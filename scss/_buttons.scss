@@ -1,15 +1,13 @@
 // Custom extra large button size
 .btn{
-  outline: 0; font-family: $font-family-sans-serif;
+  outline: 0; font-family: "Apple SD Gothic Neo"; 
   &.focus, &:focus{box-shadow: none;}
 }
 .btn-link{
   &.hover, &:hover, &.focus, &:focus {text-decoration: none;}
 }
+.btn-lg {padding: rem(17.3px) 0; width:rem(311px); font-size: rem(18px); border-radius: rem(40px);}
 
-.btn-group-xl>.btn, .btn-xl{border-radius: 0.375rem; }
-.btn-xl {padding: 1rem 1.75rem; font-size: 1.25rem;}
-.btn-outline-light{color:#222;}
 .btn-primary{
   &.focus, &:focus, &:hover{color:#fff; background: $primary;}
 }

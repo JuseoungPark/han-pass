@@ -36,5 +36,47 @@
     }
 }
 .main-conts-01{
-    margin-top:rem(-18px);
+    padding:rem(90px) 0;
+    h3{font-family: Lato; font-size: rem(48px); font-weight: 900; color: #18191a;}
+    h4{margin-top:rem(25px); font-family: "Noto Sans KR"; font-size: rem(24px); font-weight: bold; color: #18191a;}
+    p{margin:rem(62px) 0 rem(54px); line-height: rem(45px); font-family: "Noto Sans KR"; font-size: rem(30px); font-weight: bold; color: #9c9b9c;}
+    p>strong{color:#141414;}
 }
+.main-conts-02{
+    .card{
+      &.float-left{
+        padding:rem(210px) 0 rem(197px);
+        font-family: "Noto Sans KR";
+        small{font-size: rem(22px); line-height: 1.77; font-weight: 500; color: #18191a;}
+        p{font-size: rem(30px); line-height: 1.45; font-weight: 500; color: #9c9c9c;} 
+        p>strong{color: #141414;}
+        .btn{margin-top:rem(90px);}
+      } 
+      &.float-right{
+          .card-carousel{
+              position: relative; width:rem(608px); height: rem(910px); overflow: hidden;
+              .marquee-inner{position: absolute; width:100%; height: 300%; animation: marquee 15s linear infinite;}
+            ul{
+                list-style: none; transform: translate3d(0, 0, 0); transition: opacity 0.5s ease-out; 
+                li{
+                    position:relative; padding-bottom:rem(50px); 
+                    &>p{
+                        position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); line-height: rem(34px);
+                        font-family: Lato; font-size: rem(28px); font-weight: bold; color: #ffffff; text-align: center;
+                    }
+                }
+            }
+            .float-left{margin:rem(90px) 0 0;}
+          }
+      } 
+    }
+}
+
+@keyframes marquee {
+    0% { 
+        top: -100%; 
+    }
+    100% {
+        top: 0; 
+    }
+  }
