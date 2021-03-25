@@ -1,0 +1,123 @@
+@charset"utf-8";
+span.block {
+	display:block;
+	width:4em;
+	height:1em;
+}
+.block.color1 {
+	background:#666666;
+}
+.block.color2 {
+	background:#333333;
+}
+.block.color3 {
+	background:#173e35;
+}
+.block.color4 {
+	background:#c5b60e;
+}
+h1.guide {
+	margin:25px 0 10px;
+	padding:8px 0 8px 10px;
+	background:#375f91;
+	font-size:14px;
+	line-height:1;
+	color:#fff;
+}
+h2.guide {
+	margin:25px 0 10px;
+	padding:8px 0 8px 10px;
+	background:#dddddd;
+	font-size:14px;
+	line-height:1;
+	border-top:1px solid #333333;
+	font-weight:normal;
+}
+h2.guide2 {
+	margin:25px 0 0;
+	padding:8px 0 8px 10px;
+	background:#173e35;
+	font-size:14px;
+	line-height:1;
+	color:#fff;
+}
+h3.guide {
+	margin:10px 0;
+	padding:8px 0 8px 10px;
+	background:#f2f2f2;
+	line-height:1;
+	font-weight:normal;
+	border-bottom:1px solid #dddddd;
+}
+.guide .guide-sample {
+	margin:0 0 10px;
+}
+.guide .syntax-container + .syntax-container {
+	margin:10px 0 0;
+}
+p.guide {
+	margin:10px 0;
+}
+p.guide em {
+	color:#ff0000;
+}
+ul.guide {
+	background:#fff;
+	color:#333;
+	padding:10px;
+	margin:0 0 10px;
+}
+fieldset.guide {
+	border:1px solid #ccc;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+fieldset.guide legend {
+	position:static;
+	left:0;
+	top:0;
+	width:auto;
+	height:auto;
+	font-size:1em;
+	line-height:1.5;
+	margin:1em;
+	padding:0 1em;
+	visibility:visible;
+}
+.tbl-guide {
+	margin:7px 0 30px;
+	border-top: 2px solid #333;
+	width:100%;
+}
+.tbl-guide th {
+	background-color:#dddddd;
+	font-weight:bold;
+}
+.tbl-guide th, .tbl-guide td {
+	border: 1px solid #aaaaaa;
+	padding:6px 10px;
+	vertical-align: middle;
+}
+.tbl-guide thead th {
+	padding:6px 5px;
+	text-align:center;
+}
+.tbl-guide thead th.header span {
+	display:block;
+	padding-right:20px;
+	background:url(../img/bg.gif) no-repeat 100% 50%;
+	cursor:pointer;
+}
+.tbl-guide thead th.header.headerSortDown span {
+	background:url(../img/asc.gif) no-repeat 100% 50%;
+}
+.tbl-guide thead th.header.headerSortUp span {
+	background:url(../img/desc.gif) no-repeat 100% 50%;
+}
+.tbl-guide tbody tr.even td {
+	background:#f2f2f2;
+}
+.tbl-guide tbody tr.line td {
+	border-bottom:1px solid #333;
+}

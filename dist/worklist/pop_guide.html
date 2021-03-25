@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>요소모음 | 회사명</title>
+<link rel="stylesheet" type="text/css" href="./css/default.css">
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/common.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- header -->
+<div id="header">
+
+</div>
+<!-- //header -->
+<!-- container -->
+<div id="container">
+	<div id="content">
+
+		<div id="section">
+			<div class="btn-center">
+				<span class="btn-type1"><a href="pop.html" class="call-pop">윈도우팝업보기</a></span>
+				<span class="btn-type1"><a href="#infoPOP" class="call-dialog">레이어팝업보기</a></span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //container -->
+<!-- footer -->
+<div id="footer">
+	<p class="copyr">COPYRIGHTⓒ 회사명 CO,LTD. ALL RIGHT RESERVED</p>
+</div>
+<!-- //footer -->
+<script>
+	/* 샘플보기 : 윈도우팝업 */
+	 $(".call-pop").bind("click",function(ev){
+		ev.preventDefault();
+		window.open($(this).attr('href'),'회사명Winpop1',"width=600, height=500, top=100, left=0");
+	 });
+
+	/* 샘플보기 : 레이어팝업 */
+	 $(".call-dialog").modalCon({
+			url : "pop_dialog.html"
+	});
+</script>
+</body>
+</html>
