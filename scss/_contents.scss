@@ -1,0 +1,113 @@
+.conts-wrap{
+  position: relative; width:100%; text-align: center; min-height: calc(100vh - #{$nav-height} - #{$footer-height});
+  .conts-lnb{
+    margin: 1.875rem 0 0 0; width: 28.13rem;
+    .btn{
+      display:flex;height:80px;color:#888888; border-color: #dbdbdb; background-color: #fff; font-size: 1.25rem; font-weight: 700; font-family: $sub-font-family;
+      @include center-middle;
+      &.active{color:#00457c; border-color: #004e8c; z-index: 2;}
+      &.btn-lx{padding: 1.5rem 1rem;}
+    }
+    & + .tbl-type1{margin-top:30px;}
+  }
+  .conts-title{display: inline-flex; margin:40px 0 0; padding-bottom:10px; font-size: 22px; color:#222; font-weight: bold; border-bottom:3px solid #004e8c;}
+  .btn-bottom{
+    .btn-xl{width: 192px; height: 74px; border-radius: $border-radius !important; font-weight: bold;}
+    // .btn-lg{width:192px;}
+    .btn + .btn{margin-left:7px;}
+  }
+}  
+
+@include media-breakpoint-up(md) {
+  .conts-wrap{
+    margin:0 auto; width:640px; min-height: calc(100vh - #{$nav-height-md} - #{$footer-height-md});
+    .conts-lnb{
+      width:27.31rem;
+      .btn{
+        font-size: 0.875rem; height: 3.25rem; border-radius: 0.1875rem;
+        &.btn-lx{padding:0.625rem;}
+      }
+    }
+    .btn-bottom{
+      .btn-xl{width:160px; height: 54px;}
+    } 
+  }
+}
+
+.reg-finish{
+  display: flex; position: relative; width:100%; height: calc(100vh - #{$nav-height} - #{$footer-height} - #{$lnb-height});
+  @include center-middle;
+  img{width:115px;}
+  .desc{
+    margin:10px 0;
+    p{
+      margin:0 0 7px;font-size: 30px; letter-spacing: -1px;
+      strong{color:$secondary; font-weight: normal;}
+    }
+    span{color:$light; font-size: 18px; font-family: $sub-font-family; line-height: 1.3; letter-spacing: -1px;}
+  }
+  .btn{margin-top:45px; padding:0; width:134px; height: 55px; font-size: 1rem; letter-spacing: -1px;}
+}
+
+
+@include media-breakpoint-up(md) {
+  .reg-finish{
+    height: calc(100vh - #{$nav-height-md} - #{$footer-height-md} - #{$lnb-height-md});
+    img{width:100px;}
+    .desc{
+      p{font-size: 21px;}
+      span{font-size: 13px;}
+    }
+    .btn{margin-top:50px; font-size: 14px; width:160px; height: 54px;}
+  }
+}
+
+.navbar-status{
+  position: relative; padding:15px 0; width:100%; height: 85px; background: #fff; box-shadow: $box-shadow-sm;
+  p{
+    margin:0; padding-left:38.5px; height: 32.5px; align-self: center; font-size: 18px; color:#999; letter-spacing: -1px; font-family: $sub-font-family;
+    background: url(../images/ico-status-57x65.png) no-repeat left center; background-size: 28.5px auto;
+    &>strong{color:#222; margin-right:5px;}
+  }
+  .btn-outline-light{border-color: #aaa; font-weight: bold;;}
+  & ~ .container-fluid{
+    .conts-wrap{min-height: calc(100vh - #{$nav-height} - #{$footer-height} - #{$nav-status-height});}
+  }
+}
+
+
+.badge{
+  width:57px; height: 38px; border-radius: $border-radius; font-size: 14px; color:#222; font-weight: normal; background: #fbd661;
+  display: inline-flex; @include center-middle;
+}
+.badge-reg{color:#222; background: #fbd661;}
+.badge-finish{color:#fff; background: #bacbce;}
+.badge-noti{color:#fff; background: #2a3858;}
+
+@include media-breakpoint-up(md) {
+  .badge{font-size: 13px;}
+}
+
+.list-commt{
+  margin-top:25px; padding:15px; text-align: left; background: #fff;
+  .box-type1{
+      position: relative; padding:12.5px 1rem; width:100%; border-radius: $border-radius;
+      background:#f1f1f1 url(../images/ico-comt-48x50.png) no-repeat 1rem 12.5px; background-size: 24px auto;
+      p{margin:0 0 0 37px; line-height: 1.49; font-size: 17px; letter-spacing: -1px; /* min-height: 25px;  max-height: 50px;  overflow: hidden;*/ }
+  }
+  & + .form-group{margin-top:8px;}
+  & ~ form{
+  .form-group{margin-top:8px;}
+  }
+}  
+
+.list-inquiry{
+  padding:25px 15px 20px 67.5px; margin-bottom:8px; text-align: left; border-top:1px solid #dfdfdf;
+  background:#fff url(../images/ico-inquiry-80x80-f1f1f1.png) no-repeat 15px 15px; background-size: 40px auto;
+  p{
+    position: relative; margin:0; padding-right:210px; line-height: 1.2; font-size: 17px; letter-spacing: -1px;
+    &>span{position: absolute; top:0; right:0; color:#aaa;}
+    & + p{margin-top:8px;}
+   }
+}
+  

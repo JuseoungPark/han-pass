@@ -1,0 +1,164 @@
+[class*="list-group-type"]{
+    .head{
+        .btn-group{
+            .btn{
+                & + .btn{
+                    position: relative; margin-left:23.5px;
+                    &::before{position: absolute; padding:0 11.5px; left:-14px; top:50%; transform: translateY(-50%); width:0; height: 13px; border-left:1px solid #dadada; content: '';}
+                }
+                &.active{
+                    position: relative;color:#222;
+                    &::after{position: absolute; left:0; bottom:0; width:100%; height:0; border-bottom:2px solid #e0574e; content: '';}
+                }
+            }
+            .btn-link{padding:8px 0; color:#a0abba; }
+        }
+        & + .list-group{margin-top:15px;}
+    }
+}
+
+.list-group-type1{
+    margin:10px 0 33px 0; text-align: left; font-family: $sub-font-family; letter-spacing: -1px;
+    .list-group{
+        .list-group-item{
+            padding:13px 15px; display: flex; border:1px solid #fff; border-radius: 0; 
+            @include left-middle; min-height: 83px;
+            & + .list-group-item{margin-top:8px;}
+            &:hover{border:1px solid #748397 !important; outline: 0;}
+            .badge{
+                width:55px; height: 55px;
+                & + .title{
+                    margin-left:12.5px;
+                    &>p{margin-top:4px; font-size: 19px;}
+                    & + .date{width:128px;}
+                }
+            }
+            .badge-noti{
+                height: 33px;
+                & + .title{
+                    &>p{margin:0; font-size: 1rem;}
+                    & + .date{width:120px;}
+                }
+            }
+            .title{
+                flex:1; align-self: center; overflow: hidden;
+                &>p{
+                    margin:0;font-size: 1rem; color:#222; @include text-truncate;
+                    & + small{margin-top:6px; line-height: 1.2;}
+                }
+                &>small{display: block; font-size: 15px; color:#aaa;}
+            }
+            .date{width:120px; font-size: 15px; color:#aaa;text-align: right; align-self: center;}
+        }
+    }
+}
+
+.list-group-type2{
+    margin:20px 0 33px 0; text-align: left; font-family: $sub-font-family; letter-spacing: -1px;
+    .list-group{
+        .list-group-item{
+            padding:0; display: flex; flex-direction: column; min-height: 83px; border:0; border-radius: 0; 
+            & + .list-group-item{margin-top:8px;}
+            // &:hover{border:1px solid #748397 !important; outline: 0;}
+            .list-cont{padding:15px 10px 15px 15px; overflow: hidden; flex:1;}
+            .btn{width:93px; padding-top:52px; font-size: 15px; font-weight: bold; font-family: $sub-font-family; border:0; border-radius: 0; border-left:1px solid #dfdfdf; }
+            .btn-accept{background: url(../images/ico-accept-56x56.png) no-repeat center 17px; background-size: 28px auto; }
+            .btn-inquiry{background: url(../images/ico-inquiry-56x56.png) no-repeat center 17px; background-size: 28px auto; }
+            .list-commt{
+                margin:0; padding:15px; border-top:1px solid #dfdfdf;
+                &.unconfirmed{
+                    .box-type1{background-color: #feefda;}
+                }
+            }   
+            .badge{
+                width:55px; height: 55px;
+                & + .title{
+                    margin-left:12.5px;
+                    &>p{font-size: 19px;}
+                    & + .date{width:128px;}
+                }
+            }
+            .title{
+                flex:1; align-self: center; overflow: hidden;
+                &>p{
+                    margin:0; padding-right:130px; position: relative; font-size: 1rem; color:#222;
+                    line-height: 1.4; min-height: 20px; max-height: 50px; overflow: hidden;
+                    // @include text-truncate;
+                    &>.date{position: absolute; top:0; right:0; width:120px; font-size: 15px; color:#aaa;}
+                    & + small{margin-top:4px; line-height: 1.2;}
+                }
+                &>small{display: block; font-size: 15px; color:#aaa;}
+            }    
+                 
+        }
+    }
+}
+
+
+// pagination
+.btn-m-paging{display: inline-flex; margin-bottom:70px; width:65px; height: 65px; background: url(../images/btn-m-paging-130x130.png) no-repeat 0 0; background-size: 100% 100%; text-indent: -999999px;}
+
+.pagination{
+    display: none; margin:0 0 60px 0;
+    .page-item{
+        background: #fff;
+        &.active{
+            .page-link:hover{background-color: $primary;}        
+        }
+        & + .page-item{margin-left:2px;}
+    }
+    .page-link{
+        margin:0; padding:0; width:40px; height: 40px; line-height: 40px; border-radius: 0 !important; border:1px solid #eaeaea; font-size: 12px; color:#999;
+        &:hover, &:active, &:focus{box-shadow: none; background-color: transparent;}
+
+    }
+    .page-first{background: url(../images/ico-arr2-10x9.png) no-repeat center center;}
+    .page-end{background:url(../images/ico-arr2-10x9.png) no-repeat center center; transform: rotate(180deg);}
+    .page-prev{background:url(../images/ico-arr1-5x9.png) no-repeat center center;}
+    .page-next{background: url(../images/ico-arr1-5x9.png) no-repeat center center; transform: rotate(180deg);}
+}
+
+
+@include media-breakpoint-up(md) {
+    [class*="list-group-type"]{
+        .head{
+            .btn-group{
+                .btn{
+                    padding:10px 10px 10px 30px; font-size: 12px; color:#a0abba; border:1px solid #d0d5dd; border-radius: 3px;
+                    background:#fff url(../images/ico-list-all-14x14.png) no-repeat 11px center;
+                    & + .btn{
+                        margin-left:3px; background:#fff url(../images/ico-list-ing-14x14.png) no-repeat 11px center;
+                        &::before{display: none;}
+                    }
+                    &.active{
+                        color:#748397; border-color:#748397;
+                        &::after{display: none;}
+                    }
+                }
+            }
+            & + .list-group{margin-top:8px;}
+        }
+    }
+    .list-group-type1{
+        margin:30px 0 20px 0;
+        .list-group{
+            .list-group-item{
+                min-height: 80px;
+                .badge{
+                    width:50px; height: 50px;
+                    &+ .title>p{font-size: 14px;}
+                } 
+                .badge-noti{height: 32px;}
+                .title{
+                    p{font-size: 14px;}
+                    &>small{font-size: 13px;}
+                }
+                .date{font-size: 13px;}
+                
+            } 
+        } 
+    }
+    .pagination{display: flex;}
+    .btn-m-paging{display: none;}
+}
+

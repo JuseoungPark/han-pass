@@ -1,0 +1,35 @@
+.tbl-type1{
+    margin-bottom:30px;
+    .table{
+        border:1px solid #ccc; background: #fff; font-family: $sub-font-family; color:#222; letter-spacing: -1px;
+        tbody{
+            tr{
+                th, td{font-size: 17px; color:#222; padding:16px; line-height: 1.5; border-color:#e9e9e9; min-height: 58px;}
+                th{width:145px; color:#888; background: #f8f8f8; font-weight: normal; vertical-align: top;}
+                td{
+                     text-align: left;
+                    .img-nothing{display: block; margin-bottom:10px;}
+                    .badge{margin:-6px 0 -10px;}
+                }
+                &:first-of-type{
+                    th, td{border-top:0;}
+                }
+            }
+        }
+    }
+    & + .btn-bottom{margin-bottom:60px;}
+}
+
+@include media-breakpoint-up(md) {
+    .tbl-type1{
+        margin:30px 0;
+        .table{
+            tbody{
+                tr{
+                    th, td{font-size: 13px;}
+                }
+            }
+        }
+    }
+    
+}

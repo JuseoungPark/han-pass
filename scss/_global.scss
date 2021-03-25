@@ -1,0 +1,15 @@
+// html{font-size: 17px;}
+// @include media-breakpoint-up(md) {
+//   html{font-size: 16px;}
+// }
+
+.ico-app{background: url(../images/ico-app-96x96.png) no-repeat top center; background-size: 100% 100%; text-indent: -99999999px;}
+.ico-my{background: url(../images/ico-my-96x96.png) no-repeat top center; background-size: 100% 100%; text-indent: -99999999px;}
+.img-nothing{width:57px;}
+a:hover{text-decoration: none;}
+
+@include media-breakpoint-up(xl) {
+  .container-fluid{max-width: 1148px;}
+}
+.line-clamp-2{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;}
+.bg-1{background-color: #fefefe;}

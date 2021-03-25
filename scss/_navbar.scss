@@ -1,0 +1,64 @@
+// Styling for the navbar
+.navbar {
+  padding:0; text-align: center; background-color: #fff; border-bottom:$border-width solid #abb5c0;
+  .navbar-header{padding: 1.25rem 0; width:100%; background: $primary;}
+  .navbar-brand {padding:0; margin:0; width: 12.63rem; height:3rem; background: url(../images/logo-405x98-fff.png) no-repeat top center; background-size: 100% auto; text-indent: -99999999px;}
+  a[class*='ico-']{display: block; width: 3rem; height: 3rem;}
+  .ico-app{opacity: 1;}
+  .mypage-box{
+    position: relative;
+    .my-dropdown{
+      display: none; position: absolute; top:49px; left:50%; transform: translateX(-50%); width:200px; height: 115px; background: #fff; border:1px solid #ccc; border-radius: 3px;  z-index: 100;
+      &::before { position: absolute; bottom: calc(100% - 1px); left: 50%; margin-left: -6px; border-width: 6px; border-style: solid; border-color: transparent transparent #fff transparent; content: ""; z-index: 1;}
+      &::after { position: absolute; bottom: calc(100% + 1px); left: 50%; margin-left: -6px; border-width: 6px; border-style: solid; border-color: transparent transparent #ccc transparent; content: ""; z-index: 0;}
+      &.show{display: block;}
+      .btn-close{display: block; position: absolute; right:4px; top:4px; width:20px; height: 20px; background: url(../images/btn-cancel-10x10.png) no-repeat center center; text-indent: -9999999px; }
+      .user{
+        padding:10px 15px;text-align: left;
+        p{
+          margin:0; font-size: 13px; color:#999; letter-spacing: -1px;
+          &>strong{color:#222; text-decoration: underline;}
+          & + p{margin-top:6px;}
+        }
+      }
+      .btn-group-sm{
+        padding:15px 0; background: #f8f8f8; border-top:1px solid #e9e9e9;
+        .btn{width:70px; height:30px; font-size:12px; letter-spacing: -1px; border-color:#dbdbdb; border-radius: 2px; background: #fff;}
+      }
+    }
+
+  }
+  .navbar-nav{
+    position: relative; width:calc(100% + 3rem); margin:0 -1.5rem;  overflow: hidden;
+    // border-left: $border-width solid #e9ecef; border-right: $border-width solid #e9ecef;
+    .nav-item{
+      display: flex; height: 4.938rem; flex-grow: 1; align-items: center; justify-content: center; border-right: $border-width solid #e9ecef; 
+      &:last-child{border-right:0;}
+      .nav-link{padding:0; color:#c4c4c4; font-size: 1.625rem; font-weight: bold;}
+      &.active{
+        position: relative; 
+        .nav-link{color:#00457c;}
+        &::after{position: absolute; left:-$border-width; bottom:0; width:calc(100% + 0.125rem); height:0.25rem; background: #004e8c; content: '';}
+
+      }
+    }
+  }
+
+}
+
+@include media-breakpoint-up(md) {
+  .navbar{
+    padding: 0;
+    .navbar-header{padding: 0.6875rem 0;}
+    .navbar-brand { width: 15.38rem; height: 2.25rem; background: url(../images/logo-246x36-fff.png) no-repeat top center;}
+    a[class*='ico-']{width: 2.375rem; height: 2.375rem;}
+    .ico-app{opacity: 0;}
+    .navbar-nav{
+      width:100%; margin:0; border-left: $border-width solid #e9ecef; border-right: $border-width solid #e9ecef;
+      .nav-item{
+        height: 3.438rem;
+        .nav-link{font-size: 1rem;}
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+// Variables
+
+// Override Bootstrap primary and secondary colors
+$primary: #2a3858 !default;
+$secondary: #fe6733 !default;
+$light: #aaa !default;
+
+// Override Bootstrap font variables
+$font-family-sans-serif: "NanumSquare", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+$sub-font-family: "Nanum Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+$body-bg: #f1f1f1;
+$body-color: #222;
+$line-height-base: 1;
+// $font-size-base: 1.063rem !default;
+$nav-height: 168px;
+$nav-status-height:85px;
+$lnb-height:110px;
+$footer-height: 96px;
+
+$nav-height-md: 116px;
+$lnb-height-md:110px;
+$footer-height-md: 96px;
+
+// Override Bootstrap border variables
+$border-width: 0.0625rem !default;
+$border-radius: 0.3125rem !default;
+$border-radius-sm: 0.25rem !default;
+$border-radius-lg: 0.3125rem !default;
+$border-radius-lx: 0.375rem !default;
+
+// Override Bootstrap input/button variables
+$input-btn-border-width: $border-width !default;
+
+// Override Bootstrap modal variables
+$modal-inner-padding: 4rem 1rem !default;
+$modal-content-border-width: 0 !default;
+
+// Restate the spacer variable for overriding grid gutter width
+$spacer: 1rem !default;
+
+// Override the spacing between columns to add symmetry to the layout
+$grid-gutter-width: $spacer * 3 !default;
+
+$input-placeholder-color:#bbb;
+
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
+// @include media-breakpoint-up(sm) { ... }
+// @include media-breakpoint-up(md) { ... }
+// @include media-breakpoint-up(lg) { ... }
+// @include media-breakpoint-up(xl) { ... }

@@ -1,0 +1,14 @@
+.login-wrap{
+  position: relative; width:100%; height: 100vh;background: #f6f6f6;
+  a.logo{display: block; width:16.63rem; height: 2.438rem; background: url(../images/logo-266x39-00457c.png) no-repeat top center; text-indent: -999999px;}
+  .ico-my{margin-top:2.188rem; width: 3rem; height: 3rem; border-radius: 50%; box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.35);}
+  [class*="btn-group"]{
+    margin-top:2.188rem; margin-bottom:5.375rem;
+    .btn{
+      border-radius: .5rem !important;
+      &.btn-lg{font-size: 0.875rem; font-family: 'NanumSquare'; width:13.13rem; line-height: 1; padding-top: 1.063rem; padding-bottom: 0.9375rem;}
+      & + .btn{margin-top:0.3125rem;}
+    }
+  }
+  .copyright {font-size: 0.75rem; color: #a8b0be; line-height: 1; letter-spacing: -0.05rem;}
+}
