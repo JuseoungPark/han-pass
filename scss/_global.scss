@@ -1,4 +1,4 @@
-// html{font-size: 17px;}
+html{font-size: 16px;}
 // @include media-breakpoint-up(md) {
 //   html{font-size: 16px;}
 // }
@@ -9,7 +9,7 @@
 a:hover{text-decoration: none;}
 
 @include media-breakpoint-up(xl) {
-  .container-fluid{max-width: 1148px;}
+  .container-fluid{max-width: 1010px;}
 }
 .line-clamp-2{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;}
 .bg-1{background-color: #fefefe;}
