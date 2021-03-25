@@ -11,7 +11,11 @@ const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 sass.compiler = require("node-sass");
 const uglify = require("gulp-uglify");
-const minifycss = require("gulp-minify-css");
+// const pxtorem = require('gulp-pxtorem');
+// const minifycss = require("gulp-minify-css");
+// const gulpFont = require("gulp-font");
+// const webfont = require("gulp-webfont");
+// const fontgen = require('gulp-fontgen');
 // Load package.json for banner
 const pkg = require("./package.json");
 
@@ -64,6 +68,16 @@ function modules() {
     jquery
   );
 }
+
+/*
+function font() {
+  return gulp
+      .src('./fonts/*.{ttf,otf}')
+      .pipe(fontgen({
+        dest: "./dest/fonts"
+      }))
+}
+*/
 // CSS task
 function css() {
   return gulp
@@ -119,7 +133,7 @@ function js() {
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./scss/**/*", css);
+  gulp.watch("./scss/**/*", gulp.parallel(css, browserSyncReload));
   gulp.watch(["./js/**/*", "!./js/**/*.min.js"], js);
   gulp.watch("./**/*.html", browserSyncReload);
 }
@@ -130,6 +144,7 @@ const build = gulp.series(vendor, gulp.parallel(css, js));
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
+// exports.font = font;
 exports.css = css;
 exports.js = js;
 exports.clean = clean;

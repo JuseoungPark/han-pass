@@ -1,15 +1,23 @@
 // Styling for the navbar
 .navbar {
-  position: absolute; width:100%; padding:0; text-align: center;
-  .navbar-header{padding: 3.125rem 0 1rem 0; width:100%;}
-  .navbar-brand {padding:0; margin:0; width: 11.25rem; height:1.875rem; background: url(../images/hanpass-logo-181x30-fff.png) no-repeat top center; background-size: 100% auto; text-indent: -99999999px;}
-  a[class*='ico-']{display: block; width: 3rem; height: 3rem;}
-  .ico-app{opacity: 1;}
+  position: absolute; width:100%; padding:0; text-align: center; z-index: 100;
+  .navbar-header{padding: rem(50px) 0 rem(16px) 0; width:100%;}
+  .navbar-brand {padding:0; margin:0; width: rem(180px); height:rem(30px); background: url(../images/hanpass-logo-181x30-fff.png) no-repeat top center; background-size: 100% auto; text-indent: -99999999px;}
   .navbar-nav{
+    position: relative; margin-left:rem(24px);
+    .nav-item{
+      display: flex; flex-grow: 1; align-items: center; justify-content: center;
+      .nav-link{padding:rem(7px) rem(24px); color:#fff; font-weight: bold;}
+      &.active{
+        .nav-link{color:#fff;}
+      }
+    }
+  }
+  .nav{
     position: relative; margin-left:1.5rem;
     .nav-item{
       display: flex; flex-grow: 1; align-items: center; justify-content: center;
-      .nav-link{padding:0 1.5rem; color:#fff; font-weight: bold;}
+      .nav-link{padding:rem(8px) rem(10px); font-family: "Helvetica Neue"; font-size: rem(14px); color:#fff; font-weight: bold; letter-spacing: rem(1px);}
       &.active{
         .nav-link{color:#fff;}
       }

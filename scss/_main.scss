@@ -1,0 +1,40 @@
+.main-visual{
+    position: relative; width:100%;
+    div[class*="main-visual-bg"] {position: absolute; left:0; top:0; right:0; bottom:0; background-size: cover;}
+    .main-visual-bg-01{background: url(../images/main-visual-bg-01.png) no-repeat top center; }
+    .main-visual-bg-02{background: url(../images/main-visual-bg-02.png) no-repeat top center; }
+    .main-visual-bg-03{background: url(../images/main-visual-bg-03.png) no-repeat top center; }
+    .main-visual-bg-04{background: url(../images/main-visual-bg-04.png) no-repeat top center; }
+    .main-visual-bg-05{background: #ffffff url(../images/main-visual-bg-05.png) no-repeat left calc(50% + 350px) top rem(127px); background-size: auto auto !important;}
+    .carousel-item{
+        width:100%; height: rem(900px); overflow: hidden;
+    }
+    .carousel-caption{
+        left:50%; top:50%; transform: translate(-50%, -50%); right:inherit; bottom:inherit; text-align: left; 
+        strong{font-size: rem(77px); color: #242424; font-family: Lato; font-weight: bold;}
+        p{margin:rem(20px) 0 0 0; padding:0 rem(12px); font-size: rem(36px);color: #000000; font-weight: bold;}
+    }
+    .carousel-indicators{
+        li{width:10px; height: 10px; margin:0 5px; border-radius: 50%; background: #e7e7e7; border:0;}
+        .active {width:36px; border-radius: 5px; background: #476eff;}
+    } 
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+        width:118px; height: 118px; border-radius: 50%; 
+        background:rgba(#fff, 0.33) url(../images/icon-arrow-31x55-000.png) no-repeat center center;
+    }
+    .carousel-control-prev-icon{transform: rotate(-180deg);}
+    .carousel-control-prev:hover, .carousel-control-prev:focus, .carousel-control-next:hover, .carousel-control-next:focus{
+        opacity: 1;
+    }
+    .carousel-control-prev:hover, .carousel-control-next:hover{
+        opacity: 1;
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon{
+            background:rgba(#476eff, 0.4) url(../images/icon-arrow-31x55-fff.png) no-repeat center center;
+        }
+    }
+}
+.main-conts-01{
+    margin-top:rem(-18px);
+}
