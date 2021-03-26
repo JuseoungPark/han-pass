@@ -70,11 +70,17 @@ function modules() {
   // Swiper
   var fullpage  = gulp
     .src("./node_modules/fullpage.js/**/*")
-    .pipe(gulp.dest("./dist/vendor/fullpage"));   
+    .pipe(gulp.dest("./dist/vendor/fullpage"));
+  // ScrollMagic
+  var scrollmagic  = gulp
+    .src("./node_modules/scrollmagic/scrollmagic/**/*")
+    .pipe(gulp.dest("./dist/vendor/scrollmagic"));     
   return merge(
     bootstrap,
     jquery,
-    swiper
+    swiper,
+    fullpage,
+    scrollmagic
   );
 }
 

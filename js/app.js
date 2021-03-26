@@ -7,7 +7,16 @@ $(document).ready(function(){
     isMobile = jQuery.browser.mobile;
 	makeFullPage();
 	makeSwiper();
+	mainEvents();
+	$("#top-btn").on("click", function() {
+        $.fn.fullpage.moveTo(1);
+        jQuery(this).fadeOut(200);
+    })
 })
+
+$(window).resize(function(){
+	
+});
 
 function makeFullPage(){
 	$('.fullpage-wrapper').fullpage({
@@ -26,15 +35,15 @@ function makeFullPage(){
 		},
 		fitToSection: true,
 		afterRender: function(){
-			$.fn.fullpage.silentMoveTo(1);
+			// $.fn.fullpage.silentMoveTo(1);
 		},
 		afterLoad: function(a, index){
-			// // console.log(index);
-			// if(index == 3){
-			// 	$(".right_box ul").addClass("active");
-			// }else{
-			// 	$(".right_box ul").removeClass("active");
-			// }
+			// console.log(index);
+			if(index == 3){
+				$(".card.float-right ul").addClass("active");
+			}else{
+				$(".card.float-right ul").removeClass("active");
+			}
 		},
 		onLeave: function(index, nextIndex, direction){
 			//내려갈때
@@ -111,6 +120,28 @@ function makeSwiper(){
 		watchSlidesVisibility: true
 	});
 	swiper.autoplay.stop();
+}
+$(window).scroll(function() {
+	mainEvents()
+});
+function mainEvents() {
+	var winWidth = $(window).width();
+	console.log(winWidth)
+	var controller = new ScrollMagic.Controller();
+
+	var scene1 = new ScrollMagic.Scene({
+		triggerElement: "#main .main-conts-01", //트리거 설정
+		triggerHook: 0.8
+	})
+	.setClassToggle("#main .main-conts-01", "effect")
+	.addTo(controller)
+
+	var scene2 = new ScrollMagic.Scene({
+		triggerElement: "#main .main-conts-02", //트리거 설정
+		triggerHook: 0.8
+	})
+	.setClassToggle("#main .main-conts-02", "effect")
+	.addTo(controller)
 }
 
 $(document).on("click", "a", function (e){
