@@ -1,6 +1,8 @@
 @import "./variables.scss"; //Import variables (overrides Bootstrap defaults)
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
+@import "swiper/swiper.scss";
+@import "fullpage.js/dist/jquery.fullpage";
 
 /* Import custom styles */
 

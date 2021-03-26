@@ -63,9 +63,18 @@ function modules() {
       "!./node_modules/jquery/dist/core.js",
     ])
     .pipe(gulp.dest("./dist/vendor/jquery"));
+  // Swiper
+  var swiper  = gulp
+    .src(["./node_modules/swiper/*-bundle.*", "./node_modules/swiper/*-bundle.min.*"])
+    .pipe(gulp.dest("./dist/vendor/swiper")); 
+  // Swiper
+  var fullpage  = gulp
+    .src("./node_modules/fullpage.js/**/*")
+    .pipe(gulp.dest("./dist/vendor/fullpage"));   
   return merge(
     bootstrap,
-    jquery
+    jquery,
+    swiper
   );
 }
 

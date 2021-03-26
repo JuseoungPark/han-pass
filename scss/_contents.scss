@@ -3,25 +3,28 @@
   background: url(../images/hanpass-logo-181x30-fff-3x.png) no-repeat top center; background-size: 100% auto;
   text-indent: -99999999px;
 }
-.conts-wrap{
-  position: relative; width:100%; min-height: calc(100vh - #{$nav-height} - #{$footer-height});
-  .conts-lnb{
-    margin: 1.875rem 0 0 0; width: 28.13rem;
-    .btn{
-      display:flex;height:80px;color:#888888; border-color: #dbdbdb; background-color: #fff; font-size: 1.25rem; font-weight: 700; font-family: $sub-font-family;
-      @include center-middle;
-      &.active{color:#00457c; border-color: #004e8c; z-index: 2;}
-      &.btn-lx{padding: 1.5rem 1rem;}
-    }
-    & + .tbl-type1{margin-top:30px;}
-  }
-  .conts-title{display: inline-flex; margin:40px 0 0; padding-bottom:10px; font-size: 22px; color:#222; font-weight: bold; border-bottom:3px solid #004e8c;}
-  .btn-bottom{
-    .btn-xl{width: 192px; height: 74px; border-radius: $border-radius !important; font-weight: bold;}
-    // .btn-lg{width:192px;}
-    .btn + .btn{margin-left:7px;}
-  }
-}  
+
+#top-btn {
+  display: none;
+  margin: 0;
+  width: 98px;
+  height: 98px;
+  line-height: 98px;
+  border-radius: 50%;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  color: $white;
+  overflow: hidden;
+  background: #000000;
+  z-index: 10;
+  transition: .3s;
+  text-align: center;
+}
+#top-btn:hover{background: #3b57f1;}
+// .section{
+//   position: relative; width:100%; 
+// }  
 
 /*
 @include media-breakpoint-up(md) {
