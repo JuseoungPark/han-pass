@@ -126,7 +126,7 @@ $(window).scroll(function() {
 });
 function mainEvents() {
 	var winWidth = $(window).width();
-	console.log(winWidth)
+	// console.log(winWidth)
 	var controller = new ScrollMagic.Controller();
 
 	var scene1 = new ScrollMagic.Scene({
@@ -141,6 +141,20 @@ function mainEvents() {
 		triggerHook: 0.8
 	})
 	.setClassToggle("#main .main-conts-02", "effect")
+	.addTo(controller)
+
+	var scene3 = new ScrollMagic.Scene({
+		triggerElement: "#main .main-conts-03", //트리거 설정
+		triggerHook: 0.8
+	})
+	.setClassToggle("#main .main-conts-03", "effect")
+	.addTo(controller)
+
+	var scene4 = new ScrollMagic.Scene({
+		triggerElement: "#main .main-conts-04", //트리거 설정
+		triggerHook: 0.8
+	})
+	.setClassToggle("#main .main-conts-04", "effect")
 	.addTo(controller)
 }
 

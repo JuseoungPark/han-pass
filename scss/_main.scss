@@ -48,7 +48,7 @@
     h4{margin-top:rem(25px); font-family: "Noto Sans KR"; font-size: rem(24px); font-weight: bold; color: #18191a;}
     p{margin:rem(62px) 0 rem(54px); line-height: rem(45px); font-family: "Noto Sans KR"; font-size: rem(30px); font-weight: bold; color: #9c9b9c;}
     p>strong{color:#141414;}
-    .container-fluid{opacity: 0;}
+    .container-fluid{opacity: 0; transition: 1s;}
     &.effect{
         .container-fluid{
             -webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:.5s
@@ -59,12 +59,12 @@
     .container-fluid{height: 100%;}
     &.effect{
         .card{
-            &.float-left{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:.8s;}
-            &.float-right{-webkit-animation: 1.2s moveshow ease-out forwards;animation: 1.2s moveshow ease-out forwards;animation-delay:.8s;}
+            &.float-left{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:.3s;}
+            // &.float-right{-webkit-animation: 1.2s moveshow ease-out forwards;animation: 1.2s moveshow ease-out forwards;animation-delay:.8s;}
         }
     }
     .card{
-        width:50%; height: rem(800px); overflow: hidden; opacity: 0;
+        width:50%; height: rem(800px); overflow: hidden; opacity: 0; transition: 1s;
       &.float-left{
         font-family: "Noto Sans KR";
         small{font-size: rem(22px); line-height: 1.77; font-weight: 500; color: #18191a;}
@@ -73,6 +73,7 @@
         .btn{margin-top:rem(90px);}
       } 
       &.float-right{
+            opacity: 1;
             ul{
                 margin-right: rem(40px); width: rem(279px); height: calc(352px * 36); list-style: none; 
                 & + ul{margin:rem(-94px) 0 0 0;}
@@ -94,18 +95,34 @@
 
 .main-conts-03{
     font-family: "Noto Sans KR";  
+    &.effect{
+        small{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:.3s;}
+        p{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:.6s;}
+        ul>li>span{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:0.8s;}
+        ul>li>strong{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:1s;}
+        .main-conts-bg{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:1.2s;}
+    }
+    small, p, ul>li>span, ul>li>strong, .main-conts-bg{opacity: 0; transition: 1s;}
     small{ font-size: rem(22px); line-height: rem(40px); color:$dark;}
     p{line-height: 1.45; font-size: rem(34px); color:#9c9c9c; font-weight: 500;}
     p>strong{color:$dark;}
     ul{margin-top:rem(100px); list-style: none;}
     ul>li{padding:0 rem(100px); text-align: center;}
-    ul>li>small{display: block; line-height:rem(23px); font-size: rem(18px); color:#4f4f4f; font-weight: bold;}
+    ul>li>span{display: block; line-height:rem(23px); font-size: rem(18px); color:#4f4f4f; font-weight: bold;}
     ul>li>strong{display: block;margin:rem(14px) 0 0 0; line-height:rem(45px); font-family: Lato; font-size: rem(42px);color:$primary;}
     ul + ul>li{padding:0 rem(60px);}
     .main-conts-bg{margin-top:-25px; width: rem(885px); height: auto;}
 }
+
 .main-conts-04{
     padding:rem(43px) 0 0 0;
+    &.effect{
+        h4{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:.5s;}
+        ul.bbs-list{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:.8s;}
+        // ul.bbs-list{margin-bottom:48px}
+        .banner{-webkit-animation: 1.2s movetop ease-out forwards;animation: 1.2s movetop ease-out forwards;animation-delay:1.2s;}
+    }
+    h4, ul.bbs-list, .banner{opacity: 0;}
     h4{font-family: "Noto Sans KR"; font-size: rem(38px); font-weight: 500; line-height: rem(56px); color:#9c9c9c; letter-spacing: rem(-1px);}
     h4>strong{font-weight: 500;color:$dark;}
     ul{list-style: none;}
