@@ -4,9 +4,7 @@ $(document).on("click", "a", function (e){
 
 $(document).ready(function() {
 	$('.carousel').carousel({
-		interval: 2000,
-		wrap:false,
-		vertical: true
+		interval: 2000
 	})
 	// var i = 0;
 	// $(".marquee-left>li").last().addClass("last");

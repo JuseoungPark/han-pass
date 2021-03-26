@@ -44,6 +44,14 @@ $grid-gutter-width: $spacer * 3 !default;
 
 $input-placeholder-color:#bbb;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1330px,
+  xxl: 1580px
+);
 
 // Small devices (landscape phones, 576px and up)
 // @media (min-width: 576px) { ... }

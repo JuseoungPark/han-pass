@@ -15,6 +15,10 @@
   color:#fff;
   &.focus, &:focus, &:hover{color:#fff; background: $light;}
 }
+.btn-outline-light{
+  color:$dark; border-color: #979797; background: $white;
+  &.focus, &:focus, &:hover{color:$dark; background: $white;}
+}
 .btn-cancel{color:#fff;background: #3eb7c8;}
 
 // Custom social buttons

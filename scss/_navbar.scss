@@ -1,8 +1,13 @@
 // Styling for the navbar
 .navbar {
   position: absolute; width:100%; padding:0; text-align: center; z-index: 100;
+  .navbar-toggler{position: absolute; top:-5px; right:24px; margin:0; padding:0; width:rem(40px); height: rem(40px); border:0; border-radius: 0;}
+  .navbar-toggler:hover, .navbar-toggler:focus{outline: 0;}
+  .navbar-toggler-icon{
+    width:100%; height: 100%; background: url(../images/ic-24-popup-40x40-000-3x.png) no-repeat center center; background-size: 40px 40px;
+  }
   .navbar-header{padding: rem(50px) 0 rem(16px) 0; width:100%;}
-  .navbar-brand {padding:0; margin:0; width: rem(180px); height:rem(30px); background: url(../images/hanpass-logo-181x30-fff.png) no-repeat top center; background-size: 100% auto; text-indent: -99999999px;}
+  .navbar-brand {padding:0; margin:0;}
   .navbar-nav{
     position: relative; margin-left:rem(24px);
     .nav-item{
@@ -25,6 +30,7 @@
   }
 
 }
+
 /*
 @include media-breakpoint-up(md) {
   .navbar{
