@@ -12,10 +12,23 @@ $(document).ready(function(){
         $.fn.fullpage.moveTo(1);
         jQuery(this).fadeOut(200);
     })
+	$(".dropdown .dropdown-item:not(.disabled)").on("click", function() {
+		let text = $(this).html()
+		$(".dropdown .dropdown-item").removeClass('active')
+		$(this).addClass('active')
+		$(this).parents('.dropdown').children(".dropdown-toggle").html(text)
+    })
 })
 
 $(window).resize(function(){
-	
+	console.log('resize')
+	// $.fn.fullpage.destroy('all');
+	// makeFullPage();
+	//mainEvents()	
+});
+$(window).scroll(function() {
+	console.log('scroll')
+	mainEvents()
 });
 
 function makeFullPage(){
@@ -28,10 +41,10 @@ function makeFullPage(){
 		css3:true,
 		easing: 'easeInOutCubic',
 		scrollingSpeed: 800,
-		scrollOverflowEndPrevent: { delay: 500, reversal: false },
+		// scrollOverflowEndPrevent: { delay: 500, reversal: false },
 		scrollOverflowOptions: {
-			disablePointer: false,
-			scrollbars: false
+			disablePointer: true,
+			scrollbars: true
 		},
 		fitToSection: true,
 		afterRender: function(){
@@ -95,23 +108,21 @@ function makeSwiper(){
 			clickable: true,
 		},
 		on: {
-			slideChangeTransitionEnd: function() {
-				// tick = setInterval(progress, 50);
-				// var $circle = $('#svg #bar');
-				// var r = $circle.attr('r');
-				// var percentVal = 0;
-				// function progress() {
-				// 	percentVal += 50;
-				// 	val = (percentVal/swiperAutoplayDelay)*100;
-				// 	var per = ((100 - val) / 100) * Math.PI *r * 2;
-				// 	$circle.css({
-				// 		strokeDashoffset: per
-				// 	});
-				// }
+			// afterInit: () => {
+			// 	console.log("afterInit")
+			// 	$(".main-visual").addClass("effect")
+			// },
+			slideChangeTransitionStart: function() {
+				$(".swiper-slide-active").removeClass("effect")
+				console.log("slideChangeTransitionStart")
 			},
-			progress: function(){
-				// clearInterval(tick);
-			}
+			slideChangeTransitionEnd: function() {
+				$(".swiper-slide-active").addClass("effect")
+				console.log("slideChangeTransitionEnd")
+			},
+			// progress: function(){
+			// 	
+			// }
 		},
 		preloadImages: true,
 		lazyLoading: true,
@@ -121,9 +132,7 @@ function makeSwiper(){
 	});
 	swiper.autoplay.stop();
 }
-$(window).scroll(function() {
-	mainEvents()
-});
+
 function mainEvents() {
 	var winWidth = $(window).width();
 	// console.log(winWidth)

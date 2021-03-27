@@ -3,7 +3,22 @@
   background: url(../images/hanpass-logo-181x30-fff-3x.png) no-repeat top center; background-size: 100% auto;
   text-indent: -99999999px;
 }
-
+.dropdown{
+  width:150px;
+  .btn{
+    &.dropdown-toggle{
+      padding:rem(10px) rem(48px) rem(10px) rem(24px); width:100%;
+      border-radius: rem(20px); border:0; 
+      font-family: "Noto Sans KR"; font-size: rem(13px); font-weight: 500; color:#242424;
+      background:#e7e7e7 url(../images/icon-arrow-down-gray-25x25-3x.png) no-repeat right 15px center; background-size: rem(25px) auto;
+      &:focus{color:#ffffff; background:#242424 url(../images/icon-arrow-down-000-25x25-3x.png) no-repeat right 15px center; background-size: rem(25px) auto;}
+      &::after{display: none;}
+      // &.btn-secondary{border:0; background:#242424; color:#fff;}
+    }
+  }
+  .dropdown-menu{width:100%; border-radius: 0; box-shadow: 1px 5px 10px rgba(#000000, 0.1);}
+  .dropdown-item{padding:rem(20px);}
+}
 #top-btn {
   display: none;
   margin: 0;

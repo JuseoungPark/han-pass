@@ -35,7 +35,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "file-loader": "^5.0.2",
     "fontforge": "0.0.4",
-    "fullpage.js": "^2.9.6",
+    "fullpage.js": "2.9.7",
     "gsap": "^3.6.1",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "7.0.0",

@@ -1,9 +1,15 @@
 // Styling for the navbar
 .navbar {
   position: fixed; top:0; left:0; padding:0; width:100%; height: auto;  text-align: center; 
-  background: transparent; transition: .3s; z-index: 100;
+  background: rgba(#000000, 0.05); z-index: 100;
+  *{transition: all 0.2s ease-out;}
   .navbar-toggler{margin:0; padding:0; width:rem(40px); height: rem(40px); border:0; border-radius: 0;}
   .navbar-toggler:hover, .navbar-toggler:focus{outline: 0;}
+  .navbar-toggler.collapsed{
+    & + #navbar-allmenu{
+      &.collapsing {left: 100%;}
+    }
+  }
   .navbar-toggler-icon{
     width:100%; height: 100%; background: url(../images/ic-24-popup-40x40-fff-3x.png) no-repeat center center; background-size: 40px 40px;
   }
@@ -36,9 +42,70 @@
     .navbar-header{padding-top:rem(30px);}
     .logo-img{background: url(../images/hanpass-logo-180x30-000-3x.png) no-repeat top center; background-size: 100% auto;}
     .navbar-brand + .navbar-nav ul>.nav-item .nav-link,
-    .navbar-brand + .navbar-nav .nav>.nav-item .nav-link{color:#3b3b3b;}
+    .navbar-brand + .navbar-nav .nav>.nav-item.active .nav-link{color:#3b3b3b;}
+    .navbar-brand + .navbar-nav .nav>.nav-item .nav-link{color:#9e9e9e;}
   }
 }
+
+#navbar-allmenu{
+  position: fixed; left: 0; top:0; width:100%; padding:rem(30px) 0 0; height: auto; background:#262626;
+  transition: left 1s ease !important;
+  &.collapse:not(.show){display: block !important; left: 100%;}
+  &.collapse.show{display: block !important; left: 0;}
+  &.collapsing {
+    left: 0;
+    transition: left 1s ease !important;
+  }
+  .navbar-collapse{
+    .navbar-collapse-header{
+      position: relative; width:100%; padding:rem(20px) 0 rem(54px);
+    }
+    .logo-img{height: 28px; background: url(../images/allmenu-logo-180x28-fff-3x.png) no-repeat top center; background-size: 100% auto;}
+    .nav{
+      margin-right:rem(28.5px);
+      &>.nav-item{
+        color:#ffffff;
+        .nav-link{padding:0 rem(11.5px); color:#9e9e9e;}
+        &.active{
+          .nav-link{color:#ffffff;}
+        }  
+      }
+    }
+    .navbar-toggler-icon{
+      background: url(../images/ic-20-appbar-40x40-fff-3x.png) no-repeat center center; background-size: 40px 40px;
+    }
+    .navbar-nav{
+      position: relative; width:100%; color:#fff; 
+      .nav-link{color:#fff;}
+      dl{
+        font-family: "Noto Sans KR"; text-align: left; font-weight: bold;
+        & + dl{margin-left:rem(55px);}
+        dt{margin-bottom:rem(17px); font-size: rem(14px); line-height: rem(20px);  color: #989898;}
+        dd{
+          margin-bottom:rem(20px);  text-align: left; 
+          .nav-link{padding:0;font-size: rem(18px); line-height: rem(27px);}
+        }
+      }
+    }
+    .sns-box{
+      position: relative; margin-top:rem(38px); padding:rem(22px) 0 rem(34px); width:100%; background:#4a4a4a;
+      .nav{
+        font-family: "Noto Sans KR"; font-size: rem(18px); line-height: rem(27px); font-weight: bold; text-align: left;
+        .nav-item{padding-right: rem(10px);}
+        .nav-item + .nav-item{margin-left:rem(50px);}
+        .nav-link{padding:0; font-size: rem(14px); font-weight: normal; color:rgba(#ffffff, 0.5);}
+        &.sns-kind{
+          margin-bottom: rem(20px);
+          .nav-item{padding-bottom:4px; padding-right: 0; border-bottom:4px solid transparent; cursor: pointer;}
+          .nav-item.active{border-bottom:2px solid #fff;}
+          .nav-item + .nav-item{margin-left:rem(40px);}
+        }
+      }
+    }
+  }
+}
+
+
 @include media-breakpoint-up(lg) {
   .navbar-expand-lg .navbar-toggler {
     display: block;

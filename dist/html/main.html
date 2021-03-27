@@ -11,7 +11,7 @@
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../vendor/swiper/swiper-bundle.min.js"></script>
     <script src="../vendor/fullpage/vendors/jquery.easings.min.js"></script>
-    <script src="../vendor/fullpage/vendors/scrolloverflow.min.js"></script>
+    <script src="../js/scrolloverflow.min.js"></script>
     <script src="../vendor/fullpage/dist/jquery.fullpage.min.js"></script>
     <script src="../vendor/fullpage/dist/jquery.fullpage.extensions.min.js"></script>
     <script src="../vendor/scrollmagic/minified/ScrollMagic.min.js"></script>
@@ -24,6 +24,7 @@
   <nav class="navbar navbar-expand-lg flex-column">
     <!-- navbar-header -->
     <div class="navbar-header">
+      <!-- container-fluid -->
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
         <div class="navbar-nav justify-content-between flex-grow-1">
@@ -40,38 +41,161 @@
             <li class="nav-item"><a class="nav-link" href="#">EN</a></li>
           </ul>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">회사소개</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">사업소개</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">서비스 소개</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">커뮤니티</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">제휴문의</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
-            </ul>
-            <ul class="nav">
-              <li class="nav-item active"><a class="nav-link" href="#">KR</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">EN</a></li>
-            </ul>
+        <!-- navbar-collapse -->
+        <div id="navbar-allmenu" class="collapse show">
+          <div class="navbar-collapse align-items-start flex-wrap">
+            <div class="container-fluid">
+              <div class="d-flex align-items-center navbar-collapse-header">
+                <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
+                <ul class="nav flex-grow-1 justify-content-end">
+                  <li class="nav-item active"><a class="nav-link" href="#">KOR</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">ENG</a></li>
+                </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              <!-- navbar-nav -->
+              <div class="navbar-nav">
+                <dl>
+                  <dt>회사소개</dt>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                </dl>
+                <dl>
+                  <dt>회사소개</dt>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                </dl>
+                <dl>
+                  <dt>회사소개</dt>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                </dl>
+                <dl>
+                  <dt>회사소개</dt>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                </dl>
+                <dl>
+                  <dt>회사소개</dt>
+                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                </dl>
+              </div>
+              <!-- navbar-nav // -->
+              
+            </div>
+            <!-- sns-box -->
+            <div class="sns-box">
+              <div class="container-fluid flex-column align-items-start">
+                <ul class="nav sns-kind">
+                  <li class="nav-item">INSTAGRAM</li>
+                  <li class="nav-item active">FACEBOOK</li>
+                  <li class="nav-item">NAVERBLOG</li>
+                  <li class="nav-item">OK.RU</li>
+                </ul>
+                <ul class="nav">
+                  <li class="nav-item"><div class="country kr">한국</div><a href="#" class="nav-link">@hanpass.kr</a></li>
+                  <li class="nav-item"><div class="country id">인도네시아</div><a href="#" class="nav-link">@hanpass.id</a></li>
+                  <li class="nav-item"><div class="country ph">필리핀</div><a href="#" class="nav-link">@hanpass.ph</a></li>
+                  <li class="nav-item"><div class="country khmer">캄보디아</div><a href="#" class="nav-link">@hanpass.khmer</a></li>
+                  <li class="nav-item"><div class="country np">네팔</div><a href="#" class="nav-link">@hanpass.np</a></li>
+                  <li class="nav-item"><div class="country vnm">베트남</div><a href="#" class="nav-link">@hanpass.vnm</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- sns-box // -->
+          </div>
         </div>
+        <!-- navbar-collapse // -->
       </div>
+      <!-- container-fluid // -->
     </div>
+    <!-- navbar-header // -->
   </nav>
   <!-- gnb // --> 
 
   <div class="fullpage-wrapper" id="main">
     <!-- main-visual -->
     <div class="section main-visual">
+      <!-- exchange-calc -->
+      <div class="exchange-calc">
+        <div class="desc">
+          <h2>Pass by Hanpass</h2>      
+          <p>
+            Want to see how much money you can save with HANPASS?
+            <span>You can save up to 90% compared to other remittance services.</span> 
+          </p>
+        </div>
+        <div class="form-group deposit">
+          <h5 for="deposit">You Deposit(include fee)</h5>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="currency KRW">KRW</div>
+            </div>
+            <input type="text" value="100,000,000" class="form-control-plaintext text-right" id="deposit" placeholder="Enter Deposit">
+            <div class="cal-tooltip">최소 100,000</div>
+          </div>
+        </div>
+        <div class="form-group sending">
+          <div class="input-group">
+            <img src="../images/ico-send-money-33x33-3x.png" alt="">
+            <div class="dropdown">
+              <!-- data-offset="0,-33" -->
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">픽업 장소를 선택해 주세요</button>
+              <div class="dropdown-menu">
+                <div class="dropdown-header">픽업 장소를 선택해 주세요</div>
+                <!-- <div role="separator" class="dropdown-divider"></div> -->
+                <a class="dropdown-item" href="#">캐시픽업</a>
+                <a class="dropdown-item" href="#">계좌이체</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group recipient">
+          <h5 for="recipient">Recipient Gets</h5>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="dropdown currency-dropdown">
+                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="currency AUD">AUD</div>
+                </button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-header">Currencies</div>
+                  <!-- <div role="separator" class="dropdown-divider"></div> -->
+                  <a class="dropdown-item" href="#"><div class="currency KRW">KRW</div></a>
+                  <a class="dropdown-item" href="#"><div class="currency AUD">AUD</div></a>
+                </div>
+              </div>
+              
+            </div>
+            <input type="text" value="1,089" class="form-control-plaintext text-right" id="recipient" placeholder="Enter Recipient">
+            <div class="cal-tooltip">최소 100,000</div>
+          </div>
+        </div>
+        <ul class="result">
+          <li><img src="../images/ico-cal-multi-24x24-3x.png" alt=""> 송금 환율 : = 24.62 KRW = 1 PHP</li>
+          <li><img src="../images/ico-cal-plus-24x24-3x.png" alt="">송금 수수료 : 5,000 KRW <img src="../images/img-coupon-41x33-3x.png" class="img-coupon" alt=""></li>
+          <li><img src="../images/ico-cal-time-24x24-3x.png" alt="">예상 소요 시간 : 1 Business Day</li>
+        </ul>
+      </div>
+      <!-- exchange-calc // -->
       <!-- Slider main container -->
       <div class="swiper-container">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <div class="main-visual-bg-01"></div>
+            <div class="main-visual-bg-01">
+              <div class="main-visual-bg-line-01"></div>
+            </div>
+            <div class="caption d-none d-md-block text-white">
+              <p>Great rates, <br>exceptional service</p> 
+            </div>
           </div>
           <div class="swiper-slide">
             <div class="cont-box">
@@ -107,6 +231,7 @@
                 <p>종합금융<br>서비스 플랫폼<br>App service</p> 
               </div>
             </div>
+            <div class="main-visual-bg-obj-05"></div>
           </div>
         </div>
         <!-- If we need pagination -->
