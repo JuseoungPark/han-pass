@@ -14,7 +14,9 @@
     "@fortawesome/fontawesome-free": "5.10.2",
     "bootstrap": "4.4.1",
     "jquery": "3.4.1",
+    "jquery-mousewheel": "^3.1.13",
     "jquery.easing": "^1.4.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {

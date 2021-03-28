@@ -75,12 +75,22 @@ function modules() {
   var scrollmagic  = gulp
     .src("./node_modules/scrollmagic/scrollmagic/**/*")
     .pipe(gulp.dest("./dist/vendor/scrollmagic"));     
+  // jquery-mousewheel
+  var mousewheel  = gulp
+  .src("./node_modules/jquery-mousewheel/jquery.mousewheel.js")
+  .pipe(gulp.dest("./dist/vendor/mousewheel"));         
+   // jquery.mCustomScrollbar
+  var scrollbar  = gulp
+  .src("./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js")
+  .pipe(gulp.dest("./dist/vendor/mCustomScrollbar"));
   return merge(
     bootstrap,
     jquery,
     swiper,
     fullpage,
-    scrollmagic
+    scrollmagic,
+    mousewheel,
+    scrollbar
   );
 }
 

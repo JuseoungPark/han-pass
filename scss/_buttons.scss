@@ -16,8 +16,8 @@
   color:#fff;
   &.focus, &:focus, &:active, &:hover{color:#fff; background: $light;}
 }
-.btn-outline-light{
-  color:$dark; border-color: #979797; background: $white;
+.btn-outline-light{ // c0c0c0
+  color:#262626; border-color: #979797; background: $white;
   &.focus, &:focus, &:active, &:hover{color:$white !important; background: $primary !important;}
 }
 .btn-cancel{color:#fff;background: #3eb7c8;}
