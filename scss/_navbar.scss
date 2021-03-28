@@ -44,6 +44,16 @@
     .navbar-brand + .navbar-nav ul>.nav-item .nav-link,
     .navbar-brand + .navbar-nav .nav>.nav-item.active .nav-link{color:#3b3b3b;}
     .navbar-brand + .navbar-nav .nav>.nav-item .nav-link{color:#9e9e9e;}
+    .navbar-toggler-icon{background: url(../images/ic-24-popup-40x40-000-3x.png) no-repeat center center; background-size: 40px 40px;}
+  }
+  &.sub{
+    position: relative; background: $white;
+    .navbar-header{padding-top:rem(30px);}
+    .logo-img{background: url(../images/hanpass-logo-180x30-000-3x.png) no-repeat top center; background-size: 100% auto;}
+    .navbar-brand + .navbar-nav ul>.nav-item .nav-link,
+    .navbar-brand + .navbar-nav .nav>.nav-item.active .nav-link{color:#3b3b3b;}
+    .navbar-brand + .navbar-nav .nav>.nav-item .nav-link{color:#9e9e9e;}
+    .navbar-toggler-icon{background: url(../images/ic-24-popup-40x40-000-3x.png) no-repeat center center; background-size: 40px 40px;}
   }
 }
 
@@ -104,31 +114,3 @@
     }
   }
 }
-
-
-@include media-breakpoint-up(lg) {
-  .navbar-expand-lg .navbar-toggler {
-    display: block;
-  }
-  .collapse:not(.show){
-    display: none !important;
-  }
-}
-/*
-@include media-breakpoint-up(md) {
-  .navbar{
-    padding: 0;
-    .navbar-header{padding: 0.6875rem 0;}
-    .navbar-brand { width: 11.25rem; height: 1.875rem; background: url(../images/hanpass-logo-181x30-fff.png) no-repeat top center;}
-    a[class*='ico-']{width: 2.375rem; height: 2.375rem;}
-    .ico-app{opacity: 0;}
-    .navbar-nav{
-      width:100%; margin:0; border-left: $border-width solid #e9ecef; border-right: $border-width solid #e9ecef;
-      .nav-item{
-        height: 3.438rem;
-        .nav-link{font-size: 1rem;}
-      }
-    }
-  }
-}
-*/
