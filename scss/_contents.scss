@@ -1,4 +1,7 @@
 .section{position: relative; overflow: hidden;}
+.cont-wrap{
+  position: relative; overflow: hidden;
+}
 .logo-img{
   display: inline-block; width: rem(180px); height:rem(30px);
   background: url(../images/hanpass-logo-181x30-fff-3x.png) no-repeat top center; background-size: 100% auto;
@@ -8,6 +11,10 @@
   display: inline-block; width: rem(28px); height:rem(27px);
   background: url(../images/ico-map-28x27-666-x3.png) no-repeat top center; background-size: 100% auto;
   text-indent: -99999999px;
+}
+.ico-arr-right{
+  display: inline-block; width: rem(11px); height:rem(18px);
+  background: url(../images/icon-arrow-11x18-3x.png) no-repeat right center; background-size: 100% auto;
 }
 .tabs-type1{
   .list-group{display: flex; flex-direction: row; justify-content: center;}
@@ -22,6 +29,21 @@
     .tab-pane{padding:rem(40px) 0;}
   }
 }
+
+.tabs-type2{
+  width:100%;
+  .list-group{display: flex; flex-direction: row; width:100%; border-bottom:4px solid #262626;}
+  .list-group-item-action{
+    width:auto; padding: rem(13px) rem(20px) rem(28px) 0; line-height: rem(36px); background:#fff; border:0; border-radius: 0;
+    font-size: rem(24px); font-family: "Noto Sans KR"; font-weight: bold; color:#262626; opacity: 0.36; 
+    &.active{opacity: 1; border:0;}
+    & + .list-group-item-action{margin-left:22px;}
+  }
+  .tab-content{
+    .tab-pane{padding:0;}
+  }
+}
+
 .dropdown{
   width:150px;
   .btn{
@@ -61,6 +83,11 @@
 // }  
 
 /*
+- 이용약관 참고
+   https://www.ssfshop.com/public/common/information/termsAndConditions
+- WU송금 사기 신고 URL
+   https://www.hanpass.com/kr/reportRemittance
+// 메뉴 효과 참고 : https://titleistapparel.co.kr/brand/faq      
 @include media-breakpoint-up(md) {
   .conts-wrap{
     margin:0 auto; width:640px; min-height: calc(100vh - #{$nav-height-md} - #{$footer-height-md});

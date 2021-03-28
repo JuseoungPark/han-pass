@@ -8,21 +8,18 @@ body{
 }
 a:hover{text-decoration: none;}
 .container-fluid::after {
-  display: block;
-  clear: both;
-  content: "";
+  @include clearfix;
 }
 ul{list-style: none;}
 ul::after {
-  display: block;
-  clear: both;
-  content: "";
+  @include clearfix;
 }
 p{margin:0;}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{margin:0; line-height: 1;}
 ol, ul, dl{margin:0; padding:0;}
 
-*:focus{outline: 0;}
+.form-control:focus, *:focus,
+.form-control:active, *:active{outline: 0; box-shadow: none;}
 
 .container-fluid{position: relative;}
 @include media-breakpoint-up(xl) {
@@ -31,4 +28,4 @@ ol, ul, dl{margin:0; padding:0;}
 .line-clamp-2{display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;}
 .bg-1{background-color: #fefefe;}
 
-// 메뉴 효과 참고 : https://titleistapparel.co.kr/brand/faq
+

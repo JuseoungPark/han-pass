@@ -4,21 +4,21 @@
   &.focus, &:focus{box-shadow: none;}
 }
 .btn-link{
-  &.hover, &:hover, &.focus, &:focus {text-decoration: none;}
+  &.hover, &:hover, &.focus, &:focus, &:active {text-decoration: none;}
 }
 .btn-lg {padding: rem(17.3px) 0; width:rem(311px); font-size: rem(18px); border-radius: rem(40px);}
 
 .btn-primary{
-  &.focus, &:focus, &:hover{color:#fff; background: $primary;}
+  &.focus, &:focus, &:active, &:hover{color:#fff; background: $primary;}
 }
 .btn-dark{border:0;}
 .btn-light{
   color:#fff;
-  &.focus, &:focus, &:hover{color:#fff; background: $light;}
+  &.focus, &:focus, &:active, &:hover{color:#fff; background: $light;}
 }
 .btn-outline-light{
   color:$dark; border-color: #979797; background: $white;
-  &.focus, &:focus, &:hover{color:$dark; background: $white;}
+  &.focus, &:focus, &:active, &:hover{color:$white !important; background: $primary !important;}
 }
 .btn-cancel{color:#fff;background: #3eb7c8;}
 

@@ -148,3 +148,65 @@
         }
     }
 }
+
+.sub-conts-cs{
+    padding:rem(92px) 0 0 0;
+    h2{font-size: rem(36px);  font-family: "Noto Sans KR"; font-weight: 500; color:#18191a;}
+    .cont-wrap{
+        position: relative; width:100%; margin-top:47px;
+        .left-box{
+            width:512px;
+            .input-group{
+                height: 82px; border:4px solid #262626; border-radius: 8px;
+                .select{
+                    width:130px; height: 100%;
+                    select{
+                        display: flex; align-items: center;
+                        width:100%; height: 100%; padding-left:32px;
+                        font-size: rem(24px);  font-family: "Noto Sans KR"; font-weight: bold; color:#18191a;
+                        border:0; 
+                        background:url(../images/icon-arrow-r-n-25x15-3x.png) no-repeat right center; background-size: 25px auto;
+                        -webkit-appearance: none; -moz-appearance: none; text-indent: 1px; text-overflow: '';
+                    }
+                }
+                .form-control{height: 100%; border:0; background:transparent;}
+            }
+            h4{margin-top:107px; line-height: 1.44; font-size: rem(20px); font-family: "Noto Sans KR"; font-weight: 500; color:#262626;}
+            h4 + .btn.btn-lg{
+                margin-top:30px;
+            }
+            .btn-lg{
+                margin-top:30px; padding:0; width:278px; height: 79px; line-height: 79px; border-radius: 50px;
+                font-size: rem(20px); font-family: "Noto Sans KR"; font-weight: 500; color:#262626;
+                &>span{
+                    padding-right:22px; background: url(../images/icon-arrow-11x18-000-3x.png) no-repeat right center; background-size: 11px auto;
+                }
+            }
+            .btn-outline-light{
+                &:focus, &:active, &:hover{
+                    &>span{background: url(../images/icon-arrow-11x18-fff-3x.png) no-repeat right center; background-size: 11px auto;}
+                } 
+            }
+
+        }
+        .right-box{
+            position: relative;  margin-left:36px; width:calc(100% - 512px);
+            .faq-list{
+                .card-header{
+                    padding:rem(40px) 0; margin:0; cursor: pointer;
+                    h3{
+                        padding-left:25px; font-size: rem(22px);  font-family: "Noto Sans KR"; font-weight: bold; color:#262626;
+                        &>span{font-size: rem(24px);}
+                    }
+                }
+                .card-body{
+                    padding:rem(40px) 0 rem(40px) 0; border-bottom:1px solid #cccccc;
+                    font-family: "Noto Sans KR"; color:#262626;
+                    &>span{padding:0 rem(19px) 0 rem(28px); font-size: rem(24px);font-weight: bold; }
+                    &>p{font-size: rem(20px);font-weight: 500; }
+                }
+            }
+            
+        }
+    }
+}
