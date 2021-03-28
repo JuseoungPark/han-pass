@@ -1,0 +1,103 @@
+.sub-visual{
+    position: relative; width:100%; height: rem(254px); overflow: hidden;
+    .sub-visual-bg{display: block; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); min-width: 1580px; width:100%; z-index: -1;}
+}
+
+.bg-sub{display: block; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); min-width: 1580px; width:100%; z-index: -1;}
+
+.sub-visual{
+    nav{background:transparent;}
+    .breadcrumb{
+        margin:0; padding:30px 20px;
+        background:transparent;
+    }
+    .breadcrumb-item{
+        font-size: rem(16px); font-family: "Noto Sans KR"; font-weight: bold;
+        &>a{color:#fff;}
+        &.active{font-size: rem(24px); font-family: "Noto Sans KR"; font-weight: bold; color:#fff;}
+        & + .breadcrumb-item{
+            padding-left:0;
+            &>span{display: inline-block; padding-top:3px;}
+            &::before{content: '>'; padding:0 rem(10px) 0 rem(4px); font-size: rem(16px); color:#fff; vertical-align: 10px;}
+        }
+    }
+}
+.sub-cont-about-01{
+    p{
+        padding:rem(75px) 0 rem(64px); text-align: center; line-height: 1.44;
+        font-size: rem(20px); font-family: "Noto Sans KR"; font-weight: 500; color:#666666;
+    }
+}
+.sub-cont-about-02{
+    padding:rem(94px) 0 rem(86px); text-align: center;
+    h3{font-family: "Apple SD Gothic Neo"; font-size: rem(36px); color: #ffffff; font-weight: 600;}
+    ul{
+        margin-top:rem(58px);
+        &>li{
+            @include center-middle;
+            position: relative; width:rem(292px); height: rem(226px); line-height: 1.44; background:rgba(#476eff, 0.65); border-radius: 54px;
+            font-size: rem(22px); font-family: "Noto Sans KR"; font-weight: 500; color:#ffffff;
+            &::before, &::after{display: block; width:64px; height: 74px; content: ''; background:url(../images/bg-licence-open-64x74-3x.png) no-repeat center center; background-size: 100% auto;}
+            &::after{transform: scaleX(-1);}
+        }
+    }
+}
+
+.sub-cont-about-03{
+    padding:rem(43px) 0 0;
+    .tab-content > .active{display: flex; flex-direction: column; justify-content: center;}
+    .info-box{
+        li{
+            font-family: "Apple SD Gothic Neo"; color: #000000; font-size: rem(16px);
+            &>strong{display: inline-block; width:167px; font-size: rem(20px);}
+            & + li{margin-top:16px;}
+        }
+    }
+    .history-box{
+        padding:rem(87px) 0 0; font-family: "Noto Sans KR";
+        &>li .year{padding-top:rem(24px); width:rem(195px); font-size: rem(50px); font-weight: 900; color:#46484b;}
+        // &>li + li{padding-top:30px;}
+        &>li + li .history-list::before{
+            display: block; position: absolute; left:rem(-10px); top:rem(40px); width:rem(20px); height: rem(20px); content: '';
+            background: #3b57f1; border-radius: 50%;
+        }
+        .history-list{
+            position: relative; padding:rem(36px) 0 0 rem(47px); border-left:2px dashed #deefff;
+            &::before{
+                display: block; position: absolute; left:rem(-20px); top:rem(29px); width:rem(40px); height: rem(40px); content: '';
+                background:url(../images/img-year-dot-here-40x40-3x.png) no-repeat center center; background-size:rem(40px) rem(40px); 
+                border-radius: 0;
+            }
+            &>li{
+                display: flex; line-height: rem(27px);
+                &>span{width:112px; font-size: rem(14px); font-weight: bold; color:#ababab;}
+                &>p{font-size: rem(18px); font-weight: bold; color:#18191a;}
+                & + li{margin-top:20px;}
+            }
+        }
+    }
+    h4{
+        width:300px; line-height: 1.5;
+        font-size: rem(34px); font-family: "Noto Sans KR"; font-weight: bold; color:#18191a;
+        &>img{display: block; margin-bottom:rem(30px);}
+    }
+    .contact-box{
+        margin:rem(70px) 0 rem(90px);
+        dl{
+            font-family: "Noto Sans KR";  text-align: center; line-height: 1.5;
+            & + dl{margin-left:rem(100px);}
+            dt{font-weight: 500; color:#ababab;}
+            dd{margin-top:rem(10px); font-size: rem(20px);font-weight: bold; color:#18191a;}
+        }
+        
+    }
+    .btn-map-view{
+        padding:0; width:rem(400px); height: rem(100px);  border-radius: 50px; 
+        font-size: rem(20px); font-weight: bold; 
+        &>span{padding-right:43px; line-height: rem(100px); background: url(../images/ico-map-28x27-d8d8d8-x3.png) no-repeat right center; background-size: rem(28px) auto;}
+    }
+    .btn-map-view:hover{
+        color:#d8d8d8; background:#141414;
+        &>span{background: url(../images/ico-map-28x27-d8d8d8-x3.png) no-repeat right center; background-size: rem(28px) auto;}
+    }
+}

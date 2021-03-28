@@ -1,6 +1,6 @@
 // Custom extra large button size
 .btn{
-  outline: 0; font-family: "Apple SD Gothic Neo"; 
+  outline: 0; font-family: "Apple SD Gothic Neo"; box-shadow: none !important;
   &.focus, &:focus{box-shadow: none;}
 }
 .btn-link{
@@ -11,6 +11,7 @@
 .btn-primary{
   &.focus, &:focus, &:hover{color:#fff; background: $primary;}
 }
+.btn-dark{border:0;}
 .btn-light{
   color:#fff;
   &.focus, &:focus, &:hover{color:#fff; background: $light;}

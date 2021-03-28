@@ -114,3 +114,10 @@
     }
   }
 }
+
+
+@include media-breakpoint-up(lg) {
+  .navbar-expand-lg .navbar-toggler {
+    display: block;
+  }
+}

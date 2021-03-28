@@ -1,7 +1,26 @@
+.section{position: relative; overflow: hidden;}
 .logo-img{
-  display: block; width: rem(180px); height:rem(30px);
+  display: inline-block; width: rem(180px); height:rem(30px);
   background: url(../images/hanpass-logo-181x30-fff-3x.png) no-repeat top center; background-size: 100% auto;
   text-indent: -99999999px;
+}
+.ico-map{
+  display: inline-block; width: rem(28px); height:rem(27px);
+  background: url(../images/ico-map-28x27-666-x3.png) no-repeat top center; background-size: 100% auto;
+  text-indent: -99999999px;
+}
+.tabs-type1{
+  .list-group{display: flex; flex-direction: row; justify-content: center;}
+  .list-group-item-action{
+    width:auto; padding: rem(20px) rem(24px); line-height: rem(36px); background:#fff; border:0; border-radius: 0;
+    font-size: rem(24px); font-family: "Noto Sans KR"; font-weight: bold; color:#262626; opacity: 0.36;
+    border-bottom:3px solid transparent;
+    &.active{opacity: 1; border-bottom:3px solid #262626; }
+    & + .list-group-item-action{margin-left:22px;}
+  }
+  .tab-content{
+    .tab-pane{padding:rem(40px) 0;}
+  }
 }
 .dropdown{
   width:150px;
