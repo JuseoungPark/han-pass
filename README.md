@@ -1,9 +1,17 @@
 # hanpass_pub
 한패스리뉴얼
 
-npm install
 
+1. 노드 설치
+ --------------------------------------
+      https://nodejs.org/ko/download/
+ --------------------------------------
+
+2. 터미널에서 실행 명령어
+--------------------------------------
+npm install
 gulp watch  OR  ./node_modules/gulp/bin/gulp.js watch
+--------------------------------------
 
 [Browsersync] Access URLs:
  --------------------------------------
@@ -11,7 +19,11 @@ gulp watch  OR  ./node_modules/gulp/bin/gulp.js watch
  --------------------------------------
 [Browsersync] Serving files from: ./dist
 
+
+
+부트스트랩 4.5 사용
 https://getbootstrap.com/docs/4.5/
+
 
 완성본파일은 /dist 폴더에 있습니다.
 
