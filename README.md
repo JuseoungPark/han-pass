@@ -7,11 +7,13 @@
  ---
 
 터미널에서 실행 명령어
-----
+---
 npm install
 
 gulp watch  OR  ./node_modules/gulp/bin/gulp.js watch
-----
+---
+
+---
 
 [Browsersync] Access URLs:
  ---
@@ -19,6 +21,7 @@ gulp watch  OR  ./node_modules/gulp/bin/gulp.js watch
  ---
 [Browsersync] Serving files from: ./dist
 
+----
 
  ---
 부트스트랩 4.5 사용
