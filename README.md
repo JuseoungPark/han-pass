@@ -1,35 +1,29 @@
 # hanpass_pub
 한패스리뉴얼
 
-<p>
-1. 노드 설치
- --------------------------------------
+노드 설치
+ ---
       https://nodejs.org/ko/download/
- --------------------------------------
-</p>
+ ---
 
-<p>
-2. 터미널에서 실행 명령어
---------------------------------------
+터미널에서 실행 명령어
+----
 npm install
 gulp watch  OR  ./node_modules/gulp/bin/gulp.js watch
---------------------------------------
-</p>
+----
 
-<p>
 [Browsersync] Access URLs:
- --------------------------------------
+ ---
        Local: http://localhost:3000
- --------------------------------------
+ ---
 [Browsersync] Serving files from: ./dist
-</p>
 
-<p>
+
+ ---
 부트스트랩 4.5 사용
 https://getbootstrap.com/docs/4.5/
-</p>
 
-<p>
+ ---
 완성본파일은 /dist 폴더에 있습니다.
 
 /dist/worklist/는 퍼블리싱 작업목록 소스파일입니다.
@@ -40,4 +34,3 @@ https://getbootstrap.com/docs/4.5/
 /dist/js
 /dist/vendor
 위 5개폴더가 실제 소스파일입니다.
-</p>
