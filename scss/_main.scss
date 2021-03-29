@@ -77,12 +77,13 @@
             background:rgba(#476eff, 0.4) url(../images/icon-arrow-31x55-fff.png) no-repeat center center;
         }
     }
+    
 }
 .exchange-calc{
     // display: none;
     position: absolute; left:50%; top:50%; transform: translate(-640px, -50%); 
     padding:rem(24px) rem(20px); width:rem(440px);height: rem(617px);
-    border-radius: rem(16px); background-color: #ffffff; z-index: 100;
+    border-radius: rem(16px); background-color: #ffffff; z-index: 99;
     box-shadow: 0 2px 16px 2px rgba(105, 105, 105, 0.5);
      .desc{
          font-family: "Noto Sans KR"; color: #231916;
@@ -158,8 +159,8 @@
 .country{
     display: inline-block; padding:0 rem(4px) 0 rem(67px); line-height: rem(40px);
     font-family: Lato; font-size: rem(18px); font-weight: bold; color: #161616;
-    &.KR{background: url(../images/currency/flag-korea-40x40-3x.png) no-repeat left center; background-size: rem(40px) auto;}
-    &.AUD{background: url(../images/currency/flag-aud-40x40-3x.png) no-repeat left center; background-size: rem(40px) auto;}
+    &.kr{background: url(../images/currency/flag-korea-40x40-3x.png) no-repeat left center; background-size: rem(40px) auto;}
+    &.aud{background: url(../images/currency/flag-aud-40x40-3x.png) no-repeat left center; background-size: rem(40px) auto;}
     &.hungary{background: url(../images/currency/flag-hungary-29x29-3x.png) no-repeat left center; background-size: rem(40px) auto;}
 }
 
@@ -199,6 +200,7 @@
                 & + ul{margin:rem(-94px) 0 0 0;}
                 li{
                     position:relative; margin-top: rem(50px); 
+                    &>img{display: block; max-width: 100%;}
                     &>span{
                         position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); line-height: rem(34px);
                         font-family: Lato; font-size: rem(28px); font-weight: bold; color: #ffffff; text-align: center;
@@ -256,19 +258,51 @@
         }
         & + .btn{display: block; margin:rem(95px) auto;}
     }
-    .banner{
-        position: relative; width:rem(625px); height: rem(248px); padding:rem(20px) rem(40px); border-radius: rem(20px);
-        &>small{display: block; margin-top:rem(25px);line-height: rem(20px); font-size: rem(18px); font-weight: bold;}
-        &>p{margin-top:rem(63px); line-height: rem(30px); font-size: rem(24px); font-weight: bold;}
-        .btn-lg{position: absolute; bottom:rem(35px); padding: rem(21px) 0; right:rem(27px); width:rem(246px);}
-        .btn-link{
-            display: inline-block; padding-right:rem(30px); line-height: rem(33px); font-size: rem(24px); color:$dark; font-weight: bold;
-            background:url(../images/ico-more-view-b-19x18-3x.png) no-repeat right center; background-size: rem(19px) auto;
+    .banner-list{
+        &>li{position: relative; width:rem(625px); height: rem(248px);}
+        .banner{
+            width:100%; height: 100%; padding:rem(20px) rem(40px);  border-radius: rem(20px); overflow: hidden;
+            &>small{display: block; margin-top:rem(25px);line-height: rem(20px); font-size: rem(18px); font-weight: bold;}
+            &>p{margin-top:rem(63px); line-height: rem(30px); font-size: rem(24px); font-weight: bold;}
+            .btn-lg{position: absolute; bottom:rem(35px); padding: rem(21px) 0; right:rem(27px); width:rem(246px);}
+            .btn-link{
+                display: inline-block; padding-right:rem(30px); line-height: rem(33px); font-size: rem(24px); color:$dark; font-weight: bold;
+                background:url(../images/ico-more-view-b-19x18-3x.png) no-repeat right center; background-size: rem(19px) auto;
+            }
+            &.bg-1{background: #4f56fa; color:#fff;}
+            &.bg-2{background: #fed403; color:$dark;}
+            img.arcode{display: block; position: absolute; width:rem(146px); right:rem(40px); bottom:rem(35px);}
         }
-        &.bg-1{background: #4f56fa; color:#fff;}
-        &.bg-2{background: #fed403; color:$dark;}
-        img.arcode{display: block; position: absolute; width:rem(146px); right:rem(40px); bottom:rem(35px);}
     }
+    
+}
+@include media-breakpoint-down(lg) {
+    .main-visual .swiper-container{height: 90vh;}
+    .exchange-calc{left:rem(20px); transform: translate(0, -50%);}
+    .main-conts-01{padding: rem(142px) 0 rem(152px);}
+    .main-conts-04 .banner-list > li{width:48%;}
+}
+@include media-breakpoint-down(md) {
+    .main-conts-04 ul.bbs-list{flex-wrap: wrap;}
+    .main-conts-04 ul.bbs-list > li{width:48%; padding-top:rem(50px); }
+}
+@include media-breakpoint-down(sm) {
+    .main-conts-02 .card{width:100%; height: auto;}
+    .main-conts-02 .card.float-left{ padding-bottom: rem(50px);}
+    .main-conts-02 .card.float-right{flex-direction: column !important;}
+    .main-conts-02 .card.float-right ul{width:calc(172px * 30); height: auto; margin-right: 0;}
+    .main-conts-02 .card.float-right ul li{float: left; width:160px; height: auto; margin-top:12px; margin-right: 12px;}
+    .main-conts-02 .card.float-right ul li > span{font-size: rem(20px);}
+    .main-conts-02 .card.float-right ul + ul{margin: 0 0 0 rem(-84px);}    
+    .main-conts-02 .card.float-right ul.active{
+            animation: horizontalscroll 100s linear infinite;
+        -ms-animation: horizontalscroll 100s linear infinite;
+    }
+    .main-conts-04 ul.bbs-list{flex-wrap: wrap;}
+    .main-conts-04 ul.bbs-list > li{width:100%; padding-top:rem(50px); }
+    .main-conts-04 .banner-list{flex-wrap: wrap;}
+    .main-conts-04 .banner-list > li{width:100%;}
+    .main-conts-04 .banner-list > li + li {margin-top:rem(30px);}
 }
 @keyframes marquee {
     0% { 

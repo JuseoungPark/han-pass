@@ -20,7 +20,7 @@
     &>ul{display: flex;}
     &>ul>.nav-item{
       display: flex; flex-grow: 1; align-items: center; justify-content: center;
-      .nav-link{padding:rem(7px) rem(24px); color:#fff; font-weight: bold;}
+      .nav-link{padding:rem(7px) rem(24px); color:#fff; font-weight: bold; white-space: nowrap;}
       &.active{
         .nav-link{color:#fff;}
       }
@@ -66,18 +66,20 @@
 }
 
 #navbar-allmenu{
-  position: fixed; left: 0; top:0; width:100%; padding:rem(30px) 0 0; height: auto; background:#262626;
+  position: fixed; left: 0; top:0; width:100%; padding:0; height: auto; 
   transition: all 1s ease !important;
-  &.collapse:not(.show){display: block !important; top: -100%;  opacity: 0;}
-  &.collapse.show{display: block !important; top: 0;  opacity: 1;}
+  &.collapse:not(.show){ top: -100%;  opacity: 0;}
+  &.collapse.show{top: 0;  opacity: 1;}
   &.collapsing {
     top: 0;
     opacity: 1;
     transition: all 1s ease !important;
   }
+  .navbar-list{position: absolute; left:0;top:0; width:100%; background:#262626;}
   .navbar-collapse{
+    height: rem(530px);
     .navbar-collapse-header{
-      position: relative; width:100%; padding:rem(20px) 0 rem(54px);
+      position: relative; width:100%; padding:rem(40px) 0 rem(54px);
     }
     .logo-img{height: 28px; background: url(../images/allmenu-logo-180x28-fff-3x.png) no-repeat top center; background-size: 100% auto;}
     .nav{
@@ -94,25 +96,40 @@
       background: url(../images/ic-20-appbar-40x40-fff-3x.png) no-repeat center center; background-size: 40px 40px;
     }
     .navbar-nav{
-      position: relative; width:100%; color:#fff; 
+      position: relative; width:100%; margin-bottom:rem(38px); color:#fff; 
       .nav-link{color:#fff;}
       dl{
         font-family: "Noto Sans KR"; text-align: left; font-weight: bold;
-        & + dl{margin-left:rem(55px);}
+        & + dl{margin-left:rem(70px);}
         dt{margin-bottom:rem(17px); font-size: rem(14px); line-height: rem(20px);  color: #989898;}
         dd{
-          margin-bottom:rem(20px);  text-align: left; 
-          .nav-link{padding:0;font-size: rem(18px); line-height: rem(27px);}
+          width:rem(160px); margin-bottom:rem(20px);  text-align: left; 
+          .nav-link{
+            display: inline-block; padding:0 0 rem(5px) 0;font-size: rem(18px); line-height: rem(27px);
+            border-bottom: 2px solid transparent;
+          }
+          &:hover, &.active{
+            .nav-link{
+              border-bottom: 2px solid #fff;
+            }
+          }
         }
       }
     }
+    
     .sns-box{
-      position: relative; margin-top:rem(38px); padding:rem(22px) 0 rem(34px); width:100%; background:#4a4a4a;
+      position: absolute; left:0; bottom:0; padding:rem(22px) 0 rem(34px);
+      width:100%; height:rem(176px); opacity: 0;  overflow: hidden; background:#4a4a4a;
+      &.on{ bottom:rem(-175px); opacity: 1; transition: all 1s ease;}
       .nav{
         font-family: "Noto Sans KR"; font-size: rem(18px); line-height: rem(27px); font-weight: bold; text-align: left;
         .nav-item{padding-right: rem(10px);}
         .nav-item + .nav-item{margin-left:rem(50px);}
         .nav-link{padding:0; font-size: rem(14px); font-weight: normal; color:rgba(#ffffff, 0.5);}
+        .country{
+          font-family: "Noto Sans KR"; font-size: rem(14px); font-weight: bold; color:#fff;
+          padding-left:rem(24px); background-size: rem(18px) auto;
+        }
         &.sns-kind{
           margin-bottom: rem(20px);
           .nav-item{padding-bottom:4px; padding-right: 0; border-bottom:4px solid transparent; cursor: pointer;}
@@ -124,9 +141,11 @@
   }
 }
 
-
 @include media-breakpoint-up(lg) {
   .navbar-expand-lg .navbar-toggler {
     display: block;
   }
+}
+@include media-breakpoint-down(lg) {
+  .navbar .navbar-brand + .navbar-nav{display: none;}
 }

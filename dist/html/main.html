@@ -26,7 +26,7 @@
     <!-- navbar-header -->
     <div class="navbar-header">
       <!-- container-fluid -->
-      <div class="container-fluid">
+      <div class="container-fluid flex-nowrap">
         <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
         <div class="navbar-nav justify-content-between flex-grow-1">
           <ul>
@@ -37,7 +37,7 @@
             <li class="nav-item"><a class="nav-link" href="#">제휴문의</a></li>
             <li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
           </ul>
-          <ul class="nav">
+          <ul class="nav flex-nowrap">
             <li class="nav-item active"><a class="nav-link" href="#">KR</a></li>
             <li class="nav-item"><a class="nav-link" href="#">EN</a></li>
           </ul>
@@ -48,49 +48,9 @@
         <!-- navbar-collapse -->
         <div id="navbar-allmenu" class="collapse">
           <div class="navbar-collapse align-items-start flex-wrap">
-            <div class="container-fluid">
-              <div class="d-flex align-items-center navbar-collapse-header">
-                <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
-                <ul class="nav flex-grow-1 justify-content-end">
-                  <li class="nav-item active"><a class="nav-link" href="#">KOR</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">ENG</a></li>
-                </ul>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              </div>
-              <!-- navbar-nav -->
-              <div class="navbar-nav">
-                <dl>
-                  <dt>회사소개</dt>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                </dl>
-                <dl>
-                  <dt>회사소개</dt>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                </dl>
-                <dl>
-                  <dt>회사소개</dt>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                </dl>
-                <dl>
-                  <dt>회사소개</dt>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                </dl>
-                <dl>
-                  <dt>회사소개</dt>
-                  <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
-                </dl>
-              </div>
-              <!-- navbar-nav // -->
-              
-            </div>
             <!-- sns-box -->
+            <!-- 메뉴 선택시 하위 메뉴 있는 경우 아래로 자연스럽게 나타나게 해주세요 ^^
+            메뉴 효과 참고 : https://titleistapparel.co.kr/brand/faq -->
             <div class="sns-box">
               <div class="container-fluid flex-column align-items-start">
                 <ul class="nav sns-kind">
@@ -109,7 +69,63 @@
                 </ul>
               </div>
             </div>
-            <!-- sns-box // -->
+            <!-- sns-box // -->    
+            <div class="navbar-list">
+              <div class="container-fluid">
+                <div class="d-flex align-items-center navbar-collapse-header">
+                  <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
+                  <ul class="nav flex-grow-1 justify-content-end">
+                    <li class="nav-item active"><a class="nav-link" href="#">KOR</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ENG</a></li>
+                  </ul>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+                <!-- navbar-nav -->
+                <div class="navbar-nav">
+                  <dl>
+                    <dt>회사소개</dt>
+                    <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">대표소개</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">부패방지</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">라이센스</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">로고 CI / BI </a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">오시는 길</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>사업소개</dt>
+                    <dd class="nav-item"><a class="nav-link" href="#">핵심 가치</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">송금</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">결제</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">구매대행 한마켓</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>서비스소개</dt>
+                    <dd class="nav-item"><a class="nav-link" href="#">앱소개</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">월렛</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">해외송금</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">국내송금</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">ATM출금</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">QR</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>커뮤니티</dt>
+                    <dd class="nav-item"><a class="nav-link" href="#">공지사항</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">뉴스</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">이벤트</a></dd>
+                  </dl>
+                  <dl>
+                    <dt>고객센터</dt>
+                    <dd class="nav-item"><a class="nav-link" href="#">FAQ</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">QnA</a></dd>
+                    <dd class="nav-item"><a class="nav-link" href="#">제휴문의</a></dd>
+                    <dd class="nav-item active" id="go-sns"><a class="nav-link" href="#">SNS</a></dd>
+                  </dl>
+                </div>
+                <!-- navbar-nav // -->
+              </div>
+            </div>  
           </div>
         </div>
         <!-- navbar-collapse // -->
@@ -378,7 +394,7 @@
           </li>
         </ul>
         <a href="#" class="btn btn-outline-light btn-lg" role="button" aria-disabled="true">새로운 소식 더보기</a>
-        <ul class="d-flex justify-content-between">
+        <ul class="d-flex justify-content-between banner-list">
           <li>
             <div class="banner bg-1">
               <small>Partnership Proposal</small>
