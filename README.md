@@ -9,6 +9,7 @@
 터미널에서 실행 명령어
 ----
 npm install
+
 gulp watch  OR  ./node_modules/gulp/bin/gulp.js watch
 ----
 
