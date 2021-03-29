@@ -10,11 +10,11 @@ $(document).ready(function(){
         $.fn.fullpage.moveTo(1);
         jQuery(this).fadeOut(200);
     })
-	$(".dropdown .dropdown-item:not(.disabled)").on("click", function() {
+	$(".dropdown-select .dropdown-item:not(.disabled)").on("click", function() {
 		let text = $(this).html()
-		$(".dropdown .dropdown-item").removeClass('active')
+		$(".dropdown-select .dropdown-item").removeClass('active')
 		$(this).addClass('active')
-		$(this).parents('.dropdown').children(".dropdown-toggle").html(text)
+		$(this).parents('.dropdown-select').children(".dropdown-toggle").html(text)
     })
 })
 

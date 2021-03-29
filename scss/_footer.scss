@@ -5,6 +5,16 @@
     background: url(../images/footer-logo-265x41-3x.png) no-repeat top center;
     background-size: 100% auto;
   }
+  .dropdown{
+    width:rem(280px);
+    .btn.dropdown-toggle{
+      width:100%; height: rem(60px); border-radius: rem(13px);
+      font-family: "Apple SD Gothic Neo"; font-size: rem(18px); font-weight: bold; color:#fff;
+      background:#989898 url(../images/ico-outlinkopen-21x22-3x.png) no-repeat right 15px center; background-size: rem(21px) auto;
+      &:focus, &:active{color:#ffffff; background:#242424 url(../images/ico-outlinkclose-19x20-3x.png) no-repeat right 15px center; background-size: rem(19px) auto;}
+    }
+    .dropdown-menu{width:100%; border-radius: rem(13px); border:1px solid #e1e1e1; box-shadow: 1px 5px 10px rgba(#000000, 0.1);}
+  }
   p{margin-top:rem(38px); line-height: rem(20px); font-family: "Noto Sans KR"; color:#989898; }
   .nav{
     margin-top:rem(65.4px);

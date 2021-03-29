@@ -1,0 +1,7 @@
+.input-group{
+    input[class*="form-control"] + .btn-search{
+        width:21px; padding:0; text-indent: -9999999px; border:0; border-radius: 0;
+        background: url(../images/search-icon-000-21-21-3x.png) no-repeat right center; background-size: 21px auto;
+        &:focus, &:active{border:0;}
+    }
+}

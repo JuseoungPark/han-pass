@@ -126,11 +126,8 @@
       <!-- exchange-calc -->
       <div class="exchange-calc">
         <div class="desc">
-          <h2>Pass by Hanpass</h2>      
-          <p>
-            Want to see how much money you can save with HANPASS?
-            <span>You can save up to 90% compared to other remittance services.</span> 
-          </p>
+          <h2>당신이 꿈꾸던 송금을 시작해보세요.</h2>      
+          <p>실시간 환율 체크 · 심플한 송금 절차 <br> 언제 어디서나 간편하게</p>
         </div>
         <div class="form-group deposit">
           <h5 for="deposit">You Deposit(include fee)</h5>
@@ -144,16 +141,22 @@
         </div>
         <div class="form-group sending">
           <div class="input-group">
-            <img src="../images/ico-send-money-33x33-3x.png" alt="">
-            <div class="dropdown">
+            <div class="dropdown dropdown-select">
               <!-- data-offset="0,-33" -->
-              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">픽업 장소를 선택해 주세요</button>
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>ভাষা শহীদদের ন্যায় বাংলার রেমিটেন্স যোদ্ধারাও যুগেযুগে হয়ে </span>
+              </button>
               <div class="dropdown-menu">
                 <div class="dropdown-header">픽업 장소를 선택해 주세요</div>
                 <!-- <div role="separator" class="dropdown-divider"></div> -->
                 <a class="dropdown-item" href="#">캐시픽업</a>
                 <a class="dropdown-item" href="#">계좌이체</a>
               </div>
+            </div>
+            <div class="dropdown dropdown-select">
+              <button class="btn dropdown-toggle" type="button" data-toggle="modal" data-target="#modal1">
+                <span>픽업 장소를 선택해 주세요</span>
+              </button>
             </div>
           </div>
         </div>
@@ -162,17 +165,10 @@
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="dropdown currency-dropdown">
-                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn dropdown-toggle" type="button" d data-toggle="modal" data-target="#country-select-model">
                   <div class="currency AUD">AUD</div>
                 </button>
-                <div class="dropdown-menu">
-                  <div class="dropdown-header">Currencies</div>
-                  <!-- <div role="separator" class="dropdown-divider"></div> -->
-                  <a class="dropdown-item" href="#"><div class="currency KRW">KRW</div></a>
-                  <a class="dropdown-item" href="#"><div class="currency AUD">AUD</div></a>
-                </div>
               </div>
-              
             </div>
             <input type="text" value="1,089" class="form-control-plaintext text-right" id="recipient" placeholder="Enter Recipient">
             <div class="cal-tooltip">최소 100,000</div>
@@ -193,9 +189,11 @@
           <div class="swiper-slide">
             <div class="main-visual-bg-01">
               <div class="main-visual-bg-line-01"></div>
+              <div class="main-visual-bg-currency-01"></div>
             </div>
             <div class="caption d-none d-md-block text-white">
-              <p>Great rates, <br>exceptional service</p> 
+              <strong>ALL IN<br><span>ONE APP</span></strong>
+              <p>송금도 결제도 한패스 하나로 편리하게</p>
             </div>
           </div>
           <div class="swiper-slide">
@@ -259,8 +257,9 @@
         <h3>Pass by Hanpass!</h3>
         <h4>세상을 움직이는 가치, 한패스가 연결합니다.</h4>
         <p>
-          지속적인 도전과 혁신으로 다양한 서비스 솔루션을 <br>
-          고객에게 제공하는 <strong>글로벌 외환 금융 대표기업</strong>으로 만들어 나갑니다.
+          금융 생활이 더욱 편리해지는 모든 서비스를 한패스에 담았습니다.<br>
+          <strong>해외공과금 납부 ∙ 모바일 월렛 · 선불 카드결제</strong> 등<br>
+          다양한 서비스를 한패스 하나로 경험하세요.
         </p>
         <a href="#" class="btn btn-dark btn-lg" role="button" aria-disabled="true">한패스 소개 바로가기</a>
       </div>
@@ -273,11 +272,9 @@
           <div>
             <small>한패스는</small> <br><br><br>
             <p>
-              국내에서 해외, <br>
-              해외에서 국내로, <br>
-              해외에서 해외로 <br>
-              <strong>송금 및 결제서비스를 제공하는 <br> “크로스보더(cross-border) 금융 플랫폼” </strong> <br>
-              으로 나아가고 있습니다.
+              국내에서 세계로,<br>해외에서 국내로,<br>해외에서 해외로<br>
+              <strong>송금 및 결제서비스를 제공하는<br>“글로벌 외환 금융 플랫폼”</strong><br>
+              으로 도약하고 있습니다.
             </p>
             <a href="#" class="btn btn-dark btn-lg" role="button" aria-disabled="true">사업소개 바로가기</a>
           </div>
@@ -396,12 +393,25 @@
                 <a href="#" class="btn btn-link" role="button" aria-disabled="true">App Store</a> <br>
                 <a href="#" class="btn btn-link" role="button" aria-disabled="true">Google Play</a>
               </p>
+              <img src="../images/img-qr-146x146-3x.png" class="arcode" alt="">
             </div>
           </li>
         </ul>
         <!-- footer -->
         <div class="footer">
-          <a href="#"><div class="logo-img">한패스</div></a>
+          <div class="d-flex justify-content-between">
+            <a href="#"><div class="logo-img">한패스</div></a>
+            <div class="dropdown dropup">
+              <button class="btn dropdown-toggle" type="button" data-offset="0,10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                관계사 바로가기
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">구매대행</a>
+                <a class="dropdown-item" href="#">글로지스</a>
+                <a class="dropdown-item" href="#">한마켓</a>
+              </div>
+            </div>
+          </div>
           <p>
             주소 . 서울 성동구 아차산로 92, 광명타워 4층 04782 한패스㈜ 팩스 . (+82) 2.465.0767 이메일 . contact@hanpass.com <br>
             전화 . (+82) 2.3409.1540 평일 . 09:00AM - 18:00PM 점심시간 . 12:00PM - 01:00PM (토/일/공휴일 휴무) <br>
@@ -419,7 +429,43 @@
     </div>
     <!-- main-conts-04 -->
   </div>
-  
+ 
+  <!-- country-select-model -->
+  <div class="modal fade" id="country-select-model" tabindex="-1" role="dialog" aria-labelledby="country-select-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="country-select-title">충전할 국가를 선택해주세요.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">닫기</button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" value="" class="form-control-plaintext" placeholder="국가 검색">
+            <button type="button" class="btn-search" aria-label="Search">국가 검색</button>
+          </div>
+          <div class="country-list">
+            <h6>주요 국가</h6>
+            <ul class="d-flex flex-wrap">
+              <li><div class="country hungary">헝가리<span>HU +36</span></div></li>
+              <li><div class="country hungary">헝가리<span>HU +36</span></div></li>
+              <li><div class="country hungary">우즈베키스탄<span>HU +36</span></div></li>
+              <li><div class="country hungary">헝가리<span>HU +36</span></div></li>
+            </ul>
+          </div>  
+          <div class="country-list">
+            <h6>다른 국가</h6>
+            <ul class="d-flex flex-wrap">
+              <li><div class="country hungary">우즈베키스탄우즈베키스탄<span>HU +36</span></div></li>
+              <li><div class="country hungary">헝가리<span>HU +36</span></div></li>
+              <li><div class="country hungary">우즈베키스탄<span>HU +36</span></div></li>
+              <li><div class="country hungary">헝가리<span>HU +36</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- country-select-model // -->
     
 </body>
 </html>

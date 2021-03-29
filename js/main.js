@@ -50,6 +50,7 @@ function makeFullPage(){
 				//내려갈때
 				if(index - nextIndex <= -1){
 					$('#top-btn').fadeIn();
+					$('.navbar').removeClass('von');
 					$('.navbar').addClass('on');
 				}
 			}
@@ -59,12 +60,14 @@ function makeFullPage(){
 				if(index - nextIndex == 1){
 					if(index == 2 && nextIndex == 1 && direction == 'up'){
 						$('#top-btn').fadeOut();
+						$('.navbar').removeClass('von');
 						$('.navbar').removeClass('on');
 						}
 				}
 				//여러칸 올라갈때
 				if(index - nextIndex > 1){
 					$('#top-btn').fadeOut();
+					$('.navbar').removeClass('von');
 					$('.navbar').removeClass('on');
 				}
 			}
@@ -75,7 +78,7 @@ function makeFullPage(){
 }
 function makeSwiper(){
 	//SWIPER - TOP VISUAL AREA PC / MOBILE
-	var swiperAutoplayDelay = 5000;
+	var swiperAutoplayDelay = 4000;
 	// var tick;
 	var swiper = new Swiper('.swiper-container', {
 		navigation: {
@@ -83,7 +86,7 @@ function makeSwiper(){
 			prevEl: '.carousel-control-prev'
 		},
 		loop: true,
-		speed : 1200,
+		speed : 1100,
 		autoplay: {
 			delay: swiperAutoplayDelay,
 			disableOnInteraction: true,
@@ -95,12 +98,16 @@ function makeSwiper(){
 		},
 		on: {
 			// afterInit: () => {
-			// 	console.log("afterInit")
-			// 	$(".main-visual").addClass("effect")
 			// },
 			slideChangeTransitionStart: function() {
-				$(".swiper-slide-active").removeClass("effect")
 				console.log("slideChangeTransitionStart")
+				$(".swiper-slide-active").removeClass("effect")
+				let visual5 = $(".swiper-slide-active").find('.main-visual-bg-05').length
+				if(visual5){
+					$('.navbar').addClass('von');
+				}else{
+					$('.navbar').removeClass('von');
+				}
 			},
 			slideChangeTransitionEnd: function() {
 				$(".swiper-slide-active").addClass("effect")

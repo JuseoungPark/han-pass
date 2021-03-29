@@ -1,7 +1,7 @@
 // Custom extra large button size
 .btn{
-  outline: 0; font-family: "Apple SD Gothic Neo"; box-shadow: none !important;
-  &.focus, &:focus{box-shadow: none;}
+  outline: 0; font-family: "Apple SD Gothic Neo"; box-shadow: none !important; transition: .3s;
+  &.hover, &:hover, &.focus, &:focus, &:active{box-shadow: none;}
 }
 .btn-link{
   &.hover, &:hover, &.focus, &:focus, &:active {text-decoration: none;}
@@ -11,14 +11,17 @@
 .btn-primary{
   &.focus, &:focus, &:active, &:hover{color:#fff; background: $primary;}
 }
-.btn-dark{border:0;}
+.btn-dark{
+  border:0;
+  &.focus, &:focus, &:active, &:hover{color:#fff; background: $primary;}
+}
 .btn-light{
   color:#fff;
   &.focus, &:focus, &:active, &:hover{color:#fff; background: $light;}
 }
 .btn-outline-light{ // c0c0c0
   color:#262626; border-color: #979797; background: $white;
-  &.focus, &:focus, &:active, &:hover{color:$white !important; background: $primary !important;}
+  &.focus, &:focus, &:active, &:hover{color:$white !important; border-color: $primary; background: $primary !important;}
 }
 .btn-cancel{color:#fff;background: #3eb7c8;}
 
