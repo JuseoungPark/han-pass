@@ -248,9 +248,11 @@
         }
     }
     .agreement-wrap{
-        font-family: "Noto Sans KR"; color:#262626; height: 500px;
-        h2{margin-bottom:88px; font-size: rem(30px);  font-weight: bold;}
+        font-family: "Noto Sans KR"; color:#262626; height: 710px;
+        h2{margin-bottom:50px; font-size: rem(30px);  font-weight: bold;}
         p {padding-left:47px; font-size: rem(18px);line-height: 1.44;padding-bottom: 50px;}
-        strong{font-size: rem(18px);  font-weight: bold;}
+        strong{font-size: rem(20px); font-weight: bold;}
+        strong.h3{font-size: rem(18px); margin-bottom: rem(40px); font-weight: bold;}
+        strong.h4{font-size: rem(20px); font-weight: bold;}
     }
 }
