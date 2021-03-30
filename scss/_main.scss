@@ -233,7 +233,7 @@
     ul>li>span{display: block; line-height:rem(23px); font-size: rem(18px); color:#4f4f4f; font-weight: bold;}
     ul>li>strong{display: block;margin:rem(14px) 0 0 0; line-height:rem(45px); font-family: Lato; font-size: rem(42px);color:$primary;}
     ul + ul>li{padding:0 rem(60px);}
-    .main-conts-bg{margin-top:-25px; width: rem(885px); height: auto;}
+    .main-conts-bg{margin-top:rem(-25px); width: rem(885px); height: auto;}
 }
 
 .main-conts-04{
@@ -249,7 +249,7 @@
     h4>strong{font-weight: 500;color:$dark;}
     ul{list-style: none;}
     ul.bbs-list{
-        margin-top:56px;
+        margin-top:rem(56px);
         &>li{
             width:rem(404px);
             &>img{display: block; width:100%;}
@@ -287,6 +287,30 @@
     .main-conts-04 ul.bbs-list > li{width:48%; padding-top:rem(50px); }
 }
 @include media-breakpoint-down(sm) {
+    .fullpage-wrapper{margin-top:rem(75px);}
+    .fullpage-wrapper .section:not(.main-visual) .container-fluid{padding-top:rem(75px);}
+    .main-visual .swiper-container{margin-top:rem(-50px); height: 350px;}
+    .main-visual .caption{transform: translate(-50%,-50%);}
+    .main-visual .caption.d-none{display: block !important;}
+    .main-visual .caption strong{font-size: rem(36px); line-height: 1.44;}
+    .main-visual .caption strong > span{font-size: rem(42px); line-height: 1.44;}
+    .main-visual .caption p{padding-left:0; font-size: rem(20px); line-height: 1.44;}
+    .main-visual .main-visual-bg-01 + .caption strong{font-size: rem(30px); line-height: 1.44;}
+    .main-visual .main-visual-bg-01 + .caption p{width:170px; font-size: rem(20px); margin-top:rem(20px);}
+    .main-visual .carousel-control-prev-icon, 
+    .main-visual .carousel-control-next-icon{width:50px;height: 50px; background-size: 10px auto;}
+    .exchange-calc{
+        position: relative; left:inherit; top:rem(20px); 
+        margin:0 auto; width:90%; 
+        transform: translate(0, 0);
+    }
+    .main-conts-01{padding:0 0 rem(20px); letter-spacing: rem(-1.5px);}
+    .main-conts-01 h3{font-size: rem(36px);}
+    .main-conts-01 h4{font-size: rem(20px);}
+    .main-conts-01 p{margin:rem(35px) auto; width:100%; font-size: rem(22px); line-height: 1.7;}
+
+    .main-conts-02{letter-spacing: rem(-1.5px);}
+    .main-conts-02 .card.float-left p{font-size: rem(26px);line-height: 1.5;}
     .main-conts-02 .card{width:100%; height: auto;}
     .main-conts-02 .card.float-left{ padding-bottom: rem(50px);}
     .main-conts-02 .card.float-right{flex-direction: column !important;}
@@ -298,11 +322,45 @@
             animation: horizontalscroll 100s linear infinite;
         -ms-animation: horizontalscroll 100s linear infinite;
     }
-    .main-conts-04 ul.bbs-list{flex-wrap: wrap;}
-    .main-conts-04 ul.bbs-list > li{width:100%; padding-top:rem(50px); }
+    .main-conts-03{padding-top:rem(20px); letter-spacing: rem(-1.5px);}
+    .main-conts-03 p{font-size: rem(26px); margin:0 auto; width:73%;}
+    .main-conts-03 .main-conts-bg{width:100%; margin-top:rem(-100px);}
+    .main-conts-03 ul{flex-wrap: wrap;}
+    .main-conts-03 ul > li{padding:0 rem(20px);}
+    .main-conts-03 ul + ul{margin-top:rem(50px);}
+    .main-conts-03 ul + ul > li{padding:0 rem(30px); margin-bottom:rem(50px);}
+    .main-conts-03 ul > li > strong{font-size: rem(26px);}
+
+    .main-conts-04{letter-spacing: rem(-1.5px);}
+    .main-conts-04 h4{font-size: rem(26px); line-height: 1.44; }
+    .main-conts-04 ul.bbs-list{margin-top:rem(36px); flex-wrap: wrap; letter-spacing: rem(-1.5px);}
+    .main-conts-04 ul.bbs-list > li{width:100%; padding-top:0; }
+    .main-conts-04 ul.bbs-list > li + li{margin-top:rem(50px);}
     .main-conts-04 .banner-list{flex-wrap: wrap;}
-    .main-conts-04 .banner-list > li{width:100%;}
+    .main-conts-04 .banner-list > li{width:100%; }
     .main-conts-04 .banner-list > li + li {margin-top:rem(30px);}
+    .main-conts-04 .banner-list .banner{padding:rem(10px) rem(40px);}
+    .main-conts-04 .banner-list .banner > p{margin-top:rem(30px); line-height: 1.4; font-size: rem(22px);}
+    .main-conts-04 .banner-list .banner .btn-lg, 
+    .main-conts-04 .banner-list .banner .btn-group-lg > .btn{
+        position: relative; right:inherit; bottom:inherit; margin-top:rem(30px);
+        padding: rem(11px) 0;  width:rem(146px); font-size: rem(16px); 
+    }
+    .main-conts-04 .banner-list .banner .btn-link{
+        padding:0 rem(30px) 0 0; line-height: 1.44; font-size: rem(20px);
+    }
+    .main-conts-04 .banner-list .banner.bg-2 p{
+        margin-top:rem(70px); line-height: 1.5; font-size: rem(24px);
+    }
+    .main-conts-04 .banner-list .banner img.arcode{
+        width:rem(100px); right:rem(25px); bottom:rem(30px);
+    }
+    .footer{padding:rem(56px) 0 rem(30px); }
+    .footer>.d-flex{flex-direction: column;}
+    .footer .logo-img{width:200px;}
+    .footer .dropdown{margin-top:rem(20px); width:100%;}
+    .footer p{line-height: 1.35;}
+    .footer .nav{margin-top:rem(35.4px);}
 }
 @keyframes marquee {
     0% { 

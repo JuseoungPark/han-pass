@@ -5,13 +5,8 @@ html{font-size: 16px;}
 @include media-breakpoint-down(md) {
   html{font-size: 14px;}
 }
-// @media (max-width: 1580px){
-//   html{font-size: 15px;}
-// }
-body{
-  // overflow-x: auto !important;
-  // overflow-y: hidden !important;
-}
+
+
 a:hover{text-decoration: none;}
 .container-fluid::after {
   @include clearfix;
