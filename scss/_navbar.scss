@@ -96,14 +96,14 @@
       background: url(../images/ic-20-appbar-40x40-fff-3x.png) no-repeat center center; background-size: 40px 40px;
     }
     .navbar-nav{
-      position: relative; width:100%; margin-bottom:rem(38px); color:#fff; 
+      position: relative; width:100%; padding-bottom:rem(38px); color:#fff; 
       .nav-link{color:#fff;}
       dl{
-        font-family: "Noto Sans KR"; text-align: left; font-weight: bold;
+        width:rem(160px); font-family: "Noto Sans KR"; text-align: left; font-weight: bold;
         & + dl{margin-left:rem(70px);}
         dt{margin-bottom:rem(17px); font-size: rem(14px); line-height: rem(20px);  color: #989898;}
         dd{
-          width:rem(160px); margin-bottom:rem(20px);  text-align: left; 
+          width:100%; margin-bottom:rem(20px);  text-align: left; 
           .nav-link{
             display: inline-block; padding:0 0 rem(5px) 0;font-size: rem(18px); line-height: rem(27px);
             border-bottom: 2px solid transparent;
@@ -131,7 +131,7 @@
           padding-left:rem(24px); background-size: rem(18px) auto;
         }
         &.sns-kind{
-          margin-bottom: rem(20px);
+          margin-right:0; margin-bottom: rem(20px);
           .nav-item{padding-bottom:4px; padding-right: 0; border-bottom:4px solid transparent; cursor: pointer;}
           .nav-item.active{border-bottom:2px solid #fff;}
           .nav-item + .nav-item{margin-left:rem(40px);}
@@ -148,17 +148,38 @@
 }
 @include media-breakpoint-down(lg) {
   .navbar .navbar-brand + .navbar-nav{display: none;}
+  #navbar-allmenu{height: calc(100vh - 154px);}
+  #navbar-allmenu .navbar-list,
+  #navbar-allmenu .navbar-list>.container-fluid{height: 100%;}
+  #navbar-allmenu .navbar-collapse .navbar-toggler-icon{background-size: 30px 30px;}
+  #navbar-allmenu .navbar-collapse{height: 100%;}
+  #navbar-allmenu .navbar-collapse .navbar-collapse-header{padding:rem(25px) 0 rem(35px) 0;}
+  #navbar-allmenu .navbar-collapse .navbar-nav{
+    height: calc(100vh - 154px - 93px); padding-bottom:rem(20px); letter-spacing: rem(-1.5px); overflow-y: auto;
+  }
+  #navbar-allmenu .navbar-collapse .navbar-nav dl{width:33.33333%;}
+  #navbar-allmenu .navbar-collapse .navbar-nav dl + dl{margin-left:0;}
+  #navbar-allmenu .navbar-collapse .navbar-nav dl dd .nav-link{font-size: rem(16px); line-height: 1.4;}
+  .navbar .navbar-header{padding:rem(15px)  0;}
+  
 }
 
 @include media-breakpoint-down(sm) {
-  .navbar .navbar-header{padding:rem(15px)  0;}
-  .navbar{
+  .navbar{  
     background: $white;
     .navbar-header{padding-top:rem(30px);}
     .logo-img{background: url(../images/hanpass-logo-180x30-000-3x.png) no-repeat top center; background-size: 100% auto;}
     .navbar-brand + .navbar-nav ul>.nav-item .nav-link,
     .navbar-brand + .navbar-nav .nav>.nav-item.active .nav-link{color:#3b3b3b;}
     .navbar-brand + .navbar-nav .nav>.nav-item .nav-link{color:#9e9e9e;}
-    .navbar-toggler-icon{background: url(../images/ic-24-popup-40x40-000-3x.png) no-repeat center center; background-size: 40px 40px;}
+    .navbar-toggler{width:rem(30px); height: rem(30px);}
+    .navbar-toggler-icon{background: url(../images/ic-24-popup-40x40-000-3x.png) no-repeat center center; background-size: 30px 30px;}
   }
+  #navbar-allmenu .navbar-collapse .navbar-nav dl dd{margin-bottom:rem(10px);}
+  #navbar-allmenu .navbar-collapse .sns-box{padding:rem(12px) 0 rem(24px); letter-spacing: rem(-1.5px); overflow-y: auto;}
+  #navbar-allmenu .navbar-collapse .sns-box .nav{font-size: rem(16px); line-height: 1.4;}
+  #navbar-allmenu .navbar-collapse .sns-box .nav .nav-item{margin-top:rem(10px); width:25%;}
+  #navbar-allmenu .navbar-collapse .sns-box .nav .nav-item + .nav-item{margin-left:0;}
+  #navbar-allmenu .navbar-collapse .sns-box .nav.sns-kind{margin-bottom: rem(10px);}
+  #navbar-allmenu .navbar-collapse .sns-box .nav.sns-kind .nav-item{width:auto;}
 }
