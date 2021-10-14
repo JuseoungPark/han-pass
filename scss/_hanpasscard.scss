@@ -1,0 +1,471 @@
+.navbar {
+  &.sub1 {
+    position: absolute;
+  }
+}
+.sub-visual {
+  &.hanpass-card {
+    height: auto;
+    .title {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      h2 {
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        font-size: rem(56px);
+        font-weight: 500;
+        letter-spacing: -0.76px;
+        color: #fff;
+        & > span {
+          margin-top: rem(10px);
+          display: block;
+          font-size: rem(20px);
+          letter-spacing: -0.27px;
+        }
+      }
+    }
+    .sub-visual-bg {
+      display: block;
+      position: relative;
+      min-width: 100%;
+      top: inherit;
+      left: inherit;
+      transform: inherit;
+    }
+  }
+}
+
+.sub-cont-hanpass-card-01 {
+  padding-top: rem(80px);
+  h3 {
+    font-size: rem(46px);
+    font-weight: bold;
+    line-height: 1.41;
+    color: #18191a;
+  }
+  p {
+    padding-top: rem(50px);
+    font-size: rem(22px);
+    line-height: 1.45;
+    color: #6d6d6d;
+  }
+  ul.desc-box {
+    margin-top: 90px;
+    width: 100%;
+    @include clearfix;
+    li {
+      position: relative;
+      float: left;
+      width: 31.5%;
+      height: rem(548px);
+      border-radius: 24px;
+      box-shadow: 0 0 20px 0 rgba(121, 121, 121, 0.2);
+      background-color: #fff;
+      text-align: center;
+      strong {
+        font-weight: bold;
+      }
+      & > .img {
+        margin-top: rem(87px);
+        text-align: center;
+        &.img-cashback > img {
+          width: rem(204px);
+          height: rem(225px);
+        }
+        &.img-bus > img {
+          width: rem(238px);
+          height: rem(182px);
+        }
+        &.img-global > img {
+          width: rem(187px);
+          height: rem(240px);
+        }
+      }
+      & > p {
+        position: absolute;
+        bottom: rem(34px);
+        width: 100%;
+        font-family: 'Apple SD Gothic Neo';
+        font-size: rem(26px);
+        line-height: 1.54;
+        color: #18191a;
+      }
+      & + li {
+        margin-left: 2.75%;
+      }
+      strong {
+        display: block;
+      }
+    }
+  }
+  .annual-fees {
+    position: relative;
+    margin-top: rem(30px);
+    width: 100%;
+    font-size: rem(18px);
+    line-height: 2.11;
+    text-align: center;
+    color: #18191a;
+    text-align: right;
+  }
+}
+
+.sub-cont-hanpass-card-02 {
+  margin: rem(183.4px) 0 rem(220px);
+  height: 589px;
+  @include left-middle;
+  .container-fluid {
+    height: 100%;
+  }
+  .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .desc {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  h3 {
+    margin-top: 87.5px;
+    font-size: rem(38px);
+    font-weight: 500;
+    line-height: 1.53;
+    color: #18191a;
+  }
+  p {
+    margin-top: rem(108px);
+    font-size: rem(22px);
+    line-height: 1.45;
+    color: #6d6d6d;
+  }
+}
+
+.sub-cont-hanpass-card-03 {
+  margin: 104px 0 77px;
+
+  .banner-box {
+    .background {
+      display: block;
+      width: 100%;
+      max-width: 1580px;
+      margin: 0 auto;
+    }
+    .background-color {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+    .content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      .arr-link {
+        display: block;
+        position: absolute;
+        width: 80px;
+        height: 24px;
+        & > img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .desc {
+        margin-top: 7%;
+        color: #fff;
+        p {
+          font-size: 18px;
+          line-height: 1.56;
+        }
+        h3 {
+          font-family: 'Apple SD Gothic Neo';
+          margin-top: 54px;
+          font-size: 50px;
+          font-weight: 900;
+          & > span {
+            display: block;
+            font-size: 22px;
+            opacity: 0.7;
+            line-height: 2.55;
+            letter-spacing: -0.3px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    &.banner1 {
+      position: relative;
+      width: 100%;
+      text-align: right;
+      .background-color {
+        top: 9%;
+        bottom: 0;
+        background-image: linear-gradient(to left, #132e66, #045f9f);
+      }
+      .content {
+        top: 9%;
+        bottom: 0;
+        .arr-link {
+          left: 0;
+          bottom: 20%;
+        }
+        .desc {
+          margin-top: 7%;
+        }
+      }
+    }
+    &.banner2 {
+      position: relative;
+      margin-top: rem(44px);
+      width: 100%;
+      .background-color {
+        top: 0;
+        bottom: 10.4%;
+        background-image: linear-gradient(to left, #194e9a, #d01c43);
+      }
+      .content {
+        top: 0;
+        bottom: 10.4%;
+        .arr-link {
+          right: 0;
+          bottom: -7%;
+          .desc {
+            margin-top: 7%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sub-cont-hanpass-card-04 {
+  margin-top: rem(176px);
+  .benefit {
+    position: relative;
+    margin: 0 166px 0 36px;
+    & + .benefit {
+      margin-top: 83px;
+    }
+  }
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    &.icon-cashback {
+      top: 50px;
+      right: 0;
+      width: 204px;
+      height: 225px;
+    }
+    &.icon-bus {
+      top: 20px;
+      right: 0;
+      width: 238px;
+      height: 182px;
+    }
+    &.icon-global {
+      top: 20px;
+      right: 43px;
+      width: 187px;
+      height: 240px;
+    }
+  }
+  .desc {
+    margin-top: rem(24px);
+    position: relative;
+  }
+  .label {
+    width: rem(140px);
+    height: rem(48px);
+    font-family: 'Apple SD Gothic Neo';
+    font-size: rem(24px);
+    font-weight: bold;
+    line-height: 2.33;
+    text-align: center;
+    color: #fff;
+    border-radius: rem(32px);
+    background-color: #3b57f1;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #18191a;
+  }
+  h4 {
+    margin-top: rem(51px);
+    width: 70%;
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.38;
+    color: #18191a;
+  }
+  dl {
+    margin-top: 33px;
+    border-top: 2px solid #18191a;
+    @include clearfix;
+    dt,
+    dd {
+      float: left;
+      margin-top: 35px;
+    }
+    dt {
+      width: 112px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #18191a;
+    }
+    dd {
+      width: calc(100% - 112px);
+      padding-left: 50px;
+      font-size: 18px;
+      color: #6d6d6d;
+    }
+  }
+  .card {
+    margin-top: 53px;
+    border-top: 2px solid #18191a;
+    border-bottom: 2px solid #18191a;
+    .collapse + .card-header {
+      border-top: 2px solid #18191a;
+    }
+    .card-header {
+      position: relative;
+      border-radius: 0;
+      padding: 33px 0;
+      cursor: pointer;
+      h5 {
+        font-size: 24px;
+        color: #18191a;
+        font-weight: bold;
+      }
+      .icon {
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+      }
+      &.collapsed .icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+    .card-body {
+      background: rgba(38, 38, 38, 0.03);
+      .fill-method-cont {
+        padding: 40px;
+        text-align: center;
+        h6 {
+          font-size: 24px;
+          font-weight: bold;
+          color: #18191a;
+        }
+        .fill-method-step {
+          @include clearfix;
+          li {
+            float: left;
+            margin-top: 53px;
+            width: 50%;
+            & > span {
+              display: block;
+              font-family: 'Apple SD Gothic Neo';
+              font-size: 18px;
+              font-weight: 900;
+              color: #18191a;
+            }
+            img {
+              margin: 0 auto;
+              display: block;
+              margin: 18px auto;
+              width: 220px;
+              height: 220px;
+            }
+            p {
+              font-family: 'Apple SD Gothic Neo';
+              font-size: 18px;
+              line-height: 1.44;
+              color: #18191a;
+              & > span {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      .info-cont {
+        padding: 49px 39px;
+        text-align: left;
+        font-size: 18px;
+        color: #262626;
+      }
+    }
+  }
+}
+
+.sub-cont-hanpass-card-05 {
+  margin-top: rem(100px);
+  .tabs-type1 {
+    margin: 0 166px 0 36px;
+    .tab-content {
+      margin-top: rem(35px);
+      .tab-pane {
+        padding: 50px 40px 0 40px;
+        background: rgba(38, 38, 38, 0.03);
+      }
+    }
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #262626;
+    & + p {
+      margin-top: rem(18px);
+      padding: 0 rem(13px) rem(37px) rem(13px);
+      font-size: 16px;
+      line-height: 1.75;
+      color: #262626;
+    }
+  }
+  .apply-method-step {
+    @include clearfix;
+    margin: 0 rem(25px);
+    li {
+      float: left;
+      margin-top: 53px;
+      width: 25%;
+      text-align: center;
+      & > span {
+        display: block;
+        font-family: 'Apple SD Gothic Neo';
+        font-size: 18px;
+        font-weight: 900;
+        color: #18191a;
+      }
+      img {
+        margin: 0 auto;
+        display: block;
+        margin: 37px auto 58px auto;
+        width: 180px;
+        height: 180px;
+      }
+      p {
+        font-family: 'Apple SD Gothic Neo';
+        font-size: 18px;
+        line-height: 1.44;
+        color: #18191a;
+        & > span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

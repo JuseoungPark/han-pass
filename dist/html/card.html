@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hanpass</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+        var swiper = new Swiper('.swiper-container', {
+          navigation: {
+            nextEl: '.carousel-control-next',
+            prevEl: '.carousel-control-prev',
+          },
+          loop: true,
+          speed: 1100,
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: true,
+            stopOnLast: true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          on: {
+            // afterInit: () => {
+            // },
+            slideChangeTransitionStart: function() {},
+            slideChangeTransitionEnd: function() {},
+            // progress: function(){
+            //
+            // }
+          },
+          preloadImages: true,
+          lazyLoading: true,
+          lazyLoadingInPrevNext: true,
+          watchSlidesProgress: true,
+          watchSlidesVisibility: true,
+        })
+        //swiper.autoplay.stop()
+      })
+    </script>
+  </head>
+  <body>
+    <div class="body-wrap">
+      <a id="top-btn" href="#">TOP</a>
+      <!-- gnb -->
+      <nav class="navbar navbar-expand-lg flex-column sub1">
+        <!-- navbar-header -->
+        <div class="navbar-header">
+          <!-- container-fluid -->
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><div class="logo-img">한패스</div>
+              <span class="sr-only">(current)</span></a
+            >
+            <div class="navbar-nav justify-content-between flex-grow-1">
+              <ul>
+                <li class="nav-item"><a class="nav-link" href="#">회사소개</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">사업소개</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">서비스 소개</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">커뮤니티</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">제휴문의</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
+              </ul>
+              <ul class="nav">
+                <li class="nav-item active"><a class="nav-link" href="#">KR</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">EN</a></li>
+              </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar-collapse -->
+            <div id="navbar-allmenu" class="collapse">
+              <div class="navbar-collapse align-items-start flex-wrap">
+                <div class="container-fluid">
+                  <div class="d-flex align-items-center navbar-collapse-header">
+                    <a class="navbar-brand" href="#"
+                      ><div class="logo-img">한패스</div>
+                      <span class="sr-only">(current)</span></a
+                    >
+                    <ul class="nav flex-grow-1 justify-content-end">
+                      <li class="nav-item active"><a class="nav-link" href="#">KOR</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">ENG</a></li>
+                    </ul>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                  <!-- navbar-nav -->
+                  <div class="navbar-nav">
+                    <dl>
+                      <dt>회사소개</dt>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>회사소개</dt>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>회사소개</dt>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>회사소개</dt>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                    </dl>
+                    <dl>
+                      <dt>회사소개</dt>
+                      <dd class="nav-item"><a class="nav-link" href="#">연혁 (한패스 발자취)</a></dd>
+                    </dl>
+                  </div>
+                  <!-- navbar-nav // -->
+                </div>
+                <!-- sns-box -->
+                <div class="sns-box">
+                  <div class="container-fluid flex-column align-items-start">
+                    <ul class="nav sns-kind">
+                      <li class="nav-item">INSTAGRAM</li>
+                      <li class="nav-item active">FACEBOOK</li>
+                      <li class="nav-item">NAVERBLOG</li>
+                      <li class="nav-item">OK.RU</li>
+                    </ul>
+                    <ul class="nav">
+                      <li class="nav-item">
+                        <div class="country kr">한국</div>
+                        <a href="#" class="nav-link">@hanpass.kr</a>
+                      </li>
+                      <li class="nav-item">
+                        <div class="country id">인도네시아</div>
+                        <a href="#" class="nav-link">@hanpass.id</a>
+                      </li>
+                      <li class="nav-item">
+                        <div class="country ph">필리핀</div>
+                        <a href="#" class="nav-link">@hanpass.ph</a>
+                      </li>
+                      <li class="nav-item">
+                        <div class="country khmer">캄보디아</div>
+                        <a href="#" class="nav-link">@hanpass.khmer</a>
+                      </li>
+                      <li class="nav-item">
+                        <div class="country np">네팔</div>
+                        <a href="#" class="nav-link">@hanpass.np</a>
+                      </li>
+                      <li class="nav-item">
+                        <div class="country vnm">베트남</div>
+                        <a href="#" class="nav-link">@hanpass.vnm</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- sns-box // -->
+              </div>
+            </div>
+            <!-- navbar-collapse // -->
+          </div>
+          <!-- container-fluid // -->
+        </div>
+        <!-- navbar-header // -->
+      </nav>
+      <!-- gnb // -->
+      <!-- cont-wrap -->
+      <div class="cont-wrap">
+        <div class="sub-visual hanpass-card">
+          <div class="title">
+            <h2>Hanpass card<span>with VISA</span></h2>
+          </div>
+          <img src="../images/sub-visual-card.png" class="sub-visual-bg" alt="Hanpass card" />
+        </div>
+        <div class="section sub-cont-hanpass-card-01">
+          <div class="container-fluid">
+            <h3>
+              한패스가 금융 생활의 <br />
+              새로운 기준을 제시합니다.
+            </h3>
+            <p>
+              한패스는 한패스페이 월렛을 런칭, 송금에서 결제까지 다양한 금융 서비스를 제공합니다. <br />
+              이제 한패스 카드로 온, 오프라인 결제가 편해집니다. <br />
+              복합한 자격이나 조건없이, 쓸 만큼 한패스 월렛으로 충전해서 국내외 모두 사용할 수 있는 <br />
+              한패스 카드와 함께 새로운 생활 금융을 경험해 보세요.
+            </p>
+            <ul class="desc-box">
+              <li>
+                <div class="img img-cashback">
+                  <img src="../images/img-cashback-204x225-2x.png" alt="" />
+                </div>
+                <p>
+                  쓰는 만큼 쌓인다. <br />
+                  결제 즉시 송금부터 <br />
+                  ATM 출금가능한 <strong>0.3% 캐시백</strong>
+                </p>
+              </li>
+              <li>
+                <div class="img img-bus">
+                  <img src="../images/img-bus-238x182-2x.png" alt="" />
+                </div>
+                <p>
+                  충전부터 탑승까지 <br />
+                  일상이 편해지는
+                  <strong>한패스 교통카드</strong>
+                </p>
+              </li>
+              <li>
+                <div class="img img-global">
+                  <img src="../images/img-global-187x240-2x.png" alt="" />
+                </div>
+                <p>
+                  어느 곳에서 무엇을 원하든 <br />
+                  글로벌 카드의 정석
+                  <strong>VISA 한패스카드 </strong>
+                </p>
+              </li>
+            </ul>
+            <div class="annual-fees">* 연회비 : 해외겸용 VISA 1만원</div>
+          </div>
+        </div>
+      </div>
+      <div class="section sub-cont-hanpass-card-02 d-flex">
+        <div class="container-fluid">
+          <img src="../images/img-bg-cycle-2x.png" class="background" alt="" />
+          <img src="../images/img-mobile-card-2x.png" class="background" alt="" />
+          <div class="desc">
+            <h3>한패스 카드는 심플하게 <br />기본에 충실한 혜택을 담았습니다.</h3>
+            <p>
+              한패스 앱 회원가입 후 한패스페이월렛으로 충전하여<br />
+              국내 모든 카드결제 가맹점 및 <br />
+              전세계 비자 가맹점에서 사용할 수 있습니다. <br /><br />
+              한패스 앱에서 카드 충전 / 한도 / 결제내역 / 관리 모두 가능합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section sub-cont-hanpass-card-03">
+        <!-- Slider -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- swiper-slide -->
+            <div class="swiper-slide">
+              <!-- banner-box -->
+              <div class="banner-box banner1">
+                <div class="background-color"></div>
+                <img src="../images/bg-card-01-2x.png" class="background" alt="한패스 블루" />
+                <div class="content d-flex">
+                  <div class="container-fluid">
+                    <a href="" class="arr-link"><img src="../images/ico-arrow-l-80x24-2x.png"/></a>
+                    <div class="desc">
+                      <p>
+                        한패스의 아이덴티티를 나타내는 컬러입니다. <br />
+                        깊고 넓은 바다를 건너 전세계로 뻗어나가는 느낌을 담아 <br />
+                        앞으로 선보일 신뢰, 도전, 혁신의 상징을 한패스의 <br />
+                        카드에 담았습니다.
+                      </p>
+                      <h3><span>Hanpass Blue</span>한패스 블루</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- banner-box // -->
+            </div>
+            <!-- swiper-slide // -->
+            <!-- swiper-slide -->
+            <div class="swiper-slide">
+              <!-- banner-box -->
+              <div class="banner-box banner2">
+                <div class="background-color"></div>
+                <img src="../images/bg-card-02-2x.png" class="background" alt="벨벳오로라" />
+                <div class="content">
+                  <div class="container-fluid">
+                    <a href="" class="arr-link"><img src="../images/ico-arrow-r-80x24-2x.png"/></a>
+                    <div class="desc">
+                      <p>
+                        다채로운 빛을 내는 오로라에서 모티브를 얻은 디자인입니다. <br />
+                        레드-퍼플-블루로 이어지는 그라데이션이 <br />
+                        환상적인 느낌으로 다가옵니다. <br />
+                        한패스의 다양성과 에너지를 표현합니다.
+                      </p>
+                      <h3><span>Velvet Violet</span>벨벳오로라</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- banner-box // -->
+            </div>
+            <!-- swiper-slide //-->
+          </div>
+        </div>
+        <!-- Slider// -->
+      </div>
+
+      <div class="section sub-cont-hanpass-card-04">
+        <div class="container-fluid">
+          <!-- benefit -->
+          <div class="benefit">
+            <div class="label">해택1</div>
+            <div class="desc">
+              <h3>쓸때마다 <br />무조건 0.3% 캐쉬백</h3>
+              <h4>
+                실적 조건 없고, 적립한도도 없는 카드 <br />
+                캐시백으로 즉시 송금, ATM출금, 결제 등 바로 사용할 수 있는 한패스만의 혜택
+              </h4>
+              <img src="../images/img-cashback-204x225-2x.png" class="icon icon-cashback" alt="해택1" />
+            </div>
+            <dl>
+              <dt>적립 기준</dt>
+              <dd>국내 온·오프라인 결제 시 0.3% 적립</dd>
+              <dt>적립 한도</dt>
+              <dd>한도 없음</dd>
+              <dt>적립 제외</dt>
+              <dd>공공요금 업종 · 조세서비스 업종 · 상품권 업종 · 금융결제원(온라인-관세) · 제세공과금</dd>
+            </dl>
+          </div>
+          <!-- benefit // -->
+          <!-- benefit -->
+          <div class="benefit">
+            <div class="label">해택2</div>
+            <div class="desc">
+              <h3>한패스카드에 <br />교통카드를 더하다</h3>
+              <h4>
+                간편하게 원하는 금액만큼 충전, <br />
+                한패스카드 하나로 손쉽게 대중교통을 이용 가능
+              </h4>
+              <img src="../images/img-bus-238x182-2x.png" class="icon icon-bus" alt="해택2" />
+            </div>
+
+            <div class="card">
+              <div class="card-header collapsed" data-toggle="collapse" data-target="#fill-method" aria-expanded="false" aria-controls="fill-method">
+                <h5>충전방법</h5>
+                <img src="../images/icon-arrow-down-40x40-2x.png" class="icon" alt="" />
+              </div>
+              <div class="collapse" id="fill-method">
+                <div class="card-body">
+                  <div class="fill-method-cont">
+                    <h6>교통카드 충전방법</h6>
+                    <ul class="fill-method-step">
+                      <li>
+                        <span>STEP.01</span>
+                        <img src="../images/img-charge-step-01-220x220-2x.png" alt="" />
+                        <p>한패스 앱 내 <br />교통카드 충전을 클릭합니다.</p>
+                      </li>
+                      <li>
+                        <span>STEP.02</span>
+                        <img src="../images/img-charge-step-02-220x220-2x.png" alt="" />
+                        <p>핸드폰 뒷면에 카드를 <br />태깅하여 주세요.</p>
+                      </li>
+                      <li>
+                        <span>STEP.03</span>
+                        <img src="../images/img-charge-step-03-220x220-2x.png" alt="" />
+                        <p>
+                          충전하실 금액을 <br />
+                          입력해주세요. <span>(최대 50만원까지)</span>
+                        </p>
+                      </li>
+                      <li>
+                        <span>STEP.04</span>
+                        <img src="../images/img-charge-step-04-220x220-2x.png" alt="" />
+                        <p>충전이 완료되었습니다.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- benefit // -->
+          <!-- benefit -->
+          <div class="benefit">
+            <div class="label">해택3</div>
+            <div class="desc">
+              <h3>이제 해외에서도 <br />한패스 VISA 카드</h3>
+              <h4>
+                업계 최초 한패스회원에게 제공되는 통큰혜택 <br />
+                해외결제수수료, ATM 출금수수료 ALL ZERO !!
+              </h4>
+              <img src="../images/img-global-187x240-2x.png" class="icon icon-global" alt="해택3" />
+            </div>
+            <div class="card">
+              <div class="card-header collapsed" data-toggle="collapse" data-target="#fee-info" aria-expanded="false" aria-controls="fee-info">
+                <h5>수수료 안내</h5>
+                <img src="../images/icon-arrow-down-40x40-2x.png" class="icon" alt="" />
+              </div>
+              <div class="collapse" id="fee-info">
+                <div class="card-body">
+                  <div class="info-cont">
+                    1. 해외결제수수료 무료 <br />
+                    해외브랜드수수료 1.1% + 해외이용수수료 0.25% <br /><br />
+
+                    2. 해외ATM 출금수수료 무료 <br />
+                    출금수수료 $3 , 조회수수료 $0.5 (프로모션 혜택기간 2022년 3월 31일까지) <br />
+                    추후 프로모션 정책에 따라 변경 가능합니다.
+                  </div>
+                </div>
+              </div>
+              <div class="card-header collapsed" data-toggle="collapse" data-target="#foreign-fee-info" aria-expanded="false" aria-controls="foreign-fee-info">
+                <h5>해외결제 및 기타안내</h5>
+                <img src="../images/icon-arrow-down-40x40-2x.png" class="icon" alt="" />
+              </div>
+              <div class="collapse" id="foreign-fee-info">
+                <div class="card-body">
+                  <div class="info-cont">
+                    - 해외 이용시(해외사이트 거래 포함) 미화(USD)기준 거래 금액에 접수일의 지정은행 최초고시 전신환매도율을 적용한 후, <br />
+                    국제브랜드사가 부과하는 국제브랜드수수료 VISA (1.1%)와 한패스카드가 부과하는 해외서비스수수료(0.25%)를 포함하여 <br />
+                    USD로 청구됩니다. <br />
+                    - 해외 이용시 청구금액 산출방법 <br />
+                    해외 이용 시 청구금액 = (거래미화금액 X 전신환 매도율¹) + 국제브랜드수수료² + 해외서비스수수료³ <br />
+                    1. 전신환 매도율 : 접수일의 지정은행 최초고시 전신환 매도율 <br />
+                    2. 국제브랜드수수료 = (거래미화금액 X 국제브랜드 이용수수료율(VISA1.1%) X 전신환 매도율 <br />
+                    3. 해외서비스수수료 = (거래미화금액 X 해외서비스 수수료율(0.25%)) X 전신환 매도율 <br />
+                    - 해외 가맹점에서 원화로 결제할 경우(DCC) 추가 수수료가 발생하므로 현지 통화 또는 미화로 거래하시기 바랍니다. <br />
+                    - 해외원화결제서비스(DCC) 사전차단 서비스 <br />
+                    · 이용방법 → 모바일 App(페이지/카드관리> 해외원화결제(DCC) 차단서비스 > ON *기본설정은 “차단＂으로 되어있습니다.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- benefit // -->
+        </div>
+      </div>
+
+      <div class="section sub-cont-hanpass-card-05">
+        <div class="container-fluid">
+          <div class="tabs-type1" role="tabpanel">
+            <!-- List group -->
+            <div class="list-group" role="tablist">
+              <a class="list-group-item list-group-item-action active" data-toggle="list" href="#tab-apply" role="tab">신청방법</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#tab-guide" role="tab">이용안내</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#tab-usage" role="tab">사용처</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#tab-note" role="tab">유의사항</a>
+            </div>
+            <!-- List group // -->
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- tab-pane -->
+              <div class="tab-pane active" id="tab-apply" role="tabpanel">
+                <br />
+                <h3>한패스카드 신청방법</h3>
+                <ul class="apply-method-step">
+                  <li>
+                    <span>STEP.01</span>
+                    <img src="../images/img-apply-step-01-180x180-2x.png" alt="" />
+                    <p>한패스 앱 내 <br />한패스 카드신청을 클릭합니다.</p>
+                  </li>
+                  <li>
+                    <span>STEP.02</span>
+                    <img src="../images/img-apply-step-02-180x180-2x.png" alt="" />
+                    <p>약관 및 개인정보 확인 후 <br />배송지를 입력합니다.</p>
+                  </li>
+                  <li>
+                    <span>STEP.03</span>
+                    <img src="../images/img-apply-step-03-180x180-2x.png" alt="" />
+                    <p>카드 비밀번호를 설정합니다. <br />(숫자 4자리입력)</p>
+                  </li>
+                  <li>
+                    <span>STEP.04</span>
+                    <img src="../images/img-apply-step-04-180x180-2x.png" alt="" />
+                    <p>
+                      한패스카드 신청이 <br />
+                      완료 되었습니다.
+                    </p>
+                  </li>
+                </ul>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+              </div>
+              <!-- tab-pane // -->
+              <!-- tab-pane -->
+              <div class="tab-pane" id="tab-guide" role="tabpanel">
+                <h3>1. 이용안내</h3>
+                <p>
+                  - 발급대상: 한패스 회원 <br />
+                  - 연회비 정책:<br />
+                  · 연회비 : 년1회10,000원<br />
+                  · 청구기준 : 최초 사용 개시 등록일의 다음달 10일 청구<br />
+                  · 반환기준 : 카드해지 시 기 납부된 연회비에서 사용일수 차감 후 익일 반환<br />
+                  - 충전방법: 계좌이체, 휴대폰 결제, 편의점 충전 (충전방식에 따른 한도는 상이할 수 있음)<br />
+                  - 충전한도: 1회 한도 200만원, 1일 한도 2,000만원 / 교통카드 최대 50만원<br />
+                  - 문의처 <br />
+                  한패스 고객센터 02-3409-1540<br />
+                  한패스 홈페이지: www.hanpass.com
+                </p>
+                <h3>2. QR결제</h3>
+                <p>
+                  - HANPASS 카드 >보유카드 > QR결제 클릭 <br />
+                  - 내 QR코드를 보여주고 결제: 결제카드 선택 후 QR 결제 누르고 리더기로 스캔하면 결제 완료 <br />
+                  - 매장 QR코드를 스캔해서 결제: 결제카드 선택 후 QR 스캔 클릭, QR 스캔 후 금액 입력하면 결제 완료<br />
+                  - 가맹점 안내 : https://paybooc.co.kr/mobile/front/qr_guide.html#link
+                </p>
+              </div>
+              <!-- tab-pane // -->
+              <!-- tab-pane -->
+              <div class="tab-pane" id="tab-usage" role="tabpanel">
+                <h3>사용처</h3>
+                <p>
+                  1. 국내 모든 온.오프라인 가맹점 <br />
+                  전세계 VISA 가맹점<br /><br />
+
+                  2. 교통<br />
+                  - 전국 지하철(김해 경전철 제외)<br />
+                  - 전국 버스(단, 경남 창녕, 남해, 하동, 산청, 함양, 거창, 합천 제외<br />
+                  - 전국 고속버스 터미널(매표창구, 버스단말기)<br />
+                  - 전국 시외버스 터미널(버스단말기)<br />
+                  - 간선철도<br />
+                  - 택시(Cashbee 제외)<br />
+                  - 고속도로<br />
+                  - 인천공항 리무진(서울 · 경기권)<br /><br />
+
+                  3. 편의시설<br />
+                  - 코레일 멤버십라운지(서울, 용산, 대전, 동대구, 부산역)<br />
+                  - 전국 주요 철도역 주차장<br /><br />
+
+                  ※ 교통카드 이용안내: 레일플러스 https://railplus.korail.com
+                </p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+              </div>
+              <!-- tab-pane // -->
+              <!-- tab-pane -->
+              <div class="tab-pane" id="tab-note" role="tabpanel">
+                <br />
+                <h3>유의사항</h3>
+                <p>
+                  - 한패스카드 거래 결제취소 건은 한패스페이월렛에 환급되며, 별도의 계좌환불은 제공하지 않습니다. <br />
+                  - 한패스카드는 선불형 체크카드로 할부서비스는 제공되지 않습니다.<br />
+                  - 카드를 해지하시더라도 한패스 앱은 이용가능합니다만 한패스 회원탈회의 경우 카드는 자동으로 해지처리됩니다. <br />
+                  - 본인 부주의로 인한 휴대폰 분실, 카드분실에 따른 환불은 한패스가 책임지지 않습니다.<br />
+                  - 해외가맹점의 경우 국제브랜드사인 VISA에 지침과 조건에 따릅니다.
+                </p>
+                <br />
+                <br />
+                <br />
+              </div>
+              <!-- tab-pane // -->
+            </div>
+            <!-- Tab panes // -->
+          </div>
+        </div>
+      </div>
+
+      <!-- cont-wrap // -->
+      <!-- footer -->
+      <div class="footer">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-between">
+            <a href="#"><div class="logo-img">한패스</div></a>
+            <div class="dropdown dropup">
+              <button class="btn dropdown-toggle" type="button" data-offset="0,10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                관계사 바로가기
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">구매대행</a>
+                <a class="dropdown-item" href="#">글로지스</a>
+                <a class="dropdown-item" href="#">한마켓</a>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            주소 . 서울 성동구 아차산로 92, 광명타워 4층 04782 한패스㈜ 팩스 . (+82) 2.465.0767 이메일 . contact@hanpass.com <br />
+            전화 . (+82) 2.3409.1540 평일 . 09:00AM - 18:00PM 점심시간 . 12:00PM - 01:00PM (토/일/공휴일 휴무) <br />
+            한패스(주) 사업자 등록번호 . 714-87-00610 대표이사 . 김경훈
+          </p>
+          <ul class="nav">
+            <li><a href="#" class="font-weight-bold">개인정보 처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">신고하기</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- footer // -->
+    </div>
+  </body>
+</html>

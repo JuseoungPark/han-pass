@@ -1,24 +1,23 @@
-@import "./variables.scss"; //Import variables (overrides Bootstrap defaults)
+@import './variables.scss'; //Import variables (overrides Bootstrap defaults)
 // Import Bootstrap
-@import "bootstrap/scss/bootstrap.scss";
-@import "swiper/swiper.scss";
-@import "fullpage.js/dist/jquery.fullpage";
-@import "malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar";
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'swiper/swiper.scss';
+@import 'fullpage.js/dist/jquery.fullpage';
+@import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
 /* Import custom styles */
 
-@import "./mixin.scss";
-@import "./fonts.scss";
-@import "./global.scss";
-@import "./buttons.scss";
-@import "./form.scss";
-@import "./list.scss";
-@import "./card.scss";
-@import "./tables.scss";
-@import "./navbar.scss";
-@import "./footer.scss";
-@import "./login.scss";
-@import "./contents.scss";
-@import "./main.scss";
-@import "./_sub.scss";
-
-
+@import './mixin.scss';
+@import './fonts.scss';
+@import './global.scss';
+@import './buttons.scss';
+@import './form.scss';
+@import './list.scss';
+@import './card.scss';
+@import './tables.scss';
+@import './navbar.scss';
+@import './footer.scss';
+@import './login.scss';
+@import './contents.scss';
+@import './main.scss';
+@import './sub.scss';
+@import './hanpasscard.scss';

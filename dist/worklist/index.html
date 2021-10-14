@@ -1,166 +1,187 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> 작업목록 | 한패스 리뉴얼</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link rel="shortcut icon" href="" />
-<link rel="stylesheet" type="text/css" href="./css/style.css" />
-<script type="text/javascript" src="./js/jquery.1.8.3.min.js"></script>
-<script type="text/javascript" src="./js/jquery.tablesorter.js"></script>
-<script type="text/javascript" src="./js/common.js"></script>
-</head>
-<body>
-<div id="devWrap">
-	<h1>한패스 리뉴얼</h1>
-	<ul id="gnb">
-		<li class="on"><a href="index.html">작업목록</a></li>
-		<!-- <li><a href="index2.html">가이드</a></li> -->
-		<!-- <li><a href="index3.html">관리자</a></li> -->
-		<!-- <li><a href="index4.html">작업규칙</a></li> -->
-		<!-- <li><a href="index5.html">개발기</a></li>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>작업목록 | 한패스 리뉴얼</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script type="text/javascript" src="./js/jquery.1.8.3.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+  </head>
+  <body>
+    <div id="devWrap">
+      <h1>한패스 리뉴얼</h1>
+      <ul id="gnb">
+        <li class="on"><a href="index.html">작업목록</a></li>
+        <!-- <li><a href="index2.html">가이드</a></li> -->
+        <!-- <li><a href="index3.html">관리자</a></li> -->
+        <!-- <li><a href="index4.html">작업규칙</a></li> -->
+        <!-- <li><a href="index5.html">개발기</a></li>
 		<li><a href="index6.html">운영기</a></li> -->
-	</ul>
-	<h2>작업목록</h2>
+      </ul>
+      <h2>작업목록</h2>
 
-	<h3 id="M0">작업공정률</h3>
-	<table summary="" cellspacing="0" border="0" class="htmlProcess tbl-type1">
-		<caption>작업공정률</caption>
-		<colgroup><col width="60"/><col span="4" width="12%"/><col width="*"/></colgroup>
-		<thead>
-		<tr>
-			<th>구분</th>
-			<th>파일수</th>
-			<th>완료</th>
-			<th>대기</th>
-			<th>작업률(%)</th>
-			<th>기타</th>
-		</tr>
-		</thead>
-		<tbody> 
-		<tr>
-			<td></td>
-			<td class="total_files"></td>
-			<td class="final_files"></td>
-			<td class="waiting_files"></td>
-			<td class="html_percent"></td>
-			<td></td>
-		</tr>
-		</tbody>
-	</table>
+      <h3 id="M0">작업공정률</h3>
+      <table summary="" cellspacing="0" border="0" class="htmlProcess tbl-type1">
+        <caption>
+          작업공정률
+        </caption>
+        <colgroup>
+          <col width="60" />
+          <col span="4" width="12%" />
+          <col width="*" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>파일수</th>
+            <th>완료</th>
+            <th>대기</th>
+            <th>작업률(%)</th>
+            <th>기타</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td class="total_files"></td>
+            <td class="final_files"></td>
+            <td class="waiting_files"></td>
+            <td class="html_percent"></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
 
-	<h3 id="M1">개발목록</h3>
-	<table summary="퍼블리싱 작업목록을 파일명과 완료일자로 보여주는 표" class="tbl-type1 sorttable">
-		<caption>작업목록</caption>
-		<colgroup>
-			<col width="60"/>
-			<col width="6%">
-			<col span="3" width="10%"/>
-			<col width="11%">
-			<col width="6%">
-			<col width="6%">
-			<col width="8%">
-			<col width="*"/>
-		</colgroup>
-		<thead>
-			<tr>
-				<th scope="col"><span>번호</span></th>
-				<th scope="col"><span>분류</span></th>
-				<th scope="col"><span>1Depth</span></th>
-				<th scope="col"><span>2Depth</span></th>
-				<th scope="col"><span>3Depth</span></th>
-				<th scope="col"><span>파일명</span></th>
-				<th scope="col">작업자</th>
-				<th scope="col">작업일</th>
-				<th scope="col">비고</th>
-				<th scope="col">수정일</th>
-				<th scope="col">수정내역</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td>메인</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><a href="../html/main.html" target="_blank" title="새창">main.html</a></td>
-				<td>김인혜</td>
-				<td>2020-03-25</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>회사소개</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><a href="../html/about.html" target="_blank" title="새창">about.html</a></td>
-				<td>김인혜</td>
-				<td>2020-03-28</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>사업소개</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><a href="../html/business.html" target="_blank" title="새창">business.html</a></td>
-				<td>김인혜</td>
-				<td>2020-03-28</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>고객센터</td>
-				<td>faq</td>
-				<td></td>
-				<td></td>
-				<td><a href="../html/faq.html" target="_blank" title="새창">faq.html</a></td>
-				<td>김인혜</td>
-				<td>2020-03-28</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td>제휴문의</td>
-				<td></td>
-				<td></td>
-				<td><a href="../html/inquiry.html" target="_blank" title="새창">inquiry.html</a></td>
-				<td>김인혜</td>
-				<td>2020-03-28</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>이용약관</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><a href="../html/terms.html" target="_blank" title="새창">terms.html</a></td>
-				<td>김인혜</td>
-				<td>2020-03-28</td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-	</table>
+      <h3 id="M1">개발목록</h3>
+      <table summary="퍼블리싱 작업목록을 파일명과 완료일자로 보여주는 표" class="tbl-type1 sorttable">
+        <caption>
+          작업목록
+        </caption>
+        <colgroup>
+          <col width="60" />
+          <col width="6%" />
+          <col span="3" width="10%" />
+          <col width="11%" />
+          <col width="6%" />
+          <col width="6%" />
+          <col width="8%" />
+          <col width="*" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col"><span>번호</span></th>
+            <th scope="col"><span>분류</span></th>
+            <th scope="col"><span>1Depth</span></th>
+            <th scope="col"><span>2Depth</span></th>
+            <th scope="col"><span>3Depth</span></th>
+            <th scope="col"><span>파일명</span></th>
+            <th scope="col">작업자</th>
+            <th scope="col">작업일</th>
+            <th scope="col">비고</th>
+            <th scope="col">수정일</th>
+            <th scope="col">수정내역</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>메인</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="../html/main.html" target="_blank" title="새창">main.html</a></td>
+            <td>김인혜</td>
+            <td>2020-03-25</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>회사소개</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="../html/about.html" target="_blank" title="새창">about.html</a></td>
+            <td>김인혜</td>
+            <td>2020-03-28</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>사업소개</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="../html/business.html" target="_blank" title="새창">business.html</a></td>
+            <td>김인혜</td>
+            <td>2020-03-28</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>고객센터</td>
+            <td>faq</td>
+            <td></td>
+            <td></td>
+            <td><a href="../html/faq.html" target="_blank" title="새창">faq.html</a></td>
+            <td>김인혜</td>
+            <td>2020-03-28</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>제휴문의</td>
+            <td></td>
+            <td></td>
+            <td><a href="../html/inquiry.html" target="_blank" title="새창">inquiry.html</a></td>
+            <td>김인혜</td>
+            <td>2020-03-28</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>이용약관</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="../html/terms.html" target="_blank" title="새창">terms.html</a></td>
+            <td>김인혜</td>
+            <td>2020-03-28</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>한패스카드</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><a href="../html/card.html" target="_blank" title="새창">card.html</a></td>
+            <td>김인혜</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
 
-	<span class="btn-top"><a href="#devWrap">&uarr; 위로</a></span>
-</div>
-</body>
+      <span class="btn-top"><a href="#devWrap">&uarr; 위로</a></span>
+    </div>
+  </body>
 </html>
