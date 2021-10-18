@@ -10,43 +10,12 @@
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../vendor/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="../vendor/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="../vendor/gsap/gsap.min.js"></script>
+    <script src="../vendor/gsap/animation.gsap.min.js"></script>
     <script src="../js/app.js"></script>
-    <script>
-      $(document).ready(function() {
-        var swiper = new Swiper('.swiper-container', {
-          navigation: {
-            nextEl: '.carousel-control-next',
-            prevEl: '.carousel-control-prev',
-          },
-          loop: true,
-          speed: 1100,
-          autoplay: {
-            delay: 2000,
-            disableOnInteraction: true,
-            stopOnLast: true,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          on: {
-            // afterInit: () => {
-            // },
-            slideChangeTransitionStart: function() {},
-            slideChangeTransitionEnd: function() {},
-            // progress: function(){
-            //
-            // }
-          },
-          preloadImages: true,
-          lazyLoading: true,
-          lazyLoadingInPrevNext: true,
-          watchSlidesProgress: true,
-          watchSlidesVisibility: true,
-        })
-        //swiper.autoplay.stop()
-      })
-    </script>
+    <script src="../js/hanpasscard.js"></script>
   </head>
   <body>
     <div class="body-wrap">
@@ -177,8 +146,10 @@
         <div class="sub-visual hanpass-card">
           <div class="title">
             <h2>Hanpass card<span>with VISA</span></h2>
+            <img src="../images/sub-visual-card-item.png" class="animation-hand" alt="Hanpass card" />
           </div>
-          <img src="../images/sub-visual-card.png" class="sub-visual-bg" alt="Hanpass card" />
+          <!-- <img src="../images/sub-visual-card.png" class="sub-visual-bg" alt="Hanpass card" /> -->
+          <img src="../images/sub-visual-card-bg.png" class="sub-visual-bg" alt="Hanpass card" />
         </div>
         <div class="section sub-cont-hanpass-card-01">
           <div class="container-fluid">
@@ -230,8 +201,8 @@
       </div>
       <div class="section sub-cont-hanpass-card-02 d-flex">
         <div class="container-fluid">
-          <img src="../images/img-bg-cycle-2x.png" class="background" alt="" />
-          <img src="../images/img-mobile-card-2x.png" class="background" alt="" />
+          <img src="../images/img-bg-cycle-2x.png" class="background front" alt="" />
+          <img src="../images/img-mobile-card-2x.png" class="background back" alt="" />
           <div class="desc">
             <h3>한패스 카드는 심플하게 <br />기본에 충실한 혜택을 담았습니다.</h3>
             <p>
@@ -251,10 +222,13 @@
             <div class="swiper-slide">
               <!-- banner-box -->
               <div class="banner-box banner1">
-                <div class="background-color"></div>
-                <img src="../images/bg-card-01-2x.png" class="background" alt="한패스 블루" />
                 <div class="content d-flex">
                   <div class="container-fluid">
+                    <div class="img-card">
+                      <img src="../images/img-card-01-front-2x.png" class="front" alt="한패스 블루" />
+                      <img src="../images/img-card-01-back-2x.png" class="back" alt="한패스 블루" />
+                    </div>
+                    
                     <a href="" class="arr-link"><img src="../images/ico-arrow-l-80x24-2x.png"/></a>
                     <div class="desc">
                       <p>
@@ -275,10 +249,14 @@
             <div class="swiper-slide">
               <!-- banner-box -->
               <div class="banner-box banner2">
-                <div class="background-color"></div>
-                <img src="../images/bg-card-02-2x.png" class="background" alt="벨벳오로라" />
-                <div class="content">
+                
+                <div class="content d-flex">
                   <div class="container-fluid">
+                    <div class="img-card">
+                      <img src="../images/img-card-02-front-2x.png" class="front" alt="벨벳오로라" />
+                      <img src="../images/img-card-02-back-2x.png" class="back" alt="벨벳오로라" />
+                    </div>
+                    
                     <a href="" class="arr-link"><img src="../images/ico-arrow-r-80x24-2x.png"/></a>
                     <div class="desc">
                       <p>
@@ -303,13 +281,19 @@
       <div class="section sub-cont-hanpass-card-04">
         <div class="container-fluid">
           <!-- benefit -->
-          <div class="benefit">
-            <div class="label">해택1</div>
+          <div class="benefit benefit1">
+            <div class="label">
+              <span>해택1</span>
+            </div>
             <div class="desc">
-              <h3>쓸때마다 <br />무조건 0.3% 캐쉬백</h3>
+              <h3>
+                <span class="maskBox t1"><span>쓸때마다</span></span>
+                <span class="maskBox t2"><span>무조건 0.3% 캐쉬백</span></span>
+              </h3>
               <h4>
-                실적 조건 없고, 적립한도도 없는 카드 <br />
-                캐시백으로 즉시 송금, ATM출금, 결제 등 바로 사용할 수 있는 한패스만의 혜택
+                <span class="maskBox t3"><span>실적 조건 없고, 적립한도도 없는 카드</span></span>
+                <span class="maskBox t4"><span>캐시백으로 즉시 송금, ATM출금, 결제 등 바로 사용할 수</span></span>
+                <span class="maskBox t5"><span>있는 한패스만의 혜택</span></span>
               </h4>
               <img src="../images/img-cashback-204x225-2x.png" class="icon icon-cashback" alt="해택1" />
             </div>
@@ -324,13 +308,15 @@
           </div>
           <!-- benefit // -->
           <!-- benefit -->
-          <div class="benefit">
-            <div class="label">해택2</div>
+          <div class="benefit benefit2">
+            <div class="label"><span>해택2</span></div>
             <div class="desc">
-              <h3>한패스카드에 <br />교통카드를 더하다</h3>
+              <h3>
+                <span class="maskBox t1"><span>한패스카드에</span></span>
+                <span class="maskBox t1"><span>교통카드를 더하다</span></span>
               <h4>
-                간편하게 원하는 금액만큼 충전, <br />
-                한패스카드 하나로 손쉽게 대중교통을 이용 가능
+                <span class="maskBox t3"><span>간편하게 원하는 금액만큼 충전,</span></span>
+                <span class="maskBox t4"><span>한패스카드 하나로 손쉽게 대중교통을 이용 가능</span></span>
               </h4>
               <img src="../images/img-bus-238x182-2x.png" class="icon icon-bus" alt="해택2" />
             </div>
@@ -376,13 +362,16 @@
           </div>
           <!-- benefit // -->
           <!-- benefit -->
-          <div class="benefit">
-            <div class="label">해택3</div>
+          <div class="benefit benefit3">
+            <div class="label"><span>해택3</span></div>
             <div class="desc">
-              <h3>이제 해외에서도 <br />한패스 VISA 카드</h3>
+              <h3>
+                <span class="maskBox t1"><span>이제 해외에서도</span></span>
+                <span class="maskBox t2"><span>한패스 VISA 카드</span></span>
+              </h3>
               <h4>
-                업계 최초 한패스회원에게 제공되는 통큰혜택 <br />
-                해외결제수수료, ATM 출금수수료 ALL ZERO !!
+                <span class="maskBox t3"><span>업계 최초 한패스회원에게 제공되는 통큰혜택</span></span>
+                <span class="maskBox t4"><span>해외결제수수료, ATM 출금수수료 ALL ZERO !!</span></span>
               </h4>
               <img src="../images/img-global-187x240-2x.png" class="icon icon-global" alt="해택3" />
             </div>

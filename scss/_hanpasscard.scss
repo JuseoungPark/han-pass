@@ -6,12 +6,20 @@
 .sub-visual {
   &.hanpass-card {
     height: auto;
+
     .title {
       position: absolute;
       left: 0;
       top: 0;
       right: 0;
       bottom: 0;
+      .animation-hand {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 40%;
+        height: auto;
+      }
       h2 {
         position: absolute;
         left: 20%;
@@ -36,6 +44,19 @@
       left: inherit;
       transform: inherit;
     }
+    h2,
+    .animation-hand {
+      opacity: 0;
+      transition: 1s;
+    }
+    &.effect {
+      h2 {
+        animation: 1.5s visual-title ease-out forwards;
+      }
+      .animation-hand {
+        animation: 1.5s animation-hand ease-out forwards;
+      }
+    }
   }
 }
 
@@ -54,7 +75,7 @@
     color: #6d6d6d;
   }
   ul.desc-box {
-    margin-top: 90px;
+    margin-top: rem(90px);
     width: 100%;
     @include clearfix;
     li {
@@ -112,20 +133,65 @@
     color: #18191a;
     text-align: right;
   }
+  .container-fluid {
+    h3,
+    & > p,
+    .annual-fees,
+    ul.desc-box > li {
+      opacity: 0;
+      transition: 1s;
+    }
+  }
+  &.effect {
+    .container-fluid {
+      h3 {
+        -webkit-animation: 1.2s moveright ease-out forwards;
+        animation: 1.2s moveright ease-out forwards;
+      }
+      & > p {
+        -webkit-animation: 1.2s moveleft1 ease-out forwards;
+        animation: 1.2s moveleft1 ease-out forwards;
+        animation-delay: 0.4s;
+      }
+      ul.desc-box {
+        li {
+          -webkit-animation: 1s movetop1 ease-out forwards;
+          animation: 1s movetop1 ease-out forwards;
+        }
+        li:nth-child(1) {
+          animation-delay: 0.8s;
+        }
+        li:nth-child(2) {
+          animation-delay: 1s;
+        }
+        li:nth-child(3) {
+          animation-delay: 1.2s;
+        }
+      }
+      .annual-fees {
+        -webkit-animation: 1.2s moveleft1 ease-out forwards;
+        animation: 1.2s moveleft1 ease-out forwards;
+        animation-delay: 1.5s;
+      }
+    }
+  }
 }
 
 .sub-cont-hanpass-card-02 {
-  margin: rem(183.4px) 0 rem(220px);
+  margin: rem(183.4px) 0 rem(80px);
   height: 589px;
   @include left-middle;
   .container-fluid {
     height: 100%;
+    perspective: 300px;
   }
+
   .background {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    transform: translate(0px, 0px);
   }
   .desc {
     position: absolute;
@@ -135,7 +201,7 @@
     height: 100%;
   }
   h3 {
-    margin-top: 87.5px;
+    margin-top: rem(87.5px);
     font-size: rem(38px);
     font-weight: 500;
     line-height: 1.53;
@@ -147,28 +213,91 @@
     line-height: 1.45;
     color: #6d6d6d;
   }
+  h3,
+  p {
+    opacity: 0;
+    transition: 1s;
+  }
+  &.effect {
+    .background {
+      // &.front {
+      //   animation: attraction 0.4s linear 0s infinite alternate;
+      //   // transform: rotateY(180deg);
+      // }
+      &.back {
+        animation: updown 1.4s ease-in-out infinite;
+        // transform: rotateY(360deg);
+      }
+    }
+    h3 {
+      animation: moveright 1.2s ease-out forwards;
+    }
+    p {
+      animation: moveleft1 1.2s ease-out forwards;
+      animation-delay: 0.4s;
+    }
+  }
 }
 
 .sub-cont-hanpass-card-03 {
-  margin: 104px 0 77px;
+  &.effect {
+    .swiper-slide-active.effect {
+      .img-card {
+        img {
+          &.front {
+            transform: rotateY(360deg) !important;
+          }
+          &.back {
+            transform: rotateY(180deg) !important;
+          }
+        }
+      }
+    }
+  }
 
   .banner-box {
-    .background {
-      display: block;
-      width: 100%;
-      max-width: 1580px;
-      margin: 0 auto;
-    }
-    .background-color {
-      position: absolute;
-      left: 0;
-      right: 0;
-      z-index: -1;
-    }
+    position: relative;
+    width: 100%;
+    height: rem(444px);
+    margin: rem(100px) 0;
+
     .content {
       position: absolute;
       left: 0;
       right: 0;
+      top: 0;
+      bottom: 0;
+      .img-card {
+        position: absolute;
+        width: 289px;
+        height: 448px;
+        perspective: 500px;
+        img {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          transition: 1.4s;
+          &.front {
+            transform: rotateY(0deg);
+          }
+          &.back {
+            transform: rotateY(-180deg);
+          }
+        }
+        &:hover {
+          img {
+            &.front {
+              transform: rotateY(180deg) !important;
+            }
+            &.back {
+              transform: rotateY(0deg) !important;
+            }
+          }
+        }
+      }
+
       .arr-link {
         display: block;
         position: absolute;
@@ -181,20 +310,20 @@
         }
       }
       .desc {
-        margin-top: 7%;
+        padding-top: 7%;
         color: #fff;
         p {
-          font-size: 18px;
+          font-size: rem(18px);
           line-height: 1.56;
         }
         h3 {
           font-family: 'Apple SD Gothic Neo';
-          margin-top: 54px;
-          font-size: 50px;
+          margin-top: rem(54px);
+          font-size: rem(50px);
           font-weight: 900;
           & > span {
             display: block;
-            font-size: 22px;
+            font-size: rem(22px);
             opacity: 0.7;
             line-height: 2.55;
             letter-spacing: -0.3px;
@@ -204,44 +333,29 @@
       }
     }
     &.banner1 {
-      position: relative;
-      width: 100%;
       text-align: right;
-      .background-color {
-        top: 9%;
-        bottom: 0;
-        background-image: linear-gradient(to left, #132e66, #045f9f);
+      background-image: linear-gradient(to left, #132e66, #045f9f);
+      .img-card {
+        left: rem(160px);
+        top: rem(-44px);
       }
       .content {
-        top: 9%;
-        bottom: 0;
         .arr-link {
           left: 0;
           bottom: 20%;
         }
-        .desc {
-          margin-top: 7%;
-        }
       }
     }
     &.banner2 {
-      position: relative;
-      margin-top: rem(44px);
-      width: 100%;
-      .background-color {
-        top: 0;
-        bottom: 10.4%;
-        background-image: linear-gradient(to left, #194e9a, #d01c43);
+      background-image: linear-gradient(to left, #194e9a, #d01c43);
+      .img-card {
+        right: rem(160px);
+        bottom: rem(-44px);
       }
       .content {
-        top: 0;
-        bottom: 10.4%;
         .arr-link {
           right: 0;
-          bottom: -7%;
-          .desc {
-            margin-top: 7%;
-          }
+          bottom: 20%;
         }
       }
     }
@@ -249,12 +363,12 @@
 }
 
 .sub-cont-hanpass-card-04 {
-  margin-top: rem(176px);
+  margin-top: rem(90px);
   .benefit {
     position: relative;
-    margin: 0 166px 0 36px;
+    margin: 0 rem(166px) 0 rem(36px);
     & + .benefit {
-      margin-top: 83px;
+      margin-top: rem(83px);
     }
   }
   .icon {
@@ -287,53 +401,70 @@
   .label {
     width: rem(140px);
     height: rem(48px);
-    font-family: 'Apple SD Gothic Neo';
-    font-size: rem(24px);
-    font-weight: bold;
-    line-height: 2.33;
-    text-align: center;
-    color: #fff;
-    border-radius: rem(32px);
-    background-color: #3b57f1;
+    overflow: hidden;
+    & > span {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      font-family: 'Apple SD Gothic Neo';
+      font-size: rem(24px);
+      font-weight: bold;
+      line-height: 2.33;
+      text-align: center;
+      color: #fff;
+      border-radius: rem(32px);
+      background-color: #3b57f1;
+    }
   }
   h3 {
-    font-size: 40px;
+    font-size: rem(40px);
     font-weight: bold;
     line-height: 1.4;
     color: #18191a;
+    overflow: hidden;
   }
   h4 {
+    position: relative;
     margin-top: rem(51px);
     width: 70%;
-    font-size: 32px;
+    font-size: rem(32px);
     font-weight: normal;
     line-height: 1.38;
     color: #18191a;
+    overflow: hidden;
+  }
+  .maskBox {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    & > span {
+      display: inline-block;
+    }
   }
   dl {
-    margin-top: 33px;
+    margin-top: rem(33px);
     border-top: 2px solid #18191a;
     @include clearfix;
     dt,
     dd {
       float: left;
-      margin-top: 35px;
+      margin-top: rem(35px);
     }
     dt {
       width: 112px;
-      font-size: 20px;
+      font-size: rem(20px);
       font-weight: bold;
       color: #18191a;
     }
     dd {
       width: calc(100% - 112px);
-      padding-left: 50px;
-      font-size: 18px;
+      padding-left: rem(50px);
+      font-size: rem(18px);
       color: #6d6d6d;
     }
   }
   .card {
-    margin-top: 53px;
+    margin-top: rem(53px);
     border-top: 2px solid #18191a;
     border-bottom: 2px solid #18191a;
     .collapse + .card-header {
@@ -342,10 +473,11 @@
     .card-header {
       position: relative;
       border-radius: 0;
-      padding: 33px 0;
+      padding: rem(33px) 0;
       cursor: pointer;
+      border: 0;
       h5 {
-        font-size: 24px;
+        font-size: rem(24px);
         color: #18191a;
         font-weight: bold;
       }
@@ -362,10 +494,10 @@
     .card-body {
       background: rgba(38, 38, 38, 0.03);
       .fill-method-cont {
-        padding: 40px;
+        padding: rem(40px);
         text-align: center;
         h6 {
-          font-size: 24px;
+          font-size: rem(24px);
           font-weight: bold;
           color: #18191a;
         }
@@ -467,5 +599,340 @@
         }
       }
     }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+}
+@include media-breakpoint-down(md) {
+  .sub-visual.hanpass-card .title h2 {
+    font-size: rem(40px);
+  }
+  .sub-cont-hanpass-card-01 h3 {
+    font-size: rem(40px);
+  }
+}
+@include media-breakpoint-down(sm) {
+  .sub-visual.hanpass-card .title h2 {
+    font-size: rem(30px);
+  }
+  .sub-cont-hanpass-card-01 {
+    padding-top: rem(60px);
+    h3 {
+      font-size: rem(28px);
+    }
+    p {
+      padding-top: rem(30px);
+      font-size: rem(18px);
+    }
+    ul.desc-box {
+      margin-top: rem(60px);
+      li {
+        width: 46%;
+        height: 320px;
+        & + li {
+          margin-left: 4%;
+        }
+        &:last-child {
+          margin: rem(20px) 0 0 0;
+        }
+        & > .img {
+          margin-top: rem(27px);
+          & > img {
+            width: 80% !important;
+            height: auto !important;
+          }
+        }
+        & > p {
+          font-size: rem(18px);
+        }
+      }
+    }
+  }
+  .sub-cont-hanpass-card-02 {
+    margin: rem(50px) 0 rem(40px);
+    height: auto;
+    .background {
+      display: none;
+    }
+    .desc {
+      position: relative;
+    }
+    h3 {
+      margin-top: rem(40px);
+      font-size: rem(28px);
+    }
+    p {
+      margin-top: rem(40px);
+      font-size: rem(18px);
+    }
+  }
+  .sub-cont-hanpass-card-03 {
+    .banner-box {
+      height: auto;
+      .content {
+        position: relative;
+        .img-card {
+          width: 289px;
+          height: 448px;
+          top: rem(-44px);
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .desc {
+          padding-top: rem(500px);
+          padding-bottom: rem(100px);
+          p {
+            font-size: rem(15px);
+          }
+          h3 {
+            margin-top: rem(34px);
+            font-size: rem(30px);
+            & > span {
+              font-size: rem(18px);
+            }
+          }
+        }
+      }
+      &.banner1 {
+        .img-card {
+          top: rem(-44px);
+          left: 50%;
+        }
+        .content {
+          .arr-link {
+            left: rem(40px);
+            bottom: rem(50px);
+          }
+        }
+      }
+      &.banner2 {
+        .img-card {
+          right: inherit;
+          bottom: inherit;
+        }
+        .content {
+          .arr-link {
+            right: rem(40px);
+            bottom: rem(50px);
+          }
+        }
+      }
+    }
+  }
+  .sub-cont-hanpass-card-04 {
+    margin-top: 0;
+    .benefit {
+      margin: 0;
+      & + .benefit {
+        margin-top: rem(53px);
+      }
+    }
+    .icon {
+      display: none;
+    }
+    .label {
+      width: rem(100px);
+      height: rem(38px);
+      & > span {
+        font-size: rem(18px);
+      }
+    }
+    h3 {
+      font-size: rem(28px);
+    }
+    h4 {
+      width: 100%;
+      margin-top: rem(20px);
+      font-size: rem(18px);
+    }
+    dl {
+      dt,
+      dd {
+        margin-top: rem(20px);
+      }
+      dt {
+        width: rem(80px);
+      }
+      dd {
+        padding-left: rem(20px);
+        font-size: rem(18px);
+        line-height: 1.4;
+      }
+    }
+    .card {
+      margin-top: rem(23px);
+      .card-header {
+        padding: rem(23px) 0;
+        h5 {
+          font-size: rem(20px);
+        }
+      }
+      .card-body {
+        .fill-method-cont {
+          padding: 0;
+          h6 {
+            font-size: rem(20px);
+          }
+          .fill-method-step {
+            li {
+              & > span {
+                font-size: 15px;
+              }
+              img {
+                width: 120px;
+                height: 120px;
+              }
+              p {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+        .info-cont {
+          padding: 39px 29px;
+          text-align: left;
+          font-size: 16px;
+          color: #262626;
+        }
+      }
+    }
+  }
+  .sub-cont-hanpass-card-05 {
+    margin-top: rem(50px);
+    .tabs-type1 {
+      margin: 0;
+      .tab-content {
+        margin-top: rem(25px);
+        .tab-pane {
+          padding: 30px 20px 0 20px;
+        }
+      }
+      .list-group-item-action {
+        padding: rem(18px);
+        font-size: rem(20px);
+        text-align: center;
+        & + .list-group-item-action {
+          margin-left: 0;
+        }
+      }
+    }
+    h3 {
+      font-size: 18px;
+      & + p {
+        font-size: 15px;
+      }
+    }
+    .apply-method-step {
+      margin: 0;
+      li {
+        margin-top: 33px;
+        width: 50%;
+        & > span {
+          font-size: 16px;
+        }
+        img {
+          margin: 17px auto 38px auto;
+          width: 120px;
+          height: 120px;
+        }
+        p {
+          font-size: 15px;
+          letter-spacing: -1px;
+          & > span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes visual-title {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation-hand {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveright {
+  0% {
+    opacity: 0;
+    transform: translateX(-160px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveright1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes movetop1 {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes movetop2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveleft1 {
+  0% {
+    opacity: 0;
+    transform: translateX(160px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-7px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-7px);
   }
 }
