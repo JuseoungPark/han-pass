@@ -6,6 +6,42 @@
 	초기화
 ---------------------------------------------- */
 
+.top-right-fixed-wrap {
+  position: fixed;
+  top: 2.4812rem;
+  right: 3.25rem;
+  a {
+    display: block;
+    margin-top: 1.0438rem;
+    padding: 1.25rem 1.0625rem;
+    border-radius: 0.625rem;
+    font-family: NanumSquareB;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    text-align: center;
+    color: #ffffff;
+  }
+  .btn--login {
+    background-image: linear-gradient(
+      144deg,
+      #4c53ff 22%,
+      #2927f4 63%,
+      #0a00eb 100%
+    );
+    &:before {
+      display: block;
+      width: 4.375rem;
+      height: 1.0625rem;
+      margin: 0 auto 1.25rem auto;
+      background-position: 0 0;
+      background-size: cover;
+      background-image: url(../../images/renewal/logo-hanbiz-2@3x.png);
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+}
+
 .main-visual {
   div[class*="main-visual-bg"] {
     top: 50%;
@@ -15,6 +51,7 @@
     height: 37.5rem;
   }
   .caption {
+    transform: translate(-30px, -50%);
     h1 {
       width: 5rem;
       height: 1.2125rem;
