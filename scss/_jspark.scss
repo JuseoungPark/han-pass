@@ -34,6 +34,13 @@
       line-height: 2rem;
     }
   }
+  .main-visual {
+    &-bg-01 {
+      background-position: 0 50%;
+      background-image: url(../../images/renewal/main-visual-01-01@3x.png);
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .main-conts {
