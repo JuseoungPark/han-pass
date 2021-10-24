@@ -6,6 +6,41 @@
 	초기화
 ---------------------------------------------- */
 
+.main-visual {
+  div[class*="main-visual-bg"] {
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    width: 28.75rem;
+    height: 37.5rem;
+  }
+  .caption {
+    h1 {
+      width: 5rem;
+      height: 1.2125rem;
+      margin-bottom: 2.4375rem;
+      font-size: 0;
+      background-position: 0 0;
+      background-size: cover;
+      background-image: url(../../images/renewal/logo-hanbiz-2@3x.png);
+      background-repeat: no-repeat;
+    }
+    strong {
+      font-size: 3.75rem;
+      line-height: 4.625rem;
+    }
+    p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.main-conts {
+  &-02 {
+  }
+}
+
 .card {
   &-wrap {
     display: flex;
@@ -43,11 +78,11 @@
       }
     }
     &.ci-banner {
-      margin-top: 4.65rem;
-      &:first-child {
-        margin-top: 0;
-      }
+      flex-wrap: wrap;
+      justify-content: space-between;
       .card-item {
+        flex: unset;
+        width: 13.05rem;
         margin-left: 0;
         border-radius: 0;
         box-shadow: none;
@@ -63,27 +98,39 @@
       }
     }
     &.count {
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-between;
       .card-item {
+        flex: unset;
+        max-width: 25.875rem;
+        margin-left: 0;
         &:before {
           position: absolute;
-          top: -28px;
+          top: -1.75rem;
           left: 50%;
           transform: translateX(-50%);
-          width: 56px;
-          height: 56px;
+          width: 3.5rem;
+          height: 3.5rem;
           border-radius: 9999px;
-          line-height: 56px;
+          line-height: 3.5rem;
           text-align: center;
           color: #ffffff;
           background-color: #1632d2;
           content: "01";
         }
       }
+      .card-title {
+        margin-bottom: 0.6875rem;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        text-align: center;
+      }
       .card-txt {
-        margin: 11px 0 0;
         font-family: S-CoreDream-4;
-        font-size: 14px;
-        line-height: 1.71;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        text-align: center;
         color: #353535;
       }
     }
@@ -182,22 +229,18 @@
       display: flex;
       flex-flow: column wrap;
       align-items: center;
-      padding: 111px 100px 103px;
+      padding: 6.9375rem 6.4375rem 6.4375rem;
+    }
+    .main-title {
+      color: #ffffff;
+      &__wrap {
+        margin-bottom: 3.0625rem;
+      }
+      &--txt {
+        color: #ffffff;
+      }
     }
   }
-}
-.box__title-wrap {
-}
-.box__title {
-  font-size: 44px;
-  font-weight: 500;
-  color: #ffffff;
-}
-.box__txt-wrap {
-}
-.box__txt {
-  font-size: 20px;
-  color: #ffffff;
 }
 
 /* layout */
@@ -251,6 +294,10 @@
   &-07 {
     background-color: #1e4ba3;
 
+    .card {
+      background-color: transparent;
+    }
+
     .main-title {
       color: #ffffff;
       &--txt {
@@ -271,6 +318,7 @@
   margin-top: 14px;
   padding: 10px 46px 6px 46px;
   border-radius: 28px;
+  text-align: center;
   background-color: #ffffff;
   &:first-child {
     margin-top: 0;
@@ -285,18 +333,19 @@
 
 // Main
 .main-title {
+  display: block;
   font-family: S-CoreDream-7;
-  font-size: 44px;
+  font-size: 2.75rem;
   font-weight: 800;
-  line-height: 1.48;
+  line-height: 4.0625rem;
   color: #353535;
   &__wrap {
-    flex: none;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    min-width: 414px;
-    margin-right: 60px;
+    // flex: none;
+    // display: flex;
+    // flex-flow: column wrap;
+    // align-items: flex-start;
+    // min-width: 414px;
+    // margin-right: 60px;
 
     &.center {
       align-items: center;
@@ -312,9 +361,11 @@
     }
   }
   &--mid {
+    display: block;
     font-size: 30px;
   }
   &--sub {
+    display: block;
     margin: 0 0 18px 0;
     font-family: S-CoreDream-5;
     font-size: 22px;
@@ -323,6 +374,7 @@
     color: #353535;
   }
   &--txt {
+    display: block;
     margin: 70px 0 0 0;
     font-family: S-CoreDream-5;
     font-size: 20px;
@@ -336,7 +388,7 @@
   &__wrap {
     display: flex;
     flex-flow: column wrap;
-    width: 38.6875rem;
+    // width: 38.6875rem;
   }
   &__title {
     font-size: 2.75rem;
@@ -474,5 +526,92 @@
     &:first-child {
       margin-left: 0;
     }
+  }
+}
+
+@media (max-width: 767.98px) {
+  // Main
+  .main-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    &__wrap {
+    }
+    &--mid {
+      font-size: 1.7142rem;
+      line-height: 2.1428rem;
+    }
+    &--sub {
+      margin: 0 0 0.75rem 0;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+    &--txt {
+      margin: 1.375rem 0 0 0;
+      // font-size: 0.875rem;
+      font-size: 1rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  .han-content {
+    &--05 {
+      img {
+        width: 10.1786rem;
+        margin-top: 0;
+        margin-left: 11.25rem;
+      }
+    }
+  }
+
+  // Card
+  .card {
+    &-wrap {
+      &.count {
+        .card-item {
+          margin: 3.9687rem 0 0 0;
+          &:first-child {
+            margin: 0;
+          }
+        }
+        .card-content {
+          padding: 2.3571rem 0.7142rem 1rem 0.7142rem;
+        }
+        .card-title {
+          margin-bottom: 1.1571rem;
+        }
+        .card-txt {
+          font-size: 0.8571rem;
+          line-height: 1.4286rem;
+        }
+      }
+    }
+  }
+
+  // Box
+  .box {
+    &--gradient {
+      border-radius: 1rem;
+      background-image: linear-gradient(145deg, #363ef8 5%, #6119ec 92%);
+      &__content {
+        padding: 3.1429rem 0.7143rem 2.2857rem 0.7143rem;
+      }
+      .main-title {
+        &__wrap {
+          margin-bottom: 2.5714rem;
+        }
+        &--txt {
+          font-size: 1rem;
+          line-height: 1.5714rem;
+        }
+      }
+    }
+  }
+
+  .white-border-box {
+    margin-top: 0.5714rem;
+    padding: 0.7143rem;
+    border-radius: 1rem;
+    font-size: 0.8571rem;
+    line-height: 1.4285rem;
   }
 }
