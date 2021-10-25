@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/* ----------------------------------------------
+	가입문의
+---------------------------------------------- */
+.sub-visual {
+  &.membership {
+    height: 28rem;
+    .sub-visual-bg {
+      height: 100%;
+    }
+    .container-fluid {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      h2 {
+        margin-bottom: 1.813rem;
+        font-family: S-Core;
+        font-size: 2.75rem;
+        font-weight: 500;
+        line-height: 1.48;
+        color: #fff;
+      }
+      p {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+  }
+}
+// 전화문의, 메일문의
+.sub-cont-membership-inquiry-01 {
+  margin: 6.25rem 0 6.5rem;
+  .membership-inquiry-info {
+    > li {
+      display: inline-block;
+      padding: 2.438rem 4.5rem 4.313rem;
+      width: 32.125rem;
+      height: 13.75rem;
+      box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.5);
+      & + li {
+        margin-left: 1.188rem;
+      }
+      span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.375rem;
+        font-weight: bold;
+        line-height: 2.5;
+        color: #fff;
+      }
+      p {
+        text-align: left;
+        font-weight: bold;
+        color: #fff;
+      }
+      &:first-child {
+        background-color: #363ef8;
+        p {
+          margin-top: 0.688rem;
+          font-size: 3rem;
+        }
+      }
+      &:nth-child(2) {
+        background-color: #0921a2;
+        p {
+          margin-top: 1.313rem;
+          font-size: 2.25rem;
+        }
+      }
+    }
+  }
+}
+// 한비즈 서비스 진행 절차
+.sub-cont-membership-inquiry-02 {
+  margin-bottom: 8.875rem;
+  .tit {
+    margin-bottom: 8.5rem;
+    text-align: center;
+    font-family: S-Core;
+    font-size: 2.75rem;
+    font-weight: bold;
+    line-height: 1.48;
+    color: #353535;
+  }
+  .service-process {
+    flex-wrap: wrap;
+    > li {
+      position: relative;
+      width: 33.3%;
+      height: 20.875rem; //334
+      padding-left: 88px; // 68 + 20
+      counter-increment: service-process;
+      strong {
+        display: flex;
+        align-items: center;
+        min-height: 4.25rem;
+        font-size: 1.625rem;
+        font-weight: bold;
+        line-height: 1.5;
+        color: #292929;
+        & + p {
+          margin-top: 0.5rem;
+        }
+      }
+      p {
+        display: block;
+        min-height: 4.625rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: #292929;
+      }
+      .service-process-img {
+        display: block;
+        height: auto;
+        margin-top: 1.25rem;
+        &.join {
+          width: 15.688rem;
+        }
+        &.consulting {
+          width: 14.063rem;
+        }
+        &.add {
+          width: 6.625rem;
+        }
+        &.screening {
+          width: 9.375rem;
+        }
+        &.completed {
+          width: 11.375rem;
+        }
+        &.sendmoney {
+          width: 12.438rem;
+        }
+      }
+      &:before {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 4.25rem;
+        height: 4.25rem;
+        border-radius: 50%;
+        background-color: #1e4ba3;
+        font-size: 2.625rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: 4.25rem;
+        color: #fff;
+        content: counter(service-process);
+      }
+    }
+  }
+}
