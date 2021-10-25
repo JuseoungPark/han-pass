@@ -7,7 +7,7 @@
   &.membership {
     height: 28rem;
     .sub-visual-bg {
-      height: 100%;
+      height: auto;
     }
     .container-fluid {
       display: flex;
@@ -92,8 +92,8 @@
     > li {
       position: relative;
       width: 33.3%;
-      height: 20.875rem; //334
-      padding-left: 88px; // 68 + 20
+      height: rem(402px);
+      padding-left: rem(88px); // 68 + 20
       counter-increment: service-process;
       strong {
         display: flex;
@@ -119,22 +119,22 @@
         height: auto;
         margin-top: 1.25rem;
         &.join {
-          width: 15.688rem;
+          width: rem(252px);
         }
         &.consulting {
-          width: 14.063rem;
+          width: rem(225px);
         }
         &.add {
-          width: 6.625rem;
+          width: rem(107px);
         }
         &.screening {
-          width: 9.375rem;
+          width: rem(150px);
         }
         &.completed {
-          width: 11.375rem;
+          width: rem(209px);
         }
         &.sendmoney {
-          width: 12.438rem;
+          width: rem(220px);
         }
       }
       &:before {
@@ -143,10 +143,11 @@
         display: block;
         width: 4.25rem;
         height: 4.25rem;
+        padding-top: 2px;
         border-radius: 50%;
         background-color: #1e4ba3;
         font-size: 2.625rem;
-        font-weight: bold;
+        font-weight: 800;
         text-align: center;
         line-height: 4.25rem;
         color: #fff;
