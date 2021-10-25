@@ -7,19 +7,19 @@ $dark: #141414 !default;
 $light: #989898 !default;
 
 // Override Bootstrap font variables
-$font-family-sans-serif: "Nanum Square", "S-Core" !default;
-$sub-font-family: "Nanum Square", "S-Core" !default;
+$font-family-sans-serif: "NanumSquare", "S-Core" !default;
+$sub-font-family: "NanumSquare", "S-Core" !default;
 $body-bg: #fff;
 $body-color: #222;
 $line-height-base: 1;
 // $font-size-base: 1.063rem !default;
 $nav-height: 168px;
-$nav-status-height:85px;
-$lnb-height:110px;
+$nav-status-height: 85px;
+$lnb-height: 110px;
 $footer-height: 96px;
 
 $nav-height-md: 116px;
-$lnb-height-md:110px;
+$lnb-height-md: 110px;
 $footer-height-md: 96px;
 
 // Override Bootstrap border variables
@@ -42,7 +42,7 @@ $spacer: 1rem !default;
 // Override the spacing between columns to add symmetry to the layout
 $grid-gutter-width: $spacer * 3 !default;
 
-$input-placeholder-color:#bbb;
+$input-placeholder-color: #bbb;
 
 $grid-breakpoints: (
   xs: 0,
@@ -50,7 +50,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1280px,
-  xxl: 1580px
+  xxl: 1580px,
 );
 
 // Small devices (landscape phones, 576px and up)
