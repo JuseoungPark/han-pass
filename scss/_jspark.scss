@@ -7,7 +7,12 @@
 ---------------------------------------------- */
 
 @media (min-width: 1280px) {
-  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  .container,
+  .container-fluid,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
     max-width: 78.75rem;
     padding: 0px;
   }
@@ -15,12 +20,12 @@
 
 .container-fluid {
   &:after {
-    display:block;
-    clear:both;
-    visibility:hidden;
-    height:0;
-    font-size:0;
-    content:".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    content: ".";
   }
 }
 
@@ -33,7 +38,7 @@
     margin-top: 1.0438rem;
     padding: 1.25rem 1.0625rem;
     border-radius: 0.625rem;
-    font-family: NanumSquareB;
+    font-family: "NanumSquare";
     font-size: 1.125rem;
     line-height: 1.75rem;
     text-align: center;
@@ -123,7 +128,7 @@
     margin-top: 1.3125rem;
     span {
       display: block;
-      font-family: NanumSquareB;
+      font-family: "NanumSquare";
       font-size: 1.25rem;
       color: #000;
     }
@@ -158,19 +163,6 @@
     }
   }
 }
-.navigaion {
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  overflow: hidden;
-  min-width: 0;
-  // width: 314px;
-  // height: calc(100vh - 95px);
-  word-wrap: break-word;
-  background-clip: border-box;
-  transition: all 1s ease 0s;
-}
 
 .content {
   // width: calc(100% - 314px);
@@ -180,8 +172,6 @@
   transition: 1s;
 }
 
-.float
-
 .main-conts {
   &-02 {
     background-size: cover;
@@ -190,7 +180,7 @@
   &-03 {
     background-size: cover;
     // background-image: url(../../images/renewal/bg-img@3x.png);
-    opacity: .48;
+    opacity: 0.48;
     background-color: #12134b;
     .main-title {
       &--sub {
@@ -218,29 +208,28 @@
     }
   }
   &-04 {
-    .main-content {
-      img {
-        width: 503px;
-        margin-top: -17rem;
-        margin-left: 51rem;
-        width: 27.3125rem;
-        height: auto;
-      }
+    img {
+      margin: -19em 0 0 43rem;
+      width: 31.4375rem;
+      height: 34.25rem;
     }
     .float-right {
       flex-direction: column !important;
       width: 100%;
       height: auto;
     }
+    .box--gradient {
+      margin: 7.25rem 0 6.5rem;
+    }
   }
-  &-05 {}
+  &-05 {
+    background-color: #f7f7f7;
+  }
   &-06 {
     background-color: #1e4ba3;
-
     .card {
       background-color: transparent;
     }
-
     .main-title {
       color: #ffffff;
       &--txt {
@@ -259,6 +248,24 @@
       align-items: stretch;
       .card-item {
         margin: 1.5rem 0 0 0;
+      }
+      .card-content {
+        flex-flow: row wrap;
+        align-items: flex-end;
+      }
+      .card-title {
+        margin-bottom: 0;
+        font-family: "NanumSquare";
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+        color: #292929;
+      }
+      .card-txt {
+        margin: 1.875rem 0 0 0;
+        font-family: "NanumSquare";
+        font-size: 1.125rem;
+        line-height: 1.875rem;
+        color: #ababab;
       }
     }
     &.business-card {
@@ -280,7 +287,7 @@
       }
       .card-txt {
         margin-left: 2.1875rem;
-        font-family: NanumSquareR;
+        font-family: "NanumSquare";
         font-size: 1.225rem;
         line-height: 1.57;
         color: #292929;
@@ -311,9 +318,6 @@
       align-items: stretch;
       justify-content: space-between;
       .card-item {
-        flex: unset;
-        max-width: 25.875rem;
-        margin-left: 0;
         &:before {
           position: absolute;
           top: -1.75rem;
@@ -322,6 +326,7 @@
           width: 3.5rem;
           height: 3.5rem;
           border-radius: 9999px;
+          font-family: "NanumSquare";
           line-height: 3.5rem;
           text-align: center;
           color: #ffffff;
@@ -331,14 +336,17 @@
       }
       .card-title {
         margin-bottom: 0.6875rem;
+        font-family: "S-Core";
         font-size: 1.25rem;
+        font-weight: 600;
         line-height: 1.5rem;
         text-align: center;
       }
       .card-txt {
-        font-family: S-CoreDream-4;
-        font-size: 0.875rem;
-        line-height: 1.5rem;
+        font-family: "S-Core";
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 1.25rem;
         text-align: center;
         color: #353535;
       }
@@ -347,6 +355,8 @@
       flex-flow: row nowrap;
       align-items: stretch;
       overflow-x: auto;
+      padding: 4.9375rem 1.5rem 9.0625rem 1.5rem;
+      margin: 0 -1.5rem;
       .card-item {
         min-width: 242px;
         display: flex;
@@ -388,7 +398,7 @@
         display: inline-flex;
         align-items: center;
         min-height: 68px;
-        font-family: NanumSquareB;
+        font-family: "NanumSquare";
         text-align: center;
         line-height: 1.31;
         font-size: 24px;
@@ -441,24 +451,18 @@
       padding: 6.9375rem 6.4375rem 6.4375rem;
     }
     .main-title {
+      text-align: center;
       color: #ffffff;
       &__wrap {
-        margin-bottom: 3.0625rem;
+        margin-bottom: 3.125rem;
       }
       &--txt {
+        margin: 2rem 0 0 0;
+        text-align: center;
         color: #ffffff;
       }
     }
   }
-}
-
-/* layout */
-
-.main-conts-04 {
-  background-position: 0 0;
-  background-size: cover;
-  background-image: url();
-  background-repeat: no-repeat;
 }
 
 .white-border-box {
@@ -471,7 +475,7 @@
     margin-top: 0;
   }
   &__txt {
-    font-family: "Nanum Square";
+    font-family: "NanumSquare";
     font-size: 22px;
     line-height: 1.82;
     color: #292929;
@@ -487,16 +491,8 @@
   line-height: 4.0625rem;
   color: #353535;
   &__wrap {
-    // flex: none;
-    // display: flex;
-    // flex-flow: column wrap;
-    // align-items: flex-start;
-    // min-width: 414px;
-    // margin-right: 60px;
-
     &.center {
-      align-items: center;
-      .magin-title {
+      .main-title {
         text-align: center;
         &--sub {
           text-align: center;
@@ -565,14 +561,14 @@
     align-items: center;
     padding: 1.9375rem 0 1.8125rem 0;
     &__title {
-      font-family: NanumSquareR;
+      font-family: "NanumSquare";
       font-size: 18px;
       color: #353535;
     }
     &__date {
       flex: none;
       margin-left: auto;
-      font-family: NanumSquareR;
+      font-family: "NanumSquare";
       font-size: 16px;
       color: #353535;
     }
@@ -603,7 +599,7 @@
     }
   }
   &__txt {
-    font-family: NanumSquareB;
+    font-family: "NanumSquare";
     font-size: 18px;
     line-height: 1.71;
     color: #292929;
@@ -632,7 +628,7 @@
   }
   &__link {
     margin-left: 51px;
-    font-family: NanumSquareB;
+    font-family: "NanumSquare";
     font-size: 16px;
     color: #e8e6e8;
     &:first-child {
@@ -679,6 +675,60 @@
 }
 
 @media (max-width: 767.98px) {
+  .top-right-fixed-wrap {
+    display: none;
+  }
+
+  .main-visual {
+    background-position: 0 0;
+    background-size: cover;
+    div[class*="main-visual-bg"] {
+      position: unset;
+      // top: 9.75rem;
+      width: 100%;
+      height: 22.375rem;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 90vh;
+      margin-top: 0;
+    }
+    .cont-box {
+      display: flex;
+      flex-flow: column-reverse wrap;
+      justify-content: flex-end;
+      position: relative;
+      width: calc(100% - 20px * 2);
+      margin: 1.75rem auto 0 auto;
+    }
+    .caption {
+      position: unset;
+      // top: 1.75rem;
+      // left: 0;
+      transform: translate(0);
+      h1 {
+        width: 2.3125rem;
+        height: 0.625rem;
+        margin-bottom: 0;
+      }
+    }
+    .main-visual-bg-01 {
+      + .caption {
+        strong {
+          font-family: "S-Core";
+          font-size: 1.25rem;
+          font-weight: 500;
+          line-height: 1.875rem;
+        }
+        p {
+          font-family: "S-Core";
+          font-size: 0.75rem;
+          font-weight: 400;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
   .section {
     .nav {
       height: unset;
@@ -695,13 +745,19 @@
       }
     }
     &-04 {
+      padding: 0;
       .float-right {
         flex-direction: column !important;
         width: 100%;
         height: auto;
       }
       img {
-        width: 10.1786rem;
+        width: 10.125rem;
+        height: 11.0625rem;
+        margin: -2.625rem 0 0 10.625rem;
+      }
+      .box--gradient {
+        margin: 2.125rem 0 3.25rem;
       }
     }
     &-05 {
@@ -767,13 +823,24 @@
           width: 3.5rem;
           height: 3.5rem;
         }
-        .card-title {}
-        .card-txt {}
+        .card-title {
+          margin-left: 1.125rem;
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        .card-txt {
+          margin: 1.5625rem 0 0 0;
+          font-size: 0.75rem;
+          line-height: 1.25rem;
+        }
       }
       &.business-card {
         flex-flow: row nowrap;
+        align-items: stretch;
         overflow-y: hidden;
         overflow-x: auto;
+        padding: 4.9375rem 1.5rem 9.0625rem 1.5rem;
+        margin: 0 -1.5rem;
         .card-item {
           margin: 0 0 0 1.5rem;
           &:first-child {
@@ -801,10 +868,20 @@
         }
       }
       &.count {
+        margin-top: -4.125rem;
         .card-item {
+          flex: none;
+          width: 100%;
           margin: 3.9687rem 0 0 0;
           &:first-child {
             margin: 0;
+          }
+          &:before {
+            top: -1.2188rem;
+            width: 2.4375rem;
+            height: 2.4375rem;
+            font-size: 0.875rem;
+            line-height: 2.4375rem;
           }
         }
         .card-content {
@@ -812,6 +889,8 @@
         }
         .card-title {
           margin-bottom: 1.1571rem;
+          font-size: 1rem;
+          line-height: 1.05rem;
         }
         .card-txt {
           font-size: 0.8571rem;
@@ -827,15 +906,22 @@
       border-radius: 1rem;
       background-image: linear-gradient(145deg, #363ef8 5%, #6119ec 92%);
       &__content {
+        align-items: flex-start;
         padding: 3.1429rem 0.7143rem 2.2857rem 0.7143rem;
       }
       .main-title {
+        width: 10rem;
+        font-size: 1.5rem;
+        line-height: 2.4375rem;
+        text-align: left;
         &__wrap {
-          margin-bottom: 2.5714rem;
+          margin-bottom: 2.25rem;
         }
         &--txt {
-          font-size: 1rem;
-          line-height: 1.5714rem;
+          margin: 0.5rem 0 0 0;
+          font-size: 0.875rem;
+          line-height: 1.375rem;
+          text-align: left;
         }
       }
     }
