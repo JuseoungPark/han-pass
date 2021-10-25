@@ -483,7 +483,7 @@
   display: block;
   font-family: "S-Core";
   font-size: 2.75rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 4.0625rem;
   color: #353535;
   &__wrap {
@@ -514,7 +514,8 @@
   &--sub {
     display: block;
     margin: 0 0 18px 0;
-    font-family: S-CoreDream-5;
+    font-family: "S-Core";
+    font-weight: 500;
     font-size: 22px;
     font-weight: 500;
     line-height: 3.36;
@@ -523,8 +524,9 @@
   &--txt {
     display: block;
     margin: 70px 0 0 0;
-    font-family: S-CoreDream-5;
+    font-family: "S-Core";
     font-size: 20px;
+    font-weight: 500;
     font-weight: 500;
     line-height: 2;
     color: #353535;
