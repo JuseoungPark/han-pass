@@ -156,3 +156,89 @@
     }
   }
 }
+
+.sub-cont-membership-inquiry-03 {
+  .card {
+    margin-top: rem(53px);
+    border-top: 2px solid #18191a;
+    border-bottom: 2px solid #18191a;
+    .icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .collapse + .card-header {
+      border-top: 2px solid #18191a;
+    }
+    .card-header {
+      position: relative;
+      border-radius: 0;
+      padding: rem(33px) 0;
+      cursor: pointer;
+      border: 0;
+      h5 {
+        font-size: rem(24px);
+        color: #18191a;
+        font-weight: bold;
+      }
+      .icon {
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+      }
+      &.collapsed .icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+    .card-body {
+      background: rgba(38, 38, 38, 0.03);
+      .fill-method-cont {
+        padding: rem(40px);
+        text-align: center;
+        h6 {
+          font-size: rem(24px);
+          font-weight: bold;
+          color: #18191a;
+        }
+        .fill-method-step {
+          @include clearfix;
+          li {
+            float: left;
+            margin-top: 53px;
+            width: 50%;
+            & > span {
+              display: block;
+              font-family: "Apple SD Gothic Neo";
+              font-size: 18px;
+              font-weight: 900;
+              color: #18191a;
+            }
+            img {
+              margin: 0 auto;
+              display: block;
+              margin: 18px auto;
+              width: 220px;
+              height: 220px;
+            }
+            p {
+              font-family: "Apple SD Gothic Neo";
+              font-size: 18px;
+              line-height: 1.44;
+              color: #18191a;
+              & > span {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      .info-cont {
+        padding: 49px 39px;
+        text-align: left;
+        font-size: 18px;
+        color: #262626;
+      }
+    }
+  }
+}
