@@ -20,6 +20,26 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.weight {
+  &--400 {
+    font-weight: 400;
+  }
+  &--500 {
+    font-weight: 500;
+  }
+  &--600 {
+    font-weight: 600;
+  }
+  &--700 {
+    font-weight: 700;
+  }
+}
+.bold {
+  font-weight: 700;
+}
+.green {
+  color: #33dd9b;
+}
 
 @media (min-width: 1280px) {
   .container,
@@ -79,8 +99,8 @@
     }
   }
   .btn--primary {
-    padding: 20px 17px;
-    border-radius: 10px;
+    padding: 1.25rem 1rem;
+    border-radius: 0.625rem;
     background-color: #0921a2;
   }
 }
@@ -90,8 +110,9 @@
 
 // 메인 비주얼
 .main-visual {
-  background-position: 123% 0; // 470
-  background-size: contain;
+  // height: 100vh;
+  background-position: calc(100% + 22.5rem) 0;
+  background-size: cover;
   background-image: url(../../images/renewal/main-visual-01@2x.png);
   background-repeat: no-repeat;
   background-color: #1e4ba3;
@@ -162,13 +183,13 @@
       overflow: hidden;
       min-width: 0;
       height: calc(100vh - 95px);
-      margin-left: -182px;
+      margin-left: -11.25rem;
       word-wrap: break-word;
       background-clip: border-box;
       transition: all 1s ease 0s;
       > ul {
         > li {
-          padding: 0px;
+          padding: 0;
           text-align: left;
         }
       }
@@ -182,7 +203,6 @@
 }
 
 .content {
-  // width: calc(100% - 314px);
   height: calc(100vh - 95px);
   overflow: hidden;
   // opacity: 0;
@@ -193,11 +213,16 @@
   &-02 {
     background-size: cover;
     background-image: url(../../images/renewal/bg-img@3x.png);
+    .card-wrap {
+      &.bay-tree {
+        margin-top: 3.5rem;
+        margin-bottom: 7.25rem;
+      }
+    }
   }
   &-03 {
     background-size: cover;
-    // background-image: url(../../images/renewal/bg-img@3x.png);
-    opacity: 0.48;
+    background-image: url(../../images/renewal/bg-digit@2x.png);
     background-color: #12134b;
     .main-title {
       &--sub {
@@ -242,22 +267,54 @@
   &-05 {
     background-color: #f7f7f7;
     .content {
-      max-width: 790px;
+      max-width: 49.375rem;
     }
     .card-wrap {
       flex-wrap: wrap;
+      max-width: 43.125rem;
+      margin: 7rem 0 8.5rem;
     }
     .card-item {
       flex: none;
-      width: 44%;
-      margin-top: 3rem;
-      margin-left: 0;
+      width: 20.6875rem;
+      margin: 3.125rem 0 0 0;
+      // margin-top: 3.125rem;
+      // margin-left: 0;
+      box-shadow: none;
+      &:nth-child(2) {
+        .card-img {
+          height: 5.625rem;
+        }
+      }
+      &:nth-child(3) {
+        .card-img {
+          height: 6.25rem;
+        }
+      }
+      &:nth-child(4) {
+        .card-img {
+          width: 6.25rem;
+          height: 6.5rem;
+        }
+      }
       &:nth-child(2n - 1) {
-        margin-top: -1rem;
+        margin-top: -12.5rem;
       }
       &:nth-child(2n) {
-        margin-left: 1.25rem;
+        margin-left: 1.75rem;
       }
+    }
+    .card-title {
+      // font-size: 1.5rem;
+      margin: 1.25rem 0 1.875rem;
+      font-size: 1.625rem;
+      line-height: 2.5rem;
+      color: #292929;
+    }
+    .card-txt {
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+      color: #ababab;
     }
   }
   &-06 {
@@ -270,6 +327,10 @@
       &--txt {
         color: #ffffff;
       }
+    }
+    .business-card {
+      max-width: 43.125rem;
+      margin-bottom: 6.25rem;
     }
   }
   &-07 {
@@ -295,6 +356,9 @@
       align-items: stretch;
       .card-item {
         margin: 1.5rem 0 0 0;
+        &:first-child {
+          margin: 0;
+        }
       }
       .card-content {
         flex-flow: row wrap;
@@ -333,10 +397,10 @@
         max-height: 7.875rem;
       }
       .card-txt {
-        margin-left: 2.1875rem;
+        margin: 0 0 0 2.1875rem;
         font-family: "NanumSquare";
-        font-size: 1.225rem;
-        line-height: 1.57;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
         color: #292929;
       }
     }
@@ -402,67 +466,68 @@
       flex-flow: row nowrap;
       align-items: stretch;
       overflow-x: auto;
-      padding: 4.9375rem 1.5rem 9.0625rem 1.5rem;
+      // padding: 4.9375rem 1.5rem 9.0625rem 1.5rem;
+      padding: 1.5rem;
       margin: 0 -1.5rem;
       .card-item {
-        min-width: 242px;
+        min-width: 15rem;
         display: flex;
-        margin-left: 13px;
+        margin-left: 1rem;
+        box-shadow: 0 2px 7px 2px rgba(211, 211, 211, 0.5);
         &:first-child {
           margin-left: 0;
         }
-        &:before {
-          position: absolute;
-          top: 50%;
-          left: 20px;
-          transform: translateY(-50%);
-          width: 42px;
-          height: 62px;
-          background-size: 42px;
-          background-image: url(../../images/renewal/img-licence-open@3x.png);
-          background-repeat: no-repeat;
-          content: "";
-        }
+        &:before,
         &:after {
           position: absolute;
           top: 50%;
-          right: 20px;
           transform: translateY(-50%);
-          width: 42px;
-          height: 62px;
-          background-size: 42px;
-          background-image: url(../../images/renewal/img-licence-close@3x.png);
+          width: 2.125rem;
+          height: 3.125rem;
+          background-size: 2.125rem;
           background-repeat: no-repeat;
           content: "";
+        }
+        &:before {
+          left: 1.25rem;
+          background-image: url(../../images/renewal/img-licence-open@3x.png);
+        }
+        &:after {
+          right: 1.25rem;
+          background-image: url(../../images/renewal/img-licence-close@3x.png);
         }
       }
       .card-content {
         flex: 1;
         align-items: center;
-        padding: 30px 62px 20px 62px;
+        padding: 1.875rem 4rem 1.25rem 4rem;
       }
       .card-title {
         display: inline-flex;
         align-items: center;
-        min-height: 68px;
+        min-height: 4.25rem;
+        margin-bottom: 0.25rem;
         font-family: "NanumSquare";
+        font-size: 1.5rem;
         text-align: center;
-        line-height: 1.31;
-        font-size: 24px;
+        line-height: 2rem;
         color: #00051f;
       }
       .card-txt {
         margin-top: auto;
+        font-size: 0.875rem;
         text-align: center;
+        line-height: 2.125rem;
+        letter-spacing: -0.88px;
       }
     }
   }
   &-item {
     flex: 1;
     position: relative;
-    margin-left: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.11);
+    margin-left: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1.875rem 0 rgba(0, 0, 0, 0.11);
     background-color: #fff;
     &:first-child {
       margin-left: 0;
@@ -471,18 +536,18 @@
   &-content {
     display: flex;
     flex-flow: column wrap;
-    padding: 48px 26px 16px 26px;
+    padding: 3rem 1.5rem 1rem 1.5rem;
   }
   &-img {
-    width: 103px;
-    height: 103px;
+    width: 6.5rem;
+    height: 6.5rem;
   }
   &-title {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #1632d2;
   }
   &-txt {
-    font-size: 14px;
+    font-size: 1rem;
     color: #353535;
   }
 }
@@ -552,7 +617,7 @@
   }
   &--mid {
     display: block;
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   &--sub {
     display: block;
@@ -568,7 +633,7 @@
     display: block;
     margin: 70px 0 0 0;
     font-family: "S-Core";
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     font-weight: 500;
     line-height: 2;
@@ -751,6 +816,7 @@
 
 // 공지사항, 소개 및 신청
 .info-intro-link {
+  z-index: 9;
   .main-notice {
     width: 38.75rem;
   }
@@ -764,6 +830,9 @@
 }
 
 @media (max-width: 767.98px) {
+  .section .container-fluid .nav {
+    height: auto;
+  }
   .top-right-fixed-wrap {
     display: none;
   }
@@ -787,7 +856,7 @@
       flex-flow: column-reverse wrap;
       justify-content: flex-end;
       position: relative;
-      width: calc(100% - 20px * 2);
+      width: calc(100% - 1.25rem * 2);
       margin: 1.75rem auto 0 auto;
     }
     .caption {
@@ -832,6 +901,34 @@
         width: 100%;
         height: auto;
       }
+      .card-wrap {
+        &.bay-tree {
+          margin-top: 0.75rem;
+          margin-bottom: 1.5rem;
+          .card-item {
+            margin-left: 0.625rem;
+            &:first-child {
+              margin-left: 0;
+            }
+            &:before,
+            &:after {
+              width: 3.125rem;
+              height: 4.125rem;
+              background-size: cover;
+            }
+          }
+          .card-content {
+            padding: 1.5rem 1rem 1rem 1rem;
+          }
+        }
+      }
+    }
+    &-03 {
+      .float-right {
+        flex-direction: column !important;
+        width: 100%;
+        height: auto;
+      }
     }
     &-04 {
       padding: 0;
@@ -847,6 +944,9 @@
       }
       .box--gradient {
         margin: 2.125rem 0 3.25rem;
+        ul {
+          width: 100%;
+        }
       }
     }
     &-05 {
@@ -856,9 +956,24 @@
       .card-item {
         width: 100%;
         margin: 0.75rem 0 0 0;
-        box-shadow: none;
         &:first-child {
           margin: 0;
+        }
+        &:nth-child(2) {
+          .card-img {
+            height: 3rem;
+          }
+        }
+        &:nth-child(3) {
+          .card-img {
+            height: 3.25rem;
+          }
+        }
+        &:nth-child(4) {
+          .card-img {
+            width: 3.4375rem;
+            height: 3.5rem;
+          }
         }
         &:nth-child(2n - 1) {
           margin: 0.75rem 0 0 0;
@@ -866,6 +981,22 @@
         &:nth-child(2n) {
           margin: 0.75rem 0 0 0;
         }
+      }
+      .card-content {
+        padding: 1.875rem 0.625rem 2.5rem 0.625rem;
+      }
+      .card-img {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      .card-title {
+        margin: 0.5rem 0 1.5rem;
+        font-size: 1.1428rem;
+        line-height: 1.7143rem;
+      }
+      .card-txt {
+        font-size: 0.75rem;
+        line-height: 1.4286rem;
       }
     }
     &-06 {
@@ -881,8 +1012,19 @@
           color: #ffffff;
         }
       }
+      .card-wrap {
+        &.business-card {
+          margin-top: 3.1428rem;
+          margin-bottom: 2.5714rem;
+        }
+      }
     }
     &-07 {
+      .float-right {
+        flex-direction: column !important;
+        width: 100%;
+        height: auto;
+      }
       .card-wrap {
         &.ci-banner {
           .card-item {
@@ -898,24 +1040,29 @@
 
   // Main
   .main-title {
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    // &__wrap {
-    // }
+    font-size: 1.7143rem;
+    line-height: 2.1428rem;
+    &__wrap {
+      &.center {
+        .main-title--sub,
+        .main-title--mid {
+          text-align: left;
+        }
+      }
+    }
     &--mid {
-      font-size: 1.7142rem;
+      font-size: 1.7143rem;
       line-height: 2.1428rem;
     }
     &--sub {
-      margin: 0 0 0.75rem 0;
-      font-size: 0.75rem;
+      margin: 0 0 0.8571rem 0;
+      font-size: 0.8571rem;
       line-height: 1.25rem;
     }
     &--txt {
-      margin: 1.375rem 0 0 0;
-      // font-size: 0.875rem;
+      margin: 1.7143rem 0 0 0;
       font-size: 1rem;
-      line-height: 1.375rem;
+      line-height: 1.5714rem;
     }
   }
 
@@ -951,10 +1098,10 @@
         align-items: stretch;
         overflow-y: hidden;
         overflow-x: auto;
-        padding: 4.9375rem 1.5rem 9.0625rem 1.5rem;
+        padding: 1.5rem;
         margin: 0 -1.5rem;
         .card-item {
-          margin: 0 0 0 1.5rem;
+          margin: 0 0 0 0.7143rem;
           &:first-child {
             margin: 0;
           }
@@ -963,8 +1110,8 @@
           flex-flow: column wrap;
           justify-content: space-between;
           align-items: flex-start;
-          width: 14.0625rem;
-          height: 8.9375rem;
+          width: 16rem;
+          height: 10.2858rem;
           padding: 1.0625rem 2.125rem 1.1875rem 1.0625rem;
         }
         .card-img {
@@ -1000,9 +1147,9 @@
           padding: 2.3571rem 0.7142rem 1rem 0.7142rem;
         }
         .card-title {
-          margin-bottom: 1.1571rem;
-          font-size: 1rem;
-          line-height: 1.05rem;
+          margin-bottom: 1.1428rem;
+          font-size: 1.1428rem;
+          line-height: 1.1428rem;
         }
         .card-txt {
           font-size: 0.8571rem;
@@ -1022,17 +1169,12 @@
         padding: 3.1429rem 0.7143rem 2.2857rem 0.7143rem;
       }
       .main-title {
-        width: 10rem;
-        font-size: 1.5rem;
-        line-height: 2.4375rem;
         text-align: left;
         &__wrap {
           margin-bottom: 2.25rem;
         }
         &--txt {
           margin: 0.5rem 0 0 0;
-          font-size: 0.875rem;
-          line-height: 1.375rem;
           text-align: left;
         }
       }
@@ -1045,7 +1187,7 @@
     border-radius: 1rem;
     &__txt {
       font-size: 0.8571rem;
-      line-height: 1.4285rem;
+      line-height: 1.4286rem;
     }
   }
 
