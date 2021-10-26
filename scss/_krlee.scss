@@ -275,3 +275,184 @@
   &.large {
   }
 }
+
+// 미디어 쿼리
+
+// tablet
+@media (max-width: 767.98px) {
+  .sub-visual {
+    &.membership {
+      height: 198px;
+      .container-fluid {
+        h2 {
+          height: 65px;
+          margin-bottom: 0;
+          font-size: 34px;
+        }
+        p {
+          text-align: center;
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 1.54;
+        }
+      }
+    }
+  }
+  .sub-cont-membership-inquiry-01 {
+    margin: 26px 0 52px;
+    .membership-inquiry-info {
+      width: 100%;
+      max-width: 360px;
+      > li {
+        padding: 14px 0 12px;
+        width: calc(50% - 5px);
+        height: 66px;
+        & + li {
+          margin-left: 0;
+        }
+        span {
+          font-size: 10px;
+          line-height: 2;
+        }
+        p {
+          text-align: center;
+        }
+        &:first-child {
+          margin-right: 5px;
+          p {
+            margin-top: 3px;
+            font-size: 12px;
+          }
+        }
+        &:nth-child(2) {
+          margin-left: 5px;
+          p {
+            margin-top: 3px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .sub-cont-membership-inquiry-02 {
+    margin-bottom: 50px;
+    .tit {
+      margin-bottom: 8px;
+      font-size: 24px;
+      line-height: 2.71;
+    }
+    .service-process {
+      & > li {
+        width: 50%;
+        height: 130px;
+        padding-left: 32px;
+        strong {
+          min-height: 26px;
+          font-size: 12px;
+          line-height: 1.25;
+          & + p {
+            margin-top: 6px;
+          }
+        }
+        p {
+          min-height: 30px;
+          font-size: 9px;
+          line-height: 1.43;
+        }
+        .service-process-img {
+          margin-top: 3px;
+          &.join {
+            width: rem(62px);
+          }
+          &.consulting {
+            width: rem(70px);
+          }
+          &.add {
+            width: rem(32px);
+          }
+          &.screening {
+            width: rem(45px);
+          }
+          &.completed {
+            width: rem(50px);
+          }
+          &.sendmoney {
+            width: rem(65px);
+          }
+        }
+        &:before {
+          width: 26px;
+          height: 26px;
+          font-size: 10px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .sub-cont-membership-inquiry-03 {
+    h2.tit {
+      padding-bottom: 6px;
+      font-size: 24px;
+      line-height: 1.67;
+    }
+    .form-group-container {
+      .form-group-wrap {
+        flex-flow: column wrap;
+        border-bottom: none;
+        .form-group {
+          flex-direction: column;
+          padding: 8px 0;
+          .tit {
+            width: 100%;
+            margin-bottom: 8px;
+            font-size: rem(16px);
+          }
+          .input-group {
+            width: 100%;
+          }
+        }
+        &.column {
+          .input-group {
+            width: 100%;
+            textarea {
+              height: 160px;
+            }
+          }
+        }
+        &:first-child {
+          .form-group {
+            &:first-child {
+              padding-top: 24px;
+            }
+          }
+        }
+        &:last-child {
+          .form-group {
+            &:last-child {
+              padding-bottom: 24px;
+            }
+          }
+        }
+      }
+    }
+    .sub-text-wrap {
+      padding-bottom: 8px;
+    }
+    .card {
+      .card-body {
+        padding: 17px 17px 30px 17px;
+      }
+    }
+    .btns-box {
+      padding: 50px 0 80px;
+      .btn-primary {
+        &.btn-lg {
+          width: 100%;
+          padding: 16px 32px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+}
