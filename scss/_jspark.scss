@@ -276,7 +276,7 @@
     .card-wrap {
       &.ci-banner {
         .card-item {
-
+          width: 20%;
         }
       }
     }
@@ -850,9 +850,21 @@
       }
     }
     &-05 {
-      .card {
-        &-item {
-          box-shadow: none;
+      .card-wrap {
+        margin: 1.5rem 0 3.75rem 0;
+      }
+      .card-item {
+        width: 100%;
+        margin: 0.75rem 0 0 0;
+        box-shadow: none;
+        &:first-child {
+          margin: 0;
+        }
+        &:nth-child(2n - 1) {
+          margin: 0.75rem 0 0 0;
+        }
+        &:nth-child(2n) {
+          margin: 0.75rem 0 0 0;
         }
       }
     }
@@ -868,6 +880,18 @@
         &--txt {
           color: #ffffff;
         }
+      }
+    }
+    &-07 {
+      .card-wrap {
+        &.ci-banner {
+          .card-item {
+            width: 100%;
+          }
+        }
+      }
+      .info-intro-link {
+        // margin: 11.5rem 0 9rem;
       }
     }
   }
