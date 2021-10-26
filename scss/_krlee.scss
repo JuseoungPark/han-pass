@@ -7,7 +7,8 @@
   &.membership {
     height: 28rem;
     .sub-visual-bg {
-      height: auto;
+      height: 100%;
+      width: auto;
     }
     .container-fluid {
       display: flex;
@@ -158,8 +159,50 @@
 }
 
 .sub-cont-membership-inquiry-03 {
+  h2.tit {
+    padding-bottom: 38px;
+    font-weight: bold;
+  }
+  .form-group-container {
+    border-top: 2px solid #353535;
+    border-bottom: 2px solid #353535;
+    .form-group-wrap {
+      display: flex;
+      flex-flow: row wrap;
+      margin: 0;
+      border-bottom: 1px solid #d0d0d0;
+      .form-group {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        padding: 12px 0;
+        margin: 0;
+        .tit {
+          width: 142px;
+          margin: 0;
+          font-weight: bold;
+          font-size: rem(18px);
+        }
+        .input-group {
+          width: 340px;
+        }
+      }
+      &.column {
+        flex-flow: column wrap;
+        .input-group {
+          width: 638px;
+          textarea {
+            height: 240px;
+            resize: none;
+          }
+        }
+      }
+    }
+    & + .card {
+      border-top: none;
+    }
+  }
   .card {
-    margin-top: rem(53px);
     border-top: 2px solid #18191a;
     border-bottom: 2px solid #18191a;
     .icon {
@@ -172,12 +215,12 @@
     }
     .card-header {
       position: relative;
+      // min-height: 70px;
       border-radius: 0;
-      padding: rem(33px) 0;
-      cursor: pointer;
+      padding: rem(18px) 0;
       border: 0;
       h5 {
-        font-size: rem(24px);
+        font-size: rem(18px);
         color: #18191a;
         font-weight: bold;
       }
@@ -186,59 +229,49 @@
         height: 40px;
         top: 50%;
         transform: translateY(-50%) rotate(0deg);
+        cursor: pointer;
       }
       &.collapsed .icon {
         transform: translateY(-50%) rotate(180deg);
       }
     }
     .card-body {
+      padding: 27px 52px;
       background: rgba(38, 38, 38, 0.03);
-      .fill-method-cont {
-        padding: rem(40px);
-        text-align: center;
-        h6 {
-          font-size: rem(24px);
-          font-weight: bold;
-          color: #18191a;
-        }
-        .fill-method-step {
-          @include clearfix;
-          li {
-            float: left;
-            margin-top: 53px;
-            width: 50%;
-            & > span {
-              display: block;
-              font-family: "Apple SD Gothic Neo";
-              font-size: 18px;
-              font-weight: 900;
-              color: #18191a;
-            }
-            img {
-              margin: 0 auto;
-              display: block;
-              margin: 18px auto;
-              width: 220px;
-              height: 220px;
-            }
-            p {
-              font-family: "Apple SD Gothic Neo";
-              font-size: 18px;
-              line-height: 1.44;
-              color: #18191a;
-              & > span {
-                font-size: 16px;
-              }
-            }
-          }
-        }
-      }
       .info-cont {
-        padding: 49px 39px;
         text-align: left;
-        font-size: 18px;
+        font-size: rem(14px);
         color: #262626;
       }
     }
+  }
+  .btns-box {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 220px;
+    .btn-primary {
+      &.btn-lg {
+        width: 320px;
+        padding: 32px;
+        font-family: "NanumSquare";
+        text-align: center;
+        background-color: #146fd3;
+        border-radius: 16px;
+      }
+    }
+  }
+  .sub-text-wrap {
+    display: flex;
+    padding-bottom: 12px;
+    .sub-text {
+      margin-left: auto;
+      font-size: 14px;
+      color: #ababab;
+    }
+  }
+}
+
+.form-control {
+  &.large {
   }
 }

@@ -21,7 +21,7 @@
             법인송금<br />
             로그인하기
           </a>
-          <a href="#">
+          <a class="btn--primary" href="#">
             가입문의
           </a>
         </div>
@@ -124,96 +124,141 @@
         <div class="sub-cont-membership-inquiry-03">
           <div class="container-fluid">
             <h2 class="tit">문의를 남겨주세요.</h2>
-            <div class="flex-grow-1">
-              <form class="form-type1">
-                <div class="form-group row">
-                  <label for="contact-name" class="col-sm-2 col-form-label"
-                    >이름*</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="contact-name"
-                      value=""
-                      placeholder="입력해주세요."
-                    />
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="contact-tel" class="col-sm-2 col-form-label"
-                    >연락처*</label
-                  >
-                  <div class="col-sm-10">
-                    <div class="select">
-                      <select name="select1" id="select1">
-                        <option value="대한민국 (82)">대한민국 (82)</option>
-                        <option value="대한민국 (82)">전체</option>
-                        <option value="대한민국 (82)">대한민국 (82)</option>
-                      </select>
+            <div class="cont-wrap">
+              <div class="sub-text-wrap">
+                <p class="sub-text">*는 필수 사항입니다.</p>
+              </div>
+              <form class="form-group-container">
+                <div class="form-group-wrap">
+                  <div class="form-group">
+                    <label class="tit" for="data1">이름*</label>
+                    <div class="input-group">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        placeholder="입력해주세요."
+                      />
+                      <button class="btn-delete" type="button">삭제</button>
                     </div>
-                    <input type="text" class="form-control" id="contact-tel" />
                   </div>
                 </div>
-                <div class="form-group row">
-                  <label for="contact-email" class="col-sm-2 col-form-label"
-                    >이메일*</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="contact-email"
-                      value=""
-                      placeholder="입력해주세요."
-                    />
+                <div class="form-group-wrap">
+                  <div class="form-group">
+                    <label class="tit" for="data1">회사명*</label>
+                    <div class="input-group">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        placeholder="입력해주세요."
+                      />
+                      <button class="btn-delete" type="button">삭제</button>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="tit" for="data1">직함</label>
+                    <div class="input-group">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        placeholder="입력해주세요.(선택)"
+                      />
+                      <div class="input-group-append">
+                        <button class="btn-delete" type="button">삭제</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="form-group row">
-                  <label for="contact-content" class="col-sm-2 col-form-label"
-                    >문의 내용*</label
-                  >
-                  <div class="col-sm-10">
-                    <textarea
-                      class="form-control"
-                      id="contact-content"
-                      placeholder="문의 내용을 입력하세요."
-                    ></textarea>
+                <div class="form-group-wrap">
+                  <div class="form-group">
+                    <label class="tit" for="data1">사업자등록번호*</label>
+                    <div class="input-group">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        placeholder="입력해주세요."
+                      />
+                      <button class="btn-delete" type="button">삭제</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group-wrap">
+                  <div class="form-group">
+                    <label class="tit" for="data1">전화번호*</label>
+                    <div class="input-group">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        placeholder="입력해주세요."
+                      />
+                      <button class="btn-delete" type="button">삭제</button>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="tit" for="data1">이메일*</label>
+                    <div class="input-group">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        placeholder="입력해주세요."
+                      />
+                      <button class="btn-delete" type="button">삭제</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group-wrap column">
+                  <div class="form-group">
+                    <label class="tit" for="data1">제목*</label>
+                    <div class="input-group">
+                      <input
+                        class="form-control form-control-lg"
+                        type="text"
+                        placeholder="입력해주세요."
+                      />
+                      <button class="btn-delete" type="button">삭제</button>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="tit" for="data1">문의사항</label>
+                    <div class="input-group">
+                      <textarea
+                        class="form-control form-control-lg"
+                        id="contact-content"
+                        placeholder="문의 내용을 입력하세요."
+                      ></textarea>
+                    </div>
                   </div>
                 </div>
               </form>
-            </div>
-            <div class="card">
-              <div
-                class="card-header collapsed"
-                data-toggle="collapse"
-                data-target="#agreement"
-                aria-expanded="false"
-                aria-controls="fee-info"
-              >
-                <h5>개인정보 수집 및 이용 동의</h5>
-                <img
-                  src="../images/icon-arrow-down-40x40-2x.png"
-                  class="icon"
-                  alt=""
-                />
-              </div>
-              <div class="collapse" id="agreement">
-                <div class="card-body">
-                  <div class="info-cont">
-                    1. 개인정보 수집 및 이용 목적? 1) 서비스 가입에 관한 안내 –
-                    한비즈의 국경간 전자지급결제대행서비스 가입과 관련한 상담
-                    제공? 2) 마케팅 및 광고에 활용 – 서비스 관련 광고성 정보
-                    전달?2. 수집하는 개인정보 항목 : 회사명, 담당자 직함, 담당자
-                    이름, 이메일, 전화번호?3. 수집한 개인정보 보유 및 이용기간 :
-                    회사는 제1항의 개인정보 수집 및 이용목적이 달성된 후에는
-                    해당 정보를 지체 없이 파기합니다.
+              <div class="card">
+                <div class="card-header collapsed">
+                  <h5>개인정보 수집 및 이용 동의</h5>
+                  <img
+                    src="../images/icon-arrow-down-40x40-2x.png"
+                    class="icon"
+                    alt=""
+                    data-toggle="collapse"
+                    data-target="#agreement"
+                    aria-expanded="false"
+                    aria-controls="fee-info"
+                  />
+                </div>
+                <div class="collapse" id="agreement">
+                  <div class="card-body">
+                    <div class="info-cont">
+                      1. 개인정보 수집 및 이용 목적? 1) 서비스 가입에 관한 안내
+                      – 한비즈의 국경간 전자지급결제대행서비스 가입과 관련한
+                      상담 제공? 2) 마케팅 및 광고에 활용 – 서비스 관련 광고성
+                      정보 전달?2. 수집하는 개인정보 항목 : 회사명, 담당자 직함,
+                      담당자 이름, 이메일, 전화번호?3. 수집한 개인정보 보유 및
+                      이용기간 : 회사는 제1항의 개인정보 수집 및 이용목적이
+                      달성된 후에는 해당 정보를 지체 없이 파기합니다.
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="d-flex btns-box">
-              <button type="button" class="btn btn-dark btn-lg">
+            <div class="btns-box">
+              <button type="button" class="btn btn-primary btn-lg">
                 가입 문의하기
               </button>
             </div>
@@ -221,40 +266,47 @@
         </div>
         <!-- //문의 -->
       </div>
-
       <!-- cont-wrap // -->
+
       <!-- footer -->
       <div class="footer">
         <div class="footer__header">
-          <a class="footer__link" href="#"><span>HOME</span></a>
-          <a class="footer__link" href="#"><span>서비스 이용약관</span></a>
-          <div class="footer__dropdown dropup">
-            <button
-              class="button dropdown-toggle"
-              type="button"
-              data-offset="0,10"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              family Site
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">한패스 홈페이지로 바로가기</a>
+          <div class="footer__header__content">
+            <a class="footer__link" href="#"><span>HOME</span></a>
+            <a class="footer__link" href="#"><span>서비스 이용약관</span></a>
+
+            <!-- 패밀리 사이트 -->
+            <div class="footer__dropdown dropup">
+              <button
+                class="button dropdown-toggle"
+                type="button"
+                data-offset="0,10"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                family Site
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">한패스 홈페이지로 바로가기</a>
+              </div>
             </div>
+            <!-- // 패밀리 사이트 -->
           </div>
         </div>
         <div class="footer__container">
-          <a href="#">
-            <div class="logo-img">한패스</div>
-          </a>
-          <p>
-            주소 . 서울 성동구 아차산로 92, 광명타워 4층 04782 한패스㈜ <br />
-            팩스 . (+82) 2.465.0767 이메일 . contact@hanpass.com <br />
-            전화 . (+82) 2.3409.1540 평일 . 09:00AM - 18:00PM 점심시간 . 12:00PM
-            - 01:00PM (토/일/공휴일 휴무) <br />
-            한패스(주) 사업자 등록번호 . 714-87-00610 대표이사 . 김경훈
-          </p>
+          <div class="footer__container__content">
+            <a href="#">
+              <div class="logo-img">한패스</div>
+            </a>
+            <p>
+              주소 . 서울 성동구 아차산로 92, 광명타워 4층 04782 한패스㈜ <br />
+              팩스 . (+82) 2.465.0767 이메일 . contact@hanpass.com <br />
+              전화 . (+82) 2.3409.1540 평일 . 09:00AM - 18:00PM 점심시간 .
+              12:00PM - 01:00PM (토/일/공휴일 휴무) <br />
+              한패스(주) 사업자 등록번호 . 714-87-00610 대표이사 . 김경훈
+            </p>
+          </div>
         </div>
       </div>
       <!-- footer // -->
