@@ -6,6 +6,21 @@
 	초기화
 ---------------------------------------------- */
 
+.ell {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.ell--2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 @media (min-width: 1280px) {
   .container,
   .container-fluid,
@@ -139,26 +154,28 @@
 }
 
 .section {
-  .nav {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    min-width: 0;
-    height: calc(100vh - 95px);
-    margin-left: -182px;
-    word-wrap: break-word;
-    background-clip: border-box;
-    transition: all 1s ease 0s;
-    > ul {
-      > li {
-        padding: 0px;
-        text-align: left;
+  .container-fluid {
+    .nav {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+      height: calc(100vh - 95px);
+      margin-left: -182px;
+      word-wrap: break-word;
+      background-clip: border-box;
+      transition: all 1s ease 0s;
+      > ul {
+        > li {
+          padding: 0px;
+          text-align: left;
+        }
       }
-    }
-    .active {
-      span {
-        text-decoration: underline;
+      .active {
+        span {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -213,17 +230,35 @@
       width: 31.4375rem;
       height: 34.25rem;
     }
-    .float-right {
-      flex-direction: column !important;
-      width: 100%;
-      height: auto;
-    }
+    // .float-right {
+    //   flex-direction: column !important;
+    //   width: 100%;
+    //   height: auto;
+    // }
     .box--gradient {
       margin: 7.25rem 0 6.5rem;
     }
   }
   &-05 {
     background-color: #f7f7f7;
+    .content {
+      max-width: 790px;
+    }
+    .card-wrap {
+      flex-wrap: wrap;
+    }
+    .card-item {
+      flex: none;
+      width: 44%;
+      margin-top: 3rem;
+      margin-left: 0;
+      &:nth-child(2n - 1) {
+        margin-top: -1rem;
+      }
+      &:nth-child(2n) {
+        margin-left: 1.25rem;
+      }
+    }
   }
   &-06 {
     background-color: #1e4ba3;
@@ -235,6 +270,18 @@
       &--txt {
         color: #ffffff;
       }
+    }
+  }
+  &-07 {
+    .card-wrap {
+      &.ci-banner {
+        .card-item {
+
+        }
+      }
+    }
+    .info-intro-link {
+      margin: 11.5rem 0 9rem;
     }
   }
 }
@@ -298,18 +345,18 @@
       justify-content: space-between;
       .card-item {
         flex: unset;
-        width: 13.05rem;
-        margin-left: 0;
+        width: 20%;
+        margin: 4.5rem 0 0 0;
         border-radius: 0;
         box-shadow: none;
       }
       .card-content {
         align-items: center;
-        height: 2.85rem;
+        height: 3rem;
         padding: 0;
       }
       .card-img {
-        width: auto;
+        width: inherit;
         height: inherit;
       }
     }
@@ -530,11 +577,6 @@
 }
 
 .main-notice {
-  &__wrap {
-    display: flex;
-    flex-flow: column wrap;
-    // width: 38.6875rem;
-  }
   &__title {
     font-size: 2.75rem;
     &__wrap {
@@ -593,6 +635,7 @@
     font-size: 0;
     text-indent: -9999px;
     &.download {
+      flex: none;
       background-size: cover;
       background-image: url(../../images/renewal/btn-downfile@3x.png);
       background-repeat: no-repeat;
@@ -621,10 +664,16 @@
   padding: 0;
   &__header {
     display: flex;
-    align-items: center;
-    padding: 15px 0 20px 0;
+    justify-content: center;
     // opacity: 0.76;
     background-color: #0c0c0c;
+    &__content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      max-width: 78.75rem;
+      padding: 1rem 0;
+    }
   }
   &__link {
     margin-left: 51px;
@@ -635,22 +684,44 @@
       margin-left: 0;
     }
   }
+  .footer__dropdown {
+    .button {
+      &.dropdown-toggle {
+        padding-right: 2.5rem;
+        background-size: 2rem;
+        background-image: url(../../images/renewal/ico-acc-open@3x.png);
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
   &__dropdown {
     flex: none;
     margin-left: auto;
+    .button {
+      &.dropdown-toggle {
+        padding-right: 1.25rem;
+        background-size: 2rem;
+        background-image: url(../../images/renewal/ico-acc-open@3x.png);
+        &:after {
+          display: none;
+        }
+      }
+    }
   }
+  // ico-more-view@3x
   .button {
     &.dropdown-toggle {
       width: 100%;
-      height: 3.75rem;
-      border-radius: 0.8125rem;
-      font-family: "Apple SD Gothic Neo";
-      font-size: 1.125rem;
-      font-weight: bold;
+      height: 2rem;
+      font-family: "NunumSquare";
+      font-size: 1rem;
+      // font-weight: bold;
       color: #ffffff;
       background-position: 100% 50%;
-      background-size: 1.1875rem;
-      background-image: url(../images/ico-outlinkopen-21x22-3x.png);
+      background-size: 2rem;
+      background-image: url(../images/renewal/ico-acc-open@3x.png);
       background-repeat: no-repeat;
       &:focus,
       &:active {
@@ -659,9 +730,13 @@
     }
   }
   &__container {
-    padding: 3.75rem 0 8.375rem 0;
     opacity: 0.76;
     background-color: #0c0c0c;
+    &__content {
+      max-width: 78.75rem;
+      margin: 0 auto;
+      padding: 3.75rem 0 8.375rem 0;
+    }
   }
 }
 
@@ -670,6 +745,20 @@
     margin-left: 1.75rem;
     &:first-child {
       margin-left: 0;
+    }
+  }
+}
+
+// 공지사항, 소개 및 신청
+.info-intro-link {
+  .main-notice {
+    width: 38.75rem;
+  }
+  .button {
+    width: 35.375rem;
+    margin-top: 1.625rem;
+    &:first-child {
+      margin-top: 0;
     }
   }
 }
@@ -761,7 +850,6 @@
       }
     }
     &-05 {
-      background-color: #f7f7f7;
       .card {
         &-item {
           box-shadow: none;
@@ -934,6 +1022,38 @@
     &__txt {
       font-size: 0.8571rem;
       line-height: 1.4285rem;
+    }
+  }
+
+  // 공지사항, 소개 및 신청
+  .info-intro-link {
+    flex-wrap: wrap;
+    .main-notice {
+      width: 100%;
+    }
+    .button {
+      width: 100%;
+      margin-top: 1.625rem;
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        .button__txt--desc {
+          display: none;
+        }
+      }
+      &__content {
+        padding: 0.75rem 1.375rem;
+      }
+      &__txt {
+        &__wrap {
+          margin-top: 0.5rem;
+        }
+      }
+      &__ico {
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
 }
