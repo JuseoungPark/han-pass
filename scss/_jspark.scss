@@ -336,6 +336,7 @@
   &-07 {
     .card-wrap {
       &.ci-banner {
+        margin-top: rem(8px);
         .card-item {
           width: 20%;
         }
@@ -412,6 +413,7 @@
         width: 20%;
         margin: 4.5rem 0 0 0;
         border-radius: 0;
+        background-color: transparent;
         box-shadow: none;
       }
       .card-content {
@@ -541,6 +543,52 @@
   &-img {
     width: 6.5rem;
     height: 6.5rem;
+  }
+  &-ico {
+    width: 100%; height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    font-size: 0;
+    &.samsung-pay {
+      background-size: rem(100px);
+      background-image: url(../images/renewal/logo-samsung-pay@3x.png);
+    }
+    &.truefriend {
+      background-size: rem(208px);
+      background-image: url(../images/renewal/logo-truefriend@3x.png);
+    }
+    &.ki {
+      background-size: rem(120px);
+      background-image: url(../images/renewal/logo-ki@3x.png);
+    }
+    &.mirae {
+      background-size: rem(192px);
+      background-image: url(../images/renewal/logo-mirae@3x.png);
+    }
+    &.kt {
+      background-size: rem(48px);
+      background-image: url(../images/renewal/logo-kt@3x.png);
+    }
+    &.wu {
+      background-size: rem(208px);
+      background-image: url(../images/renewal/logo-wu@3x.png);
+    }
+    &.uway {
+      background-size: rem(96px);
+      background-image: url(../images/renewal/logo-uway@3x.png);
+    }
+    &.eximbank {
+      background-size: rem(192px);
+      background-image: url(../images/renewal/logo-eximbank@3x.png);
+    }
+    &.iremit {
+      background-size: rem(132px);
+      background-image: url(../images/renewal/logo-iremit@3x.png);
+    }
+    &.nsb {
+      background-size: rem(146px);
+      background-image: url(../images/renewal/logo-nsb@3x.png);
+    }
   }
   &-title {
     font-size: 1.25rem;
@@ -1038,9 +1086,11 @@
       }
       .card-wrap {
         &.ci-banner {
+          margin: 0.5rem rem(-4px) 0 rem(-4px);
           .card-item {
+            min-width: 26%;
             width: auto;
-            margin-top: rem(24px);
+            margin: rem(24px) rem(4px) 0 rem(4px);
           }
           .card-content {
             height: rem(32px);
@@ -1217,6 +1267,49 @@
       &-wrap {
         flex-flow: row wrap;
         align-items: center;
+      }
+    }
+    &-ico {
+      &.samsung-pay {
+        width: rem(70px);
+        background-size: contain;
+      }
+      &.truefriend {
+        width: rem(144px);
+        background-size: contain;
+      }
+      &.ki {
+        width: rem(86px);
+        background-size: contain;
+        // background-size: rem(120px);
+        // background-image: url(../images/renewal/logo-ki@3x.png);
+      }
+      &.mirae {
+        width: rem(135px);
+        background-size: contain;
+        // background-size: rem(192px);
+        // background-image: url(../images/renewal/logo-mirae@3x.png);
+      }
+      &.kt {
+        width: rem(32px);
+        background-size: contain;
+      }
+      &.wu {
+        width: rem(132px);
+        background-size: contain;
+      }
+      &.uway {
+        width: rem(60px);
+        background-size: contain;
+      }
+      &.eximbank {
+        background-size: contain;
+      }
+      &.iremit {
+        background-size: contain;
+      }
+      &.nsb {
+        background-size: contain;
       }
     }
   }
