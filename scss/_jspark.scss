@@ -153,9 +153,9 @@
       background-repeat: no-repeat;
     }
   }
-  .carousel-indicators {
-    margin-bottom: 5.25rem;
-  }
+  // .carousel-indicators {
+  //   margin-bottom: 5.25rem;
+  // }
 }
 
 .main-nav {
@@ -545,6 +545,10 @@
   &-title {
     font-size: 1.25rem;
     color: #1632d2;
+    &-wrap {
+      display: flex;
+      flex-flow: column wrap;
+    }
   }
   &-txt {
     font-size: 1rem;
@@ -641,9 +645,12 @@
   }
 }
 
+// Notice
 .main-notice {
   &__title {
+    font-family: "S-Core";
     font-size: 2.75rem;
+    font-weight: 700;
     &__wrap {
       display: flex;
       align-items: flex-end;
@@ -725,6 +732,7 @@
   }
 }
 
+// Footer
 .footer {
   padding: 0;
   &__header {
@@ -742,7 +750,6 @@
   }
   &__link {
     margin-left: 51px;
-    font-family: "NanumSquare";
     font-size: 16px;
     color: #e8e6e8;
     &:first-child {
@@ -845,6 +852,8 @@
       // top: 9.75rem;
       width: 100%;
       height: 22.375rem;
+      height: rem(360px);
+      margin-top: rem(20px);
     }
     .swiper-container {
       width: 100%;
@@ -873,10 +882,9 @@
     .main-visual-bg-01 {
       + .caption {
         strong {
-          font-family: "S-Core";
-          font-size: 1.25rem;
-          font-weight: 500;
-          line-height: 1.875rem;
+          // font-size: rem(20px);
+          font-size: 1.4286rem;
+          line-height: rem(30px);
         }
         p {
           font-family: "S-Core";
@@ -990,9 +998,12 @@
         height: 3.5rem;
       }
       .card-title {
-        margin: 0.5rem 0 1.5rem;
+        margin: 0 0 0 rem(16px);
         font-size: 1.1428rem;
         line-height: 1.7143rem;
+        &-wrap {
+          margin-bottom: rem(24px);
+        }
       }
       .card-txt {
         font-size: 0.75rem;
@@ -1014,8 +1025,8 @@
       }
       .card-wrap {
         &.business-card {
-          margin-top: 3.1428rem;
-          margin-bottom: 2.5714rem;
+          margin-top: rem(20px);
+          margin-bottom: rem(16px);
         }
       }
     }
@@ -1028,12 +1039,16 @@
       .card-wrap {
         &.ci-banner {
           .card-item {
-            width: 100%;
+            width: auto;
+            margin-top: rem(24px);
+          }
+          .card-content {
+            height: rem(32px);
           }
         }
       }
       .info-intro-link {
-        // margin: 11.5rem 0 9rem;
+        margin: rem(60px) 0 rem(40px);
       }
     }
   }
@@ -1063,6 +1078,47 @@
       margin: 1.7143rem 0 0 0;
       font-size: 1rem;
       line-height: 1.5714rem;
+    }
+  }
+
+  // Notice
+  .main-notice {
+    &__title {
+      font-size: rem(24px);
+      line-height: rem(64px);
+      &__wrap {
+        padding-bottom: rem(8px);
+      }
+    }
+    &__content {
+      flex-flow: column-reverse wrap;
+      align-items: flex-start;
+      padding: rem(10px) 0 rem(12px) 0;
+      &__title {
+        font-size: rem(16px);
+      }
+      &__date {
+        margin-bottom: rem(4px);
+        margin-left: unset;
+        font-size: rem(12px);
+        line-height: rem(20px);
+        color: #ababab;
+      }
+    }
+  }
+
+  // Footer
+  .footer {
+    &__header {
+      padding: 1rem rem(20px);
+    }
+    &__link {
+      margin-left: rem(24px);
+    }
+    &__container {
+      &__content {
+        padding: 20px rem(20px) 80px rem(20px);
+      }
     }
   }
 
@@ -1157,6 +1213,12 @@
         }
       }
     }
+    &-title {
+      &-wrap {
+        flex-flow: row wrap;
+        align-items: center;
+      }
+    }
   }
 
   // Box
@@ -1212,13 +1274,16 @@
         padding: 0.75rem 1.375rem;
       }
       &__txt {
+        font-size: rem(18px);
+        line-height: rem(30px);
         &__wrap {
           margin-top: 0.5rem;
         }
       }
       &__ico {
-        width: 3rem;
-        height: 3rem;
+        width: rem(48px);
+        height: rem(48px);
+        margin: 0 rem(16px) 0 0;
       }
     }
   }
