@@ -1,7 +1,4 @@
 @charset "utf-8";
-
-/*@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);*/
-
 /* ----------------------------------------------
 	초기화
 ---------------------------------------------- */
@@ -48,8 +45,8 @@
   .container-md,
   .container-lg,
   .container-xl {
-    max-width: 78.75rem;
-    padding: 0px;
+    max-width: rem(1260px);
+    padding: 0;
   }
 }
 
@@ -60,7 +57,7 @@
     visibility: hidden;
     height: 0;
     font-size: 0;
-    content: ".";
+    content: "";
   }
 }
 
@@ -68,12 +65,12 @@
   position: fixed;
   top: 2.4812rem;
   right: 3.25rem;
+  z-index: 9999;
   a {
     display: block;
     margin-top: 1.0438rem;
     padding: 1.25rem 1.0625rem;
     border-radius: 0.625rem;
-    font-family: "NanumSquare";
     font-size: 1.125rem;
     line-height: 1.75rem;
     text-align: center;
@@ -110,7 +107,6 @@
 
 // 메인 비주얼
 .main-visual {
-  // height: 100vh;
   background-position: calc(100% + 22.5rem) 0;
   background-size: cover;
   background-image: url(../../images/renewal/main-visual-01@2x.png);
@@ -153,50 +149,40 @@
       background-repeat: no-repeat;
     }
   }
-  // .carousel-indicators {
-  //   margin-bottom: 5.25rem;
-  // }
 }
 
-.main-nav {
-  font-size: 1.25rem;
-  li {
-    margin-top: 1.3125rem;
-    span {
-      display: block;
-      font-family: "NanumSquare";
-      font-size: 1.25rem;
-      color: #000;
-    }
-    &.active {
-      border-bottom: 1px solid #000;
-    }
-  }
-}
-
-.section {
-  .container-fluid {
-    .nav {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      min-width: 0;
-      height: calc(100vh - 95px);
-      margin-left: -11.25rem;
-      word-wrap: break-word;
-      background-clip: border-box;
-      transition: all 1s ease 0s;
-      > ul {
-        > li {
-          padding: 0;
-          text-align: left;
+.left-nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  height: calc(100vh - 95px);
+  margin-left: -11.25rem;
+  word-wrap: break-word;
+  background-clip: border-box;
+  transition: all 1s ease 0s;
+  ul {
+    li {
+      margin-bottom: rem(20px);
+      padding: 0;
+      text-align: left;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.active {
+        margin-bottom: rem(30px);
+        span {
+          font-size: rem(24px);
+          text-decoration: underline;
+          opacity: 1;
         }
       }
-      .active {
-        span {
-          text-decoration: underline;
-        }
+      span {
+        font-size: rem(20px);
+        font-weight: 700;
+        color: #000;
+        opacity: 0.41;
       }
     }
   }
@@ -224,6 +210,9 @@
     background-size: cover;
     background-image: url(../../images/renewal/bg-digit@2x.png);
     background-color: #12134b;
+    .float-right {
+      width: 100%;
+    }
     .main-title {
       &--sub {
         color: #ffffff;
@@ -232,7 +221,7 @@
         color: #ffffff;
       }
     }
-    .nav {
+    .left-nav {
       margin-top: calc(-95px / 2);
       ul {
         margin-top: 0;
@@ -329,11 +318,17 @@
       }
     }
     .business-card {
-      max-width: 43.125rem;
+      max-width: rem(692px);
       margin-bottom: 6.25rem;
+      .card-item {
+        width: rem(692px);
+      }
     }
   }
   &-07 {
+    .float-right {
+      width: 100%;
+    }
     .card-wrap {
       &.ci-banner {
         margin-top: rem(8px);
@@ -391,6 +386,16 @@
         height: 9.3125rem;
         padding: 0.7375rem 2.425rem 0.7375rem 2.425rem;
       }
+      .card-ico {
+        background-position: 0 50%;
+        background-size: contain;
+        &.truefriend {
+          width: rem(310px);
+        }
+        &.koima {
+          width: rem(176px);
+        }
+      }
       .card-img {
         width: auto;
         max-width: 19.375rem;
@@ -398,10 +403,9 @@
         max-height: 7.875rem;
       }
       .card-txt {
-        margin: 0 0 0 2.1875rem;
-        font-family: "NanumSquare";
-        font-size: 1.25rem;
-        line-height: 1.875rem;
+        margin: 0 0 0 rem(36px);
+        font-size: rem(20px);
+        line-height: rem(30px);
         color: #292929;
       }
     }
@@ -430,6 +434,7 @@
       flex-wrap: wrap;
       align-items: stretch;
       justify-content: space-between;
+      counter-reset: number 0;
       .card-item {
         &:before {
           position: absolute;
@@ -439,12 +444,12 @@
           width: 3.5rem;
           height: 3.5rem;
           border-radius: 9999px;
-          font-family: "NanumSquare";
           line-height: 3.5rem;
           text-align: center;
           color: #ffffff;
           background-color: #1632d2;
-          content: "01";
+          counter-increment: number 1;
+          content: "0" counter(number);
         }
       }
       .card-title {
@@ -484,18 +489,18 @@
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-          width: 2.125rem;
-          height: 3.125rem;
-          background-size: 2.125rem;
+          width: rem(64px);
+          height: rem(74px);
+          background-size: 100%;
           background-repeat: no-repeat;
           content: "";
         }
         &:before {
-          left: 1.25rem;
+          left: rem(12px);
           background-image: url(../../images/renewal/img-licence-open@3x.png);
         }
         &:after {
-          right: 1.25rem;
+          right: rem(12px);
           background-image: url(../../images/renewal/img-licence-close@3x.png);
         }
       }
@@ -545,7 +550,8 @@
     height: 6.5rem;
   }
   &-ico {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     font-size: 0;
@@ -589,6 +595,10 @@
       background-size: rem(146px);
       background-image: url(../images/renewal/logo-nsb@3x.png);
     }
+    &.koima {
+      background-size: rem(176px);
+      background-image: url(../images/renewal/logo-koima.png);
+    }
   }
   &-title {
     font-size: 1.25rem;
@@ -606,7 +616,7 @@
 
 .box {
   &--gradient {
-    border-radius: 28px;
+    border-radius: rem(28px);
     background-image: linear-gradient(115deg, #363ef8 4%, #6119ec 92%);
     &__content {
       display: flex;
@@ -630,18 +640,17 @@
 }
 
 .white-border-box {
-  margin-top: 14px;
-  padding: 10px 46px 6px 46px;
-  border-radius: 28px;
+  margin-top: rem(16px);
+  padding: rem(10px) rem(48px) rem(8px) rem(48px);
+  border-radius: rem(28px);
   text-align: center;
   background-color: #ffffff;
   &:first-child {
     margin-top: 0;
   }
   &__txt {
-    font-family: "NanumSquare";
-    font-size: 22px;
-    line-height: 1.82;
+    font-size: rem(24px);
+    line-height: rem(40px);
     color: #292929;
   }
 }
@@ -673,22 +682,21 @@
   }
   &--sub {
     display: block;
-    margin: 0 0 18px 0;
+    margin: 0 0 rem(16px) 0;
     font-family: "S-Core";
     font-weight: 500;
-    font-size: 22px;
+    font-size: rem(24px);
     font-weight: 500;
-    line-height: 3.36;
+    line-height: rem(74px);
     color: #353535;
   }
   &--txt {
     display: block;
-    margin: 70px 0 0 0;
+    margin: rem(70px) 0 0 0;
     font-family: "S-Core";
-    font-size: 1.25rem;
+    font-size: rem(20px);
     font-weight: 500;
-    font-weight: 500;
-    line-height: 2;
+    line-height: rem(40px);
     color: #353535;
   }
 }
@@ -697,16 +705,33 @@
 .main-notice {
   &__title {
     font-family: "S-Core";
-    font-size: 2.75rem;
+    font-size: rem(44px);
     font-weight: 700;
+    line-height: rem(65px);
+    color: #353535;
     &__wrap {
       display: flex;
       align-items: flex-end;
-      padding-bottom: 1.125rem;
+      padding-bottom: rem(16px);
       border-bottom: 1px solid rgba(86, 86, 86, 0.2);
       a {
         flex: none;
         margin-left: auto;
+        font-size: rem(16px);
+        line-height: rem(18px);
+        color: #353535;
+        &:after {
+          display: inline-block;
+          width: rem(10px);
+          height: rem(16px);
+          margin-left: rem(10px);
+          vertical-align: middle;
+          background-position: 50% 50%;
+          background-size: cover;
+          background-image: url(../images/renewal/btn-arrow-more@3x.png);
+          background-repeat: no-repeat;
+          content: "";
+        }
       }
     }
   }
@@ -721,17 +746,15 @@
   &__content {
     display: flex;
     align-items: center;
-    padding: 1.9375rem 0 1.8125rem 0;
+    padding: rem(32px) 0 rem(28px) 0;
     &__title {
-      font-family: "NanumSquare";
-      font-size: 18px;
+      font-size: rem(16px);
       color: #353535;
     }
     &__date {
       flex: none;
       margin-left: auto;
-      font-family: "NanumSquare";
-      font-size: 16px;
+      font-size: rem(16px);
       color: #353535;
     }
   }
@@ -745,13 +768,13 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.02);
   &__content {
     display: flex;
-    padding: 16px 42px;
+    padding: rem(16px) rem(42px);
     border: 1px solid #e0e0e0;
   }
   &__ico {
-    width: 60px;
-    height: 60px;
-    margin: 0 23px 0 0;
+    width: rem(60px);
+    height: rem(60px);
+    margin: 0 rem(24px) 0 0;
     font-size: 0;
     text-indent: -9999px;
     &.download {
@@ -762,130 +785,43 @@
     }
   }
   &__txt {
-    font-family: "NanumSquare";
-    font-size: 18px;
-    line-height: 1.71;
+    font-size: rem(18px);
+    line-height: rem(30px);
     color: #292929;
     &__wrap {
-      margin-top: 0.9062rem;
+      margin-top: rem(14px);
       text-align: left;
     }
     &--desc {
       display: block;
       margin-top: 0.4625rem;
-      font-size: 16px;
-      line-height: 1.31;
+      font-size: rem(16px);
+      line-height: rem(21px);
       color: #353535;
-    }
-  }
-}
-
-// Footer
-.footer {
-  padding: 0;
-  &__header {
-    display: flex;
-    justify-content: center;
-    // opacity: 0.76;
-    background-color: #0c0c0c;
-    &__content {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      max-width: 78.75rem;
-      padding: 1rem 0;
-    }
-  }
-  &__link {
-    margin-left: 51px;
-    font-size: 16px;
-    color: #e8e6e8;
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-  .footer__dropdown {
-    .button {
-      &.dropdown-toggle {
-        padding-right: 2.5rem;
-        background-size: 2rem;
-        background-image: url(../../images/renewal/ico-acc-open@3x.png);
-        &:after {
-          display: none;
-        }
-      }
-    }
-  }
-  &__dropdown {
-    flex: none;
-    margin-left: auto;
-    .button {
-      &.dropdown-toggle {
-        padding-right: 1.25rem;
-        background-size: 2rem;
-        background-image: url(../../images/renewal/ico-acc-open@3x.png);
-        &:after {
-          display: none;
-        }
-      }
-    }
-  }
-  // ico-more-view@3x
-  .button {
-    &.dropdown-toggle {
-      width: 100%;
-      height: 2rem;
-      font-family: "NunumSquare";
-      font-size: 1rem;
-      // font-weight: bold;
-      color: #ffffff;
-      background-position: 100% 50%;
-      background-size: 2rem;
-      background-image: url(../images/renewal/ico-acc-open@3x.png);
-      background-repeat: no-repeat;
-      &:focus,
-      &:active {
-        background-image: url(../images/ico-outlinkclose-19x20-3x.png);
-      }
-    }
-  }
-  &__container {
-    opacity: 0.76;
-    background-color: #0c0c0c;
-    &__content {
-      max-width: 78.75rem;
-      margin: 0 auto;
-      padding: 3.75rem 0 8.375rem 0;
-    }
-  }
-}
-
-.row {
-  .card-wrap {
-    margin-left: 1.75rem;
-    &:first-child {
-      margin-left: 0;
     }
   }
 }
 
 // 공지사항, 소개 및 신청
 .info-intro-link {
-  z-index: 9;
   .main-notice {
     width: 38.75rem;
   }
   .button {
     width: 35.375rem;
-    margin-top: 1.625rem;
+    margin-top: rem(28px);
     &:first-child {
       margin-top: 0;
     }
   }
 }
+.download-wrap {
+  display: flex;
+  flex-flow: column wrap;
+}
 
 @media (max-width: 767.98px) {
-  .section .container-fluid .nav {
+  .left-nav {
     height: auto;
   }
   .top-right-fixed-wrap {
@@ -1065,12 +1001,6 @@
         width: 100%;
         height: auto;
       }
-      .main-title {
-        color: #ffffff;
-        &--txt {
-          color: #ffffff;
-        }
-      }
       .card-wrap {
         &.business-card {
           margin-top: rem(20px);
@@ -1137,7 +1067,11 @@
       font-size: rem(24px);
       line-height: rem(64px);
       &__wrap {
+        align-items: center;
         padding-bottom: rem(8px);
+        a {
+          font-size: 0;
+        }
       }
     }
     &__content {
@@ -1153,21 +1087,6 @@
         font-size: rem(12px);
         line-height: rem(20px);
         color: #ababab;
-      }
-    }
-  }
-
-  // Footer
-  .footer {
-    &__header {
-      padding: 1rem rem(20px);
-    }
-    &__link {
-      margin-left: rem(24px);
-    }
-    &__container {
-      &__content {
-        padding: 20px rem(20px) 80px rem(20px);
       }
     }
   }
@@ -1212,8 +1131,19 @@
             margin: 0;
           }
         }
+        .card-ico {
+          width: 100%;
+          height: rem(56px);
+          background-position: 0 50%;
+          background-size: contain;
+          &.kita,
+          &.truefriend,
+          &.koima {
+            width: 100%;
+          }
+        }
         .card-content {
-          flex-flow: column wrap;
+          flex-direction: column;
           justify-content: space-between;
           align-items: flex-start;
           width: 16rem;
@@ -1227,9 +1157,10 @@
           max-height: 2.875rem;
         }
         .card-txt {
+          min-height: rem(40px);
           margin: 0;
-          font-size: 0.75rem;
-          line-height: 1.25rem;
+          font-size: rem(12px);
+          line-height: rem(20px);
         }
       }
       &.count {
@@ -1281,14 +1212,10 @@
       &.ki {
         width: rem(86px);
         background-size: contain;
-        // background-size: rem(120px);
-        // background-image: url(../images/renewal/logo-ki@3x.png);
       }
       &.mirae {
         width: rem(135px);
         background-size: contain;
-        // background-size: rem(192px);
-        // background-image: url(../images/renewal/logo-mirae@3x.png);
       }
       &.kt {
         width: rem(32px);
@@ -1379,5 +1306,8 @@
         margin: 0 rem(16px) 0 0;
       }
     }
+  }
+  .download-wrap {
+    width: 100%;
   }
 }
