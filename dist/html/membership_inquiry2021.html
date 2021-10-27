@@ -29,8 +29,8 @@
           <div class="container-fluid">
             <h2>가입문의</h2>
             <p class="desc">
-              법인송금 업무환경에 맞는 최상의 솔루션을 성심성의껏 안내해
-              드리겠습니다.
+              법인송금 업무환경에 맞는 최상의 솔루션을
+              <br class="only-moblile" />성심성의껏 안내해 드리겠습니다.
             </p>
           </div>
           <img
@@ -138,7 +138,10 @@
                         type="text"
                         placeholder="입력해주세요."
                       />
-                      <button class="btn-delete" type="button">삭제</button>
+                      <button
+                        class="btn btn-delete form-control-clear"
+                        type="button"
+                      ></button>
                     </div>
                   </div>
                 </div>
@@ -151,7 +154,10 @@
                         type="text"
                         placeholder="입력해주세요."
                       />
-                      <button class="btn-delete" type="button">삭제</button>
+                      <button
+                        class="btn btn-delete form-control-clear"
+                        type="button"
+                      ></button>
                     </div>
                   </div>
                   <div class="form-group">
@@ -163,7 +169,10 @@
                         placeholder="입력해주세요.(선택)"
                       />
                       <div class="input-group-append">
-                        <button class="btn-delete" type="button">삭제</button>
+                        <button
+                          class="btn btn-delete form-control-clear"
+                          type="button"
+                        ></button>
                       </div>
                     </div>
                   </div>
@@ -177,7 +186,10 @@
                         type="text"
                         placeholder="입력해주세요."
                       />
-                      <button class="btn-delete" type="button">삭제</button>
+                      <button
+                        class="btn btn-delete form-control-clear"
+                        type="button"
+                      ></button>
                     </div>
                   </div>
                 </div>
@@ -190,7 +202,10 @@
                         type="text"
                         placeholder="입력해주세요."
                       />
-                      <button class="btn-delete" type="button">삭제</button>
+                      <button
+                        class="btn btn-delete form-control-clear"
+                        type="button"
+                      ></button>
                     </div>
                   </div>
                   <div class="form-group">
@@ -201,7 +216,10 @@
                         type="text"
                         placeholder="입력해주세요."
                       />
-                      <button class="btn-delete" type="button">삭제</button>
+                      <button
+                        class="btn btn-delete form-control-clear"
+                        type="button"
+                      ></button>
                     </div>
                   </div>
                 </div>
@@ -214,7 +232,10 @@
                         type="text"
                         placeholder="입력해주세요."
                       />
-                      <button class="btn-delete" type="button">삭제</button>
+                      <button
+                        class="btn btn-delete form-control-clear"
+                        type="button"
+                      ></button>
                     </div>
                   </div>
                   <div class="form-group">
@@ -231,16 +252,26 @@
               </form>
               <div class="card">
                 <div class="card-header collapsed">
-                  <h5>개인정보 수집 및 이용 동의</h5>
-                  <img
-                    src="../images/icon-arrow-down-40x40-2x.png"
-                    class="icon"
-                    alt=""
-                    data-toggle="collapse"
-                    data-target="#agreement"
-                    aria-expanded="false"
-                    aria-controls="fee-info"
-                  />
+                  <div class="card-header-title">
+                    <input
+                      type="checkbox"
+                      name="chk-01"
+                      id="chk-01"
+                      class="ui-checkbox"
+                    />
+                    <label class="ui-checkbox-label" for="chk-01"
+                      >개인정보 수집 및 이용 동의</label
+                    >
+                    <img
+                      src="../images/icon-arrow-down-40x40-2x.png"
+                      class="icon"
+                      alt=""
+                      data-toggle="collapse"
+                      data-target="#agreement"
+                      aria-expanded="false"
+                      aria-controls="fee-info"
+                    />
+                  </div>
                 </div>
                 <div class="collapse" id="agreement">
                   <div class="card-body">
@@ -312,4 +343,32 @@
       <!-- footer // -->
     </div>
   </body>
+  <script>
+    // !!퍼블 예시 소스 입니다!!
+    // .has-clear : input에 padding-right: 50px 추가
+    // 기본 버튼 숨김 처리
+    $(".form-control-clear").hide();
+    // form-control 이벤트 추가
+    $(".form-control").on(
+      "propertychange change keyup paste input",
+      function() {
+        var currentVal = $(this).val();
+        if (currentVal !== "") {
+          $(this).addClass("has-clear");
+          $(this)
+            .siblings(".form-control-clear")
+            .show();
+        }
+      }
+    );
+    $(".form-control-clear").click(function() {
+      $(this)
+        .siblings("input[type='text']")
+        .val("");
+      $(this)
+        .siblings("input[type='text']")
+        .show();
+      $(this).hide();
+    });
+  </script>
 </html>

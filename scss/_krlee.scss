@@ -3,6 +3,41 @@
 /* ----------------------------------------------
 	가입문의
 ---------------------------------------------- */
+
+// 추후 이동 예정
+.ui-checkbox {
+  width: rem(34px);
+  height: rem(34px);
+}
+.input-group {
+  & > .form-control {
+    &:not(:last-child) {
+      border-top-right-radius: 0.3125rem;
+      border-bottom-right-radius: 0.3125rem;
+    }
+    &.has-clear {
+      padding-right: rem(50px);
+    }
+  }
+  .btn-delete {
+    position: absolute;
+    top: 50%;
+    right: rem(18px);
+    transform: translateY(-50%);
+    z-index: 10; // 3이하면 input의 인덱스가 더 높음
+    //&.form-control-clear {
+    //  display: none;
+    //}
+  }
+}
+.btn-delete {
+  width: rem(24px);
+  height: rem(24px);
+  font-size: 0;
+  background: url(../images/renewal/ico-del@3x.png) no-repeat center center;
+  background-size: 100%;
+}
+
 .sub-visual {
   &.membership {
     height: 28rem;
@@ -175,24 +210,24 @@
         display: flex;
         align-items: center;
         flex: 1;
-        padding: 12px 0;
+        padding: rem(12px) 0;
         margin: 0;
         .tit {
-          width: 142px;
+          width: rem(142px);
           margin: 0;
           font-weight: bold;
           font-size: rem(18px);
         }
         .input-group {
-          width: 340px;
+          width: rem(340px);
         }
       }
       &.column {
         flex-flow: column wrap;
         .input-group {
-          width: 638px;
+          width: rem(638px);
           textarea {
-            height: 240px;
+            height: rem(240px);
             resize: none;
           }
         }
@@ -219,24 +254,34 @@
       border-radius: 0;
       padding: rem(18px) 0;
       border: 0;
-      h5 {
-        font-size: rem(18px);
-        color: #18191a;
-        font-weight: bold;
+      .card-header-title {
+        display: flex;
+        align-items: center;
+        .ui-checkbox-label {
+          margin: 0;
+          padding-left: rem(18px);
+          font-size: rem(18px);
+          color: #18191a;
+          font-weight: bold;
+        }
+        .icon {
+          width: rem(40px);
+          height: rem(40px);
+          top: 50%;
+          transform: translateY(-50%) rotate(0deg);
+          cursor: pointer;
+        }
       }
-      .icon {
-        width: 40px;
-        height: 40px;
-        top: 50%;
-        transform: translateY(-50%) rotate(0deg);
-        cursor: pointer;
-      }
-      &.collapsed .icon {
-        transform: translateY(-50%) rotate(180deg);
+      &.collapsed {
+        .card-header-title {
+          .icon {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
       }
     }
     .card-body {
-      padding: 27px 52px;
+      padding: rem(27px) rem(52px);
       background: rgba(38, 38, 38, 0.03);
       .info-cont {
         text-align: left;
@@ -248,11 +293,11 @@
   .btns-box {
     display: flex;
     justify-content: center;
-    padding: 80px 0 220px;
+    padding: rem(80px) 0 rem(220px);
     .btn-primary {
       &.btn-lg {
-        width: 320px;
-        padding: 32px;
+        width: rem(320px);
+        padding: rem(32px);
         font-family: "NanumSquare";
         text-align: center;
         background-color: #146fd3;
@@ -262,36 +307,30 @@
   }
   .sub-text-wrap {
     display: flex;
-    padding-bottom: 12px;
+    padding-bottom: rem(12px);
     .sub-text {
       margin-left: auto;
-      font-size: 14px;
+      font-size: rem(14px);
       color: #ababab;
     }
   }
 }
 
-.form-control {
-  &.large {
-  }
-}
-
 // 미디어 쿼리
-
-// tablet
+// mobile
 @media (max-width: 767.98px) {
   .sub-visual {
     &.membership {
-      height: 198px;
+      height: rem(198px);
       .container-fluid {
         h2 {
-          height: 65px;
+          height: rem(65px);
           margin-bottom: 0;
-          font-size: 34px;
+          font-size: rem(34px);
         }
         p {
           text-align: center;
-          font-size: 13px;
+          font-size: rem(13px);
           font-weight: 500;
           line-height: 1.54;
         }
@@ -299,64 +338,65 @@
     }
   }
   .sub-cont-membership-inquiry-01 {
-    margin: 26px 0 52px;
+    margin: rem(26px) 0 rem(52px);
     .membership-inquiry-info {
       width: 100%;
-      max-width: 360px;
+      max-width: rem(360px);
       > li {
-        padding: 14px 0 12px;
+        padding: rem(14px) 0 rem(12px);
         width: calc(50% - 5px);
-        height: 66px;
+        height: rem(66px);
+        box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
         & + li {
           margin-left: 0;
         }
         span {
-          font-size: 10px;
+          font-size: rem(12px); //10
           line-height: 2;
         }
         p {
           text-align: center;
         }
         &:first-child {
-          margin-right: 5px;
+          margin-right: rem(4px);
           p {
-            margin-top: 3px;
-            font-size: 12px;
+            margin-top: rem(4px);
+            font-size: rem(12px);
           }
         }
         &:nth-child(2) {
-          margin-left: 5px;
+          margin-left: rem(5px);
           p {
-            margin-top: 3px;
-            font-size: 12px;
+            margin-top: rem(4px);
+            font-size: rem(12px);
           }
         }
       }
     }
   }
   .sub-cont-membership-inquiry-02 {
-    margin-bottom: 50px;
+    margin-bottom: rem(50px);
     .tit {
-      margin-bottom: 8px;
-      font-size: 24px;
+      margin-bottom: rem(8px);
+      font-size: rem(24px);
       line-height: 2.71;
     }
     .service-process {
       & > li {
         width: 50%;
-        height: 130px;
-        padding-left: 32px;
+        height: rem(130px);
+        padding-left: rem(32px);
         strong {
-          min-height: 26px;
-          font-size: 12px;
+          min-height: rem(28px);
+          font-size: rem(12px);
           line-height: 1.25;
           & + p {
-            margin-top: 6px;
+            margin-top: rem(6px);
           }
         }
         p {
-          min-height: 30px;
-          font-size: 9px;
+          min-height: rem(30px);
+          font-size: rem(12px); // 9
           line-height: 1.43;
         }
         .service-process-img {
@@ -381,18 +421,18 @@
           }
         }
         &:before {
-          width: 26px;
-          height: 26px;
-          font-size: 10px;
-          line-height: 24px;
+          width: rem(26px);
+          height: rem(26px);
+          font-size: rem(10px);
+          line-height: rem(24px);
         }
       }
     }
   }
   .sub-cont-membership-inquiry-03 {
     h2.tit {
-      padding-bottom: 6px;
-      font-size: 24px;
+      padding-bottom: rem(6px);
+      font-size: rem(24px);
       line-height: 1.67;
     }
     .form-group-container {
@@ -401,10 +441,10 @@
         border-bottom: none;
         .form-group {
           flex-direction: column;
-          padding: 8px 0;
+          padding: rem(8px) 0;
           .tit {
             width: 100%;
-            margin-bottom: 8px;
+            margin-bottom: rem(8px);
             font-size: rem(16px);
           }
           .input-group {
@@ -415,44 +455,42 @@
           .input-group {
             width: 100%;
             textarea {
-              height: 160px;
+              height: rem(160px);
             }
           }
         }
         &:first-child {
           .form-group {
             &:first-child {
-              padding-top: 24px;
+              padding-top: rem(24px);
             }
           }
         }
         &:last-child {
           .form-group {
             &:last-child {
-              padding-bottom: 24px;
+              padding-bottom: rem(24px);
             }
           }
         }
       }
     }
     .sub-text-wrap {
-      padding-bottom: 8px;
+      padding-bottom: rem(8px);
     }
     .card {
       .card-body {
-        padding: 17px 17px 30px 17px;
+        padding: rem(16px) rem(16px) rem(30px) rem(16px);
       }
     }
     .btns-box {
-      padding: 50px 0 80px;
+      padding: rem(50px) 0 rem(80px);
       .btn-primary {
         &.btn-lg {
           width: 100%;
-          padding: 16px 32px;
+          padding: rem(16px) rem(32px);
         }
       }
     }
   }
-}
-@media (max-width: 767.98px) {
 }
