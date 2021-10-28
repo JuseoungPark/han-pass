@@ -113,22 +113,36 @@ function makeSwiper(){
 			prevEl: '.carousel-control-prev'
 		},
 		loop: true,
-		speed : 1100,
+		speed : 500,
 		autoplay: {
-			delay: swiperAutoplayDelay,
-			disableOnInteraction: true,
-			stopOnLast: true,
+			delay: 5000,
+			disableOnInteraction: false,
 		},
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
+			type: 'fraction',
+			renderFraction: function (currentClass, totalClass) {
+				return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
+			},
+			// type: 'custom',
+			// renderCustom: function (swiper, current, total) {
+			// 	return '<span class="' + current + '"></span>' + '<span class="' + total + '"></span>';
+			// },
 		},
 		on: {
-			// afterInit: () => {
-			// },
+			init: function () {
+				$(".swiper-progress-bar").removeClass("animate");
+				$(".swiper-progress-bar").removeClass("active");
+				$(".swiper-progress-bar").eq(0).addClass("animate");
+				$(".swiper-progress-bar").eq(0).addClass("active");
+			},
 			slideChangeTransitionStart: function() {
 				console.log("slideChangeTransitionStart")
-				$(".swiper-slide-active").removeClass("effect")
+				$(".swiper-progress-bar").removeClass("animate");
+				$(".swiper-progress-bar").removeClass("active");
+				$(".swiper-progress-bar").eq(0).addClass("active");
+				$(".swiper-slide-active").removeClass("effect");
 				let visual5 = $(".swiper-slide-active").find('.main-visual-bg-05').length
 				if(visual5){
 					$('.navbar').addClass('von');
@@ -137,12 +151,10 @@ function makeSwiper(){
 				}
 			},
 			slideChangeTransitionEnd: function() {
-				$(".swiper-slide-active").addClass("effect")
-				console.log("slideChangeTransitionEnd")
+				$(".swiper-progress-bar").eq(0).addClass("animate");
+				$(".swiper-slide-active").addClass("effect");
+				console.log("slideChangeTransitionEnd");
 			},
-			// progress: function(){
-			// 	
-			// }
 		},
 		preloadImages: true,
 		lazyLoading: true,
@@ -150,7 +162,13 @@ function makeSwiper(){
 		watchSlidesProgress: true,
 		watchSlidesVisibility: true
 	});
-	swiper.autoplay.stop();
+	$('.swiper-container').hover(function() {
+		swiper.autoplay.stop();
+		$('.swiper-progress-bar').removeClass('animate');
+	}, function(){
+		swiper.autoplay.start();
+		$('.swiper-progress-bar').addClass('animate');
+	});
 }
 
 function mainEvents() {

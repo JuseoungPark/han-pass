@@ -140,7 +140,7 @@
     <!-- main-visual -->
     <div class="section main-visual">
 
-      <!-- <div id="fp-nav" class="fp-show-active">
+      <!-- <div id="fp-nav" class="fp-show-active only-desktop">
         <ul>
           <li>
             <a href="#section01" class="active">
@@ -148,7 +148,7 @@
             </a>
           </li>
           <li>
-            <a href="#section02" class="">
+            <a href="section02" class="">
               <span class="fp-sr-only">회사소개</span>
             </a>
           </li>
@@ -170,7 +170,7 @@
         </ul>
       </div> -->
 
-      <div class="top-right-fixed-wrap">
+      <div class="top-right-fixed-wrap only-desktop">
         <a class="btn--login" href="#">
           법인송금<br> 
           로그인하기
@@ -189,7 +189,7 @@
             <div class="cont-box">
               <div class="main-visual-bg-01">
               </div>
-              <div class="caption d-none d-md-block text-white">
+              <div class="caption d-md-block text-white">
                 <h1 class="logo">hanpass</h1>
                 <strong>
                   B2B Global Business<br>
@@ -201,27 +201,41 @@
           </div>
           <div class="swiper-slide">
             <div class="cont-box">
-              <div class="main-visual-bg-02"></div>
-              <div class="caption d-none d-md-block text-white">
-                <strong>WE<br><span>SEND</span></strong>
-                <p>한패스로 마음을 보내세요.</p> 
+              <div class="main-visual-bg-02">이미지가 없을 때</div>
+              <div class="caption d-md-block text-white">
+                <strong>더미 타이틀</strong>
+                <p>더미 카피</p> 
               </div>
             </div>
           </div>
         </div>
 
         <div class="swiper-control-bar">
-          <!-- If we need pagination -->
-          <div class="swiper-pagination carousel-indicators"></div>
-          <!-- If we need navigation buttons -->
+        
+          <!-- navigation buttons prev -->
           <a class="carousel-control-prev" href="#main-visual-carousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
+          <!-- // navigation buttons prev -->
+
+          <!-- Progressbar -->
+          <div class="swiper-progress-bar">
+            <span class="slide_progress-bar"></span>
+          </div>
+          <!-- // Progressbar -->
+        
+          <!-- navigation buttons next -->
           <a class="carousel-control-next" href="#main-visual-carousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
+          <!-- // navigation buttons next -->
+
+          <!-- pagination -->
+          <div class="swiper-pagination carousel-indicators"></div>
+          <!-- // pagination -->
+
         </div>
 
         <!-- If we need scrollbar -->
@@ -232,7 +246,7 @@
     <!-- main-visual //-->
 
     <!-- main-conts-02 -->
-    <div class="section main-conts-02">
+    <div class="section main-conts-02" id="section02">
 
       <div class="container-fluid">
 
