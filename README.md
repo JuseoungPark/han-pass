@@ -1,5 +1,5 @@
-# hanpass_pub
-한패스리뉴얼
+# han-pass
+한패스 - 한비즈 퍼블리싱
 
 노드 설치
  ---
@@ -38,4 +38,5 @@ https://getbootstrap.com/docs/4.5/
 /dist/images
 /dist/js
 /dist/vendor
+
 위 6개폴더가 실제 소스파일입니다.
