@@ -800,13 +800,14 @@
     height: auto;
   }
   .fullpage-wrapper {
-    margin-top: rem(75px);
+    // margin-top: rem(75px);
+    margin-top: rem(60px);
   }
   .fullpage-wrapper .section:not(.main-visual) .container-fluid {
-    padding-top: rem(75px);
+    padding-top: rem(60px);
   }
   .main-visual {
-    height: calc(100vh - 66px);
+    height: calc(100vh - 3.75rem);
     .swiper-container {
       top: 50%;
       width: 100%;
@@ -828,11 +829,11 @@
     .caption {
       flex: none;
       width: 100%;
-      margin: 0;
+      margin: 0 0 rem(16px) 0;
       h1 {
         width: 2.3125rem;
         height: 0.625rem;
-        margin-bottom: 0;
+        margin: 0 0 rem(8px) 0;
       }
       strong {
         margin-bottom: 0;
