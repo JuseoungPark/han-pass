@@ -848,9 +848,9 @@
   }
 }
 .main-conts-03 {
-  // .float-right {
-  //   width: 100%;
-  // }
+  .container-fluid {
+    padding-bottom: rem(104px);
+  }
   .main-title--sub,
   .main-title--mid,
   ul > li > span,

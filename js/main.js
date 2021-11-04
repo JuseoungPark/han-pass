@@ -85,7 +85,13 @@ function makeFullPage(){
 			// }
 
 			// 색인 사용
-			if(index == 1 || index == 3){
+			if(index == 1) {
+				$('#firstPage').css("display", "block");
+			} else {
+				$('#firstPage').css("display", "none");
+			}
+
+			if(index == 1 || index == 3) {
 				$("#fp-nav").addClass("white")
 			} else {
 				$("#fp-nav").removeClass("white")
