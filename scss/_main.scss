@@ -517,9 +517,287 @@
   }
 }
 
+// Card
+.card {
+  &-wrap {
+    display: flex;
+    align-items: center;
+    &.column {
+      flex-flow: column wrap;
+      align-items: stretch;
+      .card-item {
+        margin: 1.5rem 0 0 0;
+        &:first-child {
+          margin: 0;
+        }
+      }
+      .card-content {
+        flex-flow: row wrap;
+        align-items: flex-end;
+      }
+      .card-title {
+        margin-bottom: 0;
+        font-family: "NanumSquare";
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+        color: #292929;
+      }
+      .card-txt {
+        margin: 1.875rem 0 0 0;
+        font-family: "NanumSquare";
+        font-size: 1.125rem;
+        line-height: 1.875rem;
+        color: #ababab;
+      }
+    }
+    &.business-card {
+      .card-item {
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .card-content {
+        flex-flow: row nowrap;
+        align-items: center;
+        height: 9.3125rem;
+        padding: 0.7375rem 2.425rem 0.7375rem 2.425rem;
+      }
+      .card-ico {
+        background-position: 0 50%;
+        background-size: contain;
+        &.truefriend {
+          width: rem(310px);
+        }
+        &.koima {
+          width: rem(176px);
+        }
+      }
+      .card-img {
+        width: auto;
+        max-width: 19.375rem;
+        height: auto;
+        max-height: 7.875rem;
+      }
+      .card-txt {
+        margin: 0 0 0 rem(36px);
+        font-size: rem(20px);
+        line-height: rem(30px);
+        color: #292929;
+      }
+    }
+    &.ci-banner {
+      display: block;
+      .card-item {
+        display: inline-block;
+        margin-left: rem(56px);
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .card-content {
+        align-items: center;
+        height: 3rem;
+        padding: 0;
+      }
+      .card-img {
+        width: inherit;
+        height: inherit;
+      }
+    }
+    &.count {
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-between;
+      counter-reset: number 0;
+      .card-item {
+        &:before {
+          position: absolute;
+          top: -1.75rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 3.5rem;
+          height: 3.5rem;
+          border-radius: 9999px;
+          line-height: 3.5rem;
+          text-align: center;
+          color: #ffffff;
+          background-color: #1632d2;
+          counter-increment: number 1;
+          content: "0" counter(number);
+        }
+      }
+      .card-title {
+        margin-bottom: 0.6875rem;
+        font-family: "S-Core";
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        text-align: center;
+      }
+      .card-txt {
+        font-family: "S-Core";
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        text-align: center;
+        color: #353535;
+      }
+    }
+    &.bay-tree {
+      flex-flow: row nowrap;
+      align-items: stretch;
+      overflow-x: auto;
+      // padding: 4.9375rem 1.5rem 9.0625rem 1.5rem;
+      padding: 1.5rem;
+      margin: 0 -1.5rem;
+      .card-item {
+        min-width: 15rem;
+        display: flex;
+        margin-left: 1rem;
+        box-shadow: 0 2px 7px 2px rgba(211, 211, 211, 0.5);
+        &:first-child {
+          margin-left: 0;
+        }
+        &:before,
+        &:after {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: rem(64px);
+          height: rem(74px);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          content: "";
+        }
+        &:before {
+          left: rem(12px);
+          background-image: url(../../images/renewal/img-licence-open@3x.png);
+        }
+        &:after {
+          right: rem(12px);
+          background-image: url(../../images/renewal/img-licence-close@3x.png);
+        }
+      }
+      .card-content {
+        flex: 1;
+        align-items: center;
+        padding: 1.875rem 4rem 1.25rem 4rem;
+      }
+      .card-title {
+        display: inline-flex;
+        align-items: center;
+        min-height: 4.25rem;
+        margin-bottom: 0.25rem;
+        font-family: "NanumSquare";
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 2rem;
+        color: #00051f;
+      }
+      .card-txt {
+        margin-top: auto;
+        font-size: 0.875rem;
+        text-align: center;
+        line-height: 2.125rem;
+        letter-spacing: -0.88px;
+      }
+    }
+  }
+  &-item {
+    flex: 1;
+    position: relative;
+    margin-left: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1.875rem 0 rgba(0, 0, 0, 0.11);
+    background-color: #fff;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+  }
+  &-img {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  &-ico {
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 0;
+    &.samsung-pay {
+      width: rem(100px);
+      background-image: url(../images/renewal/logo-samsung-pay@3x.png);
+    }
+    &.truefriend {
+      width: rem(208px);
+      background-image: url(../images/renewal/logo-truefriend@3x.png);
+    }
+    &.ki {
+      width: rem(120px);
+      background-image: url(../images/renewal/logo-ki@3x.png);
+    }
+    &.mirae {
+      width: rem(192px);
+      background-image: url(../images/renewal/logo-mirae@3x.png);
+    }
+    &.kt {
+      width: rem(48px);
+      background-image: url(../images/renewal/logo-kt@3x.png);
+    }
+    &.wu {
+      width: rem(208px);
+      background-image: url(../images/renewal/logo-wu@3x.png);
+    }
+    &.uway {
+      width: rem(96px);
+      background-image: url(../images/renewal/logo-uway@3x.png);
+    }
+    &.eximbank {
+      width: rem(192px);
+      background-image: url(../images/renewal/logo-eximbank@3x.png);
+    }
+    &.iremit {
+      width: rem(132px);
+      background-image: url(../images/renewal/logo-iremit@3x.png);
+    }
+    &.nsb {
+      width: rem(146px);
+      background-image: url(../images/renewal/logo-nsb@3x.png);
+    }
+    &.koima {
+      width: rem(176px);
+      background-image: url(../images/renewal/logo-koima.png);
+    }
+  }
+  &-title {
+    font-size: 1.25rem;
+    color: #1632d2;
+    &-wrap {
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+  &-txt {
+    font-size: 1rem;
+    color: #353535;
+  }
+}
+
 .main-slide {
-  position: relative;
   overflow: hidden;
+  .row1,
+  .row2 {
+    position: relative;
+    height: 120px;
+  }
 }
 
 // 20211103 : START
@@ -649,9 +927,10 @@
       animation-delay: .2s;
     }
     img {
-      -webkit-animation: 1.2s movetop ease-out forwards;
-      animation: 1.2s movetop ease-out forwards;
+      -webkit-animation: .5s .3s bounceScale ease forwards;
+      animation: .5s .3s bounceScale ease forwards;
       animation-delay: .2s;
+      // animation: bounceScale .7s .5s ease forwards
     }
     .card-wrap {
       -webkit-animation: 1.2s movetop ease-out forwards;
@@ -670,7 +949,7 @@
   .main-title--sub,
   .main-title,
   // img,
-  .card-wrap {
+  .card-item {
     opacity: 0;
   }
   &.effect {
@@ -689,7 +968,7 @@
     //   animation: 1.2s movetop ease-out forwards;
     //   animation-delay: .2s;
     // }
-    .card-wrap {
+    .card-item {
       -webkit-animation: bounceScale .7s .5s ease forwards;
       animation: bounceScale .7s .5s ease forwards;
       animation-delay: .6s;
@@ -720,34 +999,59 @@
   }
 }
 .main-conts-07 {
+  .float-right {
+    width: 100%;
+  }
   .main-title,
   .info-intro-link,
+  .main-slide,
   .footer {
     opacity: 0;
   }
-  .main-slide {
-    height: 240px;
-    overflow: hidden;
-  }
   .ci-banner {
     position: absolute;
+    top: 50%;
     left: 0;
-    width: 3500px;
-    .card-item {
-      width: 240px;
+  }
+  .row1 {
+    .ci-banner {
+      width: rem(1000px);
     }
+  }
+  .row2 {
+    .ci-banner {
+      width: rem(1060px);
+      margin-left: rem(1060px)
+    }
+  }
+  .info-intro-link {
+    margin: 11.5rem 0 9rem;
   }
   &.effect {
     .main-title {
       -webkit-animation: 1.2s movetop ease-out forwards;
       animation: 1.2s movetop ease-out forwards;
     }
-    .card-wrap {
-      -webkit-animation: logoSlide infinite 70s linear;
-      animation: logoSlide infinite 70s linear;
-      &:nth-child(2) {
-        -webkit-animation: logoSlideReverse infinite 70s linear;
-        animation: logoSlideReverse infinite 70s linear;
+    .main-slide {
+      -webkit-animation: 1.2s movetop ease-out forwards;
+      animation: 1.2s movetop ease-out forwards;
+    }
+    .row1 {
+      .ci-banner {
+        -webkit-animation: logoSlide infinite 16s linear;
+        animation: logoSlide infinite 16s linear;
+        &.fake {
+          margin-left: rem(1000px);
+        }
+      }
+    }
+    .row2 {
+      .ci-banner {
+        -webkit-animation: logoSlideReverse infinite 16s linear;
+        animation: logoSlideReverse infinite 16s linear;
+        &.fake {
+          margin-left: 0;
+        }
       }
     }
     .info-intro-link {
@@ -802,9 +1106,12 @@
   .main-visual {
     height: calc(100vh - 3.75rem);
     .swiper-container {
-      top: 50%;
+      // top: 50%;
       width: 100%;
       height: 100%;
+    }
+    .swiper-slide {
+      padding: 0 1.25rem;
     }
     div[class*="main-visual-bg"] {
       flex: 1;
@@ -812,14 +1119,20 @@
       height: auto;
       // max-height: rem(360px);
       max-height: 63%;
-      margin-bottom: 80px;
+      // margin-bottom: 80px;
     }
     .cont-box {
       flex-direction: column-reverse;
       justify-content: space-between;
       position: relative;
-      width: calc(100% - 1.25rem * 2);
-      margin: 1.75rem auto 0 auto;
+      // width: calc(100% - 1.25rem * 2);
+      width: 100%;
+      margin: 0;
+      // margin: 1.75rem auto 0 auto;
+    }
+    .main-visual-img-01,
+    .main-visual-img-02 {
+      margin-bottom: rem(60px);
     }
     .caption {
       flex: none;
@@ -1186,18 +1499,18 @@
 }
 @keyframes logoSlide {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) translateY(-50%);
   }
   100% {
-      transform: translateX(-100%);
+      transform: translateX(-100%) translateY(-50%);
   }
 }
 @keyframes logoSlideReverse {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-100%) translateY(-50%);
   }
   100% {
-      transform: translateX(0);
+      transform: translateX(0) translateY(-50%);
   }
 }
 
