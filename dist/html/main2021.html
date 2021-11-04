@@ -10,10 +10,10 @@
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../vendor/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="../vendor/fullpage/vendors/jquery.easings.min.js"></script> -->
+    <script src="../vendor/fullpage/vendors/jquery.easings.min.js"></script>
     <script src="../js/scrolloverflow.min.js"></script>
-    <!-- <script src="../vendor/fullpage/dist/jquery.fullpage.min.js"></script> -->
-    <!-- <script src="../vendor/fullpage/dist/jquery.fullpage.extensions.min.js"></script> -->
+    <script src="../vendor/fullpage/dist/jquery.fullpage.min.js"></script>
+    <script src="../vendor/fullpage/dist/jquery.fullpage.extensions.min.js"></script>
     <script src="../vendor/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="../vendor/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
     <script src="../js/app.js"></script>
@@ -21,6 +21,47 @@
 </head>
 <body>
   <a id="top-btn" href="#">TOP</a>
+
+  <div id="fp-nav" class="fp-show-active only-desktop">
+    <ul>
+      <li data-menuanchor="firstPage">
+        <a href="#firstPage" class="active">
+          <span class="fp-sr-only">Intro</span>
+        </a>
+      </li>
+      <li data-menuanchor="secondPage">
+        <a href="#secondPage">
+          <span class="fp-sr-only">회사소개</span>
+        </a>
+      </li>
+      <li data-menuanchor="thirdPage">
+        <a href="#thirdPage">
+          <span class="fp-sr-only">서비스소개</span>
+        </a>
+      </li>
+      <li data-menuanchor="fourthPage">
+        <a href="#fourthPage">
+          <span class="fp-sr-only">공지사항</span>
+        </a>
+      </li>
+      <li data-menuanchor="lastPage">
+        <a href="#lastPage">
+          <span class="fp-sr-only">문의하기</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="top-right-fixed-wrap only-desktop">
+    <a class="btn--login" href="#">
+      법인송금<br> 
+      로그인하기
+    </a>
+    <a class="btn--primary" href="#">
+      가입문의
+    </a>
+  </div>
+
   <!-- gnb -->
   <nav class="navbar navbar-expand-lg flex-column">
     <!-- navbar-header -->
@@ -100,46 +141,6 @@
     <!-- main-visual -->
     <div class="section main-visual">
 
-      <!-- <div id="fp-nav" class="fp-show-active only-desktop">
-        <ul>
-          <li>
-            <a href="#section01" class="active">
-              <span class="fp-sr-only">Intro</span>
-            </a>
-          </li>
-          <li>
-            <a href="section02" class="">
-              <span class="fp-sr-only">회사소개</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section03" class="">
-              <span class="fp-sr-only">서비스소개</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section04" class="">
-              <span class="fp-sr-only">공지사항</span>
-            </a>
-          </li>
-          <li>
-            <a href="#section04" class="">
-              <span class="fp-sr-only">문의하기</span>
-            </a>
-          </li>
-        </ul>
-      </div> -->
-
-      <div class="top-right-fixed-wrap only-desktop">
-        <a class="btn--login" href="#">
-          법인송금<br> 
-          로그인하기
-        </a>
-        <a class="btn--primary" href="#">
-          가입문의
-        </a>
-      </div>
-
       <!-- Slider main container -->
       <div class="swiper-container">
         <!-- Additional required wrapper -->
@@ -213,20 +214,11 @@
     <!-- main-visual //-->
 
     <!-- main-conts-02 -->
-    <div class="section main-conts-02" id="section02">
+    <div class="section main-conts-02">
 
       <div class="container-fluid">
 
-        <div class="left-nav flex-row align-items-center float-left">
-          <ul>
-            <li class="active"><span>회사소개</span></li>
-            <li><span>서비스소개</span></li>
-            <li><span>공지사항</span></li>
-            <li><span>문의하기</span></li>
-          </ul>
-        </div>
-
-        <div class="flex-row float-right">
+        <!-- <div class="flex-row float-right"> -->
           
           <!-- title -->
           <div class="main-title__wrap">
@@ -292,27 +284,17 @@
           </ul>
           <!-- // contents -->
 
-        </div>
+        <!-- </div> -->
 
       </div>
     </div>
-    <!-- main-conts-02 -->
+    <!-- // main-conts-02 -->
 
     <!-- main-conts-03 -->
-    <div class="section text-center main-conts-03">
-      
+    <div class="section fp-auto-height text-center main-conts-03">
       <div class="container-fluid">
 
-        <div class="left-nav flex-row align-items-center float-left">
-          <ul>
-            <li class="active"><span>회사소개</span></li>
-            <li><span>서비스소개</span></li>
-            <li><span>공지사항</span></li>
-            <li><span>문의하기</span></li>
-          </ul>
-        </div>
-
-        <div class="flex-row float-right">
+        <!-- <div class="flex-row float-right"> -->
 
           <!-- title -->
           <div class="main-title__wrap center">
@@ -335,26 +317,26 @@
           </ul>
           <!-- // contents -->
 
-        </div>
+        <!-- </div> -->
 
       </div>
     </div>
-    <!-- main-conts-03 -->
+    <!-- // main-conts-03 -->
 
     <!-- main-conts-04 -->
     <div class="section main-conts-04">
       <div class="container-fluid">
 
-        <div class="left-nav flex-row align-items-center float-left">
+        <!-- <div class="left-nav flex-row align-items-center float-left">
           <ul>
             <li class="active"><span>회사소개</span></li>
             <li><span>서비스소개</span></li>
             <li><span>공지사항</span></li>
             <li><span>문의하기</span></li>
           </ul>
-        </div>
+        </div> -->
 
-        <div class="flex-row float-right">
+        <!-- <div class="flex-row float-right"> -->
 
           <!-- title -->
           <div class="main-title__wrap">
@@ -432,7 +414,7 @@
           </div>
           <!-- // contents -->
 
-        </div>
+        <!-- </div> -->
 
       </div>
     </div>
@@ -441,14 +423,6 @@
     <!-- main-conts-05 -->
     <div class="section main-conts-05">
       <div class="container-fluid">
-        <div class="left-nav flex-row align-items-center float-left">
-          <ul>
-            <li class="active"><span>회사소개</span></li>
-            <li><span>서비스소개</span></li>
-            <li><span>공지사항</span></li>
-            <li><span>문의하기</span></li>
-          </ul>
-        </div>
 
         <!-- title -->
         <div class="flex-row float-left">
@@ -595,9 +569,9 @@
 
     <!-- main-conts-07 -->
     <div class="section main-conts-07">
-      <div class="wrap-content">
+      <!-- <div class="wrap-content"> -->
         <div class="container-fluid">
-          <div class="flex-row float-right">
+          <!-- <div class="flex-row float-right"> -->
 
             <!-- title -->
             <div class="main-title__wrap center">
@@ -786,9 +760,9 @@
             </div>
             <!-- // contents -->
       
-          </div>
+          <!-- </div> -->
         </div>
-      </div>
+      <!-- </div> -->
 
       <!-- footer -->
       <div class="footer">
