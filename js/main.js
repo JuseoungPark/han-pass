@@ -51,8 +51,8 @@ function makeFullPage(){
 		// 이동
 		navigation: true,
 		navigationPosition: 'left',
-		anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-		menu: '#fp-nav',
+		// anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+		// menu: '#fp-nav',
 
 		// 스크롤
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -62,8 +62,7 @@ function makeFullPage(){
 		scrollOverflow: true,
 		v2compatible: true,
 		// css3: true,
-		// easing: 'easeInOutCubic',
-		easing: 'linear',
+		easing: 'easeInOutCubic',
 		// scrollingSpeed: 800,
 		scrollOverflowOptions: {
 			disablePointer: true,
