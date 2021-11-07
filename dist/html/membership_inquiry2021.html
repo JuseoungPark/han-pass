@@ -9,22 +9,85 @@
     <!-- JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="../vendor/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/main.js"></script>
   </head>
   <body>
     <div class="body-wrap">
       <a id="top-btn" href="#">TOP</a>
+    
+      <div class="top-right-fixed-wrap only-desktop">
+        <a class="btn--login" href="#">
+          법인송금<br> 
+          로그인하기
+        </a>
+        <a class="btn--primary" href="#">
+          가입문의
+        </a>
+      </div>
+    
+      <!-- gnb -->
+      <nav class="navbar navbar-expand-lg flex-column">
+        <!-- navbar-header -->
+        <div class="navbar-header">
+          <!-- container-fluid -->
+          <div class="container-fluid flex-nowrap">
+            <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
+            <button class="navbar-toggler only-moblile" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- navbar-collapse [오픈되었을 때의 컨텐츠] -->
+            <div id="navbar-allmenu" class="collapse">
+              <div class="navbar-collapse align-items-start flex-wrap">
+                <div class="navbar-list">
+                  <div class="container-fluid">
+                    <!-- nav header -->
+                    <div class="d-flex align-items-center navbar-collapse-header">
+                      <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    </div>
+                    <!-- // nav header -->
+                    <!-- nav text -->
+                    <div class="navbar-text-wrap">
+                      <p class="navbar-text">안녕하세요. 고객님,<br/>
+                        <a class="navbar-link" href="#">로그인</a> 하시면 맞춤 서비스를 보다<br/> 이용하실 수 있습니다.</p>
+                    </div>
+                    <!-- // nav text -->
+                    <!-- navbar-nav -->
+                    <div class="navbar-nav flex-row flex-wrap">
+                      <ul>
+                        <li class="nav-item"><a class="nav-link" href="#">홈</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">공지사항</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">문의하기</a></li>
+                      </ul>
+                    </div>
+                    <!-- // navbar-nav -->
+                    <!-- bottom link area -->
+                    <div class="navbar-bottom-link-wrap">
+                      <div class="d-flex flex-row">
+                        <a class="nav-bottom-link" href="#">로그인</a>
+                        <a class="nav-bottom-link" href="#">가입문의</a>
+                      </div>
+                    </div>
+                    <!-- // bottom link area -->
+                  </div>
+                </div>  
+              </div>
+            </div>
+            <!-- navbar-collapse // -->
+          </div>
+          <!-- container-fluid // -->
+        </div>
+        <!-- navbar-header // -->
+      </nav>
+      <!-- gnb // --> 
+
       <!-- cont-wrap -->
       <div class="cont-wrap">
-        <div class="top-right-fixed-wrap">
-          <a class="btn--login" href="#">
-            법인송금<br />
-            로그인하기
-          </a>
-          <a class="btn--primary" href="#">
-            가입문의
-          </a>
-        </div>
         <div class="sub-visual membership">
           <div class="container-fluid">
             <h2>가입문의</h2>
