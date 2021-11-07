@@ -124,47 +124,41 @@
 }
 
 .main-conts {
-  &-02 {
-    background-size: cover;
-    background-image: url(../../images/renewal/bg-img@3x.png);
-    .card-wrap {
-      &.bay-tree {
-        margin-top: 3.5rem;
-        margin-bottom: 7.25rem;
-      }
-    }
-  }
+  // &-02 {
+  //   background-size: cover;
+  //   background-image: url(../../images/renewal/bg-img@3x.png);
+  //   .card-wrap {
+  //     &.bay-tree {
+  //       margin-top: 3.5rem;
+  //       margin-bottom: 7.25rem;
+  //     }
+  //   }
+  // }
   &-03 {
-    background-size: cover;
-    background-image: url(../../images/renewal/bg-digit@2x.png);
-    background-color: #12134b;
-    // .float-right {
-    //   width: 100%;
+    // .main-title {
+    //   &--sub {
+    //     color: #ffffff;
+    //   }
+    //   &--mid {
+    //     color: #ffffff;
+    //   }
     // }
-    .main-title {
-      &--sub {
-        color: #ffffff;
-      }
-      &--mid {
-        color: #ffffff;
-      }
-    }
-    .left-nav {
-      margin-top: calc(-95px / 2);
-      ul {
-        margin-top: 0;
-      }
-    }
-    ul {
-      > li {
-        > span {
-          color: #ffffff;
-        }
-        > strong {
-          color: #6effdf;
-        }
-      }
-    }
+    // .left-nav {
+    //   margin-top: calc(-95px / 2);
+    //   ul {
+    //     margin-top: 0;
+    //   }
+    // }
+    // ul {
+    //   > li {
+    //     > span {
+    //       color: #ffffff;
+    //     }
+    //     > strong {
+    //       color: #6effdf;
+    //     }
+    //   }
+    // }
   }
   &-04 {
     img {

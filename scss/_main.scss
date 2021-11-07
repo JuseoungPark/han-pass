@@ -815,11 +815,18 @@
 // }
 .main-conts-02 {
   opacity: 0;
+  background-size: cover;
+  background-image: url(../../images/renewal/bg-img@3x.png);
+  background-color: #f5f9fc;
   .main-title--sub,
   .main-title,
   .main-title--txt,
   .card-wrap {
     opacity: 0;
+  }
+  .bay-tree {
+    margin-top: 3.5rem;
+    margin-bottom: 7.25rem;
   }
   &.effect {
     -webkit-animation: 1.2s movetop ease-out forwards;
@@ -847,6 +854,9 @@
   }
 }
 .main-conts-03 {
+  background-size: cover;
+  background-image: url(../../images/renewal/bg-digit@2x.png);
+  background-color: #12134b;
   .container-fluid {
     padding-bottom: rem(104px);
   }
@@ -856,6 +866,24 @@
   ul > li > strong {
     opacity: 0;
     transition: 1s;
+  }
+  .main-title {
+    &--sub {
+      color: #ffffff;
+    }
+    &--mid {
+      color: #ffffff;
+    }
+  }
+  ul {
+    > li {
+      > span {
+        color: #ffffff;
+      }
+      > strong {
+        color: #6effdf;
+      }
+    }
   }
   ul {
     margin-top: rem(100px);
@@ -869,16 +897,13 @@
     display: block;
     line-height: rem(23px);
     font-size: rem(18px);
-    color: #4f4f4f;
     font-weight: bold;
   }
   ul > li > strong {
     display: block;
     margin: rem(14px) 0 0 0;
     line-height: rem(45px);
-    font-family: Lato;
     font-size: rem(42px);
-    color: $primary;
   }
   ul + ul > li {
     padding: 0 rem(60px);
@@ -1119,8 +1144,8 @@
     div[class*="main-visual-img"] {
       width: 100%;
       max-width: calc(100% - 2.5rem);
-      max-height: 100%;
-      margin: rem(20px) rem(20px) rem(60px) rem(20px);
+      max-height: 60%;
+      margin: 0 rem(20px) rem(60px) rem(20px);
     }
     .cont-box {
       flex-direction: column-reverse;
@@ -1197,6 +1222,7 @@
 
   .main-conts-02 {
     letter-spacing: rem(-1.5px);
+    background-image: unset;
   }
   .main-conts-02 .card.float-left p {
     font-size: rem(26px);
