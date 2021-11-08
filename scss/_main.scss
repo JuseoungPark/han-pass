@@ -34,10 +34,10 @@
   div[class*="main-visual-img"] {
     flex: none;
     z-index: 1;
-    width: 28.75rem;
-    max-width: 30%;
-    height: 37.5rem;
-    max-height: 62.5%;
+    width: rem(460px);
+    height: rem(600px);
+    // margin-top: rem(64px);
+    margin-bottom: 6%;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -58,14 +58,14 @@
   }
   .cont-box {
     display: flex;
-    flex-flow: nowrap;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-items: flex-end;
     width: rem(1398px);
-    max-width: 72%;
     height: 100%;
     margin-left: rem(314px);
   }
   .caption {
+    margin-bottom: 18%;
     margin-left: rem(64px);
     color: #242424;
     .logo {
@@ -187,7 +187,8 @@
   }
   .swiper-control-bar {
     position: absolute;
-    bottom: rem(84px);
+    bottom: rem(208px);
+    bottom: 16%;
     margin-left: rem(838px); // 64 + 460 + 314
     width: rem(500px);
     display: flex;

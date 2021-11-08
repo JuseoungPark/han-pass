@@ -52,7 +52,7 @@ function makeFullPage(){
 		navigation: true,
 		navigationPosition: 'left',
 		// anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-		// menu: '#fp-nav',
+		menu: '#fp-nav',
 
 		// 스크롤
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -64,6 +64,7 @@ function makeFullPage(){
 		// css3: true,
 		easing: 'easeInOutCubic',
 		// scrollingSpeed: 800,
+		// animateAnchor: false,
 		scrollOverflowOptions: {
 			disablePointer: true,
 			scrollbars: true
@@ -90,7 +91,7 @@ function makeFullPage(){
 				$('#firstPage').css("display", "none");
 			}
 
-			if(index == 1 || index == 3) {
+			if(index == 1) {
 				$("#fp-nav").addClass("white")
 			} else {
 				$("#fp-nav").removeClass("white")
