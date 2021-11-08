@@ -110,33 +110,11 @@
     }
   }
   .swiper-slide-active.effect {
-    // .main-visual-bg-line-01 {
-    //   transform: scale(1);
-    //   opacity: 1;
-    //   transition: all 1.2s ease;
-    //   transition-delay: 0.3s;
-    // }
-    // .main-visual-bg-currency-01 {
-    //   left: 0 !important;
-    //   right: 0 !important;
-    //   transition: all 1.2s ease;
-    //   transition-delay: 0.6s;
-    // }
-    // .main-visual-bg-obj-05 {
-    //   -webkit-animation: 1.2s moveleft ease-out forwards;
-    //   animation: 1.2s moveleft ease-out forwards;
-    //   animation-delay: 0.1s;
-    // }
     div[class*="main-visual-bg"] {
-      // -webkit-animation: moveshow .6s .4s ease forwards;
-      // animation: moveshow .6s .4s ease forwards;
       -webkit-animation: 1.2s movetop ease-out forwards;
       animation: 1.2s movetop ease-out forwards;
     }
     div[class*="main-visual-img"] {
-    }
-    .main-visual-img-01,
-    .main-visual-img-02 {
       -webkit-animation: moveshow 0.7s 0.5s ease forwards;
       animation: moveshow 0.7s 0.5s ease forwards;
       animation-delay: 0.2s;
@@ -564,6 +542,8 @@
       .card-ico {
         background-position: 0 50%;
         background-size: contain;
+        &.kita {
+        }
         &.truefriend {
           width: rem(310px);
         }
@@ -732,6 +712,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 0;
+    &.kita {
+      width: rem(136px);
+      background-image: url(../images/renewal/logo-kita@3x.png);
+    }
     &.samsung-pay {
       width: rem(100px);
       background-image: url(../images/renewal/logo-samsung-pay@3x.png);
@@ -815,6 +799,7 @@
 //   }
 // }
 .main-conts-02 {
+  padding-bottom: rem(108px);
   opacity: 0;
   background-size: cover;
   background-image: url(../../images/renewal/bg-img@3x.png);
@@ -827,7 +812,6 @@
   }
   .bay-tree {
     margin-top: 3.5rem;
-    margin-bottom: 7.25rem;
   }
   &.effect {
     -webkit-animation: 1.2s movetop ease-out forwards;
@@ -1050,7 +1034,7 @@
     }
   }
   .info-intro-link {
-    margin: 11.5rem 0 9rem;
+    margin: 0 0 9rem 0;
   }
   &.effect {
     .main-title {
@@ -1146,11 +1130,12 @@
       width: 100%;
       max-width: calc(100% - 2.5rem);
       max-height: 60%;
-      margin: 0 rem(20px) rem(60px) rem(20px);
+      // max-height: 56%;
+      margin: auto rem(20px) rem(50px) rem(20px);
     }
     .cont-box {
       flex-direction: column-reverse;
-      justify-content: space-between;
+      justify-content: flex-end;
       position: relative;
       // width: calc(100% - 1.25rem * 2);
       width: 100%;
@@ -1163,10 +1148,11 @@
       width: 100%;
       margin: 0;
       padding: rem(20px);
-      h1 {
-        width: 2.3125rem;
-        height: 0.625rem;
+      .logo {
+        width: rem(37px);
+        height: rem(10px);
         margin: 0 0 rem(8px) 0;
+        background-size: contain;
       }
       strong {
         margin-bottom: 0;
@@ -1192,9 +1178,9 @@
   //
   .main-visual .carousel-control-prev-icon,
   .main-visual .carousel-control-next-icon {
-    width: 50px;
-    height: 50px;
-    background-size: 10px auto;
+    width: rem(50px);
+    height: rem(50px);
+    background-size: rem(10px) auto;
   }
   .exchange-calc {
     position: relative;
@@ -1222,44 +1208,29 @@
   }
 
   .main-conts-02 {
+    padding-bottom: rem(40px);
     letter-spacing: rem(-1.5px);
     background-image: unset;
-  }
-  .main-conts-02 .card.float-left p {
-    font-size: rem(26px);
-    line-height: 1.5;
-  }
-  .main-conts-02 .card {
-    width: 100%;
-    height: auto;
-  }
-  .main-conts-02 .card.float-left {
-    padding-bottom: rem(50px);
-  }
-  .main-conts-02 .card.float-right {
-    flex-direction: column !important;
-  }
-  .main-conts-02 .card.float-right ul {
-    width: calc(172px * 30);
-    height: auto;
-    margin-right: 0;
-  }
-  .main-conts-02 .card.float-right ul li {
-    float: left;
-    width: 160px;
-    height: auto;
-    margin-top: 12px;
-    margin-right: 12px;
-  }
-  .main-conts-02 .card.float-right ul li > span {
-    font-size: rem(20px);
-  }
-  .main-conts-02 .card.float-right ul + ul {
-    margin: 0 0 0 rem(-84px);
-  }
-  .main-conts-02 .card.float-right ul.active {
-    animation: horizontalscroll 100s linear infinite;
-    -ms-animation: horizontalscroll 100s linear infinite;
+    .card-wrap {
+      &.bay-tree {
+        margin-top: 0.75rem;
+        .card-item {
+          margin-left: 0.625rem;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:before,
+          &:after {
+            width: 3.125rem;
+            height: 4.125rem;
+            background-size: cover;
+          }
+        }
+        .card-content {
+          padding: 1.5rem 1rem 1rem 1rem;
+        }
+      }
+    }
   }
   .main-conts-03 {
     padding-top: rem(20px);
@@ -1355,6 +1326,50 @@
   // .footer{padding:rem(56px) 0 rem(30px); }
   // .footer>.d-flex{flex-direction: column;}
   // .footer .logo-img{width:200px;}
+  .main-conts-07 {
+    .card-wrap {
+      &.ci-banner {
+        margin: 0.5rem rem(-4px) 0 rem(-4px);
+        .card-item {
+          min-width: 22%;
+          width: auto;
+          margin: rem(24px) rem(4px) 0 rem(4px);
+        }
+        .card-content {
+          height: rem(32px);
+        }
+      }
+    }
+    .main-slide {
+      margin-top: rem(32px);
+    }
+    .ci-banner {
+      position: unset;
+    }
+    .info-intro-link {
+      margin: 0 0 rem(40px) 0;
+    }
+    &.effect {
+      .row1,
+      .row2 {
+        .ci-banner {
+          width: 100%;
+          margin: 0;
+          animation: unset;
+          &.fake {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .main-slide {
+    .row1,
+    .row2 {
+      height: 100%;
+    }
+  }
+
   .footer .dropdown {
     margin-top: rem(20px);
     width: 100%;

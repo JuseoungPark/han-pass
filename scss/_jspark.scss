@@ -744,35 +744,6 @@
 
 @media (max-width: 767.98px) {
   .main-conts {
-    &-02 {
-      background-color: #f5f9fc;
-      .float-right {
-        flex-direction: column !important;
-        width: 100%;
-        height: auto;
-      }
-      .card-wrap {
-        &.bay-tree {
-          margin-top: 0.75rem;
-          margin-bottom: 1.5rem;
-          .card-item {
-            margin-left: 0.625rem;
-            &:first-child {
-              margin-left: 0;
-            }
-            &:before,
-            &:after {
-              width: 3.125rem;
-              height: 4.125rem;
-              background-size: cover;
-            }
-          }
-          .card-content {
-            padding: 1.5rem 1rem 1rem 1rem;
-          }
-        }
-      }
-    }
     &-03 {
       .float-right {
         flex-direction: column !important;
@@ -864,29 +835,6 @@
           margin-top: rem(20px);
           margin-bottom: rem(16px);
         }
-      }
-    }
-    &-07 {
-      .float-right {
-        flex-direction: column !important;
-        width: 100%;
-        height: auto;
-      }
-      .card-wrap {
-        &.ci-banner {
-          margin: 0.5rem rem(-4px) 0 rem(-4px);
-          .card-item {
-            min-width: 26%;
-            width: auto;
-            margin: rem(24px) rem(4px) 0 rem(4px);
-          }
-          .card-content {
-            height: rem(32px);
-          }
-        }
-      }
-      .info-intro-link {
-        margin: rem(60px) 0 rem(40px);
       }
     }
   }
