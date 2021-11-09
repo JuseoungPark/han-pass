@@ -8,26 +8,7 @@ $(document).ready(function(){
     if(isMobile == false) myFullpageCTL = false;
 	
 	var winWidth = $(window).width();
-    if(winWidth < 1281){
-        if(myFullpageCTL == true){
-            $.fn.fullpage.destroy('all');
-            myFullpageCTL = false;
-        }
-    }else{
-        if(myFullpageCTL == false){
-            makeFullPage();
-            myFullpageCTL = true;
-        }
-    }	
-	makeSwiper();
-	mainEvents();
-})
-
-$(window).resize(function(){
-	var winWidth = $(window).width();
-	console.log('resize', winWidth, myFullpageCTL)
-	// console.log('resize', winWidth)
-    if(winWidth < 1281){
+    if(winWidth < 769){
         if(myFullpageCTL == true){
             $.fn.fullpage.destroy('all');
             myFullpageCTL = false;
@@ -38,6 +19,27 @@ $(window).resize(function(){
             myFullpageCTL = true;
         }
     }
+	// $.fn.fullpage.setAllowScrolling(false);
+	makeSwiper();
+	mainEvents();
+})
+
+$(window).resize(function(){
+	var winWidth = $(window).width();
+	console.log('resize', winWidth, myFullpageCTL)
+	// console.log('resize', winWidth)
+    if(winWidth < 769){
+        if(myFullpageCTL == true){
+            $.fn.fullpage.destroy('all');
+            myFullpageCTL = false;
+        }
+    }else{
+        if(myFullpageCTL == false){
+            makeFullPage();
+            myFullpageCTL = true;
+        }
+    }
+	makeSwiper();
 	mainEvents();	
 });
 $(window).scroll(function() {
@@ -57,7 +59,6 @@ function makeFullPage(){
 		// 스크롤
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 		// scrollHorizontally: false,
-		// normalScrollElements: '.section',
 		offsetSections: true,
 		scrollOverflow: true,
 		v2compatible: true,
@@ -126,8 +127,6 @@ function makeFullPage(){
 			}
 		},
 	});	
-	//methods
-	// $.fn.fullpage.setAllowScrolling(false);
 }
 function makeSwiper(){
 	//SWIPER - TOP VISUAL AREA PC / MOBILE

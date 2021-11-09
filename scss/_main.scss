@@ -784,20 +784,6 @@
   }
 }
 
-// 20211103 : START
-// .main-conts-01 {
-//   .container-fluid {
-//     opacity: 0;
-//     transition: 1s;
-//   }
-//   &.effect {
-//     .container-fluid {
-//       -webkit-animation: 1.2s movetop ease-out forwards;
-//       animation: 1.2s movetop ease-out forwards;
-//       animation-delay: 0.5s;
-//     }
-//   }
-// }
 .main-conts-02 {
   padding-bottom: rem(108px);
   opacity: 0;
@@ -916,7 +902,6 @@
   }
 }
 .main-conts-04 {
-  // padding: rem(43px) 0 0 0;
   .main-title,
   .main-title--txt,
   img,
@@ -928,7 +913,6 @@
     .main-title {
       -webkit-animation: 1.2s movetop ease-out forwards;
       animation: 1.2s movetop ease-out forwards;
-      // animation-delay: 0.5s;
     }
     .main-title--txt {
       -webkit-animation: 1.2s movetop ease-out forwards;
@@ -939,7 +923,6 @@
       -webkit-animation: 0.5s 0.3s bounceScale ease forwards;
       animation: 0.5s 0.3s bounceScale ease forwards;
       animation-delay: 0.2s;
-      // animation: bounceScale .7s .5s ease forwards
     }
     .card-wrap {
       -webkit-animation: 1.2s movetop ease-out forwards;
@@ -954,10 +937,8 @@
   }
 }
 .main-conts-05 {
-  // padding: rem(43px) 0 0 0;
   .main-title--sub,
   .main-title,
-  // img,
   .card-item {
     opacity: 0;
   }
@@ -965,18 +946,12 @@
     .main-title--sub {
       -webkit-animation: 1.2s movetop ease-out forwards;
       animation: 1.2s movetop ease-out forwards;
-      // animation-delay: 0.5s;
     }
     .main-title {
       -webkit-animation: 1.2s movetop ease-out forwards;
       animation: 1.2s movetop ease-out forwards;
       animation-delay: 0.2s;
     }
-    // img {
-    //   -webkit-animation: 1.2s movetop ease-out forwards;
-    //   animation: 1.2s movetop ease-out forwards;
-    //   animation-delay: .2s;
-    // }
     .card-item {
       -webkit-animation: bounceScale 0.7s 0.5s ease forwards;
       animation: bounceScale 0.7s 0.5s ease forwards;
