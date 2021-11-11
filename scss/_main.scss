@@ -839,9 +839,6 @@
       margin-left: rem(1060px);
     }
   }
-  .info-intro-link {
-    margin: 0 0 9rem 0;
-  }
   &.effect {
     .main-title {
       -webkit-animation: 1.2s movetop ease-out forwards;
@@ -880,6 +877,9 @@
       animation-delay: 1.6s;
     }
   }
+}
+.info-intro-link {
+  margin: 0 0 rem(144px) 0;
 }
 // 20211103 : END
 
@@ -1117,9 +1117,6 @@
     .ci-banner {
       position: unset;
     }
-    .info-intro-link {
-      margin: 0 0 rem(40px) 0;
-    }
     &.effect {
       .row1,
       .row2 {
@@ -1134,13 +1131,15 @@
       }
     }
   }
+  .info-intro-link {
+    margin: 0 0 rem(40px) 0;
+  }
   .main-slide {
     .row1,
     .row2 {
       height: 100%;
     }
   }
-
   .footer .dropdown {
     margin-top: rem(20px);
     width: 100%;
