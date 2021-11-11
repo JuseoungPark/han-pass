@@ -262,7 +262,7 @@
   text-align: center;
   z-index: 100;
   * {
-    transition: all 0.3s ease-out;
+    transition: all 0.2s ease-out;
   }
   .container-fluid {
     max-width: 100%;
@@ -325,6 +325,14 @@
 
     &.on {
       visibility: visible;
+      .logo-img {
+        width: rem(121px);
+        height: rem(18px);
+        opacity: 1;
+      }
+      .navbar-header {
+        align-items: center;
+      }
     }
   }
 }
