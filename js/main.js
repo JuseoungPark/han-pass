@@ -41,6 +41,7 @@ $(window).resize(function(){
         //     myFullpageCTL = true;
         // }
     }
+	$('#navbar-allmenu').removeClass('show');
 	makeSwiper();
 	mainEvents();	
 });
@@ -55,7 +56,6 @@ function makeFullPage(){
 		// 이동
 		navigation: true,
 		navigationPosition: 'left',
-		// anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
 		menu: '#fp-nav',
 
 		// 스크롤
@@ -64,7 +64,7 @@ function makeFullPage(){
 		offsetSections: true,
 		scrollOverflow: true,
 		v2compatible: true,
-		// css3: true,
+		css3: true,
 		easing: 'easeInOutCubic',
 		// scrollingSpeed: 800,
 		// animateAnchor: false,
@@ -74,19 +74,12 @@ function makeFullPage(){
 		},
 		fitToSection: false,
 		responsiveWidth: 1260,
-		responsiveHeight: 1260,
 		afterRender: function(){
 			// $.fn.fullpage.silentMoveTo(1);
 		},
 		afterLoad: function(a, index){
 			console.log(index);
 			var loadedSection = this;
-
-			// if(index == 3){
-			// 	$(".card.float-right ul").addClass("active");
-			// }else{
-			// 	$(".card.float-right ul").removeClass("active");
-			// }
 
 			// 색인 사용
 			if(index == 1) {
@@ -153,10 +146,6 @@ function makeSwiper(){
 			renderFraction: function (currentClass, totalClass) {
 				return '<span class="' + currentClass + '"></span>' + '<span class="' + totalClass + '"></span>';
 			},
-			// type: 'custom',
-			// renderCustom: function (swiper, current, total) {
-			// 	return '<span class="' + current + '"></span>' + '<span class="' + total + '"></span>';
-			// },
 		},
 		on: {
 			init: function () {
