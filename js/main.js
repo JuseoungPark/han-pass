@@ -14,11 +14,12 @@ $(document).ready(function(){
             myFullpageCTL = false;
         }
     }else{
-			makeFullPage();
-        // if(myFullpageCTL == false){
-        //     makeFullPage();
-        //     myFullpageCTL = true;
-        // }
+        if(myFullpageCTL == false){
+            makeFullPage();
+            myFullpageCTL = true;
+        } else {
+					makeFullPage();
+				}
     }
 	// $.fn.fullpage.setAllowScrolling(false);
 	makeSwiper();
@@ -39,11 +40,11 @@ $(window).resize(function(){
             myFullpageCTL = false;
         }
     }else{
-			makeFullPage();
-        // if(myFullpageCTL == false){
-        //     makeFullPage();
-        //     myFullpageCTL = true;
-        // }
+			// makeFullPage();
+        if(myFullpageCTL == false){
+            makeFullPage();
+            myFullpageCTL = true;
+        }
     }
 	$('#navbar-allmenu').removeClass('show');
 	makeSwiper();
@@ -65,7 +66,7 @@ function makeFullPage(){
 		// 스크롤
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 		// scrollHorizontally: false,
-		offsetSections: true,
+		// offsetSections: true,
 		scrollOverflow: true,
 		v2compatible: true,
 		css3: true,
@@ -73,11 +74,11 @@ function makeFullPage(){
 		// scrollingSpeed: 800,
 		// animateAnchor: false,
 		scrollOverflowOptions: {
-			disablePointer: true,
-			scrollbars: true
+			disablePointer: false,
+			scrollbars: false
 		},
 		fitToSection: false,
-		responsiveWidth: 1260,
+		responsiveWidth: 1280,
 		afterRender: function(){
 			// $.fn.fullpage.silentMoveTo(1);
 		},
