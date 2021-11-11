@@ -262,7 +262,7 @@
   text-align: center;
   z-index: 100;
   * {
-    transition: all 0.2s ease-out;
+    transition: all 0.3s ease-out;
   }
   .container-fluid {
     max-width: 100%;
@@ -302,11 +302,7 @@
     visibility: hidden;
     background: $primary;
     .logo-img {
-      width: rem(121px);
-      height: rem(18px);
-    }
-    .navbar-header {
-      align-items: center;
+      opacity: 0.01;
     }
   }
 }
