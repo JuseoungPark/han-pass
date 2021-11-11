@@ -23,6 +23,10 @@ $(document).ready(function(){
 	// $.fn.fullpage.setAllowScrolling(false);
 	makeSwiper();
 	mainEvents();
+	$("#top-btn").on("click", function() {
+        $.fn.fullpage.moveTo(1);
+        jQuery(this).fadeOut(200);
+    })
 })
 
 $(window).resize(function(){

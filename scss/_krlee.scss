@@ -34,12 +34,14 @@
   width: rem(24px);
   height: rem(24px);
   font-size: 0;
-  background: url(../images/renewal/ico-del@3x.png) no-repeat center center;
+  background: url(../images/renewal/ico-del@3x.png) no-repeat 50% 50%;
   background-size: 100%;
 }
 
 .sub-visual {
   &.membership {
+    background: url(../images/renewal/sub-visual-membership.png) no-repeat 50% 50%;
+    background-size: cover;
     height: 28rem;
     .sub-visual-bg {
       height: 100%;
@@ -224,6 +226,11 @@
       }
       &.column {
         flex-flow: column wrap;
+        .form-group {
+          + .form-group {
+            padding-top: 0;
+          }
+        }
         .input-group {
           width: rem(638px);
           textarea {
@@ -317,12 +324,101 @@
 }
 
 // 미디어 쿼리
-// mobile
+// mobile 767.98px => 1280px
+@media (max-width: 1280px) {
+  .sub-visual {
+    &.membership {
+      margin-top: rem(60px);
+      .container-fluid {
+        p {
+          text-align: center;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  .sub-cont-membership-inquiry-02 {
+    .service-process {
+      & > li {
+        width: 50%;
+        }
+      }
+  }
+  .sub-cont-membership-inquiry-03 {
+    h2.tit {
+      padding-bottom: rem(6px);
+      font-size: rem(24px);
+      line-height: 1.67;
+    }
+    .form-group-container {
+      .form-group-wrap {
+        flex-flow: column wrap;
+        border-bottom: none;
+        .form-group {
+          flex-direction: column;
+          padding: rem(8px) 0;
+          padding-top: rem(8px);
+          .tit {
+            width: 100%;
+            margin-bottom: rem(8px);
+            font-size: rem(16px);
+          }
+          .input-group {
+            width: 100%;
+          }
+        }
+        &.column {
+          .form-group {
+            + .form-group {
+              padding-top: rem(8px);
+            }
+          }
+          .input-group {
+            width: 100%;
+            textarea {
+              height: rem(160px);
+            }
+          }
+        }
+        &:first-child {
+          .form-group {
+            &:first-child {
+              padding-top: rem(24px);
+            }
+          }
+        }
+        &:last-child {
+          .form-group {
+            &:last-child {
+              padding-bottom: rem(24px);
+            }
+          }
+        }
+      }
+    }
+    .sub-text-wrap {
+      padding-bottom: rem(8px);
+    }
+    .card {
+      .card-body {
+        padding: rem(16px) rem(16px) rem(30px) rem(16px);
+      }
+    }
+    .btns-box {
+      padding: rem(50px) 0 rem(80px);
+      .btn-primary {
+        &.btn-lg {
+          width: 100%;
+          padding: rem(16px) rem(32px);
+        }
+      }
+    }
+  }
+}
 @media (max-width: 767.98px) {
   .sub-visual {
     &.membership {
       height: rem(198px);
-      margin-top: rem(60px);
       .container-fluid {
         h2 {
           height: rem(65px);
@@ -330,7 +426,6 @@
           font-size: rem(34px);
         }
         p {
-          text-align: center;
           font-size: rem(13px);
           font-weight: 500;
           line-height: 1.54;
@@ -426,70 +521,6 @@
           height: rem(26px);
           font-size: rem(10px);
           line-height: rem(24px);
-        }
-      }
-    }
-  }
-  .sub-cont-membership-inquiry-03 {
-    h2.tit {
-      padding-bottom: rem(6px);
-      font-size: rem(24px);
-      line-height: 1.67;
-    }
-    .form-group-container {
-      .form-group-wrap {
-        flex-flow: column wrap;
-        border-bottom: none;
-        .form-group {
-          flex-direction: column;
-          padding: rem(8px) 0;
-          .tit {
-            width: 100%;
-            margin-bottom: rem(8px);
-            font-size: rem(16px);
-          }
-          .input-group {
-            width: 100%;
-          }
-        }
-        &.column {
-          .input-group {
-            width: 100%;
-            textarea {
-              height: rem(160px);
-            }
-          }
-        }
-        &:first-child {
-          .form-group {
-            &:first-child {
-              padding-top: rem(24px);
-            }
-          }
-        }
-        &:last-child {
-          .form-group {
-            &:last-child {
-              padding-bottom: rem(24px);
-            }
-          }
-        }
-      }
-    }
-    .sub-text-wrap {
-      padding-bottom: rem(8px);
-    }
-    .card {
-      .card-body {
-        padding: rem(16px) rem(16px) rem(30px) rem(16px);
-      }
-    }
-    .btns-box {
-      padding: rem(50px) 0 rem(80px);
-      .btn-primary {
-        &.btn-lg {
-          width: 100%;
-          padding: rem(16px) rem(32px);
         }
       }
     }

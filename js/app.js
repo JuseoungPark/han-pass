@@ -1,9 +1,5 @@
 
 $(document).ready(function(){
-	$("#top-btn").on("click", function() {
-        $.fn.fullpage.moveTo(1);
-        jQuery(this).fadeOut(200);
-    })
     $("#go-sns").on("click", function() {
         $(".sns-box").addClass("on")
     })
