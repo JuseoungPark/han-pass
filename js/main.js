@@ -40,7 +40,6 @@ $(window).resize(function(){
             myFullpageCTL = false;
         }
     }else{
-			// makeFullPage();
         if(myFullpageCTL == false){
             makeFullPage();
             myFullpageCTL = true;
@@ -65,20 +64,20 @@ function makeFullPage(){
 
 		// 스크롤
 		licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-		// scrollHorizontally: false,
-		// offsetSections: true,
+		offsetSections: true,
 		scrollOverflow: true,
 		v2compatible: true,
 		css3: true,
 		easing: 'easeInOutCubic',
-		// scrollingSpeed: 800,
-		// animateAnchor: false,
+		scrollingSpeed: 800,
+		animateAnchor: false,
 		scrollOverflowOptions: {
 			disablePointer: false,
 			scrollbars: false
 		},
 		fitToSection: false,
 		responsiveWidth: 1280,
+		responsiveHeight: 990,
 		afterRender: function(){
 			// $.fn.fullpage.silentMoveTo(1);
 		},
