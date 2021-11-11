@@ -14,7 +14,7 @@
 }
 
 // 모바일 화면 기준이 정해지면 max-width: 767.98px 수정/보완할 것
-@media (max-width: 767.98px) {
+@media (max-width: 1280px) {
   .only-moblile {
     display: block !important;
   }

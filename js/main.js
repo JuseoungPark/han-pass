@@ -8,16 +8,17 @@ $(document).ready(function(){
     if(isMobile == false) myFullpageCTL = false;
 	
 	var winWidth = $(window).width();
-    if(winWidth < 769){
+    if(winWidth < 1281){
         if(myFullpageCTL == true){
             $.fn.fullpage.destroy('all');
             myFullpageCTL = false;
         }
     }else{
-        if(myFullpageCTL == false){
-            makeFullPage();
-            myFullpageCTL = true;
-        }
+			makeFullPage();
+        // if(myFullpageCTL == false){
+        //     makeFullPage();
+        //     myFullpageCTL = true;
+        // }
     }
 	// $.fn.fullpage.setAllowScrolling(false);
 	makeSwiper();
@@ -28,16 +29,17 @@ $(window).resize(function(){
 	var winWidth = $(window).width();
 	console.log('resize', winWidth, myFullpageCTL)
 	// console.log('resize', winWidth)
-    if(winWidth < 769){
+    if(winWidth < 1281){
         if(myFullpageCTL == true){
             $.fn.fullpage.destroy('all');
             myFullpageCTL = false;
         }
     }else{
-        if(myFullpageCTL == false){
-            makeFullPage();
-            myFullpageCTL = true;
-        }
+			makeFullPage();
+        // if(myFullpageCTL == false){
+        //     makeFullPage();
+        //     myFullpageCTL = true;
+        // }
     }
 	makeSwiper();
 	mainEvents();	
@@ -71,6 +73,7 @@ function makeFullPage(){
 			scrollbars: true
 		},
 		fitToSection: false,
+		responsiveWidth: 1260,
 		responsiveHeight: 1260,
 		afterRender: function(){
 			// $.fn.fullpage.silentMoveTo(1);

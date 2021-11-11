@@ -134,7 +134,8 @@
       background: url(../images/ic-20-appbar-40x40-fff-3x.png) no-repeat center
         center;
       // background-size: 40px 40px;
-      width: rem(16px); height: rem(16px);
+      width: rem(16px);
+      height: rem(16px);
       background-size: rem(16px) rem(16px);
     }
     .navbar-text-wrap {
@@ -143,7 +144,7 @@
       //margin: 0 rem(-24px); // 디자인은 20
       padding: 0 rem(24px) rem(20px) rem(24px); // 디자인은 20
       margin: 0 rem(-24px) rem(40px) rem(-24px);
-      border-bottom: 1px solid rgba(179,179,179,0.2);
+      border-bottom: 1px solid rgba(179, 179, 179, 0.2);
       .navbar-text {
         padding: 0;
         font-size: rem(12px);
@@ -151,7 +152,7 @@
         line-height: 1.5;
         color: #fff;
         .navbar-link {
-          color:#33dd9b;
+          color: #33dd9b;
           text-decoration: underline;
         }
       }
@@ -177,10 +178,11 @@
     }
     .navbar-bottom-link-wrap {
       position: absolute;
-      left: 0; bottom: 0;
+      left: 0;
+      bottom: 0;
       width: 100vw;
       .nav-bottom-link {
-        flex:1;
+        flex: 1;
         height: rem(64px);
         padding: 0;
         color: #fff;
@@ -188,9 +190,9 @@
         line-height: rem(64px);
         font-size: rem(18px);
         font-weight: bold;
-        border-top: 1px solid rgba(179,179,179,0.2);
+        border-top: 1px solid rgba(179, 179, 179, 0.2);
         & + .nav-bottom-link {
-          border-left: 1px solid rgba(179,179,179,0.2);
+          border-left: 1px solid rgba(179, 179, 179, 0.2);
         }
       }
     }
@@ -221,7 +223,7 @@
   #navbar-allmenu .navbar-collapse .navbar-nav {
     // height: calc(100vh - 154px - 93px);
     // 전체 - #navbar-allmenu의 높이 - header의 높이, 텍스트 영역의 높이(마진포함)
-    height:calc(100vh - 120px - 90px - 75px - 40px);
+    height: calc(100vh - 120px - 90px - 75px - 40px);
     overflow-y: auto;
   }
   .navbar .navbar-header {
@@ -309,7 +311,7 @@
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(lg) {
   .navbar {
     .container-fluid {
       margin: 0;
