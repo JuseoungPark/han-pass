@@ -21,8 +21,10 @@ $(window).scroll(function() {
 function infoEvents(){
     let scrollTop = $(window).scrollTop();
     if(scrollTop > $('.cont-wrap div:first').offset().top) {
-        $('#top-btn').fadeIn();
+        $('#top-btn').stop().fadeIn();
+		$('.navbar').addClass('on');
     } else {
-        $('#top-btn').fadeOut();
+        $('#top-btn').stop().fadeOut();
+		$('.navbar').removeClass('on');
     }
 }
