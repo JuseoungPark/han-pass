@@ -22,10 +22,10 @@
   div[class*="main-visual-bg"] {
     position: absolute;
     top: 0;
-    left: 0;
+    left: rem(360px);
     width: 100%;
     height: 100%;
-    background-position: calc(100% + 22.5rem) 0;
+    background-position: 100% 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #1e4ba3;
@@ -60,8 +60,9 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;
-    width: rem(1398px);
+    max-width: rem(1398px);
     height: 100%;
+    margin-right: rem(32px);
     margin-left: rem(314px);
   }
   .caption {
@@ -740,6 +741,15 @@
   .box--gradient {
     opacity: 0;
   }
+  img {
+    display: block;
+    margin: -19em 0 0 43rem;
+    width: 31.4375rem;
+    height: 34.25rem;
+  }
+  .box--gradient {
+    margin: 7.25rem 0 6.5rem;
+  }
   &.effect {
     .main-title {
       -webkit-animation: 1.2s movetop ease-out forwards;
@@ -884,17 +894,6 @@
 // 20211103 : END
 
 @include media-breakpoint-down(lg) {
-  .main-visual .swiper-container {
-    height: 90vh;
-  }
-  .main-conts-01 {
-    padding: rem(142px) 0 rem(152px);
-  }
-  .main-conts-04 .banner-list > li {
-    width: 48%;
-  }
-}
-@include media-breakpoint-down(lg) {
   .fullpage-wrapper {
     margin-top: rem(60px);
   }
@@ -903,65 +902,15 @@
   }
   .main-visual {
     height: calc(100vh - 3.75rem);
-    .swiper-container {
-      width: 100%;
-      height: 100%;
+    .cont-box {
+      margin: 0 rem(32px);
     }
     div[class*="main-visual-bg"] {
-      flex: 1;
-      width: 100%;
-      height: 100%;
-      max-height: 100%;
-    }
-    div[class*="main-visual-img"] {
-      width: 100%;
-      max-width: calc(100% - 2.5rem);
-      max-height: 60%;
-      margin: auto rem(20px) rem(50px) rem(20px);
-    }
-    .cont-box {
-      flex-direction: column-reverse;
-      justify-content: flex-end;
-      position: relative;
-      width: 100%;
-      max-width: unset;
-      margin: 0;
-    }
-    .caption {
-      flex: none;
-      width: 100%;
-      margin: 0;
-      padding: rem(20px);
-      .logo {
-        width: rem(37px);
-        height: rem(10px);
-        margin: 0 0 rem(8px) 0;
-        background-size: contain;
-      }
-      strong {
-        margin-bottom: 0;
-        font-size: rem(20px);
-        line-height: rem(30px);
-      }
-      p {
-        font-size: rem(12px);
-        line-height: rem(16px);
-      }
+      left: 0;
     }
     .swiper-control-bar {
-      bottom: 0;
-      width: 100%;
-      margin: 0;
+      margin-left: rem(556px); // 64 + 460 + 32
     }
-    .swiper-pagination-fraction {
-      display: none;
-    }
-  }
-  .main-visual .carousel-control-prev-icon,
-  .main-visual .carousel-control-next-icon {
-    width: rem(50px);
-    height: rem(50px);
-    background-size: rem(10px) auto;
   }
   .main-conts-01 {
     padding: 0 0 rem(20px);
@@ -1096,6 +1045,20 @@
     right: rem(25px);
     bottom: rem(30px);
   }
+  .main-conts-04 {
+    padding: 0;
+    img {
+      width: 10.125rem;
+      height: 11.0625rem;
+      margin: -2.625rem 0 0 auto;
+    }
+    .box--gradient {
+      margin: 2.125rem 0 3.25rem;
+      ul {
+        width: 100%;
+      }
+    }
+  }
   .main-conts-07 {
     .card-wrap {
       text-align: center;
@@ -1151,8 +1114,76 @@
     margin-top: rem(35.4px);
   }
 }
-// @include media-breakpoint-down(md) {
-// }
+@include media-breakpoint-down(md) {
+  // .fullpage-wrapper {
+  //   margin-top: rem(60px);
+  // }
+  // .fullpage-wrapper .section:not(.main-visual) .container-fluid {
+  //   padding-top: rem(60px);
+  // }
+  .main-visual {
+    // height: calc(100vh - 3.75rem);
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    div[class*="main-visual-bg"] {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+    }
+    div[class*="main-visual-img"] {
+      width: 100%;
+      max-width: calc(100% - 2.5rem);
+      max-height: 60%;
+      margin: auto rem(20px) rem(50px) rem(20px);
+    }
+    .cont-box {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      position: relative;
+      width: 100%;
+      max-width: unset;
+      margin: 0;
+    }
+    .caption {
+      flex: none;
+      width: 100%;
+      margin: 0;
+      padding: rem(20px);
+      .logo {
+        width: rem(37px);
+        height: rem(10px);
+        margin: 0 0 rem(8px) 0;
+        background-size: contain;
+      }
+      strong {
+        margin-bottom: 0;
+        font-size: rem(20px);
+        line-height: rem(30px);
+      }
+      p {
+        font-size: rem(12px);
+        line-height: rem(16px);
+      }
+    }
+    .swiper-control-bar {
+      bottom: 0;
+      width: 100%;
+      margin: 0;
+    }
+    .swiper-pagination-fraction {
+      display: none;
+    }
+  }
+  .main-visual .carousel-control-prev-icon,
+  .main-visual .carousel-control-next-icon {
+    width: rem(50px);
+    height: rem(50px);
+    background-size: rem(10px) auto;
+  }
+}
 
 @keyframes bounceScale {
   0% {

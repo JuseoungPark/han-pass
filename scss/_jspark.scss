@@ -103,16 +103,6 @@
 }
 
 .main-conts {
-  &-04 {
-    img {
-      margin: -19em 0 0 43rem;
-      width: 31.4375rem;
-      height: 34.25rem;
-    }
-    .box--gradient {
-      margin: 7.25rem 0 6.5rem;
-    }
-  }
   &-05 {
     background-color: #f7f7f7;
     .content {
@@ -398,25 +388,6 @@
         flex-direction: column !important;
         width: 100%;
         height: auto;
-      }
-    }
-    &-04 {
-      padding: 0;
-      .float-right {
-        flex-direction: column !important;
-        width: 100%;
-        height: auto;
-      }
-      img {
-        width: 10.125rem;
-        height: 11.0625rem;
-        margin: -2.625rem 0 0 10.625rem;
-      }
-      .box--gradient {
-        margin: 2.125rem 0 3.25rem;
-        ul {
-          width: 100%;
-        }
       }
     }
     &-05 {
