@@ -1,0 +1,17 @@
+// dashboard styling
+@charset "utf-8";
+
+.dash-board {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.remit {
+    padding: 1.5rem 1.25rem;
+    width: 27.5rem;
+    height: 38.5625rem;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    z-index: 99;
+    box-shadow: 0 2px 16px 2px rgba(105, 105, 105, 0.5);
+}
