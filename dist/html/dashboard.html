@@ -21,7 +21,7 @@
       <!-- gnb -->
       <nav class="navbar navbar-expand-lg flex-column">
         <!-- navbar-header -->
-        <div class="navbar-header">
+        <div class="navbar-left">
           <!-- container-fluid -->
           <div class="container-fluid flex-nowrap">
             <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
@@ -81,132 +81,211 @@
         <!-- 대시보드 -->
         <div class="dash-board">
           <div class="d-flex overflow-x-auto">
-            <div class="box">
+            <div class="box blue">
               <div class="item">
                 <strong>오늘 송금 금액</strong>
-                <span>1,406</span><span class="unit">KRW</span>
+                <div>
+                  <span>1,406</span><span class="unit">KRW</span>
+                </div>
               </div>
             </div>
             <div class="box">
               <div class="item">
                 <strong>7월 송금 금액</strong>
-                <span>1,406</span><span class="unit">KRW</span>
+                <div>
+                  <span>1,406</span><span class="unit">KRW</span>
+                </div>
               </div>
             </div>
-            <div class="box">
+            <div class="box small-content">
               <div class="item">
                 <strong>2021년 송금금액</strong>
-                <span>1,406,123,123,123</span><span class="unit">KRW</span>
+                <div>
+                  <span>1,406,123,123,123</span><span class="unit">KRW</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="box">
-            <div class="remit">
-              <strong class="title">실시간 송금 예상 금액</strong>
-              <div class="content">
-                <div class="remit-cont">
-                  <span class="country">대한민국</span>
+          <div class="d-flex row space-between">
+            <div class="box">
+              <div class="remit">
+                <div class="remit__title__wrap">
+                  <strong class="remit__title">실시간 송금 예상 금액</strong>
                 </div>
-                <div class="remit-charges">
-                  <div class="item">
-                    <strong class="title">송금액 :</strong>
-                    <span class="cont">1,111,111</span><span class="unit">원</span>
+                <div class="remit__content">
+                  <div class="remit__country">
+                    <div class="remit__country__title krw">
+                      <span>대한민국</span>
+                      <span class="unit">KRW</span>
+                    </div>
+                    <div class="remit__country__content">
+                      <label>송금액</label>
+                      <input type="text">
+                    </div>
                   </div>
-                  <div class="item">
-                    <strong class="title">전신료<span class="small">(83.33% 우대)</span> :</strong>
-                    <span class="cont">5,111</span><span class="unit">원</span>
+                  <div class="remit__charges">
+                    <div class="remit__charges__content">
+                      <div class="remit__charges__content__item">
+                        <strong>송금액 :</strong>
+                        <span>1,111,111</span><span class="unit">원</span>
+                      </div>
+                      <div class="remit__charges__content__item">
+                        <strong>전신료<span>(83.33% 우대)</span> :</strong>
+                        <span>5,111</span><span class="unit">원</span>
+                      </div>
+                      <div class="remit__charges__content__item">
+                        <strong>외화송금수수료<span>(83.33% 우대)</span> :</strong>
+                        <span>5,111</span><span class="unit">원</span>
+                      </div>
+                      <div class="remit__charges__content__item">
+                        <strong>해외중계수수료 :</strong>
+                        <div>
+                          <span>5,111</span><span class="unit">원</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="item">
-                    <strong class="title">외화송금수수료<span class="small">(83.33% 우대)</span> :</strong>
-                    <span class="cont">5,111</span><span class="unit">원</span>
+                  <div class="remit__country">
+                    <div class="remit__country__title aud">
+                      <span>오스트레일리아</span>
+                      <span class="unit">AUD</span>
+                    </div>
+                    <div class="remit__country__content">
+                      <label>수취액</label>
+                      <span>123,456</span>
+                    </div>
                   </div>
-                  <div class="item">
-                    <strong class="title">송금액 : 1,111,111원
-                      전신료(83.33% 우대) : 5,111원
-                      외화송금수수료(83.33% 우대) : 5,111원
-                      해외중계수수료 : 5,111원<span class="small">(83.33% 우대)</span> :</strong>
-                    <span class="cont">5,111</span><span class="unit">원</span>
+                  <div class="remit__total">
+                    <strong class="remit__total__title">입금액</strong>
+                    <div class="remit__total__content">
+                      <span>123,456</span>
+                      <span class="unit">원</span>
+                    </div>
                   </div>
                 </div>
-                <div class="receipt-cont">
-                  <span class="country">오스트레일리아</span>
-                </div>
+                <button>송금하기</button>
               </div>
-              <button>송금하기</button>
             </div>
-          </div>
-          <div class="box">
-            <div class="remit-comparison">
-              <div class="title-wrap">
-                <strong class="title">총 송금액 (년월별)</strong>
-                <div class="segment">
-                  <div class="item">
-                    <input type="radio" value="1">
-                    <span class="span">월</span>
-                  </div>
-                  <div class="item">
-                    <input type="radio" value="2">
-                    <span class="span">년</span>
+
+            <!-- 총 송금액 (년월별) -->
+            <div class="box">
+              <div class="remit-comparison">
+                <div class="remit-comparison__title__wrap">
+                  <strong class="remit-comparison__title">총 송금액 (년월별)</strong>
+                  <div class="segment">
+                    <div class="segment__item">
+                      <input type="radio" value="1">
+                      <span>월</span>
+                    </div>
+                    <div class="segment__item">
+                      <input type="radio" value="2">
+                      <span>년</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="scrp-wrap">
-                <span class="scrp">각 국가의 총 송금액을 연/월별로 비교합니다.</span>
+                <div class="desc-wrap">
+                  <span class="desc">각 국가의 총 송금액을 연/월별로 비교합니다.</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="box">
-            <div class="schedule">
-              <ul class="schedule__list">
-                <li class="schedule__item">
-                  <div class="row">
-                    <strong class="schedule__item__title">그룹번호</strong>
-                    <span class="schedule__item__cont">1234567890</span>
-                  </div>
-                  <div class="row">
-                    <strong class="schedule__item__title">그룹번호</strong>
-                    <span class="schedule__item__cont">1234567890</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="box">
-            <div class="remit-status">
-              <div class="title__wrap">
-                <div class="title__left-wrap"></div>
-                <strong class="title">송금 현황</strong>
-                <button>더보기</button>
-              </div>
-              <div class="remit-status__container">
-                <ul class="remit-status__list">
-                  <li class="remit-status__item">
-                    <span>년월</span><span>건수</span><span>합계</span>
+            <!-- // 총 송금액 (년월별) -->
+
+            <!-- 달력 -->
+            <div class="box">
+              <div class="remit-schedule">
+                <ul class="remit-schedule__list">
+                  <li class="remit-schedule__item">
+                    <div class="row">
+                      <strong class="remit-schedule__item__title">그룹번호</strong>
+                      <span class="remit-schedule__item__content">1234567890</span>
+                    </div>
+                    <div class="row">
+                      <strong class="remit-schedule__item__title">송금액</strong>
+                      <span class="remit-schedule__item__content">111,910,420 KRW</span>
+                    </div>
                   </li>
-                  <li class="remit-status__item">
-                    <span>23424</span><span>23423</span><span>234234</span>
+                  <li class="remit-schedule__item">
+                    <div class="row">
+                      <strong class="remit-schedule__item__title">그룹번호</strong>
+                      <span class="remit-schedule__item__content">1234567890</span>
+                    </div>
+                    <div class="row">
+                      <strong class="remit-schedule__item__title">송금액</strong>
+                      <span class="remit-schedule__item__content">111,910,420 KRW</span>
+                    </div>
+                  </li>
+                  <li class="remit-schedule__item">
+                    <div class="row">
+                      <strong class="remit-schedule__item__title">그룹번호</strong>
+                      <span class="remit-schedule__item__content">1234567890</span>
+                    </div>
+                    <div class="row">
+                      <strong class="remit-schedule__item__title">송금액</strong>
+                      <span class="remit-schedule__item__content">111,910,420 KRW</span>
+                    </div>
                   </li>
                 </ul>
               </div>
             </div>
+            <!-- // 달력 -->
+
           </div>
-          <!-- 송금국가 순위 -->
-          <div class="box">
-            <div class="remit-rank">
-              <div class="title__wrap">
-                <strong class="title">송금국가 순위</strong>
-              </div>
-              <div class="scrp__wrap">
-                <p class="scrp">
-                  각 국가의 송금 퍼센트를 비교합니다. <br>
-                  마우스를 올려보세요
-                </p>
-              </div>
-              <div class="remit-rank__container">
+          <div class="d-flex row">
+            <!-- 송금 현황 -->
+            <div class="box">
+              <div class="remit-status">
+                <div class="remit-status__title__wrap">
+                  <div class="left">
+                    <strong class="remit-status__title">송금 현황</strong>
+                    <span class="remit-status__unit">[최근 3개월]</span>
+                  </div>
+                  <button>더보기</button>
+                </div>
+                <div class="remit-status__container">
+                  <div class="remit-status__list__header">
+                    <span style="width: 30%;">년월</span>
+                    <span style="width: 25%;">건수</span>
+                    <span style="width: 45%;">합계</span>
+                  </div>
+                  <ul class="remit-status__list">
+                    <li class="remit-status__item">
+                      <span style="width: 30%;">23424</span>
+                      <span style="width: 25%;">23423</span>
+                      <span style="width: 45%;" class="text-right">234234</span>
+                    </li>
+                    <li class="remit-status__item">
+                      <span style="width: 30%;">23424</span>
+                      <span style="width: 25%;">23423</span>
+                      <span style="width: 45%;" class="text-right">234234</span>
+                    </li>
+                    <li class="remit-status__item">
+                      <span style="width: 30%;">23424</span>
+                      <span style="width: 25%;">23423</span>
+                      <span style="width: 45%;" class="text-right">234234</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
+            <!-- // 송금 현황 -->
+            <!-- 송금국가 순위 -->
+            <div class="box">
+              <div class="remit-rank">
+                <div class="title__wrap">
+                  <strong class="title">송금국가 순위</strong>
+                </div>
+                <div class="desc__wrap">
+                  <p class="desc">
+                    각 국가의 송금 퍼센트를 비교합니다. <br>
+                    마우스를 올려보세요
+                  </p>
+                </div>
+                <div class="remit-rank__container">
+                </div>
+              </div>
+            </div>
+            <!-- // 송금국가 순위 -->
           </div>
-          <!-- // 송금국가 순위 -->
 
         </div>
         <!-- // 대시보드 -->

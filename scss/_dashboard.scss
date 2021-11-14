@@ -1,17 +1,351 @@
 // dashboard styling
 @charset "utf-8";
 
+.space-between {
+  // justify-content: space-between;
+}
+
 .dash-board {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: rem(1260px);
+  background-color: #f0f1f6;
+  .row {
+    flex: 1;
+    min-width: 100%;
+    margin: 0;
+  }
+  .overflow-x-auto {
+    flex: 1;
+    min-width: 100%;
+    padding-bottom: rem(16px);
+    .box {
+      min-width: rem(400px);
+      margin-left: rem(12px);
+      text-align: center;
+      .item {
+        padding: rem(48px) rem(40px) rem(32px) rem(40px);
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: rem(70px);
+          margin-top: rem(8px);
+        }
+      }
+      strong {
+        font-size: rem(16px);
+        color: #353535;
+      }
+      span {
+        font-size: rem(36px);
+        font-weight: 700;
+        line-height: rem(48px);
+        text-align: right;
+        &.unit {
+          margin-left: rem(20px);
+          font-size: rem(26px);
+          text-align: left;
+        }
+      }
+    }
+  }
+  .box {
+    z-index: 99;
+    border-radius: rem(10px);
+    background-color: #ffffff;
+    &.blue {
+      background-image: radial-gradient(
+        circle at 18% 10%,
+        #1e93f4,
+        #0d5ae5 48%
+      );
+      strong,
+      span {
+        color: #ffffff;
+      }
+    }
+    &.small-content {
+      span {
+        font-size: rem(30px);
+        letter-spacing: rem(-0.8px);
+      }
+    }
+  }
+}
+
+.overflow-x-auto {
+  overflow: auto hidden;
 }
 
 .remit {
-    padding: 1.5rem 1.25rem;
-    width: 27.5rem;
-    height: 38.5625rem;
-    border-radius: 1rem;
-    background-color: #ffffff;
-    z-index: 99;
-    box-shadow: 0 2px 16px 2px rgba(105, 105, 105, 0.5);
+  width: rem(400px);
+  height: 38.5625rem;
+  padding: rem(40px) rem(24px);
+  &__title {
+    margin: 0 0 rem(24px) 0;
+    font-size: rem(21px);
+    font-weight: 700;
+    color: #353535;
+    &__wrap {
+      margin-bottom: rem(24px);
+    }
+  }
+  &__content {
+  }
+  &__country {
+    display: flex;
+    align-items: center;
+    span {
+      display: block;
+      font-size: rem(13px);
+      color: #353535;
+    }
+    &__title {
+      flex: none;
+      position: relative;
+      padding-left: rem(48px);
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: rem(40px);
+        height: rem(40px);
+        margin: 0 rem(8px) 0 0;
+        border-radius: 100%;
+        background-color: #bebebe;
+        transform: translateY(-50%);
+        content: "";
+      }
+    }
+    &__content {
+      flex: 1;
+      span {
+        // font-family: Lato;
+        font-size: rem(18px);
+        font-weight: 900;
+        text-align: right;
+        color: #146fd3;
+      }
+    }
+    .krw {
+      &::before {
+      }
+    }
+    .aud {
+      &::before {
+      }
+    }
+    .unit {
+      margin-top: rem(4px);
+      font-size: rem(18px);
+      font-weight: 900;
+    }
+  }
+  &__charges {
+    position: relative;
+    overflow: hidden;
+    margin-top: rem(10px);
+    // border-left: rem(2px) dotted #d4d4d4;
+    max-height: rem(150px);
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: rem(4px);
+      width: rem(32px);
+      height: rem(32px);
+      background-position: 50% 50%;
+      background-size: 100%;
+      background-image: url(../images/renewal/ico-send-money@3x.png);
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+      content: "";
+    }
+    &__content {
+      max-width: calc(100% - 60px);
+      margin: rem(12px) 0 rem(12px) auto;
+      &__item {
+        text-align: right;
+        color: #353535;
+        strong {
+          font-size: rem(12px);
+          line-height: rem(30px);
+          span {
+            font-size: rem(10px);
+          }
+        }
+        div {
+          display: inline-block;
+          margin-left: rem(4px);
+        }
+        span {
+          font-size: rem(14px);
+          line-height: rem(30px);
+        }
+        .unit {
+        }
+      }
+    }
+  }
+  &__total {
+    display: flex;
+    align-items: center;
+    margin: rem(16px) 0 rem(30px) 0;
+    padding: rem(16px) rem(8px) rem(16px) rem(16px);
+    border-radius: rem(4px);
+    background-color: #eff6ff;
+    &__title {
+      font-family: AppleSDGothicNeo;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      font-size: rem(16px);
+      font-weight: 800;
+      color: #353535;
+    }
+    &__content {
+      flex: none;
+      position: relative;
+      margin-left: auto;
+      // font-family: Lato;
+      font-size: 0;
+      color: #2c2c2c;
+      &::after {
+        display: block;
+        width: calc(100% + 8px);
+        height: rem(8px);
+        margin-top: rem(-8px);
+        margin-left: rem(-4px);
+        background-color: rgba(105, 238, 214, 0.6);
+        content: "";
+      }
+      span {
+        font-size: rem(20px);
+        font-weight: 900;
+      }
+      .unit {
+        font-size: rem(20px);
+      }
+    }
+  }
+  label {
+    display: block;
+    font-size: rem(14px);
+    text-align: right;
+    color: #353535;
+  }
+}
+
+// 총 송금액 (년월별)
+.remit-comparison {
+  width: rem(500px);
+  padding: rem(40px) rem(20px);
+  &__title {
+    // font-family: 'NanumSquare';
+    font-size: rem(21px);
+    color: #353535;
+    &__wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: rem(20px);
+      .segment {
+        flex: none;
+        margin-left: auto;
+      }
+    }
+  }
+  &__desc {
+    font-size: rem(14px);
+    color: #353535;
+    &__wrap {
+      margin-bottom: rem(16px);
+    }
+  }
+}
+
+// 달력
+.remit-schedule {
+  padding: rem(36px) rem(10px) rem(20px) rem(10px);
+  &__list {
+    width: rem(284px);
+  }
+  &__item {
+    padding: rem(16px) rem(8px) rem(12px) rem(8px);
+    border-top: 1px solid #e8e6e8;
+    .row {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top: rem(8px);
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    &__title {
+      flex: none;
+      width: rem(60px);
+      margin-right: rem(20px);
+      font-size: rem(13px);
+      color: #353535;
+    }
+    &__content {
+      flex: 1;
+      font-size: rem(14px);
+      color: #353535;
+    }
+  }
+}
+
+// 송금 현황
+.remit-status {
+  width: rem(380px);
+  padding: rem(36px) rem(10px) rem(16px) rem(10px);
+  &__title {
+    font-size: rem(21px);
+    vertical-align: middle;
+    color: #353535;
+    &__wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: rem(24px);
+    }
+  }
+  &__unit {
+    margin-left: rem(20px);
+    font-size: rem(14px);
+    vertical-align: middle;
+  }
+  .left {
+  }
+  button {
+    flex: none;
+    margin-left: auto;
+  }
+  &__container {
+  }
+  &__list {
+    &__header {
+      // height: 58px;
+      font-size: 0;
+      background-color: #f2f2f2;
+      span {
+        display: inline-block;
+        padding: rem(24px) rem(12px) rem(16px) rem(12px);
+        font-size: rem(14px);
+        text-align: center;
+        color: #353535;
+      }
+    }
+  }
+  &__item {
+    border-top: 1px solid #e8e6e8;
+    font-size: 0;
+    &:first-child {
+      border-top: 0 none;
+    }
+    span {
+      display: inline-block;
+      padding: rem(24px) rem(12px) rem(16px) rem(12px);
+      font-size: rem(14px);
+      text-align: center;
+      color: #353535;
+    }
+  }
 }
