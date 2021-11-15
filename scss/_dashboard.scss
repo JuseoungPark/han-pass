@@ -1,6 +1,25 @@
 // dashboard styling
 @charset "utf-8";
 
+.navbar {
+  &--left {
+    width: rem(240px);
+    height: 100vh;
+    background-color: #ffffff;
+    .navbar-header {
+      align-items: flex-start;
+      height: 100%;
+    }
+    .container-fluid {
+      margin: 0;
+    }
+    + .cont-wrap {
+      padding-left: rem(240px);
+      background-color: #f0f1f6;
+    }
+  }
+}
+
 .space-between {
   // justify-content: space-between;
 }
@@ -8,8 +27,9 @@
 .dash-board {
   display: flex;
   flex-flow: row wrap;
-  // max-width: rem(1260px);
-  background-color: #f0f1f6;
+  max-width: rem(1260px);
+  margin: 0 auto;
+  // background-color: #f0f1f6;
   .row {
     flex: 1;
     min-width: 100%;
@@ -51,7 +71,6 @@
     }
   }
   .box {
-    z-index: 99;
     border-radius: rem(10px);
     background-color: #ffffff;
     &.blue {
@@ -80,8 +99,8 @@
 
 .remit {
   width: rem(400px);
-  height: 38.5625rem;
-  padding: rem(40px) rem(24px);
+  // height: 38.5625rem;
+  padding: rem(36px) rem(24px);
   &__title {
     margin: 0 0 rem(24px) 0;
     font-size: rem(21px);
@@ -121,7 +140,7 @@
     &__content {
       flex: 1;
       span {
-        // font-family: Lato;
+        font-family: "Lato";
         font-size: rem(18px);
         font-weight: 900;
         text-align: right;
@@ -162,7 +181,7 @@
       content: "";
     }
     &__content {
-      max-width: calc(100% - 60px);
+      max-width: calc(100% - 50px);
       margin: rem(12px) 0 rem(12px) auto;
       &__item {
         text-align: right;
@@ -205,7 +224,7 @@
       flex: none;
       position: relative;
       margin-left: auto;
-      // font-family: Lato;
+      font-family: "Lato";
       font-size: 0;
       color: #2c2c2c;
       &::after {
@@ -263,9 +282,9 @@
 
 // 달력
 .remit-schedule {
+  width: rem(284px);
   padding: rem(36px) rem(10px) rem(20px) rem(10px);
   &__list {
-    width: rem(284px);
   }
   &__item {
     padding: rem(16px) rem(8px) rem(12px) rem(8px);
@@ -299,12 +318,15 @@
     align-items: center;
     justify-content: space-between;
   }
-  td {
-    width: rem(30px);
-    height: rem(30px);
-    border-radius: 100%;
-    line-height: rem(30px);
-    text-align: center;
+  tbody,
+  .calendar__week {
+    td {
+      width: rem(30px);
+      height: rem(30px);
+      border-radius: 100%;
+      line-height: rem(30px);
+      text-align: center;
+    }
   }
   thead {
     .calendar__header {
@@ -370,9 +392,136 @@
     span {
       display: inline-block;
       padding: rem(24px) rem(12px) rem(16px) rem(12px);
+      font-family: "Lato";
+      font-weight: 400;
       font-size: rem(14px);
       text-align: center;
       color: #353535;
     }
+  }
+}
+
+// 송금국가 순위
+.remit-rank {
+  width: rem(500px);
+  padding: rem(36px) rem(30px) rem(16px) rem(30px);
+  &__title {
+    font-size: rem(21px);
+    vertical-align: middle;
+    color: #353535;
+    &__wrap {
+      display: flex;
+      align-items: center;
+      margin-bottom: rem(24px);
+    }
+  }
+  &__desc {
+    font-size: rem(14px);
+    color: #353535;
+    &__wrap {
+      margin-bottom: rem(16px);
+    }
+  }
+  &__container {
+
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .dash-board {
+    // padding: 0 rem(12px);
+    .overflow-x-auto {
+      .box {
+        min-width: rem(240px);
+        margin-left: rem(10px);
+        text-align: center;
+        .item {
+          padding: rem(24px) rem(16px) rem(16px) rem(16px);
+          div {
+            height: rem(48px);
+            margin-top: rem(12px);
+          }
+        }
+        span {
+          font-size: rem(30px);
+          line-height: rem(48px);
+          &.unit {
+            margin-left: rem(4px);
+            font-size: rem(20px);
+          }
+        }
+      }
+    }
+    .box {
+      width: 100%;
+      margin-top: rem(20px);
+      // margin: rem(20px) rem(12px) 0 rem(12px);
+    }
+  }
+
+  // 실시간 송금 예상 금액
+  .remit {
+    width: 100%;
+    padding: rem(32px) rem(16px) rem(24px) rem(16px);
+    &__country {
+      &__content {
+        span {
+          font-size: rem(24px);
+        }
+      }
+    }
+    &__charges {
+      &__content {
+        &__item {
+          strong {
+            span {
+            }
+          }
+          div {
+          }
+          span {
+          }
+        }
+      }
+    }
+    &__total {
+      display: flex;
+      align-items: center;
+      margin: rem(24px) 0 rem(30px) 0;
+      padding: rem(20px) rem(8px) rem(20px) rem(20px);
+      border-radius: rem(4px);
+      background-color: #eff6ff;
+      &__title {
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        font-size: rem(20px);
+      }
+      &__content {
+        &::after {
+          height: rem(10px);
+          margin-top: rem(-10px);
+        }
+        span {
+          font-size: rem(26px);
+        }
+        .unit {
+          font-size: rem(26px);
+        }
+      }
+    }
+    label {
+      font-size: rem(14px);
+    }
+  }
+  .remit-comparison {
+    width: 100%;
+  }
+  .remit-schedule {
+    width: 100%;
+  }
+  .remit-status {
+    width: 100%;
+  }
+  .remit-rank {
+    width: 100%;
   }
 }

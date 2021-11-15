@@ -19,12 +19,16 @@
       <a id="top-btn" href="#">TOP</a>
     
       <!-- gnb -->
-      <nav class="navbar navbar-expand-lg flex-column">
+      <nav class="navbar navbar--left navbar-expand-lg flex-column">
         <!-- navbar-header -->
-        <div class="navbar-left">
+        <div class="navbar-header">
           <!-- container-fluid -->
-          <div class="container-fluid flex-nowrap">
+          <div class="container-fluid flex-column flex-nowrap">
             <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
+            <a>Home</a>
+            <a>송금하기</a>
+            <a>수취인송금</a>
+            <a>엑셀송금</a>
             <button class="navbar-toggler only-moblile" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -196,12 +200,12 @@
                 <table class="calendar">
                   <thead>
                     <tr class="calendar__header">
-                      <td onClick="prevCalendar();" style="cursor:pointer;">&#60;&#60;</td>
+                      <td onClick="prevCalendar();" style="cursor:pointer;">&#60;</td>
                       <td colspan="5">
                         <span id="calendar__year">YYYY</span>년
                         <span id="calendar__month">MM</span>월
                       </td>
-                      <td onClick="nextCalendar();" style="cursor:pointer;">&#62;&#62;</td>
+                      <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
                     </tr>
                     <tr class="calendar__week">
                       <td>일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td>
@@ -259,25 +263,25 @@
                 </div>
                 <div class="remit-status__container">
                   <div class="remit-status__list__header">
-                    <span style="width: 30%;">년월</span>
-                    <span style="width: 25%;">건수</span>
-                    <span style="width: 45%;">합계</span>
+                    <span style="width: 22%;">년월</span>
+                    <span style="width: 22%;">건수</span>
+                    <span style="width: 56%;">합계</span>
                   </div>
                   <ul class="remit-status__list">
                     <li class="remit-status__item">
-                      <span style="width: 30%;">23424</span>
-                      <span style="width: 25%;">23423</span>
-                      <span style="width: 45%;" class="text-right">234234</span>
+                      <span style="width: 22%;">21.7</span>
+                      <span style="width: 22%;">41</span>
+                      <span style="width: 56%;" class="text-right">910,420 KRW</span>
                     </li>
                     <li class="remit-status__item">
-                      <span style="width: 30%;">23424</span>
-                      <span style="width: 25%;">23423</span>
-                      <span style="width: 45%;" class="text-right">234234</span>
+                      <span style="width: 22%;">21.7</span>
+                      <span style="width: 22%;">41</span>
+                      <span style="width: 56%;" class="text-right">111,910,420 KRW</span>
                     </li>
                     <li class="remit-status__item">
-                      <span style="width: 30%;">23424</span>
-                      <span style="width: 25%;">23423</span>
-                      <span style="width: 45%;" class="text-right">234234</span>
+                      <span style="width: 22%;">21.7</span>
+                      <span style="width: 22%;">41</span>
+                      <span style="width: 56%;" class="text-right">420 KRW</span>
                     </li>
                   </ul>
                 </div>
@@ -287,13 +291,12 @@
             <!-- 송금국가 순위 -->
             <div class="box">
               <div class="remit-rank">
-                <div class="title__wrap">
-                  <strong class="title">송금국가 순위</strong>
+                <div class="remit-rank__title__wrap">
+                  <strong class="remit-rank__title">송금국가 순위</strong>
                 </div>
-                <div class="desc__wrap">
-                  <p class="desc">
-                    각 국가의 송금 퍼센트를 비교합니다. <br>
-                    마우스를 올려보세요
+                <div class="remit-rank__desc__wrap">
+                  <p class="remit-rank__desc">
+                    각 국가의 송금 퍼센트를 비교합니다. 마우스를 올려보세요
                   </p>
                 </div>
                 <div class="remit-rank__container">
@@ -387,6 +390,10 @@
 
     var today = new Date(); // @param 전역 변수, 오늘 날짜 / 내 컴퓨터 로컬을 기준으로 today에 Date 객체를 넣어줌
     var date = new Date();  // @param 전역 변수, today의 Date를 세어주는 역할
+
+    var monthNames = [
+      "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+    ];
 
     /**
      * @brief   이전달 버튼 클릭
