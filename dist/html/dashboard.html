@@ -25,10 +25,33 @@
           <!-- container-fluid -->
           <div class="container-fluid flex-column flex-nowrap">
             <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
-            <a>Home</a>
-            <a>송금하기</a>
-            <a>수취인송금</a>
-            <a>엑셀송금</a>
+            <!-- <div class="navbar-nav flex-column"> -->
+              <ul class="flex-column">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item">
+                  <strong class="nav-item__title">송금하기</strong>
+                  <!-- <a class="nav-link" href="#">송금하기</a> -->
+                  <ul>
+                    <li><a class="nav-link" href="#">수취인송금</a></li>
+                    <li><a class="nav-link" href="#">엑셀송금</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <strong class="nav-item__title">송금내역</strong>
+                  <ul>
+                    <li><a class="nav-link" href="#">그룹별 송금내역</a></li>
+                    <li><a class="nav-link" href="#">개별 송금내역</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <strong class="nav-item__title">수취인</strong>
+                  <ul>
+                    <li><a class="nav-link" href="#">그룹별 송금내역</a></li>
+                    <li><a class="nav-link" href="#">개별 송금내역</a></li>
+                  </ul>
+                </li>
+              </ul>
+            <!-- </div> -->
             <button class="navbar-toggler only-moblile" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
