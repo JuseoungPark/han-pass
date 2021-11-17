@@ -2,9 +2,14 @@
 @charset "utf-8";
 
 .navbar {
-  &--left {
+  &--left-side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
     width: rem(240px);
     height: 100vh;
+    padding: 0;
     background-color: #ffffff;
     .navbar-header {
       align-items: flex-start;
@@ -25,24 +30,122 @@
 }
 
 .dash-board {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: rem(1260px);
+  // display: flex;
+  // flex-flow: row wrap;
+  // max-width: rem(1260px);
   margin: rem(128px) auto rem(168px) auto;
   // background-color: #f0f1f6;
+  &__title {
+    // display: inline-block;
+    margin-bottom: rem(16px);
+    font-size: rem(24px);
+  }
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12,
+  .col,
+  .col-auto,
+  .col-sm-1,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm,
+  .col-sm-auto,
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-md,
+  .col-md-auto,
+  .col-lg-1,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12,
+  .col-lg,
+  .col-lg-auto,
+  .col-xl-1,
+  .col-xl-2,
+  .col-xl-3,
+  .col-xl-4,
+  .col-xl-5,
+  .col-xl-6,
+  .col-xl-7,
+  .col-xl-8,
+  .col-xl-9,
+  .col-xl-10,
+  .col-xl-11,
+  .col-xl-12,
+  .col-xl,
+  .col-xl-auto,
+  .col-xxl-1,
+  .col-xxl-2,
+  .col-xxl-3,
+  .col-xxl-4,
+  .col-xxl-5,
+  .col-xxl-6,
+  .col-xxl-7,
+  .col-xxl-8,
+  .col-xxl-9,
+  .col-xxl-10,
+  .col-xxl-11,
+  .col-xxl-12,
+  .col-xxl,
+  .col-xxl-auto {
+    padding-right: rem(6px);
+    padding-left: rem(6px);
+  }
+  .col-xl-4 {
+    // flex: 0 0 31.746%;
+    // max-width: 31.746%;
+  }
   .row {
-    flex: 1;
-    min-width: 100%;
-    margin: 0;
+    margin-right: rem(-6px);
+    margin-left: rem(-6px);
   }
   .overflow-x-auto {
     flex: 1;
-    min-width: 100%;
+    max-width: 100%;
     padding-bottom: rem(16px);
     .box {
       min-width: rem(400px);
       margin-left: rem(12px);
       text-align: center;
+      &:first-child {
+        margin-left: 0;
+      }
       .item {
         padding: rem(48px) rem(40px) rem(32px) rem(40px);
         div {
@@ -73,6 +176,31 @@
   .box {
     border-radius: rem(10px);
     background-color: #ffffff;
+    &__header {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      padding: rem(40px) rem(24px) rem(24px) rem(24px);
+      .nav-pills {
+        flex: none;
+        margin-left: auto;
+      }
+    }
+    &__body {
+      padding: 0 rem(24px) rem(40px) rem(24px);
+    }
+    &__title {
+      font-size: rem(21px);
+      &__wrap {
+        padding: rem(40px) rem(24px) rem(24px) rem(24px);
+      }
+    }
+    &__desc {
+      flex: 1 0 100%;
+      margin-top: rem(16px);
+      font-size: rem(14px);
+      color: #353535;
+    }
     &.blue {
       background-image: radial-gradient(
         circle at 18% 10%,
@@ -98,11 +226,13 @@
 }
 
 .remit {
-  width: rem(400px);
+  // flex: 0 0 31.746%;
+  // max-width: 31.746%;
+  // width: rem(400px);
   // height: 38.5625rem;
-  padding: rem(36px) rem(24px);
+  // padding: rem(36px) rem(24px);
   &__title {
-    margin: 0 0 rem(24px) 0;
+    // margin: 0 0 rem(24px) 0;
     font-size: rem(21px);
     font-weight: 700;
     color: #353535;
@@ -255,8 +385,8 @@
 
 // 총 송금액 (년월별)
 .remit-comparison {
-  width: rem(500px);
-  padding: rem(40px) rem(20px);
+  // width: rem(500px);
+  // padding: rem(40px) rem(20px);
   &__title {
     // font-family: 'NanumSquare';
     font-size: rem(21px);
@@ -271,19 +401,12 @@
       }
     }
   }
-  &__desc {
-    font-size: rem(14px);
-    color: #353535;
-    &__wrap {
-      margin-bottom: rem(16px);
-    }
-  }
 }
 
 // 달력
 .remit-schedule {
-  width: rem(284px);
-  padding: rem(36px) rem(10px) rem(20px) rem(10px);
+  // width: rem(284px);
+  // padding: rem(36px) rem(10px) rem(20px) rem(10px);
   &__list {
   }
   &__item {
@@ -344,8 +467,8 @@
 
 // 송금 현황
 .remit-status {
-  width: rem(380px);
-  padding: rem(36px) rem(10px) rem(16px) rem(10px);
+  // width: rem(380px);
+  // padding: rem(36px) rem(10px) rem(16px) rem(10px);
   &__title {
     font-size: rem(21px);
     vertical-align: middle;
@@ -403,8 +526,8 @@
 
 // 송금국가 순위
 .remit-rank {
-  width: rem(500px);
-  padding: rem(36px) rem(30px) rem(16px) rem(30px);
+  // width: rem(500px);
+  // padding: rem(36px) rem(30px) rem(16px) rem(30px);
   &__title {
     font-size: rem(21px);
     vertical-align: middle;
@@ -415,19 +538,14 @@
       margin-bottom: rem(24px);
     }
   }
-  &__desc {
-    font-size: rem(14px);
-    color: #353535;
-    &__wrap {
-      margin-bottom: rem(16px);
-    }
-  }
   &__container {
-
   }
 }
 
 @include media-breakpoint-down(md) {
+  .navbar--left + .cont-wrap {
+    padding-left: unset;
+  }
   .dash-board {
     // padding: 0 rem(12px);
     .overflow-x-auto {
@@ -523,5 +641,150 @@
   }
   .remit-rank {
     width: 100%;
+  }
+}
+
+.han-sidebar {
+  order: 0;
+  border-bottom: 1px solid #e6ecf1;
+  // background-color: #f5f7f9;
+  background-color: #ffffff;
+  .navbar-brand {
+    margin-top: rem(40px);
+  }
+  .logo-img {
+    background-image: url(../images/hanpass-logo-180x30-000-3x.png);
+  }
+}
+
+@media (min-width: 768px) {
+  .han-sidebar {
+    border-right: 1px solid #e6ecf1;
+  }
+
+  @supports (position: sticky) {
+    .han-sidebar {
+      position: sticky;
+      top: 0;
+      // top: 4rem;
+      z-index: 1000;
+      // height: calc(100vh - 4rem);
+      height: 100vh;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .han-sidebar {
+    // flex: 0 1 rem(240px);
+    flex: 1 0 rem(240px);
+  }
+}
+.han-sidebar .nav > li {
+  // margin-top: rem(12px);
+}
+.han-sidebar .nav > li > a {
+  display: block;
+  padding: rem(6px) rem(6px) rem(6px) rem(66px);
+  font-size: rem(14px);
+  color: #4c555a;
+}
+.han-sidebar .nav > li > a:hover {
+  color: rgba(0, 0, 0, 0.85);
+  background-color: transparent;
+}
+.han-sidebar .nav > .active > a {
+  position: relative;
+  font-weight: 700;
+  // color: #0099e5;
+  background-color: transparent;
+}
+.han-sidebar .nav > .active:hover > a {
+  color: #0099e5;
+}
+.han-toc-item {
+  .nav {
+    margin-top: rem(10px);
+  }
+}
+.han-toc-item.active {
+  margin-bottom: 1rem;
+}
+
+.han-toc-item.active:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.han-toc-item.active > .han-toc-link {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.han-toc-item.active > .han-toc-link:hover {
+  background-color: transparent;
+}
+
+.han-toc-item.active > .han-sidenav {
+  display: block;
+}
+.han-toc-link {
+  display: block;
+  height: rem(48px);
+  margin-top: rem(26px);
+  padding: 0 0 0 rem(66px);
+  border-radius: rem(24px);
+  font-size: rem(18px);
+  line-height: rem(48px);
+  color: #3b3b3c;
+  background-position: rem(16px) 50%;
+  background-size: rem(36px);
+  background-image: url(../images/renewal/icons-2021-main-ico-remittance@3x.png);
+  background-repeat: no-repeat;
+  &.active {
+    color: #146fd3;
+    background-color: #cde7fb;
+  }
+}
+
+.han-links {
+  margin: 0 rem(20px);
+  // margin-right: -15px;
+  // margin-left: -15px;
+}
+@media (min-width: 768px) {
+  @supports (position: sticky) {
+    .han-links {
+      max-height: calc(100vh - 5rem);
+      overflow-y: auto;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .han-links {
+    display: block !important;
+  }
+}
+
+.han-content {
+  order: 1;
+  width: 100%;
+  background-color: #f0f1f6;
+}
+
+.dash-board-page {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  .col-xl-2 {
+    flex: 0 0 24.6%;
+    max-width: 24.6%;
+  }
+  .col-xl-3 {
+    flex: 0 0 32.39%;
+    max-width: 32.39%;
+  }
+  .col-xl-4 {
+    flex: 0 0 43.004%;
+    max-width: 43.004%;
   }
 }
