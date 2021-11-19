@@ -30,13 +30,9 @@
 }
 
 .dash-board {
-  // display: flex;
-  // flex-flow: row wrap;
-  // max-width: rem(1260px);
   margin: rem(128px) auto rem(168px) auto;
-  // background-color: #f0f1f6;
   &__title {
-    // display: inline-block;
+    display: block;
     margin-bottom: rem(16px);
     font-size: rem(24px);
   }
@@ -219,6 +215,26 @@
       }
     }
   }
+  // 부트스트랩
+  .btn {
+    height: rem(60px);
+    border-radius: rem(40px);
+    font-size: rem(18px);
+    background-color: #146fd3;
+  }
+  .form-control {
+    border-width: 0 0 rem(2px) 0;
+    border-style: solid;
+    border-color: #146fd3;
+    border-radius: 0;
+    font-size: rem(24px);
+    text-align: right;
+    color: #363636;
+    &::placeholder {
+      // font-size: rem(24px);
+      color: #c7c7c7;
+    }
+  }
 }
 
 .overflow-x-auto {
@@ -269,6 +285,7 @@
     }
     &__content {
       flex: 1;
+      margin-left: rem(30px);
       span {
         font-family: "Lato";
         font-size: rem(18px);
@@ -346,7 +363,7 @@
     &__title {
       font-family: AppleSDGothicNeo;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-      font-size: rem(16px);
+      font-size: rem(20px);
       font-weight: 800;
       color: #353535;
     }
@@ -367,11 +384,11 @@
         content: "";
       }
       span {
-        font-size: rem(20px);
+        font-size: rem(26px);
         font-weight: 900;
       }
       .unit {
-        font-size: rem(20px);
+        font-size: rem(26px);
       }
     }
   }
@@ -385,6 +402,7 @@
 
 // 총 송금액 (년월별)
 .remit-comparison {
+  height: rem(552px);
   // width: rem(500px);
   // padding: rem(40px) rem(20px);
   &__title {
@@ -610,7 +628,7 @@
       border-radius: rem(4px);
       background-color: #eff6ff;
       &__title {
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        // text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         font-size: rem(20px);
       }
       &__content {
@@ -786,5 +804,38 @@
   .col-xl-4 {
     flex: 0 0 43.004%;
     max-width: 43.004%;
+  }
+}
+
+.dash-board {
+  .nav-pills {
+    .nav-item {
+      margin-left: -1px;
+      // border: 1px solid #e8e6e8;
+    }
+    .nav-item:first-child {
+      margin-left: 0;
+      .nav-link {
+        border-radius: rem(8px) 0 0 rem(8px);
+      }
+    }
+    .nav-item:last-child {
+      .nav-link {
+        border-radius: 0 rem(8px) rem(8px) 0;
+      }
+    }
+    .nav-link {
+      border: 1px solid #e8e6e8;
+      &.active {
+        color: #fff;
+        background-color: #1e4ba3;
+      }
+    }
+    .show {
+      > .nav-link {
+        color: #fff;
+        background-color: #1e4ba3;
+      }
+    }
   }
 }
