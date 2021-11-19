@@ -23,11 +23,17 @@
 
           <!-- 사이드 바 -->
           <div class="han-sidebar">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand only-desktop" href="#">
               <div class="logo-img">한패스</div>
               <span class="sr-only">(current)</span>
             </a>
-            <nav class="han-links collapse show">
+            <button class="navbar-toggler only-moblile" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <button type="button" class="my-page-button only-moblile">
+              <span class="my-page-button-icon">마이 페이지</span>
+            </button>
+            <nav class="han-links collapse show only-desktop">
               <div class="han-toc-item">
                 <a class="han-toc-link" href="#">Home</a>
               </div>
@@ -65,12 +71,67 @@
                 </ul>
               </div>
             </nav>
+            <!-- navbar-collapse [오픈되었을 때의 컨텐츠] -->
+            <div id="navbar-allmenu" class="collapse">
+              <div class="navbar-collapse align-items-start flex-wrap">
+                <div class="navbar-list">
+                  <div class="container-fluid">
+                    <!-- nav header -->
+                    <div class="d-flex align-items-center navbar-collapse-header">
+                      <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    </div>
+                    <!-- // nav header -->
+                    <!-- nav text -->
+                    <div class="navbar-text-wrap">
+                      <p class="navbar-text">안녕하세요. 고객님,<br/>
+                        <a class="navbar-link" href="#">로그인</a> 하시면 맞춤 서비스를 보다<br/> 이용하실 수 있습니다.</p>
+                    </div>
+                    <!-- // nav text -->
+                    <!-- navbar-nav -->
+                    <div class="navbar-nav flex-row flex-wrap">
+                      <ul>
+                        <li class="nav-item"><a class="nav-link" href="#">홈</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">공지사항</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">문의하기</a></li>
+                      </ul>
+                    </div>
+                    <!-- // navbar-nav -->
+                    <!-- bottom link area -->
+                    <div class="navbar-bottom-link-wrap">
+                      <div class="d-flex flex-row">
+                        <a class="nav-bottom-link" href="#">로그인</a>
+                        <a class="nav-bottom-link" href="#">가입문의</a>
+                      </div>
+                    </div>
+                    <!-- // bottom link area -->
+                  </div>
+                </div>  
+              </div>
+            </div>
           </div>
           <!-- // 사이드 바 -->
           <!-- 컨텐츠 -->
           <div class="han-content">
 
+            <nav class="navbar navbar-top only-desktop-flex">
+              <!-- <div class="container-fluid"> -->
+                <strong class="han-notice">한비즈 테스트 공지사항 제목입니다</strong>
+  
+                <div class="corp-info">
+                  <strong class="corp-info__title">거래업체명</strong>
+                  <span class="corp-info__content">user@corp.com</span>
+                  <button type="button" class="my-page-button">
+                    <span class="my-page-button-icon">마이 페이지</span>
+                  </button>
+                </div>
+              <!-- </div> -->
+            </nav>
+
             <div class="container-fluid">
+
               <div class="cont-wrap">
                 <!-- 대시보드 -->
                 <div class="dash-board">
@@ -275,13 +336,13 @@
                                   <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td class="sunday">7</td>
                                 </tr>
                                 <tr class="calendar__week">
-                                  <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td class="sunday">14</td>
+                                  <td>8</td><td>9</td><td>10</td><td class="checked">11</td><td>12</td><td>13</td><td class="sunday">14</td>
                                 </tr>
                                 <tr class="calendar__week">
-                                  <td>15</td><td>16</td><td class="active">17</td><td>18</td><td>19</td><td>20</td><td class="sunday">21</td>
+                                  <td>15</td><td>16</td><td class="checked">17</td><td>18</td><td class="active">19</td><td>20</td><td class="sunday">21</td>
                                 </tr>
                                 <tr class="calendar__week">
-                                  <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td class="sunday">28</td>
+                                  <td>22</td><td>23</td><td>24</td><td class="checked">25</td><td>26</td><td>27</td><td class="sunday">28</td>
                                 </tr>
                                 <tr class="calendar__week">
                                   <td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td>

@@ -366,7 +366,7 @@
     background-color: #eff6ff;
     &__title {
       font-family: AppleSDGothicNeo;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
       font-size: rem(20px);
       font-weight: 800;
       color: #353535;
@@ -460,12 +460,28 @@
   &__week {
     font-size: rem(14px);
     td {
+      position: relative;
       text-align: center;
     }
+    .checked,
     .active {
+      width: rem(22px);
+      height: rem(22px);
       border-radius: 100%;
+      line-height: rem(22px);
       color: #ffffff;
       background-color: #146fd3;
+    }
+    .active::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(30px);
+      height: rem(30px);
+      border-radius: 100%;
+      background-color: #d8eafe;
+      content: "";
     }
   }
   .sunday {
@@ -561,9 +577,18 @@
   }
 }
 
-@include media-breakpoint-down(md) {
-  .navbar--left + .cont-wrap {
-    padding-left: unset;
+@include media-breakpoint-down(lg) {
+  .han-sidebar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: rem(70px);
+    .navbar-toggler {
+      margin-left: unset;
+    }
+    .my-page-button {
+      margin-left: auto;
+    }
   }
   .dash-board {
     .overflow-x-auto {
@@ -629,7 +654,6 @@
       border-radius: rem(4px);
       background-color: #eff6ff;
       &__title {
-        // text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         font-size: rem(20px);
       }
       &__content {
@@ -669,10 +693,31 @@
   // background-color: #f5f7f9;
   background-color: #ffffff;
   .navbar-brand {
-    margin-top: rem(40px);
+    margin: rem(40px) auto;
+    padding: 0;
+    text-align: center;
   }
   .logo-img {
+    width: rem(180px);
+    height: rem(26px);
     background-image: url(../images/hanpass-logo-180x30-000-3x.png);
+  }
+}
+.my-page-button {
+  padding: 0;
+  border: 0 none;
+  font-size: 0;
+  vertical-align: middle;
+  background-color: transparent;
+  &-icon {
+    display: inline-block;
+    width: rem(40px);
+    height: rem(40px);
+    // font-size: 0;
+    text-indent: -9999px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url(../images/renewal/ico-mypage@3x.png);
   }
 }
 
@@ -747,7 +792,7 @@
 .han-toc-link {
   display: block;
   height: rem(48px);
-  margin-top: rem(26px);
+  margin-top: rem(24px);
   padding: 0 0 0 rem(66px);
   border-radius: rem(24px);
   font-size: rem(18px);
@@ -783,9 +828,33 @@
 }
 
 .han-content {
+  position: relative;
   order: 1;
   width: 100%;
   background-color: #f0f1f6;
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-top {
+    position: absolute;
+    top: rem(40px);
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: transparent;
+  }
+  .han-notice {
+    margin-left: rem(30px);
+    font-size: rem(16px);
+  }
+  .corp-info {
+    flex: none;
+    margin-right: rem(72px);
+    margin-left: auto;
+  }
 }
 
 .dash-board-page {
