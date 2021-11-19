@@ -23,17 +23,17 @@
 
           <!-- 사이드 바 -->
           <div class="han-sidebar">
-            <a class="navbar-brand only-desktop" href="#">
+            <a class="navbar-brand d-none d-xl-block" href="#">
               <div class="logo-img">한패스</div>
               <span class="sr-only">(current)</span>
             </a>
-            <button class="navbar-toggler only-moblile" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <button type="button" class="my-page-button only-moblile">
+            <button type="button" class="my-page-button d-md-none">
               <span class="my-page-button-icon">마이 페이지</span>
             </button>
-            <nav class="han-links collapse show only-desktop">
+            <nav class="han-links collapse show d-none d-xl-block">
               <div class="han-toc-item">
                 <a class="han-toc-link" href="#">Home</a>
               </div>
@@ -118,7 +118,7 @@
 
             <nav class="navbar navbar-top only-desktop-flex">
               <!-- <div class="container-fluid"> -->
-                <strong class="han-notice">한비즈 테스트 공지사항 제목입니다</strong>
+                <strong class="han-notice"><i class="han-notice__tag">중요</i> 한비즈 테스트 공지사항 제목입니다</strong>
   
                 <div class="corp-info">
                   <strong class="corp-info__title">거래업체명</strong>
@@ -532,7 +532,7 @@
     });
   </script>
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
       buildCalendar();
     });
@@ -707,5 +707,5 @@
       }
       return num;
     }
-  </script>
+  </script> -->
 </html>
