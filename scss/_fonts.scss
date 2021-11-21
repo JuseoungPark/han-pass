@@ -1,48 +1,54 @@
 @import url(http://db.onlinewebfonts.com/c/67680f2eb947c5cbd58b40961b4a61e9?family=Apple+SD+Gothic+Neo);
 // @import url(http://db.onlinewebfonts.com/c/0d49fc455f4a8951a42daf952412a713?family=Helvetica+Neue);
 @import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap);
 // @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
 
 @font-face {
-	font-family: 'S-Core';
-	font-weight:100;
-	src: url('../../fonts/S-CoreDream-1Thin.woff') format('woff');
+  font-family: "S-Core";
+  font-weight: 100;
+  src: url("../../fonts/S-CoreDream-1Thin.woff") format("woff");
 }
 @font-face {
-	font-family: 'S-Core';
-	font-weight:200;
-	src: url('../../fonts/S-CoreDream-2ExtraLight.woff') format('woff');
+  font-family: "S-Core";
+  font-weight: 200;
+  src: url("../../fonts/S-CoreDream-2ExtraLight.woff") format("woff");
 }
 @font-face {
-  font-family: 'S-Core';
-  font-weight:300;
-  src: url('../../fonts/S-CoreDream-3Light.woff') format('woff');
+  font-family: "S-Core";
+  font-weight: 300;
+  src: url("../../fonts/S-CoreDream-3Light.woff") format("woff");
 }
 @font-face {
-	font-family: 'S-Core';
-	font-weight:400;
-	src: url('../../fonts/S-CoreDream-4Regular.woff') format('woff');
+  font-family: "S-Core";
+  font-weight: 400;
+  src: url("../../fonts/S-CoreDream-4Regular.woff") format("woff");
 }
 @font-face {
-	font-family: 'S-Core';
-	font-weight:500;
-	src: url('../../fonts/S-CoreDream-5Medium.woff') format('woff');
+  font-family: "S-Core";
+  font-weight: 500;
+  src: url("../../fonts/S-CoreDream-5Medium.woff") format("woff");
 }
 @font-face {
-	font-family: 'S-Core';
-	font-weight:600;
-	src: url('../../fonts/S-CoreDream-6Bold.woff') format('woff');
+  font-family: "S-Core";
+  font-weight: 600;
+  src: url("../../fonts/S-CoreDream-6Bold.woff") format("woff");
 }
 @font-face {
-	font-family: 'S-Core';
-	font-weight:700;
-	src: url('../../fonts/S-CoreDream-7ExtraBold.woff') format('woff');
+  font-family: "S-Core";
+  font-weight: 700;
+  src: url("../../fonts/S-CoreDream-7ExtraBold.woff") format("woff");
 }
 @font-face {
-	font-family: 'S-Core';
-	font-weight:800;
-	src: url('../../fonts/S-CoreDream-8Heavy.woff') format('woff');
+  font-family: "S-Core";
+  font-weight: 800;
+  src: url("../../fonts/S-CoreDream-8Heavy.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNext";
+  font-weight: 800;
+  src: url("../../fonts/AvenirNextLTPro-Bold.woff") format("woff");
 }

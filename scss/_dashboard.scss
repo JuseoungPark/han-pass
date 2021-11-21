@@ -1,40 +1,13 @@
 // dashboard styling
 @charset "utf-8";
 
-.navbar {
-  &--left-side {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: rem(240px);
-    height: 100vh;
-    padding: 0;
-    background-color: #ffffff;
-    .navbar-header {
-      align-items: flex-start;
-      height: 100%;
-    }
-    .container-fluid {
-      margin: 0;
-    }
-    + .cont-wrap {
-      padding-left: rem(240px);
-      background-color: #f0f1f6;
-    }
-  }
-}
-
-.space-between {
-  // justify-content: space-between;
-}
-
 .dash-board {
   margin: rem(128px) auto rem(168px) auto;
   &__title {
     display: block;
     margin-bottom: rem(16px);
     font-size: rem(24px);
+    font-weight: 800;
   }
   .col-1,
   .col-2,
@@ -137,7 +110,6 @@
     padding-bottom: rem(16px);
     justify-content: space-between;
     .box {
-      // min-width: rem(400px);
       width: 100%;
       margin: 0 rem(6px);
       text-align: center;
@@ -149,6 +121,8 @@
       }
       .item {
         padding: rem(48px) rem(40px) rem(32px) rem(40px);
+        border-radius: rem(10px);
+        background-color: #ffffff;
         div {
           display: flex;
           align-items: center;
@@ -162,11 +136,13 @@
         color: #353535;
       }
       span {
+        font-family: "AvenirNext";
         font-size: rem(36px);
         font-weight: 700;
         line-height: rem(48px);
         text-align: right;
         &.unit {
+          font-family: "Lato";
           margin-left: rem(20px);
           font-size: rem(26px);
           text-align: left;
@@ -196,9 +172,27 @@
     }
     &__title {
       font-size: rem(21px);
+      font-weight: 800;
       &__wrap {
         padding: rem(40px) rem(24px) rem(24px) rem(24px);
       }
+    }
+    &__unit {
+      margin-left: rem(20px);
+      font-size: rem(14px);
+    }
+    &__more {
+      flex: none;
+      margin-left: auto;
+      padding: rem(10px) rem(32px) rem(8px) rem(16px);
+      border: 1px solid #e8e6e8;
+      border-radius: rem(8px);
+      font-size: rem(12px);
+      color: #353535;
+      background-position: calc(100% - 12px) 50%;
+      background-size: rem(4px);
+      background-image: url(../images/renewal/btn-arrow-more@3x.png);
+      background-repeat: no-repeat;
     }
     &__desc {
       flex: 1 0 100%;
@@ -216,11 +210,62 @@
       span {
         color: #ffffff;
       }
+      .item {
+        background-color: transparent;
+      }
     }
     &.small-content {
       span {
         font-size: rem(30px);
         letter-spacing: rem(-0.8px);
+      }
+    }
+  }
+  .main-notice {
+    &__content {
+      &__title {
+        font-size: rem(14px);
+      }
+      &__date {
+        font-size: rem(13px);
+      }
+    }
+    &__item {
+      border-top: 1px solid rgba(86, 86, 86, 0.2);
+      border-bottom: unset;
+    }
+  }
+  .nav-pills {
+    .nav-item {
+      margin-left: -1px;
+      .nav-link {
+        color: #353535;
+      }
+    }
+    .nav-item:first-child {
+      margin-left: 0;
+      .nav-link {
+        border-radius: rem(8px) 0 0 rem(8px);
+      }
+    }
+    .nav-item:last-child {
+      .nav-link {
+        border-radius: 0 rem(8px) rem(8px) 0;
+      }
+    }
+    .nav-link {
+      border: 1px solid #e8e6e8;
+      &.active {
+        font-weight: 800;
+        color: #353535;
+        background-color: transparent;
+      }
+    }
+    .show {
+      > .nav-link {
+        font-weight: 800;
+        color: #353535;
+        background-color: transparent;
       }
     }
   }
@@ -232,6 +277,7 @@
     background-color: #146fd3;
   }
   .form-control {
+    padding: rem(8px) 0;
     border-width: 0 0 rem(2px) 0;
     border-style: solid;
     border-color: #146fd3;
@@ -240,7 +286,6 @@
     text-align: right;
     color: #363636;
     &::placeholder {
-      // font-size: rem(24px);
       color: #c7c7c7;
     }
   }
@@ -251,15 +296,6 @@
 }
 
 .remit {
-  &__title {
-    // margin: 0 0 rem(24px) 0;
-    font-size: rem(21px);
-    font-weight: 700;
-    color: #353535;
-    &__wrap {
-      margin-bottom: rem(24px);
-    }
-  }
   &__content {
   }
   &__country {
@@ -307,7 +343,7 @@
       margin-left: rem(30px);
       span {
         font-family: "Lato";
-        font-size: rem(18px);
+        font-size: rem(24px);
         font-weight: 900;
         text-align: right;
         color: #146fd3;
@@ -330,10 +366,18 @@
   &__charges {
     position: relative;
     overflow: hidden;
-    margin-top: rem(10px);
-    // border-left: rem(2px) dotted #d4d4d4;
-    // max-height: rem(150px);
+    margin: rem(16px) 0 rem(16px) 0;
     &::before {
+      position: absolute;
+      top: 50%;
+      left: rem(18px);
+      border-left: 2px dotted #d4d4d4;
+      width: 2px;
+      height: rem(1000px);
+      transform: translateY(-50%);
+      content: "";
+    }
+    &::after {
       position: absolute;
       top: 50%;
       left: rem(4px);
@@ -348,13 +392,13 @@
     }
     &__content {
       max-width: calc(100% - 50px);
-      margin: rem(12px) 0 rem(12px) auto;
+      margin: rem(12px) 0 0 auto;
       &__item {
         text-align: right;
         color: #353535;
         strong {
           font-size: rem(12px);
-          line-height: rem(30px);
+          line-height: rem(32px);
           span {
             font-size: rem(10px);
           }
@@ -365,7 +409,7 @@
         }
         span {
           font-size: rem(14px);
-          line-height: rem(30px);
+          line-height: rem(32px);
         }
         .unit {
         }
@@ -375,13 +419,12 @@
   &__total {
     display: flex;
     align-items: center;
-    margin: rem(16px) 0 rem(30px) 0;
-    padding: rem(16px) rem(8px) rem(16px) rem(16px);
+    margin: rem(24px) 0 rem(32px) 0;
+    padding: rem(20px) rem(8px) rem(20px) rem(16px);
     border-radius: rem(4px);
     background-color: #eff6ff;
     &__title {
-      font-family: AppleSDGothicNeo;
-      // text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      font-weight: 800;
       font-size: rem(20px);
       font-weight: 800;
       color: #353535;
@@ -403,11 +446,13 @@
         content: "";
       }
       span {
+        font-family: "Lato";
         font-size: rem(26px);
         font-weight: 900;
       }
       .unit {
-        font-size: rem(26px);
+        font-size: rem(24px);
+        font-weight: 700;
       }
     }
   }
@@ -426,6 +471,9 @@
 // 달력
 .remit-schedule {
   padding-top: rem(40px);
+  .box__body {
+    padding-bottom: rem(20px);
+  }
   &__list {
     margin-top: rem(24px);
   }
@@ -466,9 +514,18 @@
     font-size: rem(21px);
     text-align: center;
   }
+  &__prev,
+  &__next {
+    width: rem(6px);
+    height: rem(10px);
+    border: 0 none;
+    font-size: 0;
+  }
   &__prev {
+    margin-right: rem(24px);
   }
   &__next {
+    margin-left: rem(24px);
   }
   &__body {
     width: inherit;
@@ -488,15 +545,22 @@
       color: #ffffff;
       background-color: #146fd3;
     }
+    // .active {
+    //   box-sizing: content-box;
+    //   border: 8px solid #d8eafe;
+    //   background-color: transparent;
+    // }
     .active::before {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: rem(30px);
-      height: rem(30px);
+      width: rem(22px);
+      height: rem(22px);
       border-radius: 100%;
-      background-color: #d8eafe;
+      box-sizing: content-box;
+      border: rem(4px) solid #d8eafe;
+      background-color: transparent;
       content: "";
     }
   }
@@ -534,8 +598,10 @@
     }
   }
   &__year {
+    font-weight: 700;
   }
   &__month {
+    font-weight: 700;
   }
   .choice {
     background-color: #146fd3;
@@ -544,14 +610,13 @@
 
 // 송금 현황
 .remit-status {
+  .box__body {
+    padding-bottom: rem(20px);
+  }
   &__unit {
     margin-left: rem(20px);
     font-size: rem(14px);
     vertical-align: middle;
-  }
-  button {
-    flex: none;
-    margin-left: auto;
   }
   &__container {
   }
@@ -593,45 +658,26 @@
   }
 }
 
+// 공지사항
+.notice {
+  .box__body {
+    padding-bottom: rem(20px);
+  }
+}
+
 @include media-breakpoint-down(lg) {
-  .han-sidebar {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: rem(70px);
-    .navbar-toggler {
-      margin-left: rem(20px);
-    }
-    .my-page-button {
-      margin-right: rem(20px);
-      margin-left: auto;
-    }
-  }
-  .han-content {
-    .container-fluid {
-      padding: 0;
-      .dash-board {
-        margin: rem(30px) auto rem(52px) auto;
-        > div,
-        > strong {
-          &:not(.overflow-x-auto) {
-            padding: 0 rem(10px);
-          }
-        }
-      }
-    }
-  }
   .dash-board {
+    margin: rem(30px) auto rem(52px) auto;
     .overflow-x-auto {
       justify-content: unset;
-      padding-right: rem(10px);
       padding-left: rem(10px);
       .box {
-        min-width: rem(240px);
-        width: fit-content;
-        margin-left: rem(10px);
-        text-align: center;
+        &:last-child {
+          margin-right: rem(10px);
+        }
         .item {
+          min-width: rem(240px);
+          width: 100%;
           padding: rem(24px) rem(16px) rem(16px) rem(16px);
           div {
             height: rem(48px);
@@ -646,36 +692,96 @@
             font-size: rem(20px);
           }
         }
+        &.small-content {
+          .item {
+            min-width: fit-content;
+          }
+        }
       }
     }
     .box {
       width: 100%;
       margin-top: rem(20px);
     }
+    > div,
+    > strong {
+      &:not(.overflow-x-auto) {
+        padding: 0 rem(10px);
+      }
+    }
+  }
+
+  .han-sidebar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: rem(70px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    .navbar-toggler {
+      margin-left: rem(20px);
+    }
+    .my-page-button {
+      margin-right: rem(20px);
+      margin-left: auto;
+    }
+    #navbar-allmenu {
+      // max-height: 100vh;
+      .navbar-collapse {
+        // height: rem(700px);
+        height: 100%;
+        .navbar-collapse-header {
+          .navbar-brand {
+            margin: 0;
+            font-size: 0;
+          }
+          .navbar-toggler {
+            margin-left: auto;
+          }
+          .logo-img {
+            width: rem(120px);
+            height: rem(17px);
+            background-image: url(../images/renewal/logo-hanbiz@3x.png);
+          }
+        }
+        .navbar-nav {
+          height: auto;
+          border-radius: rem(10px);
+          background-color: #ffffff;
+          .han-links {
+            margin-top: rem(12px);
+            margin-bottom: rem(12px);
+          }
+          .han-toc-item {
+            &:first-child {
+              .han-toc-link {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+        .navbar-bottom-link-wrap {
+          .nav-bottom-link {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .han-content {
+    margin-top: rem(70px);
+    .container-fluid {
+      padding: 0;
+    }
   }
 
   // 실시간 송금 예상 금액
   .remit {
-    width: 100%;
-    padding: rem(32px) rem(16px) rem(24px) rem(16px);
     &__country {
       &__content {
         span {
           font-size: rem(24px);
-        }
-      }
-    }
-    &__charges {
-      &__content {
-        &__item {
-          strong {
-            span {
-            }
-          }
-          div {
-          }
-          span {
-          }
         }
       }
     }
@@ -722,6 +828,7 @@
 
 .han-sidebar {
   order: 0;
+  z-index: 100;
   border-bottom: 1px solid #e6ecf1;
   background-color: #ffffff;
   .navbar-brand {
@@ -732,7 +839,7 @@
   .logo-img {
     width: rem(180px);
     height: rem(26px);
-    background-image: url(../images/hanpass-logo-180x30-000-3x.png);
+    background-image: url(../images/renewal/logo-hanbiz-copy@3x.png);
   }
   .navbar-toggler-icon {
     width: rem(40px);
@@ -750,7 +857,6 @@
     display: inline-block;
     width: rem(40px);
     height: rem(40px);
-    // font-size: 0;
     text-indent: -9999px;
     background-position: 50% 50%;
     background-size: cover;
@@ -758,36 +864,25 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .han-sidebar {
-    border-right: 1px solid #e6ecf1;
+    flex: 1 0 rem(240px);
   }
-
   @supports (position: sticky) {
     .han-sidebar {
       position: sticky;
       top: 0;
-      // top: 4rem;
-      z-index: 1000;
-      // height: calc(100vh - 4rem);
       height: 100vh;
     }
   }
 }
-@media (min-width: 1200px) {
-  .han-sidebar {
-    // flex: 0 1 rem(240px);
-    flex: 1 0 rem(240px);
-  }
-}
 .han-sidebar .nav > li {
-  // margin-top: rem(12px);
 }
 .han-sidebar .nav > li > a {
   display: block;
   padding: rem(6px) rem(6px) rem(6px) rem(66px);
   font-size: rem(14px);
-  color: #4c555a;
+  color: #3b3b3c;
 }
 .han-sidebar .nav > li > a:hover {
   color: rgba(0, 0, 0, 0.85);
@@ -795,8 +890,8 @@
 }
 .han-sidebar .nav > .active > a {
   position: relative;
-  font-weight: 700;
-  // color: #0099e5;
+  font-weight: 800;
+  text-decoration: underline;
   background-color: transparent;
 }
 .han-sidebar .nav > .active:hover > a {
@@ -805,6 +900,36 @@
 .han-toc-item {
   .nav {
     margin-top: rem(10px);
+  }
+  &.home {
+    .han-toc-link {
+      background-image: url(../images/renewal/icons-2021-main-ico-home@3x.png);
+      &.active {
+        background-image: url(../images/renewal/icons-2021-main-ico-home-blue@3x.png);
+      }
+    }
+  }
+  &.remittance {
+    .han-toc-link {
+      background-image: url(../images/renewal/icons-2021-main-ico-remittance@3x.png);
+      &.active {
+        background-image: url(../images/renewal/icons-2021-main-ico-remittance-blue@3x.png);
+      }
+    }
+  }
+  &.remittance-history {
+    .han-toc-link {
+      background-image: url(../images/renewal/icons-2021-main-ico-list@3x.png);
+      &.active {
+      }
+    }
+  }
+  &.reciever {
+    .han-toc-link {
+      background-image: url(../images/renewal/icons-2021-main-ico-people@3x.png);
+      &.active {
+      }
+    }
   }
 }
 .han-toc-item.active {
@@ -837,7 +962,6 @@
   color: #3b3b3c;
   background-position: rem(16px) 50%;
   background-size: rem(36px);
-  background-image: url(../images/renewal/icons-2021-main-ico-remittance@3x.png);
   background-repeat: no-repeat;
   &.active {
     color: #146fd3;
@@ -847,21 +971,6 @@
 
 .han-links {
   margin: 0 rem(20px);
-  // margin-right: -15px;
-  // margin-left: -15px;
-}
-@media (min-width: 768px) {
-  @supports (position: sticky) {
-    .han-links {
-      max-height: calc(100vh - 5rem);
-      overflow-y: auto;
-    }
-  }
-}
-@media (min-width: 768px) {
-  .han-links {
-    display: block !important;
-  }
 }
 
 .han-content {
@@ -875,7 +984,7 @@
   }
   .navbar-top {
     position: absolute;
-    top: rem(40px);
+    top: rem(32px);
     left: 0;
     z-index: 1;
     width: 100%;
@@ -902,6 +1011,20 @@
     flex: none;
     margin-right: rem(72px);
     margin-left: auto;
+    font-size: 0;
+    &__title {
+      margin-right: rem(16px);
+      font-size: rem(14px);
+      font-weight: 800;
+      vertical-align: middle;
+    }
+    &__content {
+      margin-right: rem(8px);
+      font-size: rem(16px);
+      vertical-align: middle;
+      text-decoration: underline;
+      color: #353535;
+    }
   }
 }
 
@@ -910,7 +1033,7 @@
   padding-left: 1.5rem;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 992px) {
   .col-xl-2 {
     flex: 0 0 24.6%;
     max-width: 24.6%;
@@ -925,35 +1048,156 @@
   }
 }
 
-.dash-board {
-  .nav-pills {
-    .nav-item {
-      margin-left: -1px;
-      // border: 1px solid #e8e6e8;
+@include media-breakpoint-down(md) {
+  .dash-board {
+    &__title {
+      margin-bottom: rem(20px);
+      font-size: rem(18px);
     }
-    .nav-item:first-child {
-      margin-left: 0;
-      .nav-link {
-        border-radius: rem(8px) 0 0 rem(8px);
+    .overflow-x-auto {
+      .box {
+        .item {
+          padding: rem(24px) rem(20px) rem(16px) rem(20px);
+          div {
+            height: rem(48px);
+          }
+        }
+        // strong {
+        //   font-size: rem(16px);
+        // }
+        span {
+          font-size: rem(30px);
+          &.unit {
+            margin-left: rem(4px);
+            font-size: rem(20px);
+          }
+        }
       }
     }
-    .nav-item:last-child {
-      .nav-link {
-        border-radius: 0 rem(8px) rem(8px) 0;
+    .col-xl-4,
+    .col-xl-2 {
+      margin-top: rem(20px);
+    }
+    .box {
+      margin-top: rem(20px);
+      &__header {
+        padding: rem(32px) rem(20px) rem(16px) rem(20px);
+      }
+      &__body {
+        padding: 0 rem(20px) rem(20px) rem(20px);
+      }
+      &__title {
+        font-size: rem(16px);
+      }
+      &__unit {
+        margin-left: rem(8px);
+        font-size: rem(12px);
+      }
+      &__desc {
+        margin-top: rem(12px);
+        font-size: rem(13px);
+        color: #353535;
       }
     }
-    .nav-link {
-      border: 1px solid #e8e6e8;
-      &.active {
-        color: #fff;
-        background-color: #1e4ba3;
+    // 부트스트랩
+    .btn {
+      height: rem(44px);
+      border-radius: rem(30px);
+      font-size: rem(14px);
+    }
+    .form-control {
+      font-size: rem(18px);
+    }
+  }
+
+  .remit {
+    &__country {
+      span {
+        font-size: rem(10px);
+      }
+      &__title {
+        padding-left: rem(36px);
+        &::before {
+          width: rem(30px);
+          height: rem(30px);
+        }
+      }
+      &__content {
+        margin-left: rem(20px);
+        span {
+          font-size: rem(18px);
+        }
+      }
+      .unit {
+        font-size: rem(14px);
       }
     }
-    .show {
-      > .nav-link {
-        color: #fff;
-        background-color: #1e4ba3;
+    &__charges {
+      margin: rem(12px) 0 rem(12px) 0;
+      &::before {
+        left: rem(14px);
+      }
+      &::after {
+        width: rem(24px);
+        height: rem(24px);
+      }
+      &__content {
+        margin: rem(8px) 0 0 auto;
+        &__item {
+          strong {
+            font-size: rem(10px);
+            line-height: rem(24px);
+            span {
+              font-size: rem(10px);
+            }
+          }
+          div {
+            margin-left: rem(4px);
+          }
+          span {
+            font-size: rem(10px);
+            line-height: rem(24px);
+          }
+          // .unit {
+          // }
+        }
+      }
+    }
+    &__total {
+      margin: rem(16px) 0 rem(32px) 0;
+      padding: rem(12px) rem(8px) rem(12px) rem(12px);
+      &__title {
+        font-size: rem(15px);
+      }
+      &__content {
+        span {
+          font-size: rem(20px);
+        }
+        .unit {
+          font-size: rem(18px);
+        }
+      }
+    }
+    label {
+      font-size: rem(10px);
+    }
+  }
+
+  .han-sidebar {
+    .nav {
+      > li {
+        > a {
+          font-size: rem(14px);
+        }
       }
     }
   }
+  .han-toc-link {
+    font-size: rem(18px);
+  }
+  // #navbar-allmenu {
+  //   min-height: calc(100vh - 120px);
+  //   height: auto;
+  //   max-height: 100vh;
+  // }
 }

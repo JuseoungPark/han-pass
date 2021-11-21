@@ -23,94 +23,131 @@
 
           <!-- 사이드 바 -->
           <div class="han-sidebar">
-            <a class="navbar-brand d-none d-xl-block" href="#">
-              <div class="logo-img">한패스</div>
-              <span class="sr-only">(current)</span>
-            </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <button type="button" class="my-page-button d-md-none">
-              <span class="my-page-button-icon">마이 페이지</span>
-            </button>
-            <nav class="han-links collapse show d-none d-xl-block">
-              <div class="han-toc-item">
-                <a class="han-toc-link" href="#">Home</a>
-              </div>
-              <div class="han-toc-item">
-                <a class="han-toc-link active" href="#">송금하기</a>
-                <ul class="nav han-sidenav">
-                  <li class="active han-sidenav-active">
-                    <a href="#">수취인송금</a>
-                  </li>
-                  <li>
-                    <a href="#">엑셀송금</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="han-toc-item">
-                <a class="han-toc-link" href="#">송금내역</a>
-                <ul class="nav han-sidenav">
-                  <li class="han-sidenav-active">
-                    <a href="#">그룹별 송금내역</a>
-                  </li>
-                  <li>
-                    <a href="#">개별 송금내역</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="han-toc-item">
-                <a class="han-toc-link" href="#">수취인</a>
-                <ul class="nav han-sidenav">
-                  <li class="han-sidenav-active">
-                    <a href="#">그룹별 송금내역</a>
-                  </li>
-                  <li>
-                    <a href="#">개별 송금내역</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            <!-- navbar-collapse [오픈되었을 때의 컨텐츠] -->
-            <div id="navbar-allmenu" class="collapse">
-              <div class="navbar-collapse align-items-start flex-wrap">
-                <div class="navbar-list">
-                  <div class="container-fluid">
-                    <!-- nav header -->
-                    <div class="d-flex align-items-center navbar-collapse-header">
-                      <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
-                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                    </div>
-                    <!-- // nav header -->
-                    <!-- nav text -->
-                    <div class="navbar-text-wrap">
-                      <p class="navbar-text">안녕하세요. 고객님,<br/>
-                        <a class="navbar-link" href="#">로그인</a> 하시면 맞춤 서비스를 보다<br/> 이용하실 수 있습니다.</p>
-                    </div>
-                    <!-- // nav text -->
-                    <!-- navbar-nav -->
-                    <div class="navbar-nav flex-row flex-wrap">
-                      <ul>
-                        <li class="nav-item"><a class="nav-link" href="#">홈</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">공지사항</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">문의하기</a></li>
-                      </ul>
-                    </div>
-                    <!-- // navbar-nav -->
-                    <!-- bottom link area -->
-                    <div class="navbar-bottom-link-wrap">
-                      <div class="d-flex flex-row">
-                        <a class="nav-bottom-link" href="#">로그인</a>
-                        <a class="nav-bottom-link" href="#">가입문의</a>
+            <!-- <div class="han-sidebar__header"> -->
+              <a class="navbar-brand d-none d-xl-block" href="#">
+                <div class="logo-img">한패스</div>
+                <span class="sr-only">(current)</span>
+              </a>
+              <button class="navbar-toggler d-xl-none" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <button type="button" class="my-page-button d-xl-none">
+                <span class="my-page-button-icon">마이 페이지</span>
+              </button>
+              <nav class="han-links collapse show d-none d-xl-block">
+                <div class="han-toc-item home">
+                  <a class="han-toc-link" href="#">Home</a>
+                </div>
+                <div class="han-toc-item remittance">
+                  <a class="han-toc-link active" href="#">송금하기</a>
+                  <ul class="nav han-sidenav">
+                    <li class="active han-sidenav-active">
+                      <a href="#">수취인송금</a>
+                    </li>
+                    <li>
+                      <a href="#">엑셀송금</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="han-toc-item remittance-history">
+                  <a class="han-toc-link" href="#">송금내역</a>
+                  <ul class="nav han-sidenav">
+                    <li class="han-sidenav-active">
+                      <a href="#">그룹별 송금내역</a>
+                    </li>
+                    <li>
+                      <a href="#">개별 송금내역</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="han-toc-item reciever">
+                  <a class="han-toc-link" href="#">수취인</a>
+                  <ul class="nav han-sidenav">
+                    <li class="han-sidenav-active">
+                      <a href="#">수취인 목록</a>
+                    </li>
+                    <li>
+                      <a href="#">수취인 등록</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- navbar-collapse [오픈되었을 때의 컨텐츠] -->
+              <div id="navbar-allmenu" class="collapse">
+                <div class="navbar-collapse align-items-start flex-wrap">
+                  <div class="navbar-list">
+                    <div class="container-fluid">
+                      <!-- nav header -->
+                      <div class="d-flex align-items-center navbar-collapse-header">
+                        <a class="navbar-brand" href="#"><div class="logo-img">한패스</div> <span class="sr-only">(current)</span></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-allmenu" aria-controls="navbar-allmenu" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
                       </div>
+                      <!-- // nav header -->
+                      <!-- nav text -->
+                      <div class="navbar-text-wrap">
+                        <p class="navbar-text">안녕하세요. 고객님,<br/>
+                          <a class="navbar-link" href="#">로그인</a> 하시면 맞춤 서비스를 보다<br/> 이용하실 수 있습니다.</p>
+                      </div>
+                      <!-- // nav text -->
+                      <!-- navbar-nav -->
+                      <div class="navbar-nav flex-row flex-wrap">
+                        <!-- <ul>
+                          <li class="nav-item"><a class="nav-link" href="#">홈</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">공지사항</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">문의하기</a></li>
+                        </ul> -->
+                        <nav class="han-links collapse show">
+                          <div class="han-toc-item remittance">
+                            <a class="han-toc-link active" href="#">송금하기</a>
+                            <ul class="nav han-sidenav">
+                              <li class="active han-sidenav-active">
+                                <a href="#">수취인송금</a>
+                              </li>
+                              <li>
+                                <a href="#">엑셀송금</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="han-toc-item remittance-history">
+                            <a class="han-toc-link" href="#">송금내역</a>
+                            <ul class="nav han-sidenav">
+                              <li class="han-sidenav-active">
+                                <a href="#">그룹별 송금내역</a>
+                              </li>
+                              <li>
+                                <a href="#">개별 송금내역</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="han-toc-item reciever">
+                            <a class="han-toc-link" href="#">수취인</a>
+                            <ul class="nav han-sidenav">
+                              <li class="han-sidenav-active">
+                                <a href="#">수취인 목록</a>
+                              </li>
+                              <li>
+                                <a href="#">수취인 등록</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+                      </div>
+                      <!-- // navbar-nav -->
+                      <!-- bottom link area -->
+                      <div class="navbar-bottom-link-wrap">
+                        <div class="d-flex flex-row">
+                          <a class="nav-bottom-link" href="#">로그인</a>
+                          <a class="nav-bottom-link" href="#">가입문의</a>
+                        </div>
+                      </div>
+                      <!-- // bottom link area -->
                     </div>
-                    <!-- // bottom link area -->
-                  </div>
-                </div>  
+                  </div>  
+                </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
           <!-- // 사이드 바 -->
           <!-- 컨텐츠 -->
@@ -169,67 +206,69 @@
                         <div class="box__header">
                           <strong class="box__title">실시간 송금 예상 금액</strong>
                         </div>
-                        <div class="box__body remit__content">
-                          <div class="remit__country">
-                            <div class="remit__country__title krw">
-                              <span>대한민국</span>
-                              <span class="unit">KRW</span>
+                        <div class="box__body">
+                          <div class="remit__content">
+                            <div class="remit__country">
+                              <div class="remit__country__title krw">
+                                <span>대한민국</span>
+                                <span class="unit">KRW</span>
+                              </div>
+                              <div class="remit__country__content">
+                                <label for="input" class="form-label">송금액</label>
+                                <input type="text" id="input" class="form-control" placeholder="송금액을 입력하세요.">
+                              </div>
                             </div>
-                            <div class="remit__country__content">
-                              <label for="input" class="form-label">송금액</label>
-                              <input type="text" id="input" class="form-control" placeholder="송금액을 입력하세요.">
-                            </div>
-                          </div>
-                          <div class="remit__charges">
-                            <div class="remit__charges__content">
-                              <div class="remit__charges__content__item">
-                                <strong>송금액 :</strong>
-                                <span>1,111,111</span><span class="unit">원</span>
-                              </div>
-                              <div class="remit__charges__content__item">
-                                <strong>전신료<span>(83.33% 우대)</span> :</strong>
-                                <span>5,111</span><span class="unit">원</span>
-                              </div>
-                              <div class="remit__charges__content__item">
-                                <strong>외화송금수수료<span>(83.33% 우대)</span> :</strong>
-                                <span>5,111</span><span class="unit">원</span>
-                              </div>
-                              <div class="remit__charges__content__item">
-                                <strong>해외중계수수료 :</strong>
-                                <div>
+                            <div class="remit__charges">
+                              <div class="remit__charges__content">
+                                <div class="remit__charges__content__item">
+                                  <strong>송금액 :</strong>
+                                  <span>1,111,111</span><span class="unit">원</span>
+                                </div>
+                                <div class="remit__charges__content__item">
+                                  <strong>전신료<span>(83.33% 우대)</span> :</strong>
                                   <span>5,111</span><span class="unit">원</span>
+                                </div>
+                                <div class="remit__charges__content__item">
+                                  <strong>외화송금수수료<span>(83.33% 우대)</span> :</strong>
+                                  <span>5,111</span><span class="unit">원</span>
+                                </div>
+                                <div class="remit__charges__content__item">
+                                  <strong>해외중계수수료 :</strong>
+                                  <div>
+                                    <span>5,111</span><span class="unit">원</span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="remit__country">
-                            <div class="remit__country__title aud">
-                              <span>오스트레일리아</span>
-                              <span class="unit">AUD</span>
+                            <div class="remit__country">
+                              <div class="remit__country__title aud">
+                                <span>오스트레일리아</span>
+                                <span class="unit">AUD</span>
+                              </div>
+                              <div class="remit__country__content">
+                                <label>수취액</label>
+                                <span>123,456</span>
+                              </div>
                             </div>
-                            <div class="remit__country__content">
-                              <label>수취액</label>
-                              <span>123,456</span>
+                            <div class="remit__total">
+                              <strong class="remit__total__title">입금액</strong>
+                              <div class="remit__total__content">
+                                <span>123,456</span>
+                                <span class="unit">원</span>
+                              </div>
                             </div>
+                            <button type="button" class="btn btn-primary btn-block">송금하기</button>
                           </div>
-                          <div class="remit__total">
-                            <strong class="remit__total__title">입금액</strong>
-                            <div class="remit__total__content">
-                              <span>123,456</span>
-                              <span class="unit">원</span>
-                            </div>
-                          </div>
-                          <!-- <button>송금하기</button> -->
-                          <button type="button" class="btn btn-primary btn-block">송금하기</button>
                         </div>
                       </div>
                       <!-- // 실시간 송금 예상 금액 -->
                       <!-- 송금 현황 -->
                       <div class="box remit-status">
                         <div class="box__header">
-                          <strong class="remit-status__title">송금 현황</strong>
-                          <span class="remit-status__unit">[최근 3개월]</span>
-                          <button>더보기</button>
+                          <strong class="box__title">송금 현황</strong>
+                          <span class="box__unit">[최근 3개월]</span>
+                          <!-- <button>더보기</button> -->
+                          <a class="box__more" href="#">더보기</a>
                         </div>
                         <div class="box__body remit-status__container">
                           <div class="remit-status__list__header">
@@ -253,6 +292,21 @@
                               <span style="width: 22%;">41</span>
                               <span style="width: 56%;" class="text-right">420 KRW</span>
                             </li>
+                            <li class="remit-status__item">
+                              <span style="width: 22%;">21.7</span>
+                              <span style="width: 22%;">41</span>
+                              <span style="width: 56%;" class="text-right">420 KRW</span>
+                            </li>
+                            <li class="remit-status__item">
+                              <span style="width: 22%;">21.7</span>
+                              <span style="width: 22%;">41</span>
+                              <span style="width: 56%;" class="text-right">420 KRW</span>
+                            </li>
+                            <li class="remit-status__item">
+                              <span style="width: 22%;">21.7</span>
+                              <span style="width: 22%;">41</span>
+                              <span style="width: 56%;" class="text-right">420 KRW</span>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -265,16 +319,14 @@
                         <div class="box__header">
                           <strong class="box__title">총 송금액 (년월별)</strong>
                           <ul class="nav nav-pills">
-                            <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales">
+                            <li class="nav-item mr-md-0" data-toggle="chart" data-target="#chart-sales">
                               <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
-                                <span class="d-none d-md-block">월</span>
-                                <span class="d-md-none">M</span>
+                                <span>월</span>
                               </a>
                             </li>
                             <li class="nav-item" data-toggle="chart" data-target="#chart-sales">
                               <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
-                                <span class="d-none d-md-block">년</span>
-                                <span class="d-md-none">W</span>
+                                <span>년</span>
                               </a>
                             </li>
                           </ul>
@@ -421,7 +473,7 @@
                       <div class="box notice">
                         <div class="box__header">
                           <strong class="box__title">공지사항</strong>
-                          <a href="#">더보기</a>
+                          <a class="box__more" href="#">더보기</a>
                         </div>
                         <div class="box__body">
                           <div class="main-notice">
@@ -503,209 +555,4 @@
       <!-- footer // -->
     </div>
   </body>
-  <script>
-    // !!퍼블 예시 소스 입니다!!
-    // .has-clear : input에 padding-right: 50px 추가
-    // 기본 버튼 숨김 처리
-    $(".form-control-clear").hide();
-    // form-control 이벤트 추가
-    $(".form-control").on(
-      "propertychange change keyup paste input",
-      function() {
-        var currentVal = $(this).val();
-        if (currentVal !== "") {
-          $(this).addClass("has-clear");
-          $(this)
-            .siblings(".form-control-clear")
-            .show();
-        }
-      }
-    );
-    $(".form-control-clear").click(function() {
-      $(this)
-        .siblings("input[type='text']")
-        .val("");
-      $(this)
-        .siblings("input[type='text']")
-        .show();
-      $(this).hide();
-    });
-  </script>
-
-  <!-- <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-      buildCalendar();
-    });
-
-    var today = new Date(); // @param 전역 변수, 오늘 날짜 / 내 컴퓨터 로컬을 기준으로 today에 Date 객체를 넣어줌
-    var date = new Date();  // @param 전역 변수, today의 Date를 세어주는 역할
-
-    var monthNames = [
-      "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-    ];
-
-    /**
-     * @brief   이전달 버튼 클릭
-     */
-    function prevCalendar() {
-      this.today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
-      buildCalendar();    // @param 전월 캘린더 출력 요청
-    }
-
-    /**
-     * @brief   다음달 버튼 클릭
-     */
-    function nextCalendar() {
-      this.today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
-      buildCalendar();    // @param 명월 캘린더 출력 요청
-    }
-
-    /**
-     * @brief   캘린더 오픈
-     * @details 날짜 값을 받아 캘린더 폼을 생성하고, 날짜값을 채워넣는다.
-     */
-    function buildCalendar() {
-      let doMonth = new Date(today.getFullYear(), today.getMonth(), 1);
-      let lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
-
-      let tbCalendar = document.querySelector(".calendar > tbody");
-
-      document.getElementById("calendar__year").innerText = today.getFullYear();                                  // @param YYYY월
-      document.getElementById("calendar__month").innerText = autoLeftPad((today.getMonth() + 1), 2);   // @param MM월
-
-      // @details 이전 캘린더의 출력결과가 남아있다면, 이전 캘린더를 삭제한다.
-      while(tbCalendar.rows.length > 0) {
-          tbCalendar.deleteRow(tbCalendar.rows.length - 1);
-      }
-
-      // @param 첫번째 개행
-      let row = tbCalendar.insertRow();
-
-      // @param 날짜가 표기될 열의 증가값
-      let dom = 1;
-
-      // @details 시작일의 요일값( doMonth.getDay() ) + 해당월의 전체일( lastDate.getDate())을  더해준 값에서
-      //               7로 나눈값을 올림( Math.ceil() )하고 다시 시작일의 요일값( doMonth.getDay() )을 빼준다.
-      let daysLength = (Math.ceil((doMonth.getDay() + lastDate.getDate()) / 7) * 7) - doMonth.getDay();
-
-      // @param 달력 출력
-
-      // @details 시작값은 1일을 직접 지정하고 요일값( doMonth.getDay() )를 빼서 마이너스( - )로 for문을 시작한다.
-      for(let day = 1 - doMonth.getDay(); daysLength >= day; day++) {
-
-        let column = row.insertCell();
-
-        // @param 평일( 전월일과 익월일의 데이터 제외 )
-        if(Math.sign(day) == 1 && lastDate.getDate() >= day) {
-          // @param 평일 날짜 데이터 삽입
-          column.innerText = autoLeftPad(day, 2);
-
-          // @param 일요일인 경우
-          if(dom % 7 == 1) {
-            column.style.color = "#FF4D4D";
-          }
-          // @param 토요일인 경우
-          if(dom % 7 == 0) {
-            column.style.color = "#4D4DFF";
-            row = tbCalendar.insertRow();   // @param 토요일이 지나면 다시 가로 행을 한줄 추가한다.
-          }
-        }
-        // @param 평일 전월일과 익월일의 데이터 날짜변경
-        else {
-          let exceptDay = new Date(doMonth.getFullYear(), doMonth.getMonth(), day);
-          column.innerText = autoLeftPad(exceptDay.getDate(), 2);
-          column.style.color = "#A9A9A9";
-        }
-
-        // @brief   전월, 명월 음영처리
-        // @details 현재년과 선택 년도가 같은경우
-        if(today.getFullYear() == date.getFullYear()) {
-          // @details 현재월과 선택월이 같은경우
-          if(today.getMonth() == date.getMonth()) {
-
-            // @details 현재일보다 이전인 경우이면서 현재월에 포함되는 일인경우
-            if(date.getDate() > day && Math.sign(day) == 1) {
-              column.style.backgroundColor = "#E5E5E5";
-            }
-
-            // @details 현재일보다 이후이면서 현재월에 포함되는 일인경우
-            else if(date.getDate() < day && lastDate.getDate() >= day) {
-              column.style.backgroundColor = "#FFFFFF";
-              column.style.cursor = "pointer";
-              column.onclick = function(){ calendarChoiceDay(this); }
-            }
-
-            // @details 현재일인 경우
-            else if(date.getDate() == day) {
-              column.style.backgroundColor = "#FFFFE6";
-              column.style.cursor = "pointer";
-              column.onclick = function(){ calendarChoiceDay(this); }
-            }
-
-          // @details 현재월보다 이전인경우
-          } else if(today.getMonth() < date.getMonth()) {
-            if(Math.sign(day) == 1 && day <= lastDate.getDate()) {
-              column.style.backgroundColor = "#E5E5E5";
-            }
-          }
-
-          // @details 현재월보다 이후인경우
-          else {
-            if(Math.sign(day) == 1 && day <= lastDate.getDate()) {
-              column.style.backgroundColor = "#FFFFFF";
-              column.style.cursor = "pointer";
-              column.onclick = function(){ calendarChoiceDay(this); }
-            }
-          }
-        }
-
-        // @details 선택한년도가 현재년도보다 작은경우
-        else if(today.getFullYear() < date.getFullYear()) {
-          if(Math.sign(day) == 1 && day <= lastDate.getDate()) {
-            column.style.backgroundColor = "#E5E5E5";
-          }
-        }
-
-        // @details 선택한년도가 현재년도보다 큰경우
-        else {
-          if(Math.sign(day) == 1 && day <= lastDate.getDate()) {
-            column.style.backgroundColor = "#FFFFFF";
-            column.style.cursor = "pointer";
-            column.onclick = function(){ calendarChoiceDay(this); }
-          }
-        }
-        dom++;
-      }
-    }
-    /**
-     * @brief   날짜 선택
-     * @details 사용자가 선택한 날짜에 체크표시를 남긴다.
-     */
-    function calendarChoiceDay(column) {
-      // @param 기존 선택일이 존재하는 경우 기존 선택일의 표시형식을 초기화 한다.
-      // if(document.getElementsByClassName("choiceDay")[0]) {
-      //   document.getElementsByClassName("choiceDay")[0].style.backgroundColor = "#FFFFFF";
-      //   document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");
-      // }
-
-      // @param 선택일 체크 표시
-      column.style.color = "#ffffff";
-      column.style.backgroundColor = "#146fd3";
-
-      // @param 선택일 클래스명 변경
-      column.classList.add("choice");
-    }
-    /**
-     * @brief   숫자 두자릿수( 00 ) 변경
-     * @details 자릿수가 한지라인 ( 1, 2, 3등 )의 값을 10, 11, 12등과 같은 두자리수 형식으로 맞추기위해 0을 붙인다.
-     * @param   num     앞에 0을 붙일 숫자 값
-     * @param   digit   글자의 자릿수를 지정 ( 2자릿수인 경우 00, 3자릿수인 경우 000 … )
-     */
-    function autoLeftPad(num, digit) {
-      if(String(num).length < digit) {
-        num = new Array(digit - String(num).length + 1).join("0") + num;
-      }
-      return num;
-    }
-  </script> -->
 </html>
