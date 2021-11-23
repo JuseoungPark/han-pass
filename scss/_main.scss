@@ -1,5 +1,4 @@
 .fullpage-wrapper {
-  // min-width: 1580px;
   .section:not(.main-visual) .container-fluid {
     padding-top: rem(95px);
   }
@@ -36,8 +35,6 @@
     z-index: 1;
     width: rem(460px);
     height: rem(600px);
-    // margin-top: rem(64px);
-    // margin-bottom: 6%;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -66,7 +63,6 @@
     margin-left: rem(314px);
   }
   .caption {
-    // margin-bottom: 18%;
     margin-left: rem(64px);
     color: #242424;
     .logo {
@@ -82,7 +78,7 @@
     }
     strong {
       display: inline-block;
-      margin-bottom: rem(80px);
+      margin-bottom: rem(48px);
       font-family: "S-Core";
       font-size: rem(60px);
       font-weight: 500;
@@ -92,7 +88,7 @@
       font-size: rem(77px);
     }
     p {
-      margin: rem(12px) 0 0 0;
+      // margin: rem(12px) 0 0 0;
       font-family: "S-Core";
       font-size: rem(24px);
       font-weight: 400;
@@ -246,42 +242,6 @@
   }
 }
 
-.left-nav {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-  min-width: 0;
-  height: calc(100vh - 95px);
-  margin-left: -11.25rem;
-  word-wrap: break-word;
-  background-clip: border-box;
-  transition: all 1s ease 0s;
-  ul {
-    li {
-      margin-bottom: rem(20px);
-      padding: 0;
-      text-align: left;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &.active {
-        margin-bottom: rem(30px);
-        span {
-          font-size: rem(24px);
-          text-decoration: underline;
-          opacity: 1;
-        }
-      }
-      span {
-        font-size: rem(20px);
-        font-weight: 700;
-        color: #000;
-        opacity: 0.41;
-      }
-    }
-  }
-}
 .currency {
   display: inline-block;
   padding: 0 rem(4px) 0 rem(67px);
@@ -894,14 +854,14 @@
 // 20211103 : END
 
 @include media-breakpoint-down(lg) {
-  .fullpage-wrapper {
-    margin-top: rem(60px);
-  }
+  // .fullpage-wrapper {
+  //   margin-top: rem(60px);
+  // }
   .fullpage-wrapper .section:not(.main-visual) .container-fluid {
     padding-top: rem(60px);
   }
   .main-visual {
-    height: calc(100vh - 3.75rem);
+    // height: calc(100vh - 3.75rem);
     .cont-box {
       margin: 0 rem(32px);
     }
@@ -1115,14 +1075,7 @@
   }
 }
 @include media-breakpoint-down(md) {
-  // .fullpage-wrapper {
-  //   margin-top: rem(60px);
-  // }
-  // .fullpage-wrapper .section:not(.main-visual) .container-fluid {
-  //   padding-top: rem(60px);
-  // }
   .main-visual {
-    // height: calc(100vh - 3.75rem);
     .swiper-container {
       width: 100%;
       height: 100%;
@@ -1134,8 +1087,10 @@
       max-height: 100%;
     }
     div[class*="main-visual-img"] {
+      flex: 1;
       width: 100%;
-      max-width: calc(100% - 2.5rem);
+      max-width: calc(100% - 40px);
+      height: auto;
       max-height: 60%;
       margin: auto rem(20px) rem(50px) rem(20px);
     }
@@ -1151,7 +1106,7 @@
     .caption {
       flex: none;
       width: 100%;
-      margin: 0;
+      margin-top: rem(60px);
       padding: rem(20px);
       .logo {
         width: rem(37px);
@@ -1160,7 +1115,7 @@
         background-size: contain;
       }
       strong {
-        margin-bottom: 0;
+        margin: 0 0 rem(8px) 0;
         font-size: rem(20px);
         line-height: rem(30px);
       }

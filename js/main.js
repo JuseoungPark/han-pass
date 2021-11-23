@@ -34,17 +34,19 @@ $(window).resize(function(){
 	var winWidth = $(window).width();
 	console.log('resize', winWidth, myFullpageCTL)
 	// console.log('resize', winWidth)
-    if(winWidth < 1281){
-        if(myFullpageCTL == true){
-            $.fn.fullpage.destroy('all');
-            myFullpageCTL = false;
-        }
-    }else{
-        if(myFullpageCTL == false){
-            makeFullPage();
-            myFullpageCTL = true;
-        }
-    }
+	// if(winWidth < 1281){
+	//     if(myFullpageCTL == true){
+	//         $.fn.fullpage.destroy('all');
+	//         myFullpageCTL = false;
+	//     }
+	// }else{
+	//     if(myFullpageCTL == false){
+	// 				$.fn.fullpage.destroy('all');
+
+	//         // makeFullPage();
+	//         myFullpageCTL = true;
+	//     }
+	// }
 	$('#navbar-allmenu').removeClass('show');
 	makeSwiper();
 	mainEvents();	
