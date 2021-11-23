@@ -10,6 +10,12 @@
       align-items: center;
       max-width: rem(1260px);
       padding: 1rem 0;
+      .footer__link {
+        &:hover {
+          color: #ffffff;
+          text-decoration: underline;
+        }
+      }
     }
   }
   &__container {
