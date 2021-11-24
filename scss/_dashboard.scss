@@ -516,16 +516,31 @@
   }
   &__prev,
   &__next {
-    width: rem(6px);
-    height: rem(10px);
+    width: rem(28px);
+    height: rem(28px);
+    padding: 0;
     border: 0 none;
     font-size: 0;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
   &__prev {
-    margin-right: rem(24px);
+    margin-right: rem(16px);
+    background-image: url(../images/renewal/ico-prev@3x.png);
+    &.on {
+      background-image: url(../images/renewal/ico-next-on@3x.png);
+      transform: rotate(180deg);
+    }
   }
   &__next {
-    margin-left: rem(24px);
+    margin-left: rem(12px);
+    background-image: url(../images/renewal/ico-prev@3x.png);
+    transform: rotate(180deg);
+    &.on {
+      background-image: url(../images/renewal/ico-next-on@3x.png);
+      transform: rotate(0);
+    }
   }
   &__body {
     width: inherit;
